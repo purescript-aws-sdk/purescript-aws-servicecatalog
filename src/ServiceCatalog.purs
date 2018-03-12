@@ -20,307 +20,425 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "ServiceCatalog" :: String
-
 
 -- | <p>Accepts an offer to share the specified portfolio.</p>
 acceptPortfolioShare :: forall eff. AcceptPortfolioShareInput -> Aff (exception :: EXCEPTION | eff) AcceptPortfolioShareOutput
-acceptPortfolioShare = Request.request serviceName "acceptPortfolioShare" 
+acceptPortfolioShare = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "acceptPortfolioShare"
 
 
 -- | <p>Associates the specified principal ARN with the specified portfolio.</p>
 associatePrincipalWithPortfolio :: forall eff. AssociatePrincipalWithPortfolioInput -> Aff (exception :: EXCEPTION | eff) AssociatePrincipalWithPortfolioOutput
-associatePrincipalWithPortfolio = Request.request serviceName "associatePrincipalWithPortfolio" 
+associatePrincipalWithPortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "associatePrincipalWithPortfolio"
 
 
 -- | <p>Associates the specified product with the specified portfolio.</p>
 associateProductWithPortfolio :: forall eff. AssociateProductWithPortfolioInput -> Aff (exception :: EXCEPTION | eff) AssociateProductWithPortfolioOutput
-associateProductWithPortfolio = Request.request serviceName "associateProductWithPortfolio" 
+associateProductWithPortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "associateProductWithPortfolio"
 
 
 -- | <p>Associate the specified TagOption with the specified portfolio or product.</p>
 associateTagOptionWithResource :: forall eff. AssociateTagOptionWithResourceInput -> Aff (exception :: EXCEPTION | eff) AssociateTagOptionWithResourceOutput
-associateTagOptionWithResource = Request.request serviceName "associateTagOptionWithResource" 
+associateTagOptionWithResource = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "associateTagOptionWithResource"
 
 
 -- | <p>Copies the specified source product to the specified target product or a new product.</p> <p>You can copy a product to the same account or another account. You can copy a product to the same region or another region.</p> <p>This operation is performed asynchronously. To track the progress of the operation, use <a>DescribeCopyProductStatus</a>.</p>
 copyProduct :: forall eff. CopyProductInput -> Aff (exception :: EXCEPTION | eff) CopyProductOutput
-copyProduct = Request.request serviceName "copyProduct" 
+copyProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "copyProduct"
 
 
 -- | <p>Creates a constraint.</p>
 createConstraint :: forall eff. CreateConstraintInput -> Aff (exception :: EXCEPTION | eff) CreateConstraintOutput
-createConstraint = Request.request serviceName "createConstraint" 
+createConstraint = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "createConstraint"
 
 
 -- | <p>Creates a portfolio.</p>
 createPortfolio :: forall eff. CreatePortfolioInput -> Aff (exception :: EXCEPTION | eff) CreatePortfolioOutput
-createPortfolio = Request.request serviceName "createPortfolio" 
+createPortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "createPortfolio"
 
 
 -- | <p>Shares the specified portfolio with the specified account.</p>
 createPortfolioShare :: forall eff. CreatePortfolioShareInput -> Aff (exception :: EXCEPTION | eff) CreatePortfolioShareOutput
-createPortfolioShare = Request.request serviceName "createPortfolioShare" 
+createPortfolioShare = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "createPortfolioShare"
 
 
 -- | <p>Creates a product.</p>
 createProduct :: forall eff. CreateProductInput -> Aff (exception :: EXCEPTION | eff) CreateProductOutput
-createProduct = Request.request serviceName "createProduct" 
+createProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "createProduct"
 
 
 -- | <p>Creates a plan. A plan includes the list of resources to be created (when provisioning a new product) or modified (when updating a provisioned product) when the plan is executed.</p> <p>You can create one plan per provisioned product. To create a plan for an existing provisioned product, the product status must be AVAILBLE or TAINTED.</p> <p>To view the resource changes in the change set, use <a>DescribeProvisionedProductPlan</a>. To create or modify the provisioned product, use <a>ExecuteProvisionedProductPlan</a>.</p>
 createProvisionedProductPlan :: forall eff. CreateProvisionedProductPlanInput -> Aff (exception :: EXCEPTION | eff) CreateProvisionedProductPlanOutput
-createProvisionedProductPlan = Request.request serviceName "createProvisionedProductPlan" 
+createProvisionedProductPlan = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "createProvisionedProductPlan"
 
 
 -- | <p>Creates a provisioning artifact (also known as a version) for the specified product.</p> <p>You cannot create a provisioning artifact for a product that was shared with you.</p>
 createProvisioningArtifact :: forall eff. CreateProvisioningArtifactInput -> Aff (exception :: EXCEPTION | eff) CreateProvisioningArtifactOutput
-createProvisioningArtifact = Request.request serviceName "createProvisioningArtifact" 
+createProvisioningArtifact = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "createProvisioningArtifact"
 
 
 -- | <p>Creates a TagOption.</p>
 createTagOption :: forall eff. CreateTagOptionInput -> Aff (exception :: EXCEPTION | eff) CreateTagOptionOutput
-createTagOption = Request.request serviceName "createTagOption" 
+createTagOption = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "createTagOption"
 
 
 -- | <p>Deletes the specified constraint.</p>
 deleteConstraint :: forall eff. DeleteConstraintInput -> Aff (exception :: EXCEPTION | eff) DeleteConstraintOutput
-deleteConstraint = Request.request serviceName "deleteConstraint" 
+deleteConstraint = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "deleteConstraint"
 
 
 -- | <p>Deletes the specified portfolio.</p> <p>You cannot delete a portfolio if it was shared with you or if it has associated products, users, constraints, or shared accounts.</p>
 deletePortfolio :: forall eff. DeletePortfolioInput -> Aff (exception :: EXCEPTION | eff) DeletePortfolioOutput
-deletePortfolio = Request.request serviceName "deletePortfolio" 
+deletePortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "deletePortfolio"
 
 
 -- | <p>Stops sharing the specified portfolio with the specified account.</p>
 deletePortfolioShare :: forall eff. DeletePortfolioShareInput -> Aff (exception :: EXCEPTION | eff) DeletePortfolioShareOutput
-deletePortfolioShare = Request.request serviceName "deletePortfolioShare" 
+deletePortfolioShare = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "deletePortfolioShare"
 
 
 -- | <p>Deletes the specified product.</p> <p>You cannot delete a product if it was shared with you or is associated with a portfolio.</p>
 deleteProduct :: forall eff. DeleteProductInput -> Aff (exception :: EXCEPTION | eff) DeleteProductOutput
-deleteProduct = Request.request serviceName "deleteProduct" 
+deleteProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "deleteProduct"
 
 
 -- | <p>Deletes the specified plan.</p>
 deleteProvisionedProductPlan :: forall eff. DeleteProvisionedProductPlanInput -> Aff (exception :: EXCEPTION | eff) DeleteProvisionedProductPlanOutput
-deleteProvisionedProductPlan = Request.request serviceName "deleteProvisionedProductPlan" 
+deleteProvisionedProductPlan = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "deleteProvisionedProductPlan"
 
 
 -- | <p>Deletes the specified provisioning artifact (also known as a version) for the specified product.</p> <p>You cannot delete a provisioning artifact associated with a product that was shared with you. You cannot delete the last provisioning artifact for a product, because a product must have at least one provisioning artifact.</p>
 deleteProvisioningArtifact :: forall eff. DeleteProvisioningArtifactInput -> Aff (exception :: EXCEPTION | eff) DeleteProvisioningArtifactOutput
-deleteProvisioningArtifact = Request.request serviceName "deleteProvisioningArtifact" 
+deleteProvisioningArtifact = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "deleteProvisioningArtifact"
 
 
 -- | <p>Deletes the specified TagOption.</p> <p>You cannot delete a TagOption if it is associated with a product or portfolio.</p>
 deleteTagOption :: forall eff. DeleteTagOptionInput -> Aff (exception :: EXCEPTION | eff) DeleteTagOptionOutput
-deleteTagOption = Request.request serviceName "deleteTagOption" 
+deleteTagOption = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "deleteTagOption"
 
 
 -- | <p>Gets information about the specified constraint.</p>
 describeConstraint :: forall eff. DescribeConstraintInput -> Aff (exception :: EXCEPTION | eff) DescribeConstraintOutput
-describeConstraint = Request.request serviceName "describeConstraint" 
+describeConstraint = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeConstraint"
 
 
 -- | <p>Gets the status of the specified copy product operation.</p>
 describeCopyProductStatus :: forall eff. DescribeCopyProductStatusInput -> Aff (exception :: EXCEPTION | eff) DescribeCopyProductStatusOutput
-describeCopyProductStatus = Request.request serviceName "describeCopyProductStatus" 
+describeCopyProductStatus = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeCopyProductStatus"
 
 
 -- | <p>Gets information about the specified portfolio.</p>
 describePortfolio :: forall eff. DescribePortfolioInput -> Aff (exception :: EXCEPTION | eff) DescribePortfolioOutput
-describePortfolio = Request.request serviceName "describePortfolio" 
+describePortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describePortfolio"
 
 
 -- | <p>Gets information about the specified product.</p>
 describeProduct :: forall eff. DescribeProductInput -> Aff (exception :: EXCEPTION | eff) DescribeProductOutput
-describeProduct = Request.request serviceName "describeProduct" 
+describeProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeProduct"
 
 
 -- | <p>Gets information about the specified product. This operation is run with administrator access.</p>
 describeProductAsAdmin :: forall eff. DescribeProductAsAdminInput -> Aff (exception :: EXCEPTION | eff) DescribeProductAsAdminOutput
-describeProductAsAdmin = Request.request serviceName "describeProductAsAdmin" 
+describeProductAsAdmin = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeProductAsAdmin"
 
 
 -- | <p>Gets information about the specified product.</p>
 describeProductView :: forall eff. DescribeProductViewInput -> Aff (exception :: EXCEPTION | eff) DescribeProductViewOutput
-describeProductView = Request.request serviceName "describeProductView" 
+describeProductView = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeProductView"
 
 
 -- | <p>Gets information about the specified provisioned product.</p>
 describeProvisionedProduct :: forall eff. DescribeProvisionedProductInput -> Aff (exception :: EXCEPTION | eff) DescribeProvisionedProductOutput
-describeProvisionedProduct = Request.request serviceName "describeProvisionedProduct" 
+describeProvisionedProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeProvisionedProduct"
 
 
 -- | <p>Gets information about the resource changes for the specified plan.</p>
 describeProvisionedProductPlan :: forall eff. DescribeProvisionedProductPlanInput -> Aff (exception :: EXCEPTION | eff) DescribeProvisionedProductPlanOutput
-describeProvisionedProductPlan = Request.request serviceName "describeProvisionedProductPlan" 
+describeProvisionedProductPlan = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeProvisionedProductPlan"
 
 
 -- | <p>Gets information about the specified provisioning artifact (also known as a version) for the specified product.</p>
 describeProvisioningArtifact :: forall eff. DescribeProvisioningArtifactInput -> Aff (exception :: EXCEPTION | eff) DescribeProvisioningArtifactOutput
-describeProvisioningArtifact = Request.request serviceName "describeProvisioningArtifact" 
+describeProvisioningArtifact = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeProvisioningArtifact"
 
 
 -- | <p>Gets information about the configuration required to provision the specified product using the specified provisioning artifact.</p> <p>If the output contains a TagOption key with an empty list of values, there is a TagOption conflict for that key. The end user cannot take action to fix the conflict, and launch is not blocked. In subsequent calls to <a>ProvisionProduct</a>, do not include conflicted TagOption keys as tags, or this causes the error "Parameter validation failed: Missing required parameter in Tags[<i>N</i>]:<i>Value</i>". Tag the provisioned product with the value <code>sc-tagoption-conflict-portfolioId-productId</code>.</p>
 describeProvisioningParameters :: forall eff. DescribeProvisioningParametersInput -> Aff (exception :: EXCEPTION | eff) DescribeProvisioningParametersOutput
-describeProvisioningParameters = Request.request serviceName "describeProvisioningParameters" 
+describeProvisioningParameters = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeProvisioningParameters"
 
 
 -- | <p>Gets information about the specified request operation.</p> <p>Use this operation after calling a request operation (for example, <a>ProvisionProduct</a>, <a>TerminateProvisionedProduct</a>, or <a>UpdateProvisionedProduct</a>). </p>
 describeRecord :: forall eff. DescribeRecordInput -> Aff (exception :: EXCEPTION | eff) DescribeRecordOutput
-describeRecord = Request.request serviceName "describeRecord" 
+describeRecord = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeRecord"
 
 
 -- | <p>Gets information about the specified TagOption.</p>
 describeTagOption :: forall eff. DescribeTagOptionInput -> Aff (exception :: EXCEPTION | eff) DescribeTagOptionOutput
-describeTagOption = Request.request serviceName "describeTagOption" 
+describeTagOption = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "describeTagOption"
 
 
 -- | <p>Disassociates a previously associated principal ARN from a specified portfolio.</p>
 disassociatePrincipalFromPortfolio :: forall eff. DisassociatePrincipalFromPortfolioInput -> Aff (exception :: EXCEPTION | eff) DisassociatePrincipalFromPortfolioOutput
-disassociatePrincipalFromPortfolio = Request.request serviceName "disassociatePrincipalFromPortfolio" 
+disassociatePrincipalFromPortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "disassociatePrincipalFromPortfolio"
 
 
 -- | <p>Disassociates the specified product from the specified portfolio. </p>
 disassociateProductFromPortfolio :: forall eff. DisassociateProductFromPortfolioInput -> Aff (exception :: EXCEPTION | eff) DisassociateProductFromPortfolioOutput
-disassociateProductFromPortfolio = Request.request serviceName "disassociateProductFromPortfolio" 
+disassociateProductFromPortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "disassociateProductFromPortfolio"
 
 
 -- | <p>Disassociates the specified TagOption from the specified resource.</p>
 disassociateTagOptionFromResource :: forall eff. DisassociateTagOptionFromResourceInput -> Aff (exception :: EXCEPTION | eff) DisassociateTagOptionFromResourceOutput
-disassociateTagOptionFromResource = Request.request serviceName "disassociateTagOptionFromResource" 
+disassociateTagOptionFromResource = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "disassociateTagOptionFromResource"
 
 
 -- | <p>Provisions or modifies a product based on the resource changes for the specified plan.</p>
 executeProvisionedProductPlan :: forall eff. ExecuteProvisionedProductPlanInput -> Aff (exception :: EXCEPTION | eff) ExecuteProvisionedProductPlanOutput
-executeProvisionedProductPlan = Request.request serviceName "executeProvisionedProductPlan" 
+executeProvisionedProductPlan = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "executeProvisionedProductPlan"
 
 
 -- | <p>Lists all portfolios for which sharing was accepted by this account.</p>
 listAcceptedPortfolioShares :: forall eff. ListAcceptedPortfolioSharesInput -> Aff (exception :: EXCEPTION | eff) ListAcceptedPortfolioSharesOutput
-listAcceptedPortfolioShares = Request.request serviceName "listAcceptedPortfolioShares" 
+listAcceptedPortfolioShares = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listAcceptedPortfolioShares"
 
 
 -- | <p>Lists the constraints for the specified portfolio and product.</p>
 listConstraintsForPortfolio :: forall eff. ListConstraintsForPortfolioInput -> Aff (exception :: EXCEPTION | eff) ListConstraintsForPortfolioOutput
-listConstraintsForPortfolio = Request.request serviceName "listConstraintsForPortfolio" 
+listConstraintsForPortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listConstraintsForPortfolio"
 
 
 -- | <p>Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary when provisioning a product. A path also determines the constraints put on the product.</p>
 listLaunchPaths :: forall eff. ListLaunchPathsInput -> Aff (exception :: EXCEPTION | eff) ListLaunchPathsOutput
-listLaunchPaths = Request.request serviceName "listLaunchPaths" 
+listLaunchPaths = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listLaunchPaths"
 
 
 -- | <p>Lists the account IDs that have access to the specified portfolio.</p>
 listPortfolioAccess :: forall eff. ListPortfolioAccessInput -> Aff (exception :: EXCEPTION | eff) ListPortfolioAccessOutput
-listPortfolioAccess = Request.request serviceName "listPortfolioAccess" 
+listPortfolioAccess = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listPortfolioAccess"
 
 
 -- | <p>Lists all portfolios in the catalog.</p>
 listPortfolios :: forall eff. ListPortfoliosInput -> Aff (exception :: EXCEPTION | eff) ListPortfoliosOutput
-listPortfolios = Request.request serviceName "listPortfolios" 
+listPortfolios = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listPortfolios"
 
 
 -- | <p>Lists all portfolios that the specified product is associated with.</p>
 listPortfoliosForProduct :: forall eff. ListPortfoliosForProductInput -> Aff (exception :: EXCEPTION | eff) ListPortfoliosForProductOutput
-listPortfoliosForProduct = Request.request serviceName "listPortfoliosForProduct" 
+listPortfoliosForProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listPortfoliosForProduct"
 
 
 -- | <p>Lists all principal ARNs associated with the specified portfolio.</p>
 listPrincipalsForPortfolio :: forall eff. ListPrincipalsForPortfolioInput -> Aff (exception :: EXCEPTION | eff) ListPrincipalsForPortfolioOutput
-listPrincipalsForPortfolio = Request.request serviceName "listPrincipalsForPortfolio" 
+listPrincipalsForPortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listPrincipalsForPortfolio"
 
 
 -- | <p>Lists the plans for the specified provisioned product or all plans to which the user has access.</p>
 listProvisionedProductPlans :: forall eff. ListProvisionedProductPlansInput -> Aff (exception :: EXCEPTION | eff) ListProvisionedProductPlansOutput
-listProvisionedProductPlans = Request.request serviceName "listProvisionedProductPlans" 
+listProvisionedProductPlans = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listProvisionedProductPlans"
 
 
 -- | <p>Lists all provisioning artifacts (also known as versions) for the specified product.</p>
 listProvisioningArtifacts :: forall eff. ListProvisioningArtifactsInput -> Aff (exception :: EXCEPTION | eff) ListProvisioningArtifactsOutput
-listProvisioningArtifacts = Request.request serviceName "listProvisioningArtifacts" 
+listProvisioningArtifacts = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listProvisioningArtifacts"
 
 
 -- | <p>Lists the specified requests or all performed requests.</p>
 listRecordHistory :: forall eff. ListRecordHistoryInput -> Aff (exception :: EXCEPTION | eff) ListRecordHistoryOutput
-listRecordHistory = Request.request serviceName "listRecordHistory" 
+listRecordHistory = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listRecordHistory"
 
 
 -- | <p>Lists the resources associated with the specified TagOption.</p>
 listResourcesForTagOption :: forall eff. ListResourcesForTagOptionInput -> Aff (exception :: EXCEPTION | eff) ListResourcesForTagOptionOutput
-listResourcesForTagOption = Request.request serviceName "listResourcesForTagOption" 
+listResourcesForTagOption = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listResourcesForTagOption"
 
 
 -- | <p>Lists the specified TagOptions or all TagOptions.</p>
 listTagOptions :: forall eff. ListTagOptionsInput -> Aff (exception :: EXCEPTION | eff) ListTagOptionsOutput
-listTagOptions = Request.request serviceName "listTagOptions" 
+listTagOptions = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "listTagOptions"
 
 
 -- | <p>Provisions the specified product.</p> <p>A provisioned product is a resourced instance of a product. For example, provisioning a product based on a CloudFormation template launches a CloudFormation stack and its underlying resources. You can check the status of this request using <a>DescribeRecord</a>.</p> <p>If the request contains a tag key with an empty list of values, there is a tag conflict for that key. Do not include conflicted keys as tags, or this causes the error "Parameter validation failed: Missing required parameter in Tags[<i>N</i>]:<i>Value</i>".</p>
 provisionProduct :: forall eff. ProvisionProductInput -> Aff (exception :: EXCEPTION | eff) ProvisionProductOutput
-provisionProduct = Request.request serviceName "provisionProduct" 
+provisionProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "provisionProduct"
 
 
 -- | <p>Rejects an offer to share the specified portfolio.</p>
 rejectPortfolioShare :: forall eff. RejectPortfolioShareInput -> Aff (exception :: EXCEPTION | eff) RejectPortfolioShareOutput
-rejectPortfolioShare = Request.request serviceName "rejectPortfolioShare" 
+rejectPortfolioShare = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "rejectPortfolioShare"
 
 
 -- | <p>Lists the provisioned products that are available (not terminated).</p> <p>To use additional filtering, see <a>SearchProvisionedProducts</a>.</p>
 scanProvisionedProducts :: forall eff. ScanProvisionedProductsInput -> Aff (exception :: EXCEPTION | eff) ScanProvisionedProductsOutput
-scanProvisionedProducts = Request.request serviceName "scanProvisionedProducts" 
+scanProvisionedProducts = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "scanProvisionedProducts"
 
 
 -- | <p>Gets information about the products to which the caller has access.</p>
 searchProducts :: forall eff. SearchProductsInput -> Aff (exception :: EXCEPTION | eff) SearchProductsOutput
-searchProducts = Request.request serviceName "searchProducts" 
+searchProducts = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "searchProducts"
 
 
 -- | <p>Gets information about the products for the specified portfolio or all products.</p>
 searchProductsAsAdmin :: forall eff. SearchProductsAsAdminInput -> Aff (exception :: EXCEPTION | eff) SearchProductsAsAdminOutput
-searchProductsAsAdmin = Request.request serviceName "searchProductsAsAdmin" 
+searchProductsAsAdmin = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "searchProductsAsAdmin"
 
 
 -- | <p>Gets information about the provisioned products that meet the specified criteria.</p>
 searchProvisionedProducts :: forall eff. SearchProvisionedProductsInput -> Aff (exception :: EXCEPTION | eff) SearchProvisionedProductsOutput
-searchProvisionedProducts = Request.request serviceName "searchProvisionedProducts" 
+searchProvisionedProducts = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "searchProvisionedProducts"
 
 
 -- | <p>Terminates the specified provisioned product.</p> <p>This operation does not delete any records associated with the provisioned product.</p> <p>You can check the status of this request using <a>DescribeRecord</a>.</p>
 terminateProvisionedProduct :: forall eff. TerminateProvisionedProductInput -> Aff (exception :: EXCEPTION | eff) TerminateProvisionedProductOutput
-terminateProvisionedProduct = Request.request serviceName "terminateProvisionedProduct" 
+terminateProvisionedProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "terminateProvisionedProduct"
 
 
 -- | <p>Updates the specified constraint.</p>
 updateConstraint :: forall eff. UpdateConstraintInput -> Aff (exception :: EXCEPTION | eff) UpdateConstraintOutput
-updateConstraint = Request.request serviceName "updateConstraint" 
+updateConstraint = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "updateConstraint"
 
 
 -- | <p>Updates the specified portfolio.</p> <p>You cannot update a product that was shared with you.</p>
 updatePortfolio :: forall eff. UpdatePortfolioInput -> Aff (exception :: EXCEPTION | eff) UpdatePortfolioOutput
-updatePortfolio = Request.request serviceName "updatePortfolio" 
+updatePortfolio = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "updatePortfolio"
 
 
 -- | <p>Updates the specified product.</p>
 updateProduct :: forall eff. UpdateProductInput -> Aff (exception :: EXCEPTION | eff) UpdateProductOutput
-updateProduct = Request.request serviceName "updateProduct" 
+updateProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "updateProduct"
 
 
 -- | <p>Requests updates to the configuration of the specified provisioned product.</p> <p>If there are tags associated with the object, they cannot be updated or added. Depending on the specific updates requested, this operation can update with no interruption, with some interruption, or replace the provisioned product entirely.</p> <p>You can check the status of this request using <a>DescribeRecord</a>.</p>
 updateProvisionedProduct :: forall eff. UpdateProvisionedProductInput -> Aff (exception :: EXCEPTION | eff) UpdateProvisionedProductOutput
-updateProvisionedProduct = Request.request serviceName "updateProvisionedProduct" 
+updateProvisionedProduct = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "updateProvisionedProduct"
 
 
 -- | <p>Updates the specified provisioning artifact (also known as a version) for the specified product.</p> <p>You cannot update a provisioning artifact for a product that was shared with you.</p>
 updateProvisioningArtifact :: forall eff. UpdateProvisioningArtifactInput -> Aff (exception :: EXCEPTION | eff) UpdateProvisioningArtifactOutput
-updateProvisioningArtifact = Request.request serviceName "updateProvisioningArtifact" 
+updateProvisioningArtifact = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "updateProvisioningArtifact"
 
 
 -- | <p>Updates the specified TagOption.</p>
 updateTagOption :: forall eff. UpdateTagOptionInput -> Aff (exception :: EXCEPTION | eff) UpdateTagOptionOutput
-updateTagOption = Request.request serviceName "updateTagOption" 
+updateTagOption = Request.request service method  where
+    service = Request.ServiceName "ServiceCatalog"
+    method = Request.MethodName "updateTagOption"
 
 
 newtype AcceptLanguage = AcceptLanguage String
