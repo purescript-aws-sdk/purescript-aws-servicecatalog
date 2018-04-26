@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -28,7 +27,7 @@ instance encodeAcceptLanguage :: Encode AcceptLanguage where encode = genericEnc
 
 
 newtype AcceptPortfolioShareInput = AcceptPortfolioShareInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   }
 derive instance newtypeAcceptPortfolioShareInput :: Newtype AcceptPortfolioShareInput _
@@ -39,12 +38,12 @@ instance encodeAcceptPortfolioShareInput :: Encode AcceptPortfolioShareInput whe
 
 -- | Constructs AcceptPortfolioShareInput from required parameters
 newAcceptPortfolioShareInput :: Id -> AcceptPortfolioShareInput
-newAcceptPortfolioShareInput _PortfolioId = AcceptPortfolioShareInput { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newAcceptPortfolioShareInput _PortfolioId = AcceptPortfolioShareInput { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 -- | Constructs AcceptPortfolioShareInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAcceptPortfolioShareInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) } ) -> AcceptPortfolioShareInput
-newAcceptPortfolioShareInput' _PortfolioId customize = (AcceptPortfolioShareInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newAcceptPortfolioShareInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) } ) -> AcceptPortfolioShareInput
+newAcceptPortfolioShareInput' _PortfolioId customize = (AcceptPortfolioShareInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 
 
@@ -59,8 +58,8 @@ instance encodeAcceptPortfolioShareOutput :: Encode AcceptPortfolioShareOutput w
 
 -- | <p>The access level to use to filter results.</p>
 newtype AccessLevelFilter = AccessLevelFilter 
-  { "Key" :: NullOrUndefined (AccessLevelFilterKey)
-  , "Value" :: NullOrUndefined (AccessLevelFilterValue)
+  { "Key" :: Maybe (AccessLevelFilterKey)
+  , "Value" :: Maybe (AccessLevelFilterValue)
   }
 derive instance newtypeAccessLevelFilter :: Newtype AccessLevelFilter _
 derive instance repGenericAccessLevelFilter :: Generic AccessLevelFilter _
@@ -70,12 +69,12 @@ instance encodeAccessLevelFilter :: Encode AccessLevelFilter where encode = gene
 
 -- | Constructs AccessLevelFilter from required parameters
 newAccessLevelFilter :: AccessLevelFilter
-newAccessLevelFilter  = AccessLevelFilter { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newAccessLevelFilter  = AccessLevelFilter { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs AccessLevelFilter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAccessLevelFilter' :: ( { "Key" :: NullOrUndefined (AccessLevelFilterKey) , "Value" :: NullOrUndefined (AccessLevelFilterValue) } -> {"Key" :: NullOrUndefined (AccessLevelFilterKey) , "Value" :: NullOrUndefined (AccessLevelFilterValue) } ) -> AccessLevelFilter
-newAccessLevelFilter'  customize = (AccessLevelFilter <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newAccessLevelFilter' :: ( { "Key" :: Maybe (AccessLevelFilterKey) , "Value" :: Maybe (AccessLevelFilterValue) } -> {"Key" :: Maybe (AccessLevelFilterKey) , "Value" :: Maybe (AccessLevelFilterValue) } ) -> AccessLevelFilter
+newAccessLevelFilter'  customize = (AccessLevelFilter <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
@@ -152,7 +151,7 @@ instance encodeApproximateCount :: Encode ApproximateCount where encode = generi
 
 
 newtype AssociatePrincipalWithPortfolioInput = AssociatePrincipalWithPortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   , "PrincipalARN" :: (PrincipalARN)
   , "PrincipalType" :: (PrincipalType)
@@ -165,12 +164,12 @@ instance encodeAssociatePrincipalWithPortfolioInput :: Encode AssociatePrincipal
 
 -- | Constructs AssociatePrincipalWithPortfolioInput from required parameters
 newAssociatePrincipalWithPortfolioInput :: Id -> PrincipalARN -> PrincipalType -> AssociatePrincipalWithPortfolioInput
-newAssociatePrincipalWithPortfolioInput _PortfolioId _PrincipalARN _PrincipalType = AssociatePrincipalWithPortfolioInput { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "PrincipalType": _PrincipalType, "AcceptLanguage": (NullOrUndefined Nothing) }
+newAssociatePrincipalWithPortfolioInput _PortfolioId _PrincipalARN _PrincipalType = AssociatePrincipalWithPortfolioInput { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "PrincipalType": _PrincipalType, "AcceptLanguage": Nothing }
 
 -- | Constructs AssociatePrincipalWithPortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociatePrincipalWithPortfolioInput' :: Id -> PrincipalARN -> PrincipalType -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) , "PrincipalType" :: (PrincipalType) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) , "PrincipalType" :: (PrincipalType) } ) -> AssociatePrincipalWithPortfolioInput
-newAssociatePrincipalWithPortfolioInput' _PortfolioId _PrincipalARN _PrincipalType customize = (AssociatePrincipalWithPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "PrincipalType": _PrincipalType, "AcceptLanguage": (NullOrUndefined Nothing) }
+newAssociatePrincipalWithPortfolioInput' :: Id -> PrincipalARN -> PrincipalType -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) , "PrincipalType" :: (PrincipalType) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) , "PrincipalType" :: (PrincipalType) } ) -> AssociatePrincipalWithPortfolioInput
+newAssociatePrincipalWithPortfolioInput' _PortfolioId _PrincipalARN _PrincipalType customize = (AssociatePrincipalWithPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "PrincipalType": _PrincipalType, "AcceptLanguage": Nothing }
 
 
 
@@ -184,10 +183,10 @@ instance encodeAssociatePrincipalWithPortfolioOutput :: Encode AssociatePrincipa
 
 
 newtype AssociateProductWithPortfolioInput = AssociateProductWithPortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   , "PortfolioId" :: (Id)
-  , "SourcePortfolioId" :: NullOrUndefined (Id)
+  , "SourcePortfolioId" :: Maybe (Id)
   }
 derive instance newtypeAssociateProductWithPortfolioInput :: Newtype AssociateProductWithPortfolioInput _
 derive instance repGenericAssociateProductWithPortfolioInput :: Generic AssociateProductWithPortfolioInput _
@@ -197,12 +196,12 @@ instance encodeAssociateProductWithPortfolioInput :: Encode AssociateProductWith
 
 -- | Constructs AssociateProductWithPortfolioInput from required parameters
 newAssociateProductWithPortfolioInput :: Id -> Id -> AssociateProductWithPortfolioInput
-newAssociateProductWithPortfolioInput _PortfolioId _ProductId = AssociateProductWithPortfolioInput { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing), "SourcePortfolioId": (NullOrUndefined Nothing) }
+newAssociateProductWithPortfolioInput _PortfolioId _ProductId = AssociateProductWithPortfolioInput { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": Nothing, "SourcePortfolioId": Nothing }
 
 -- | Constructs AssociateProductWithPortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociateProductWithPortfolioInput' :: Id -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) , "SourcePortfolioId" :: NullOrUndefined (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) , "SourcePortfolioId" :: NullOrUndefined (Id) } ) -> AssociateProductWithPortfolioInput
-newAssociateProductWithPortfolioInput' _PortfolioId _ProductId customize = (AssociateProductWithPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing), "SourcePortfolioId": (NullOrUndefined Nothing) }
+newAssociateProductWithPortfolioInput' :: Id -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) , "SourcePortfolioId" :: Maybe (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) , "SourcePortfolioId" :: Maybe (Id) } ) -> AssociateProductWithPortfolioInput
+newAssociateProductWithPortfolioInput' _PortfolioId _ProductId customize = (AssociateProductWithPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": Nothing, "SourcePortfolioId": Nothing }
 
 
 
@@ -274,7 +273,7 @@ instance encodeChangeAction :: Encode ChangeAction where encode = genericEncode 
 
 -- | <p>Information about a CloudWatch dashboard.</p>
 newtype CloudWatchDashboard = CloudWatchDashboard 
-  { "Name" :: NullOrUndefined (CloudWatchDashboardName)
+  { "Name" :: Maybe (CloudWatchDashboardName)
   }
 derive instance newtypeCloudWatchDashboard :: Newtype CloudWatchDashboard _
 derive instance repGenericCloudWatchDashboard :: Generic CloudWatchDashboard _
@@ -284,12 +283,12 @@ instance encodeCloudWatchDashboard :: Encode CloudWatchDashboard where encode = 
 
 -- | Constructs CloudWatchDashboard from required parameters
 newCloudWatchDashboard :: CloudWatchDashboard
-newCloudWatchDashboard  = CloudWatchDashboard { "Name": (NullOrUndefined Nothing) }
+newCloudWatchDashboard  = CloudWatchDashboard { "Name": Nothing }
 
 -- | Constructs CloudWatchDashboard's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCloudWatchDashboard' :: ( { "Name" :: NullOrUndefined (CloudWatchDashboardName) } -> {"Name" :: NullOrUndefined (CloudWatchDashboardName) } ) -> CloudWatchDashboard
-newCloudWatchDashboard'  customize = (CloudWatchDashboard <<< customize) { "Name": (NullOrUndefined Nothing) }
+newCloudWatchDashboard' :: ( { "Name" :: Maybe (CloudWatchDashboardName) } -> {"Name" :: Maybe (CloudWatchDashboardName) } ) -> CloudWatchDashboard
+newCloudWatchDashboard'  customize = (CloudWatchDashboard <<< customize) { "Name": Nothing }
 
 
 
@@ -322,10 +321,10 @@ instance encodeConstraintDescription :: Encode ConstraintDescription where encod
 
 -- | <p>Information about a constraint.</p>
 newtype ConstraintDetail = ConstraintDetail 
-  { "ConstraintId" :: NullOrUndefined (Id)
-  , "Type" :: NullOrUndefined (ConstraintType)
-  , "Description" :: NullOrUndefined (ConstraintDescription)
-  , "Owner" :: NullOrUndefined (AccountId)
+  { "ConstraintId" :: Maybe (Id)
+  , "Type" :: Maybe (ConstraintType)
+  , "Description" :: Maybe (ConstraintDescription)
+  , "Owner" :: Maybe (AccountId)
   }
 derive instance newtypeConstraintDetail :: Newtype ConstraintDetail _
 derive instance repGenericConstraintDetail :: Generic ConstraintDetail _
@@ -335,12 +334,12 @@ instance encodeConstraintDetail :: Encode ConstraintDetail where encode = generi
 
 -- | Constructs ConstraintDetail from required parameters
 newConstraintDetail :: ConstraintDetail
-newConstraintDetail  = ConstraintDetail { "ConstraintId": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Owner": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newConstraintDetail  = ConstraintDetail { "ConstraintId": Nothing, "Description": Nothing, "Owner": Nothing, "Type": Nothing }
 
 -- | Constructs ConstraintDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConstraintDetail' :: ( { "ConstraintId" :: NullOrUndefined (Id) , "Type" :: NullOrUndefined (ConstraintType) , "Description" :: NullOrUndefined (ConstraintDescription) , "Owner" :: NullOrUndefined (AccountId) } -> {"ConstraintId" :: NullOrUndefined (Id) , "Type" :: NullOrUndefined (ConstraintType) , "Description" :: NullOrUndefined (ConstraintDescription) , "Owner" :: NullOrUndefined (AccountId) } ) -> ConstraintDetail
-newConstraintDetail'  customize = (ConstraintDetail <<< customize) { "ConstraintId": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Owner": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newConstraintDetail' :: ( { "ConstraintId" :: Maybe (Id) , "Type" :: Maybe (ConstraintType) , "Description" :: Maybe (ConstraintDescription) , "Owner" :: Maybe (AccountId) } -> {"ConstraintId" :: Maybe (Id) , "Type" :: Maybe (ConstraintType) , "Description" :: Maybe (ConstraintDescription) , "Owner" :: Maybe (AccountId) } ) -> ConstraintDetail
+newConstraintDetail'  customize = (ConstraintDetail <<< customize) { "ConstraintId": Nothing, "Description": Nothing, "Owner": Nothing, "Type": Nothing }
 
 
 
@@ -373,8 +372,8 @@ instance encodeConstraintSummaries :: Encode ConstraintSummaries where encode = 
 
 -- | <p>Summary information about a constraint.</p>
 newtype ConstraintSummary = ConstraintSummary 
-  { "Type" :: NullOrUndefined (ConstraintType)
-  , "Description" :: NullOrUndefined (ConstraintDescription)
+  { "Type" :: Maybe (ConstraintType)
+  , "Description" :: Maybe (ConstraintDescription)
   }
 derive instance newtypeConstraintSummary :: Newtype ConstraintSummary _
 derive instance repGenericConstraintSummary :: Generic ConstraintSummary _
@@ -384,12 +383,12 @@ instance encodeConstraintSummary :: Encode ConstraintSummary where encode = gene
 
 -- | Constructs ConstraintSummary from required parameters
 newConstraintSummary :: ConstraintSummary
-newConstraintSummary  = ConstraintSummary { "Description": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newConstraintSummary  = ConstraintSummary { "Description": Nothing, "Type": Nothing }
 
 -- | Constructs ConstraintSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newConstraintSummary' :: ( { "Type" :: NullOrUndefined (ConstraintType) , "Description" :: NullOrUndefined (ConstraintDescription) } -> {"Type" :: NullOrUndefined (ConstraintType) , "Description" :: NullOrUndefined (ConstraintDescription) } ) -> ConstraintSummary
-newConstraintSummary'  customize = (ConstraintSummary <<< customize) { "Description": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newConstraintSummary' :: ( { "Type" :: Maybe (ConstraintType) , "Description" :: Maybe (ConstraintDescription) } -> {"Type" :: Maybe (ConstraintType) , "Description" :: Maybe (ConstraintDescription) } ) -> ConstraintSummary
+newConstraintSummary'  customize = (ConstraintSummary <<< customize) { "Description": Nothing, "Type": Nothing }
 
 
 
@@ -421,12 +420,12 @@ instance encodeCopyOptions :: Encode CopyOptions where encode = genericEncode op
 
 
 newtype CopyProductInput = CopyProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "SourceProductArn" :: (ProductArn)
-  , "TargetProductId" :: NullOrUndefined (Id)
-  , "TargetProductName" :: NullOrUndefined (ProductViewName)
-  , "SourceProvisioningArtifactIdentifiers" :: NullOrUndefined (SourceProvisioningArtifactProperties)
-  , "CopyOptions" :: NullOrUndefined (CopyOptions)
+  , "TargetProductId" :: Maybe (Id)
+  , "TargetProductName" :: Maybe (ProductViewName)
+  , "SourceProvisioningArtifactIdentifiers" :: Maybe (SourceProvisioningArtifactProperties)
+  , "CopyOptions" :: Maybe (CopyOptions)
   , "IdempotencyToken" :: (IdempotencyToken)
   }
 derive instance newtypeCopyProductInput :: Newtype CopyProductInput _
@@ -437,17 +436,17 @@ instance encodeCopyProductInput :: Encode CopyProductInput where encode = generi
 
 -- | Constructs CopyProductInput from required parameters
 newCopyProductInput :: IdempotencyToken -> ProductArn -> CopyProductInput
-newCopyProductInput _IdempotencyToken _SourceProductArn = CopyProductInput { "IdempotencyToken": _IdempotencyToken, "SourceProductArn": _SourceProductArn, "AcceptLanguage": (NullOrUndefined Nothing), "CopyOptions": (NullOrUndefined Nothing), "SourceProvisioningArtifactIdentifiers": (NullOrUndefined Nothing), "TargetProductId": (NullOrUndefined Nothing), "TargetProductName": (NullOrUndefined Nothing) }
+newCopyProductInput _IdempotencyToken _SourceProductArn = CopyProductInput { "IdempotencyToken": _IdempotencyToken, "SourceProductArn": _SourceProductArn, "AcceptLanguage": Nothing, "CopyOptions": Nothing, "SourceProvisioningArtifactIdentifiers": Nothing, "TargetProductId": Nothing, "TargetProductName": Nothing }
 
 -- | Constructs CopyProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCopyProductInput' :: IdempotencyToken -> ProductArn -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "SourceProductArn" :: (ProductArn) , "TargetProductId" :: NullOrUndefined (Id) , "TargetProductName" :: NullOrUndefined (ProductViewName) , "SourceProvisioningArtifactIdentifiers" :: NullOrUndefined (SourceProvisioningArtifactProperties) , "CopyOptions" :: NullOrUndefined (CopyOptions) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "SourceProductArn" :: (ProductArn) , "TargetProductId" :: NullOrUndefined (Id) , "TargetProductName" :: NullOrUndefined (ProductViewName) , "SourceProvisioningArtifactIdentifiers" :: NullOrUndefined (SourceProvisioningArtifactProperties) , "CopyOptions" :: NullOrUndefined (CopyOptions) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CopyProductInput
-newCopyProductInput' _IdempotencyToken _SourceProductArn customize = (CopyProductInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "SourceProductArn": _SourceProductArn, "AcceptLanguage": (NullOrUndefined Nothing), "CopyOptions": (NullOrUndefined Nothing), "SourceProvisioningArtifactIdentifiers": (NullOrUndefined Nothing), "TargetProductId": (NullOrUndefined Nothing), "TargetProductName": (NullOrUndefined Nothing) }
+newCopyProductInput' :: IdempotencyToken -> ProductArn -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "SourceProductArn" :: (ProductArn) , "TargetProductId" :: Maybe (Id) , "TargetProductName" :: Maybe (ProductViewName) , "SourceProvisioningArtifactIdentifiers" :: Maybe (SourceProvisioningArtifactProperties) , "CopyOptions" :: Maybe (CopyOptions) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "SourceProductArn" :: (ProductArn) , "TargetProductId" :: Maybe (Id) , "TargetProductName" :: Maybe (ProductViewName) , "SourceProvisioningArtifactIdentifiers" :: Maybe (SourceProvisioningArtifactProperties) , "CopyOptions" :: Maybe (CopyOptions) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CopyProductInput
+newCopyProductInput' _IdempotencyToken _SourceProductArn customize = (CopyProductInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "SourceProductArn": _SourceProductArn, "AcceptLanguage": Nothing, "CopyOptions": Nothing, "SourceProvisioningArtifactIdentifiers": Nothing, "TargetProductId": Nothing, "TargetProductName": Nothing }
 
 
 
 newtype CopyProductOutput = CopyProductOutput 
-  { "CopyProductToken" :: NullOrUndefined (Id)
+  { "CopyProductToken" :: Maybe (Id)
   }
 derive instance newtypeCopyProductOutput :: Newtype CopyProductOutput _
 derive instance repGenericCopyProductOutput :: Generic CopyProductOutput _
@@ -457,12 +456,12 @@ instance encodeCopyProductOutput :: Encode CopyProductOutput where encode = gene
 
 -- | Constructs CopyProductOutput from required parameters
 newCopyProductOutput :: CopyProductOutput
-newCopyProductOutput  = CopyProductOutput { "CopyProductToken": (NullOrUndefined Nothing) }
+newCopyProductOutput  = CopyProductOutput { "CopyProductToken": Nothing }
 
 -- | Constructs CopyProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCopyProductOutput' :: ( { "CopyProductToken" :: NullOrUndefined (Id) } -> {"CopyProductToken" :: NullOrUndefined (Id) } ) -> CopyProductOutput
-newCopyProductOutput'  customize = (CopyProductOutput <<< customize) { "CopyProductToken": (NullOrUndefined Nothing) }
+newCopyProductOutput' :: ( { "CopyProductToken" :: Maybe (Id) } -> {"CopyProductToken" :: Maybe (Id) } ) -> CopyProductOutput
+newCopyProductOutput'  customize = (CopyProductOutput <<< customize) { "CopyProductToken": Nothing }
 
 
 
@@ -476,12 +475,12 @@ instance encodeCopyProductStatus :: Encode CopyProductStatus where encode = gene
 
 
 newtype CreateConstraintInput = CreateConstraintInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   , "ProductId" :: (Id)
   , "Parameters" :: (ConstraintParameters)
   , "Type" :: (ConstraintType)
-  , "Description" :: NullOrUndefined (ConstraintDescription)
+  , "Description" :: Maybe (ConstraintDescription)
   , "IdempotencyToken" :: (IdempotencyToken)
   }
 derive instance newtypeCreateConstraintInput :: Newtype CreateConstraintInput _
@@ -492,19 +491,19 @@ instance encodeCreateConstraintInput :: Encode CreateConstraintInput where encod
 
 -- | Constructs CreateConstraintInput from required parameters
 newCreateConstraintInput :: IdempotencyToken -> ConstraintParameters -> Id -> Id -> ConstraintType -> CreateConstraintInput
-newCreateConstraintInput _IdempotencyToken _Parameters _PortfolioId _ProductId _Type = CreateConstraintInput { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "PortfolioId": _PortfolioId, "ProductId": _ProductId, "Type": _Type, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newCreateConstraintInput _IdempotencyToken _Parameters _PortfolioId _ProductId _Type = CreateConstraintInput { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "PortfolioId": _PortfolioId, "ProductId": _ProductId, "Type": _Type, "AcceptLanguage": Nothing, "Description": Nothing }
 
 -- | Constructs CreateConstraintInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateConstraintInput' :: IdempotencyToken -> ConstraintParameters -> Id -> Id -> ConstraintType -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: (Id) , "Parameters" :: (ConstraintParameters) , "Type" :: (ConstraintType) , "Description" :: NullOrUndefined (ConstraintDescription) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: (Id) , "Parameters" :: (ConstraintParameters) , "Type" :: (ConstraintType) , "Description" :: NullOrUndefined (ConstraintDescription) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreateConstraintInput
-newCreateConstraintInput' _IdempotencyToken _Parameters _PortfolioId _ProductId _Type customize = (CreateConstraintInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "PortfolioId": _PortfolioId, "ProductId": _ProductId, "Type": _Type, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newCreateConstraintInput' :: IdempotencyToken -> ConstraintParameters -> Id -> Id -> ConstraintType -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: (Id) , "Parameters" :: (ConstraintParameters) , "Type" :: (ConstraintType) , "Description" :: Maybe (ConstraintDescription) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: (Id) , "Parameters" :: (ConstraintParameters) , "Type" :: (ConstraintType) , "Description" :: Maybe (ConstraintDescription) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreateConstraintInput
+newCreateConstraintInput' _IdempotencyToken _Parameters _PortfolioId _ProductId _Type customize = (CreateConstraintInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "PortfolioId": _PortfolioId, "ProductId": _ProductId, "Type": _Type, "AcceptLanguage": Nothing, "Description": Nothing }
 
 
 
 newtype CreateConstraintOutput = CreateConstraintOutput 
-  { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail)
-  , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters)
-  , "Status" :: NullOrUndefined (Status)
+  { "ConstraintDetail" :: Maybe (ConstraintDetail)
+  , "ConstraintParameters" :: Maybe (ConstraintParameters)
+  , "Status" :: Maybe (Status)
   }
 derive instance newtypeCreateConstraintOutput :: Newtype CreateConstraintOutput _
 derive instance repGenericCreateConstraintOutput :: Generic CreateConstraintOutput _
@@ -514,21 +513,21 @@ instance encodeCreateConstraintOutput :: Encode CreateConstraintOutput where enc
 
 -- | Constructs CreateConstraintOutput from required parameters
 newCreateConstraintOutput :: CreateConstraintOutput
-newCreateConstraintOutput  = CreateConstraintOutput { "ConstraintDetail": (NullOrUndefined Nothing), "ConstraintParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newCreateConstraintOutput  = CreateConstraintOutput { "ConstraintDetail": Nothing, "ConstraintParameters": Nothing, "Status": Nothing }
 
 -- | Constructs CreateConstraintOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateConstraintOutput' :: ( { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail) , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters) , "Status" :: NullOrUndefined (Status) } -> {"ConstraintDetail" :: NullOrUndefined (ConstraintDetail) , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters) , "Status" :: NullOrUndefined (Status) } ) -> CreateConstraintOutput
-newCreateConstraintOutput'  customize = (CreateConstraintOutput <<< customize) { "ConstraintDetail": (NullOrUndefined Nothing), "ConstraintParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newCreateConstraintOutput' :: ( { "ConstraintDetail" :: Maybe (ConstraintDetail) , "ConstraintParameters" :: Maybe (ConstraintParameters) , "Status" :: Maybe (Status) } -> {"ConstraintDetail" :: Maybe (ConstraintDetail) , "ConstraintParameters" :: Maybe (ConstraintParameters) , "Status" :: Maybe (Status) } ) -> CreateConstraintOutput
+newCreateConstraintOutput'  customize = (CreateConstraintOutput <<< customize) { "ConstraintDetail": Nothing, "ConstraintParameters": Nothing, "Status": Nothing }
 
 
 
 newtype CreatePortfolioInput = CreatePortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "DisplayName" :: (PortfolioDisplayName)
-  , "Description" :: NullOrUndefined (PortfolioDescription)
+  , "Description" :: Maybe (PortfolioDescription)
   , "ProviderName" :: (ProviderName)
-  , "Tags" :: NullOrUndefined (AddTags)
+  , "Tags" :: Maybe (AddTags)
   , "IdempotencyToken" :: (IdempotencyToken)
   }
 derive instance newtypeCreatePortfolioInput :: Newtype CreatePortfolioInput _
@@ -539,18 +538,18 @@ instance encodeCreatePortfolioInput :: Encode CreatePortfolioInput where encode 
 
 -- | Constructs CreatePortfolioInput from required parameters
 newCreatePortfolioInput :: PortfolioDisplayName -> IdempotencyToken -> ProviderName -> CreatePortfolioInput
-newCreatePortfolioInput _DisplayName _IdempotencyToken _ProviderName = CreatePortfolioInput { "DisplayName": _DisplayName, "IdempotencyToken": _IdempotencyToken, "ProviderName": _ProviderName, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreatePortfolioInput _DisplayName _IdempotencyToken _ProviderName = CreatePortfolioInput { "DisplayName": _DisplayName, "IdempotencyToken": _IdempotencyToken, "ProviderName": _ProviderName, "AcceptLanguage": Nothing, "Description": Nothing, "Tags": Nothing }
 
 -- | Constructs CreatePortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreatePortfolioInput' :: PortfolioDisplayName -> IdempotencyToken -> ProviderName -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "DisplayName" :: (PortfolioDisplayName) , "Description" :: NullOrUndefined (PortfolioDescription) , "ProviderName" :: (ProviderName) , "Tags" :: NullOrUndefined (AddTags) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "DisplayName" :: (PortfolioDisplayName) , "Description" :: NullOrUndefined (PortfolioDescription) , "ProviderName" :: (ProviderName) , "Tags" :: NullOrUndefined (AddTags) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreatePortfolioInput
-newCreatePortfolioInput' _DisplayName _IdempotencyToken _ProviderName customize = (CreatePortfolioInput <<< customize) { "DisplayName": _DisplayName, "IdempotencyToken": _IdempotencyToken, "ProviderName": _ProviderName, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreatePortfolioInput' :: PortfolioDisplayName -> IdempotencyToken -> ProviderName -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "DisplayName" :: (PortfolioDisplayName) , "Description" :: Maybe (PortfolioDescription) , "ProviderName" :: (ProviderName) , "Tags" :: Maybe (AddTags) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "DisplayName" :: (PortfolioDisplayName) , "Description" :: Maybe (PortfolioDescription) , "ProviderName" :: (ProviderName) , "Tags" :: Maybe (AddTags) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreatePortfolioInput
+newCreatePortfolioInput' _DisplayName _IdempotencyToken _ProviderName customize = (CreatePortfolioInput <<< customize) { "DisplayName": _DisplayName, "IdempotencyToken": _IdempotencyToken, "ProviderName": _ProviderName, "AcceptLanguage": Nothing, "Description": Nothing, "Tags": Nothing }
 
 
 
 newtype CreatePortfolioOutput = CreatePortfolioOutput 
-  { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail)
-  , "Tags" :: NullOrUndefined (Tags)
+  { "PortfolioDetail" :: Maybe (PortfolioDetail)
+  , "Tags" :: Maybe (Tags)
   }
 derive instance newtypeCreatePortfolioOutput :: Newtype CreatePortfolioOutput _
 derive instance repGenericCreatePortfolioOutput :: Generic CreatePortfolioOutput _
@@ -560,17 +559,17 @@ instance encodeCreatePortfolioOutput :: Encode CreatePortfolioOutput where encod
 
 -- | Constructs CreatePortfolioOutput from required parameters
 newCreatePortfolioOutput :: CreatePortfolioOutput
-newCreatePortfolioOutput  = CreatePortfolioOutput { "PortfolioDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreatePortfolioOutput  = CreatePortfolioOutput { "PortfolioDetail": Nothing, "Tags": Nothing }
 
 -- | Constructs CreatePortfolioOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreatePortfolioOutput' :: ( { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail) , "Tags" :: NullOrUndefined (Tags) } -> {"PortfolioDetail" :: NullOrUndefined (PortfolioDetail) , "Tags" :: NullOrUndefined (Tags) } ) -> CreatePortfolioOutput
-newCreatePortfolioOutput'  customize = (CreatePortfolioOutput <<< customize) { "PortfolioDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreatePortfolioOutput' :: ( { "PortfolioDetail" :: Maybe (PortfolioDetail) , "Tags" :: Maybe (Tags) } -> {"PortfolioDetail" :: Maybe (PortfolioDetail) , "Tags" :: Maybe (Tags) } ) -> CreatePortfolioOutput
+newCreatePortfolioOutput'  customize = (CreatePortfolioOutput <<< customize) { "PortfolioDetail": Nothing, "Tags": Nothing }
 
 
 
 newtype CreatePortfolioShareInput = CreatePortfolioShareInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   , "AccountId" :: (AccountId)
   }
@@ -582,12 +581,12 @@ instance encodeCreatePortfolioShareInput :: Encode CreatePortfolioShareInput whe
 
 -- | Constructs CreatePortfolioShareInput from required parameters
 newCreatePortfolioShareInput :: AccountId -> Id -> CreatePortfolioShareInput
-newCreatePortfolioShareInput _AccountId _PortfolioId = CreatePortfolioShareInput { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newCreatePortfolioShareInput _AccountId _PortfolioId = CreatePortfolioShareInput { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 -- | Constructs CreatePortfolioShareInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreatePortfolioShareInput' :: AccountId -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } ) -> CreatePortfolioShareInput
-newCreatePortfolioShareInput' _AccountId _PortfolioId customize = (CreatePortfolioShareInput <<< customize) { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newCreatePortfolioShareInput' :: AccountId -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } ) -> CreatePortfolioShareInput
+newCreatePortfolioShareInput' _AccountId _PortfolioId customize = (CreatePortfolioShareInput <<< customize) { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 
 
@@ -601,16 +600,16 @@ instance encodeCreatePortfolioShareOutput :: Encode CreatePortfolioShareOutput w
 
 
 newtype CreateProductInput = CreateProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Name" :: (ProductViewName)
   , "Owner" :: (ProductViewOwner)
-  , "Description" :: NullOrUndefined (ProductViewShortDescription)
-  , "Distributor" :: NullOrUndefined (ProductViewOwner)
-  , "SupportDescription" :: NullOrUndefined (SupportDescription)
-  , "SupportEmail" :: NullOrUndefined (SupportEmail)
-  , "SupportUrl" :: NullOrUndefined (SupportUrl)
+  , "Description" :: Maybe (ProductViewShortDescription)
+  , "Distributor" :: Maybe (ProductViewOwner)
+  , "SupportDescription" :: Maybe (SupportDescription)
+  , "SupportEmail" :: Maybe (SupportEmail)
+  , "SupportUrl" :: Maybe (SupportUrl)
   , "ProductType" :: (ProductType)
-  , "Tags" :: NullOrUndefined (AddTags)
+  , "Tags" :: Maybe (AddTags)
   , "ProvisioningArtifactParameters" :: (ProvisioningArtifactProperties)
   , "IdempotencyToken" :: (IdempotencyToken)
   }
@@ -622,19 +621,19 @@ instance encodeCreateProductInput :: Encode CreateProductInput where encode = ge
 
 -- | Constructs CreateProductInput from required parameters
 newCreateProductInput :: IdempotencyToken -> ProductViewName -> ProductViewOwner -> ProductType -> ProvisioningArtifactProperties -> CreateProductInput
-newCreateProductInput _IdempotencyToken _Name _Owner _ProductType _ProvisioningArtifactParameters = CreateProductInput { "IdempotencyToken": _IdempotencyToken, "Name": _Name, "Owner": _Owner, "ProductType": _ProductType, "ProvisioningArtifactParameters": _ProvisioningArtifactParameters, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Distributor": (NullOrUndefined Nothing), "SupportDescription": (NullOrUndefined Nothing), "SupportEmail": (NullOrUndefined Nothing), "SupportUrl": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateProductInput _IdempotencyToken _Name _Owner _ProductType _ProvisioningArtifactParameters = CreateProductInput { "IdempotencyToken": _IdempotencyToken, "Name": _Name, "Owner": _Owner, "ProductType": _ProductType, "ProvisioningArtifactParameters": _ProvisioningArtifactParameters, "AcceptLanguage": Nothing, "Description": Nothing, "Distributor": Nothing, "SupportDescription": Nothing, "SupportEmail": Nothing, "SupportUrl": Nothing, "Tags": Nothing }
 
 -- | Constructs CreateProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProductInput' :: IdempotencyToken -> ProductViewName -> ProductViewOwner -> ProductType -> ProvisioningArtifactProperties -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Name" :: (ProductViewName) , "Owner" :: (ProductViewOwner) , "Description" :: NullOrUndefined (ProductViewShortDescription) , "Distributor" :: NullOrUndefined (ProductViewOwner) , "SupportDescription" :: NullOrUndefined (SupportDescription) , "SupportEmail" :: NullOrUndefined (SupportEmail) , "SupportUrl" :: NullOrUndefined (SupportUrl) , "ProductType" :: (ProductType) , "Tags" :: NullOrUndefined (AddTags) , "ProvisioningArtifactParameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Name" :: (ProductViewName) , "Owner" :: (ProductViewOwner) , "Description" :: NullOrUndefined (ProductViewShortDescription) , "Distributor" :: NullOrUndefined (ProductViewOwner) , "SupportDescription" :: NullOrUndefined (SupportDescription) , "SupportEmail" :: NullOrUndefined (SupportEmail) , "SupportUrl" :: NullOrUndefined (SupportUrl) , "ProductType" :: (ProductType) , "Tags" :: NullOrUndefined (AddTags) , "ProvisioningArtifactParameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreateProductInput
-newCreateProductInput' _IdempotencyToken _Name _Owner _ProductType _ProvisioningArtifactParameters customize = (CreateProductInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "Name": _Name, "Owner": _Owner, "ProductType": _ProductType, "ProvisioningArtifactParameters": _ProvisioningArtifactParameters, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Distributor": (NullOrUndefined Nothing), "SupportDescription": (NullOrUndefined Nothing), "SupportEmail": (NullOrUndefined Nothing), "SupportUrl": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateProductInput' :: IdempotencyToken -> ProductViewName -> ProductViewOwner -> ProductType -> ProvisioningArtifactProperties -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Name" :: (ProductViewName) , "Owner" :: (ProductViewOwner) , "Description" :: Maybe (ProductViewShortDescription) , "Distributor" :: Maybe (ProductViewOwner) , "SupportDescription" :: Maybe (SupportDescription) , "SupportEmail" :: Maybe (SupportEmail) , "SupportUrl" :: Maybe (SupportUrl) , "ProductType" :: (ProductType) , "Tags" :: Maybe (AddTags) , "ProvisioningArtifactParameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Name" :: (ProductViewName) , "Owner" :: (ProductViewOwner) , "Description" :: Maybe (ProductViewShortDescription) , "Distributor" :: Maybe (ProductViewOwner) , "SupportDescription" :: Maybe (SupportDescription) , "SupportEmail" :: Maybe (SupportEmail) , "SupportUrl" :: Maybe (SupportUrl) , "ProductType" :: (ProductType) , "Tags" :: Maybe (AddTags) , "ProvisioningArtifactParameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreateProductInput
+newCreateProductInput' _IdempotencyToken _Name _Owner _ProductType _ProvisioningArtifactParameters customize = (CreateProductInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "Name": _Name, "Owner": _Owner, "ProductType": _ProductType, "ProvisioningArtifactParameters": _ProvisioningArtifactParameters, "AcceptLanguage": Nothing, "Description": Nothing, "Distributor": Nothing, "SupportDescription": Nothing, "SupportEmail": Nothing, "SupportUrl": Nothing, "Tags": Nothing }
 
 
 
 newtype CreateProductOutput = CreateProductOutput 
-  { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail)
-  , "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail)
-  , "Tags" :: NullOrUndefined (Tags)
+  { "ProductViewDetail" :: Maybe (ProductViewDetail)
+  , "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail)
+  , "Tags" :: Maybe (Tags)
   }
 derive instance newtypeCreateProductOutput :: Newtype CreateProductOutput _
 derive instance repGenericCreateProductOutput :: Generic CreateProductOutput _
@@ -644,27 +643,27 @@ instance encodeCreateProductOutput :: Encode CreateProductOutput where encode = 
 
 -- | Constructs CreateProductOutput from required parameters
 newCreateProductOutput :: CreateProductOutput
-newCreateProductOutput  = CreateProductOutput { "ProductViewDetail": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateProductOutput  = CreateProductOutput { "ProductViewDetail": Nothing, "ProvisioningArtifactDetail": Nothing, "Tags": Nothing }
 
 -- | Constructs CreateProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProductOutput' :: ( { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail) , "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Tags" :: NullOrUndefined (Tags) } -> {"ProductViewDetail" :: NullOrUndefined (ProductViewDetail) , "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Tags" :: NullOrUndefined (Tags) } ) -> CreateProductOutput
-newCreateProductOutput'  customize = (CreateProductOutput <<< customize) { "ProductViewDetail": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateProductOutput' :: ( { "ProductViewDetail" :: Maybe (ProductViewDetail) , "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Tags" :: Maybe (Tags) } -> {"ProductViewDetail" :: Maybe (ProductViewDetail) , "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Tags" :: Maybe (Tags) } ) -> CreateProductOutput
+newCreateProductOutput'  customize = (CreateProductOutput <<< customize) { "ProductViewDetail": Nothing, "ProvisioningArtifactDetail": Nothing, "Tags": Nothing }
 
 
 
 newtype CreateProvisionedProductPlanInput = CreateProvisionedProductPlanInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PlanName" :: (ProvisionedProductPlanName)
   , "PlanType" :: (ProvisionedProductPlanType)
-  , "NotificationArns" :: NullOrUndefined (NotificationArns)
-  , "PathId" :: NullOrUndefined (Id)
+  , "NotificationArns" :: Maybe (NotificationArns)
+  , "PathId" :: Maybe (Id)
   , "ProductId" :: (Id)
   , "ProvisionedProductName" :: (ProvisionedProductName)
   , "ProvisioningArtifactId" :: (Id)
-  , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters)
+  , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters)
   , "IdempotencyToken" :: (IdempotencyToken)
-  , "Tags" :: NullOrUndefined (Tags)
+  , "Tags" :: Maybe (Tags)
   }
 derive instance newtypeCreateProvisionedProductPlanInput :: Newtype CreateProvisionedProductPlanInput _
 derive instance repGenericCreateProvisionedProductPlanInput :: Generic CreateProvisionedProductPlanInput _
@@ -674,21 +673,21 @@ instance encodeCreateProvisionedProductPlanInput :: Encode CreateProvisionedProd
 
 -- | Constructs CreateProvisionedProductPlanInput from required parameters
 newCreateProvisionedProductPlanInput :: IdempotencyToken -> ProvisionedProductPlanName -> ProvisionedProductPlanType -> Id -> ProvisionedProductName -> Id -> CreateProvisionedProductPlanInput
-newCreateProvisionedProductPlanInput _IdempotencyToken _PlanName _PlanType _ProductId _ProvisionedProductName _ProvisioningArtifactId = CreateProvisionedProductPlanInput { "IdempotencyToken": _IdempotencyToken, "PlanName": _PlanName, "PlanType": _PlanType, "ProductId": _ProductId, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "NotificationArns": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateProvisionedProductPlanInput _IdempotencyToken _PlanName _PlanType _ProductId _ProvisionedProductName _ProvisioningArtifactId = CreateProvisionedProductPlanInput { "IdempotencyToken": _IdempotencyToken, "PlanName": _PlanName, "PlanType": _PlanType, "ProductId": _ProductId, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "NotificationArns": Nothing, "PathId": Nothing, "ProvisioningParameters": Nothing, "Tags": Nothing }
 
 -- | Constructs CreateProvisionedProductPlanInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProvisionedProductPlanInput' :: IdempotencyToken -> ProvisionedProductPlanName -> ProvisionedProductPlanType -> Id -> ProvisionedProductName -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanName" :: (ProvisionedProductPlanName) , "PlanType" :: (ProvisionedProductPlanType) , "NotificationArns" :: NullOrUndefined (NotificationArns) , "PathId" :: NullOrUndefined (Id) , "ProductId" :: (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningArtifactId" :: (Id) , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters) , "IdempotencyToken" :: (IdempotencyToken) , "Tags" :: NullOrUndefined (Tags) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanName" :: (ProvisionedProductPlanName) , "PlanType" :: (ProvisionedProductPlanType) , "NotificationArns" :: NullOrUndefined (NotificationArns) , "PathId" :: NullOrUndefined (Id) , "ProductId" :: (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningArtifactId" :: (Id) , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters) , "IdempotencyToken" :: (IdempotencyToken) , "Tags" :: NullOrUndefined (Tags) } ) -> CreateProvisionedProductPlanInput
-newCreateProvisionedProductPlanInput' _IdempotencyToken _PlanName _PlanType _ProductId _ProvisionedProductName _ProvisioningArtifactId customize = (CreateProvisionedProductPlanInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "PlanName": _PlanName, "PlanType": _PlanType, "ProductId": _ProductId, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "NotificationArns": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateProvisionedProductPlanInput' :: IdempotencyToken -> ProvisionedProductPlanName -> ProvisionedProductPlanType -> Id -> ProvisionedProductName -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanName" :: (ProvisionedProductPlanName) , "PlanType" :: (ProvisionedProductPlanType) , "NotificationArns" :: Maybe (NotificationArns) , "PathId" :: Maybe (Id) , "ProductId" :: (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningArtifactId" :: (Id) , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters) , "IdempotencyToken" :: (IdempotencyToken) , "Tags" :: Maybe (Tags) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanName" :: (ProvisionedProductPlanName) , "PlanType" :: (ProvisionedProductPlanType) , "NotificationArns" :: Maybe (NotificationArns) , "PathId" :: Maybe (Id) , "ProductId" :: (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningArtifactId" :: (Id) , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters) , "IdempotencyToken" :: (IdempotencyToken) , "Tags" :: Maybe (Tags) } ) -> CreateProvisionedProductPlanInput
+newCreateProvisionedProductPlanInput' _IdempotencyToken _PlanName _PlanType _ProductId _ProvisionedProductName _ProvisioningArtifactId customize = (CreateProvisionedProductPlanInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "PlanName": _PlanName, "PlanType": _PlanType, "ProductId": _ProductId, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "NotificationArns": Nothing, "PathId": Nothing, "ProvisioningParameters": Nothing, "Tags": Nothing }
 
 
 
 newtype CreateProvisionedProductPlanOutput = CreateProvisionedProductPlanOutput 
-  { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName)
-  , "PlanId" :: NullOrUndefined (Id)
-  , "ProvisionProductId" :: NullOrUndefined (Id)
-  , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName)
-  , "ProvisioningArtifactId" :: NullOrUndefined (Id)
+  { "PlanName" :: Maybe (ProvisionedProductPlanName)
+  , "PlanId" :: Maybe (Id)
+  , "ProvisionProductId" :: Maybe (Id)
+  , "ProvisionedProductName" :: Maybe (ProvisionedProductName)
+  , "ProvisioningArtifactId" :: Maybe (Id)
   }
 derive instance newtypeCreateProvisionedProductPlanOutput :: Newtype CreateProvisionedProductPlanOutput _
 derive instance repGenericCreateProvisionedProductPlanOutput :: Generic CreateProvisionedProductPlanOutput _
@@ -698,17 +697,17 @@ instance encodeCreateProvisionedProductPlanOutput :: Encode CreateProvisionedPro
 
 -- | Constructs CreateProvisionedProductPlanOutput from required parameters
 newCreateProvisionedProductPlanOutput :: CreateProvisionedProductPlanOutput
-newCreateProvisionedProductPlanOutput  = CreateProvisionedProductPlanOutput { "PlanId": (NullOrUndefined Nothing), "PlanName": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing) }
+newCreateProvisionedProductPlanOutput  = CreateProvisionedProductPlanOutput { "PlanId": Nothing, "PlanName": Nothing, "ProvisionProductId": Nothing, "ProvisionedProductName": Nothing, "ProvisioningArtifactId": Nothing }
 
 -- | Constructs CreateProvisionedProductPlanOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProvisionedProductPlanOutput' :: ( { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName) , "PlanId" :: NullOrUndefined (Id) , "ProvisionProductId" :: NullOrUndefined (Id) , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName) , "ProvisioningArtifactId" :: NullOrUndefined (Id) } -> {"PlanName" :: NullOrUndefined (ProvisionedProductPlanName) , "PlanId" :: NullOrUndefined (Id) , "ProvisionProductId" :: NullOrUndefined (Id) , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName) , "ProvisioningArtifactId" :: NullOrUndefined (Id) } ) -> CreateProvisionedProductPlanOutput
-newCreateProvisionedProductPlanOutput'  customize = (CreateProvisionedProductPlanOutput <<< customize) { "PlanId": (NullOrUndefined Nothing), "PlanName": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing) }
+newCreateProvisionedProductPlanOutput' :: ( { "PlanName" :: Maybe (ProvisionedProductPlanName) , "PlanId" :: Maybe (Id) , "ProvisionProductId" :: Maybe (Id) , "ProvisionedProductName" :: Maybe (ProvisionedProductName) , "ProvisioningArtifactId" :: Maybe (Id) } -> {"PlanName" :: Maybe (ProvisionedProductPlanName) , "PlanId" :: Maybe (Id) , "ProvisionProductId" :: Maybe (Id) , "ProvisionedProductName" :: Maybe (ProvisionedProductName) , "ProvisioningArtifactId" :: Maybe (Id) } ) -> CreateProvisionedProductPlanOutput
+newCreateProvisionedProductPlanOutput'  customize = (CreateProvisionedProductPlanOutput <<< customize) { "PlanId": Nothing, "PlanName": Nothing, "ProvisionProductId": Nothing, "ProvisionedProductName": Nothing, "ProvisioningArtifactId": Nothing }
 
 
 
 newtype CreateProvisioningArtifactInput = CreateProvisioningArtifactInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   , "Parameters" :: (ProvisioningArtifactProperties)
   , "IdempotencyToken" :: (IdempotencyToken)
@@ -721,19 +720,19 @@ instance encodeCreateProvisioningArtifactInput :: Encode CreateProvisioningArtif
 
 -- | Constructs CreateProvisioningArtifactInput from required parameters
 newCreateProvisioningArtifactInput :: IdempotencyToken -> ProvisioningArtifactProperties -> Id -> CreateProvisioningArtifactInput
-newCreateProvisioningArtifactInput _IdempotencyToken _Parameters _ProductId = CreateProvisioningArtifactInput { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newCreateProvisioningArtifactInput _IdempotencyToken _Parameters _ProductId = CreateProvisioningArtifactInput { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "ProductId": _ProductId, "AcceptLanguage": Nothing }
 
 -- | Constructs CreateProvisioningArtifactInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProvisioningArtifactInput' :: IdempotencyToken -> ProvisioningArtifactProperties -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "Parameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "Parameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreateProvisioningArtifactInput
-newCreateProvisioningArtifactInput' _IdempotencyToken _Parameters _ProductId customize = (CreateProvisioningArtifactInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newCreateProvisioningArtifactInput' :: IdempotencyToken -> ProvisioningArtifactProperties -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "Parameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "Parameters" :: (ProvisioningArtifactProperties) , "IdempotencyToken" :: (IdempotencyToken) } ) -> CreateProvisioningArtifactInput
+newCreateProvisioningArtifactInput' _IdempotencyToken _Parameters _ProductId customize = (CreateProvisioningArtifactInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "Parameters": _Parameters, "ProductId": _ProductId, "AcceptLanguage": Nothing }
 
 
 
 newtype CreateProvisioningArtifactOutput = CreateProvisioningArtifactOutput 
-  { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail)
-  , "Info" :: NullOrUndefined (ProvisioningArtifactInfo)
-  , "Status" :: NullOrUndefined (Status)
+  { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail)
+  , "Info" :: Maybe (ProvisioningArtifactInfo)
+  , "Status" :: Maybe (Status)
   }
 derive instance newtypeCreateProvisioningArtifactOutput :: Newtype CreateProvisioningArtifactOutput _
 derive instance repGenericCreateProvisioningArtifactOutput :: Generic CreateProvisioningArtifactOutput _
@@ -743,12 +742,12 @@ instance encodeCreateProvisioningArtifactOutput :: Encode CreateProvisioningArti
 
 -- | Constructs CreateProvisioningArtifactOutput from required parameters
 newCreateProvisioningArtifactOutput :: CreateProvisioningArtifactOutput
-newCreateProvisioningArtifactOutput  = CreateProvisioningArtifactOutput { "Info": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newCreateProvisioningArtifactOutput  = CreateProvisioningArtifactOutput { "Info": Nothing, "ProvisioningArtifactDetail": Nothing, "Status": Nothing }
 
 -- | Constructs CreateProvisioningArtifactOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProvisioningArtifactOutput' :: ( { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Info" :: NullOrUndefined (ProvisioningArtifactInfo) , "Status" :: NullOrUndefined (Status) } -> {"ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Info" :: NullOrUndefined (ProvisioningArtifactInfo) , "Status" :: NullOrUndefined (Status) } ) -> CreateProvisioningArtifactOutput
-newCreateProvisioningArtifactOutput'  customize = (CreateProvisioningArtifactOutput <<< customize) { "Info": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newCreateProvisioningArtifactOutput' :: ( { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Info" :: Maybe (ProvisioningArtifactInfo) , "Status" :: Maybe (Status) } -> {"ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Info" :: Maybe (ProvisioningArtifactInfo) , "Status" :: Maybe (Status) } ) -> CreateProvisioningArtifactOutput
+newCreateProvisioningArtifactOutput'  customize = (CreateProvisioningArtifactOutput <<< customize) { "Info": Nothing, "ProvisioningArtifactDetail": Nothing, "Status": Nothing }
 
 
 
@@ -774,7 +773,7 @@ newCreateTagOptionInput' _Key _Value customize = (CreateTagOptionInput <<< custo
 
 
 newtype CreateTagOptionOutput = CreateTagOptionOutput 
-  { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail)
+  { "TagOptionDetail" :: Maybe (TagOptionDetail)
   }
 derive instance newtypeCreateTagOptionOutput :: Newtype CreateTagOptionOutput _
 derive instance repGenericCreateTagOptionOutput :: Generic CreateTagOptionOutput _
@@ -784,12 +783,12 @@ instance encodeCreateTagOptionOutput :: Encode CreateTagOptionOutput where encod
 
 -- | Constructs CreateTagOptionOutput from required parameters
 newCreateTagOptionOutput :: CreateTagOptionOutput
-newCreateTagOptionOutput  = CreateTagOptionOutput { "TagOptionDetail": (NullOrUndefined Nothing) }
+newCreateTagOptionOutput  = CreateTagOptionOutput { "TagOptionDetail": Nothing }
 
 -- | Constructs CreateTagOptionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateTagOptionOutput' :: ( { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } -> {"TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } ) -> CreateTagOptionOutput
-newCreateTagOptionOutput'  customize = (CreateTagOptionOutput <<< customize) { "TagOptionDetail": (NullOrUndefined Nothing) }
+newCreateTagOptionOutput' :: ( { "TagOptionDetail" :: Maybe (TagOptionDetail) } -> {"TagOptionDetail" :: Maybe (TagOptionDetail) } ) -> CreateTagOptionOutput
+newCreateTagOptionOutput'  customize = (CreateTagOptionOutput <<< customize) { "TagOptionDetail": Nothing }
 
 
 
@@ -821,7 +820,7 @@ instance encodeDefaultValue :: Encode DefaultValue where encode = genericEncode 
 
 
 newtype DeleteConstraintInput = DeleteConstraintInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDeleteConstraintInput :: Newtype DeleteConstraintInput _
@@ -832,12 +831,12 @@ instance encodeDeleteConstraintInput :: Encode DeleteConstraintInput where encod
 
 -- | Constructs DeleteConstraintInput from required parameters
 newDeleteConstraintInput :: Id -> DeleteConstraintInput
-newDeleteConstraintInput _Id = DeleteConstraintInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeleteConstraintInput _Id = DeleteConstraintInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DeleteConstraintInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteConstraintInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DeleteConstraintInput
-newDeleteConstraintInput' _Id customize = (DeleteConstraintInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeleteConstraintInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DeleteConstraintInput
+newDeleteConstraintInput' _Id customize = (DeleteConstraintInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
@@ -851,7 +850,7 @@ instance encodeDeleteConstraintOutput :: Encode DeleteConstraintOutput where enc
 
 
 newtype DeletePortfolioInput = DeletePortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDeletePortfolioInput :: Newtype DeletePortfolioInput _
@@ -862,12 +861,12 @@ instance encodeDeletePortfolioInput :: Encode DeletePortfolioInput where encode 
 
 -- | Constructs DeletePortfolioInput from required parameters
 newDeletePortfolioInput :: Id -> DeletePortfolioInput
-newDeletePortfolioInput _Id = DeletePortfolioInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeletePortfolioInput _Id = DeletePortfolioInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DeletePortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeletePortfolioInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DeletePortfolioInput
-newDeletePortfolioInput' _Id customize = (DeletePortfolioInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeletePortfolioInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DeletePortfolioInput
+newDeletePortfolioInput' _Id customize = (DeletePortfolioInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
@@ -881,7 +880,7 @@ instance encodeDeletePortfolioOutput :: Encode DeletePortfolioOutput where encod
 
 
 newtype DeletePortfolioShareInput = DeletePortfolioShareInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   , "AccountId" :: (AccountId)
   }
@@ -893,12 +892,12 @@ instance encodeDeletePortfolioShareInput :: Encode DeletePortfolioShareInput whe
 
 -- | Constructs DeletePortfolioShareInput from required parameters
 newDeletePortfolioShareInput :: AccountId -> Id -> DeletePortfolioShareInput
-newDeletePortfolioShareInput _AccountId _PortfolioId = DeletePortfolioShareInput { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeletePortfolioShareInput _AccountId _PortfolioId = DeletePortfolioShareInput { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 -- | Constructs DeletePortfolioShareInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeletePortfolioShareInput' :: AccountId -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } ) -> DeletePortfolioShareInput
-newDeletePortfolioShareInput' _AccountId _PortfolioId customize = (DeletePortfolioShareInput <<< customize) { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeletePortfolioShareInput' :: AccountId -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "AccountId" :: (AccountId) } ) -> DeletePortfolioShareInput
+newDeletePortfolioShareInput' _AccountId _PortfolioId customize = (DeletePortfolioShareInput <<< customize) { "AccountId": _AccountId, "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 
 
@@ -912,7 +911,7 @@ instance encodeDeletePortfolioShareOutput :: Encode DeletePortfolioShareOutput w
 
 
 newtype DeleteProductInput = DeleteProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDeleteProductInput :: Newtype DeleteProductInput _
@@ -923,12 +922,12 @@ instance encodeDeleteProductInput :: Encode DeleteProductInput where encode = ge
 
 -- | Constructs DeleteProductInput from required parameters
 newDeleteProductInput :: Id -> DeleteProductInput
-newDeleteProductInput _Id = DeleteProductInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeleteProductInput _Id = DeleteProductInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DeleteProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteProductInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DeleteProductInput
-newDeleteProductInput' _Id customize = (DeleteProductInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeleteProductInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DeleteProductInput
+newDeleteProductInput' _Id customize = (DeleteProductInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
@@ -942,9 +941,9 @@ instance encodeDeleteProductOutput :: Encode DeleteProductOutput where encode = 
 
 
 newtype DeleteProvisionedProductPlanInput = DeleteProvisionedProductPlanInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PlanId" :: (Id)
-  , "IgnoreErrors" :: NullOrUndefined (IgnoreErrors)
+  , "IgnoreErrors" :: Maybe (IgnoreErrors)
   }
 derive instance newtypeDeleteProvisionedProductPlanInput :: Newtype DeleteProvisionedProductPlanInput _
 derive instance repGenericDeleteProvisionedProductPlanInput :: Generic DeleteProvisionedProductPlanInput _
@@ -954,12 +953,12 @@ instance encodeDeleteProvisionedProductPlanInput :: Encode DeleteProvisionedProd
 
 -- | Constructs DeleteProvisionedProductPlanInput from required parameters
 newDeleteProvisionedProductPlanInput :: Id -> DeleteProvisionedProductPlanInput
-newDeleteProvisionedProductPlanInput _PlanId = DeleteProvisionedProductPlanInput { "PlanId": _PlanId, "AcceptLanguage": (NullOrUndefined Nothing), "IgnoreErrors": (NullOrUndefined Nothing) }
+newDeleteProvisionedProductPlanInput _PlanId = DeleteProvisionedProductPlanInput { "PlanId": _PlanId, "AcceptLanguage": Nothing, "IgnoreErrors": Nothing }
 
 -- | Constructs DeleteProvisionedProductPlanInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteProvisionedProductPlanInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanId" :: (Id) , "IgnoreErrors" :: NullOrUndefined (IgnoreErrors) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanId" :: (Id) , "IgnoreErrors" :: NullOrUndefined (IgnoreErrors) } ) -> DeleteProvisionedProductPlanInput
-newDeleteProvisionedProductPlanInput' _PlanId customize = (DeleteProvisionedProductPlanInput <<< customize) { "PlanId": _PlanId, "AcceptLanguage": (NullOrUndefined Nothing), "IgnoreErrors": (NullOrUndefined Nothing) }
+newDeleteProvisionedProductPlanInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanId" :: (Id) , "IgnoreErrors" :: Maybe (IgnoreErrors) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanId" :: (Id) , "IgnoreErrors" :: Maybe (IgnoreErrors) } ) -> DeleteProvisionedProductPlanInput
+newDeleteProvisionedProductPlanInput' _PlanId customize = (DeleteProvisionedProductPlanInput <<< customize) { "PlanId": _PlanId, "AcceptLanguage": Nothing, "IgnoreErrors": Nothing }
 
 
 
@@ -973,7 +972,7 @@ instance encodeDeleteProvisionedProductPlanOutput :: Encode DeleteProvisionedPro
 
 
 newtype DeleteProvisioningArtifactInput = DeleteProvisioningArtifactInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   , "ProvisioningArtifactId" :: (Id)
   }
@@ -985,12 +984,12 @@ instance encodeDeleteProvisioningArtifactInput :: Encode DeleteProvisioningArtif
 
 -- | Constructs DeleteProvisioningArtifactInput from required parameters
 newDeleteProvisioningArtifactInput :: Id -> Id -> DeleteProvisioningArtifactInput
-newDeleteProvisioningArtifactInput _ProductId _ProvisioningArtifactId = DeleteProvisioningArtifactInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeleteProvisioningArtifactInput _ProductId _ProvisioningArtifactId = DeleteProvisioningArtifactInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing }
 
 -- | Constructs DeleteProvisioningArtifactInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteProvisioningArtifactInput' :: Id -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) } ) -> DeleteProvisioningArtifactInput
-newDeleteProvisioningArtifactInput' _ProductId _ProvisioningArtifactId customize = (DeleteProvisioningArtifactInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDeleteProvisioningArtifactInput' :: Id -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) } ) -> DeleteProvisioningArtifactInput
+newDeleteProvisioningArtifactInput' _ProductId _ProvisioningArtifactId customize = (DeleteProvisioningArtifactInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing }
 
 
 
@@ -1033,7 +1032,7 @@ instance encodeDeleteTagOptionOutput :: Encode DeleteTagOptionOutput where encod
 
 
 newtype DescribeConstraintInput = DescribeConstraintInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDescribeConstraintInput :: Newtype DescribeConstraintInput _
@@ -1044,19 +1043,19 @@ instance encodeDescribeConstraintInput :: Encode DescribeConstraintInput where e
 
 -- | Constructs DescribeConstraintInput from required parameters
 newDescribeConstraintInput :: Id -> DescribeConstraintInput
-newDescribeConstraintInput _Id = DescribeConstraintInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeConstraintInput _Id = DescribeConstraintInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DescribeConstraintInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeConstraintInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeConstraintInput
-newDescribeConstraintInput' _Id customize = (DescribeConstraintInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeConstraintInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeConstraintInput
+newDescribeConstraintInput' _Id customize = (DescribeConstraintInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
 newtype DescribeConstraintOutput = DescribeConstraintOutput 
-  { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail)
-  , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters)
-  , "Status" :: NullOrUndefined (Status)
+  { "ConstraintDetail" :: Maybe (ConstraintDetail)
+  , "ConstraintParameters" :: Maybe (ConstraintParameters)
+  , "Status" :: Maybe (Status)
   }
 derive instance newtypeDescribeConstraintOutput :: Newtype DescribeConstraintOutput _
 derive instance repGenericDescribeConstraintOutput :: Generic DescribeConstraintOutput _
@@ -1066,17 +1065,17 @@ instance encodeDescribeConstraintOutput :: Encode DescribeConstraintOutput where
 
 -- | Constructs DescribeConstraintOutput from required parameters
 newDescribeConstraintOutput :: DescribeConstraintOutput
-newDescribeConstraintOutput  = DescribeConstraintOutput { "ConstraintDetail": (NullOrUndefined Nothing), "ConstraintParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeConstraintOutput  = DescribeConstraintOutput { "ConstraintDetail": Nothing, "ConstraintParameters": Nothing, "Status": Nothing }
 
 -- | Constructs DescribeConstraintOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeConstraintOutput' :: ( { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail) , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters) , "Status" :: NullOrUndefined (Status) } -> {"ConstraintDetail" :: NullOrUndefined (ConstraintDetail) , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters) , "Status" :: NullOrUndefined (Status) } ) -> DescribeConstraintOutput
-newDescribeConstraintOutput'  customize = (DescribeConstraintOutput <<< customize) { "ConstraintDetail": (NullOrUndefined Nothing), "ConstraintParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeConstraintOutput' :: ( { "ConstraintDetail" :: Maybe (ConstraintDetail) , "ConstraintParameters" :: Maybe (ConstraintParameters) , "Status" :: Maybe (Status) } -> {"ConstraintDetail" :: Maybe (ConstraintDetail) , "ConstraintParameters" :: Maybe (ConstraintParameters) , "Status" :: Maybe (Status) } ) -> DescribeConstraintOutput
+newDescribeConstraintOutput'  customize = (DescribeConstraintOutput <<< customize) { "ConstraintDetail": Nothing, "ConstraintParameters": Nothing, "Status": Nothing }
 
 
 
 newtype DescribeCopyProductStatusInput = DescribeCopyProductStatusInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "CopyProductToken" :: (Id)
   }
 derive instance newtypeDescribeCopyProductStatusInput :: Newtype DescribeCopyProductStatusInput _
@@ -1087,19 +1086,19 @@ instance encodeDescribeCopyProductStatusInput :: Encode DescribeCopyProductStatu
 
 -- | Constructs DescribeCopyProductStatusInput from required parameters
 newDescribeCopyProductStatusInput :: Id -> DescribeCopyProductStatusInput
-newDescribeCopyProductStatusInput _CopyProductToken = DescribeCopyProductStatusInput { "CopyProductToken": _CopyProductToken, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeCopyProductStatusInput _CopyProductToken = DescribeCopyProductStatusInput { "CopyProductToken": _CopyProductToken, "AcceptLanguage": Nothing }
 
 -- | Constructs DescribeCopyProductStatusInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeCopyProductStatusInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "CopyProductToken" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "CopyProductToken" :: (Id) } ) -> DescribeCopyProductStatusInput
-newDescribeCopyProductStatusInput' _CopyProductToken customize = (DescribeCopyProductStatusInput <<< customize) { "CopyProductToken": _CopyProductToken, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeCopyProductStatusInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "CopyProductToken" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "CopyProductToken" :: (Id) } ) -> DescribeCopyProductStatusInput
+newDescribeCopyProductStatusInput' _CopyProductToken customize = (DescribeCopyProductStatusInput <<< customize) { "CopyProductToken": _CopyProductToken, "AcceptLanguage": Nothing }
 
 
 
 newtype DescribeCopyProductStatusOutput = DescribeCopyProductStatusOutput 
-  { "CopyProductStatus" :: NullOrUndefined (CopyProductStatus)
-  , "TargetProductId" :: NullOrUndefined (Id)
-  , "StatusDetail" :: NullOrUndefined (StatusDetail)
+  { "CopyProductStatus" :: Maybe (CopyProductStatus)
+  , "TargetProductId" :: Maybe (Id)
+  , "StatusDetail" :: Maybe (StatusDetail)
   }
 derive instance newtypeDescribeCopyProductStatusOutput :: Newtype DescribeCopyProductStatusOutput _
 derive instance repGenericDescribeCopyProductStatusOutput :: Generic DescribeCopyProductStatusOutput _
@@ -1109,17 +1108,17 @@ instance encodeDescribeCopyProductStatusOutput :: Encode DescribeCopyProductStat
 
 -- | Constructs DescribeCopyProductStatusOutput from required parameters
 newDescribeCopyProductStatusOutput :: DescribeCopyProductStatusOutput
-newDescribeCopyProductStatusOutput  = DescribeCopyProductStatusOutput { "CopyProductStatus": (NullOrUndefined Nothing), "StatusDetail": (NullOrUndefined Nothing), "TargetProductId": (NullOrUndefined Nothing) }
+newDescribeCopyProductStatusOutput  = DescribeCopyProductStatusOutput { "CopyProductStatus": Nothing, "StatusDetail": Nothing, "TargetProductId": Nothing }
 
 -- | Constructs DescribeCopyProductStatusOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeCopyProductStatusOutput' :: ( { "CopyProductStatus" :: NullOrUndefined (CopyProductStatus) , "TargetProductId" :: NullOrUndefined (Id) , "StatusDetail" :: NullOrUndefined (StatusDetail) } -> {"CopyProductStatus" :: NullOrUndefined (CopyProductStatus) , "TargetProductId" :: NullOrUndefined (Id) , "StatusDetail" :: NullOrUndefined (StatusDetail) } ) -> DescribeCopyProductStatusOutput
-newDescribeCopyProductStatusOutput'  customize = (DescribeCopyProductStatusOutput <<< customize) { "CopyProductStatus": (NullOrUndefined Nothing), "StatusDetail": (NullOrUndefined Nothing), "TargetProductId": (NullOrUndefined Nothing) }
+newDescribeCopyProductStatusOutput' :: ( { "CopyProductStatus" :: Maybe (CopyProductStatus) , "TargetProductId" :: Maybe (Id) , "StatusDetail" :: Maybe (StatusDetail) } -> {"CopyProductStatus" :: Maybe (CopyProductStatus) , "TargetProductId" :: Maybe (Id) , "StatusDetail" :: Maybe (StatusDetail) } ) -> DescribeCopyProductStatusOutput
+newDescribeCopyProductStatusOutput'  customize = (DescribeCopyProductStatusOutput <<< customize) { "CopyProductStatus": Nothing, "StatusDetail": Nothing, "TargetProductId": Nothing }
 
 
 
 newtype DescribePortfolioInput = DescribePortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDescribePortfolioInput :: Newtype DescribePortfolioInput _
@@ -1130,19 +1129,19 @@ instance encodeDescribePortfolioInput :: Encode DescribePortfolioInput where enc
 
 -- | Constructs DescribePortfolioInput from required parameters
 newDescribePortfolioInput :: Id -> DescribePortfolioInput
-newDescribePortfolioInput _Id = DescribePortfolioInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribePortfolioInput _Id = DescribePortfolioInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DescribePortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribePortfolioInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DescribePortfolioInput
-newDescribePortfolioInput' _Id customize = (DescribePortfolioInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribePortfolioInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DescribePortfolioInput
+newDescribePortfolioInput' _Id customize = (DescribePortfolioInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
 newtype DescribePortfolioOutput = DescribePortfolioOutput 
-  { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail)
-  , "Tags" :: NullOrUndefined (Tags)
-  , "TagOptions" :: NullOrUndefined (TagOptionDetails)
+  { "PortfolioDetail" :: Maybe (PortfolioDetail)
+  , "Tags" :: Maybe (Tags)
+  , "TagOptions" :: Maybe (TagOptionDetails)
   }
 derive instance newtypeDescribePortfolioOutput :: Newtype DescribePortfolioOutput _
 derive instance repGenericDescribePortfolioOutput :: Generic DescribePortfolioOutput _
@@ -1152,17 +1151,17 @@ instance encodeDescribePortfolioOutput :: Encode DescribePortfolioOutput where e
 
 -- | Constructs DescribePortfolioOutput from required parameters
 newDescribePortfolioOutput :: DescribePortfolioOutput
-newDescribePortfolioOutput  = DescribePortfolioOutput { "PortfolioDetail": (NullOrUndefined Nothing), "TagOptions": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newDescribePortfolioOutput  = DescribePortfolioOutput { "PortfolioDetail": Nothing, "TagOptions": Nothing, "Tags": Nothing }
 
 -- | Constructs DescribePortfolioOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribePortfolioOutput' :: ( { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail) , "Tags" :: NullOrUndefined (Tags) , "TagOptions" :: NullOrUndefined (TagOptionDetails) } -> {"PortfolioDetail" :: NullOrUndefined (PortfolioDetail) , "Tags" :: NullOrUndefined (Tags) , "TagOptions" :: NullOrUndefined (TagOptionDetails) } ) -> DescribePortfolioOutput
-newDescribePortfolioOutput'  customize = (DescribePortfolioOutput <<< customize) { "PortfolioDetail": (NullOrUndefined Nothing), "TagOptions": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newDescribePortfolioOutput' :: ( { "PortfolioDetail" :: Maybe (PortfolioDetail) , "Tags" :: Maybe (Tags) , "TagOptions" :: Maybe (TagOptionDetails) } -> {"PortfolioDetail" :: Maybe (PortfolioDetail) , "Tags" :: Maybe (Tags) , "TagOptions" :: Maybe (TagOptionDetails) } ) -> DescribePortfolioOutput
+newDescribePortfolioOutput'  customize = (DescribePortfolioOutput <<< customize) { "PortfolioDetail": Nothing, "TagOptions": Nothing, "Tags": Nothing }
 
 
 
 newtype DescribeProductAsAdminInput = DescribeProductAsAdminInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDescribeProductAsAdminInput :: Newtype DescribeProductAsAdminInput _
@@ -1173,20 +1172,20 @@ instance encodeDescribeProductAsAdminInput :: Encode DescribeProductAsAdminInput
 
 -- | Constructs DescribeProductAsAdminInput from required parameters
 newDescribeProductAsAdminInput :: Id -> DescribeProductAsAdminInput
-newDescribeProductAsAdminInput _Id = DescribeProductAsAdminInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProductAsAdminInput _Id = DescribeProductAsAdminInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DescribeProductAsAdminInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProductAsAdminInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProductAsAdminInput
-newDescribeProductAsAdminInput' _Id customize = (DescribeProductAsAdminInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProductAsAdminInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProductAsAdminInput
+newDescribeProductAsAdminInput' _Id customize = (DescribeProductAsAdminInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
 newtype DescribeProductAsAdminOutput = DescribeProductAsAdminOutput 
-  { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail)
-  , "ProvisioningArtifactSummaries" :: NullOrUndefined (ProvisioningArtifactSummaries)
-  , "Tags" :: NullOrUndefined (Tags)
-  , "TagOptions" :: NullOrUndefined (TagOptionDetails)
+  { "ProductViewDetail" :: Maybe (ProductViewDetail)
+  , "ProvisioningArtifactSummaries" :: Maybe (ProvisioningArtifactSummaries)
+  , "Tags" :: Maybe (Tags)
+  , "TagOptions" :: Maybe (TagOptionDetails)
   }
 derive instance newtypeDescribeProductAsAdminOutput :: Newtype DescribeProductAsAdminOutput _
 derive instance repGenericDescribeProductAsAdminOutput :: Generic DescribeProductAsAdminOutput _
@@ -1196,17 +1195,17 @@ instance encodeDescribeProductAsAdminOutput :: Encode DescribeProductAsAdminOutp
 
 -- | Constructs DescribeProductAsAdminOutput from required parameters
 newDescribeProductAsAdminOutput :: DescribeProductAsAdminOutput
-newDescribeProductAsAdminOutput  = DescribeProductAsAdminOutput { "ProductViewDetail": (NullOrUndefined Nothing), "ProvisioningArtifactSummaries": (NullOrUndefined Nothing), "TagOptions": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newDescribeProductAsAdminOutput  = DescribeProductAsAdminOutput { "ProductViewDetail": Nothing, "ProvisioningArtifactSummaries": Nothing, "TagOptions": Nothing, "Tags": Nothing }
 
 -- | Constructs DescribeProductAsAdminOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProductAsAdminOutput' :: ( { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail) , "ProvisioningArtifactSummaries" :: NullOrUndefined (ProvisioningArtifactSummaries) , "Tags" :: NullOrUndefined (Tags) , "TagOptions" :: NullOrUndefined (TagOptionDetails) } -> {"ProductViewDetail" :: NullOrUndefined (ProductViewDetail) , "ProvisioningArtifactSummaries" :: NullOrUndefined (ProvisioningArtifactSummaries) , "Tags" :: NullOrUndefined (Tags) , "TagOptions" :: NullOrUndefined (TagOptionDetails) } ) -> DescribeProductAsAdminOutput
-newDescribeProductAsAdminOutput'  customize = (DescribeProductAsAdminOutput <<< customize) { "ProductViewDetail": (NullOrUndefined Nothing), "ProvisioningArtifactSummaries": (NullOrUndefined Nothing), "TagOptions": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newDescribeProductAsAdminOutput' :: ( { "ProductViewDetail" :: Maybe (ProductViewDetail) , "ProvisioningArtifactSummaries" :: Maybe (ProvisioningArtifactSummaries) , "Tags" :: Maybe (Tags) , "TagOptions" :: Maybe (TagOptionDetails) } -> {"ProductViewDetail" :: Maybe (ProductViewDetail) , "ProvisioningArtifactSummaries" :: Maybe (ProvisioningArtifactSummaries) , "Tags" :: Maybe (Tags) , "TagOptions" :: Maybe (TagOptionDetails) } ) -> DescribeProductAsAdminOutput
+newDescribeProductAsAdminOutput'  customize = (DescribeProductAsAdminOutput <<< customize) { "ProductViewDetail": Nothing, "ProvisioningArtifactSummaries": Nothing, "TagOptions": Nothing, "Tags": Nothing }
 
 
 
 newtype DescribeProductInput = DescribeProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDescribeProductInput :: Newtype DescribeProductInput _
@@ -1217,18 +1216,18 @@ instance encodeDescribeProductInput :: Encode DescribeProductInput where encode 
 
 -- | Constructs DescribeProductInput from required parameters
 newDescribeProductInput :: Id -> DescribeProductInput
-newDescribeProductInput _Id = DescribeProductInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProductInput _Id = DescribeProductInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DescribeProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProductInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProductInput
-newDescribeProductInput' _Id customize = (DescribeProductInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProductInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProductInput
+newDescribeProductInput' _Id customize = (DescribeProductInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
 newtype DescribeProductOutput = DescribeProductOutput 
-  { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary)
-  , "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts)
+  { "ProductViewSummary" :: Maybe (ProductViewSummary)
+  , "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts)
   }
 derive instance newtypeDescribeProductOutput :: Newtype DescribeProductOutput _
 derive instance repGenericDescribeProductOutput :: Generic DescribeProductOutput _
@@ -1238,17 +1237,17 @@ instance encodeDescribeProductOutput :: Encode DescribeProductOutput where encod
 
 -- | Constructs DescribeProductOutput from required parameters
 newDescribeProductOutput :: DescribeProductOutput
-newDescribeProductOutput  = DescribeProductOutput { "ProductViewSummary": (NullOrUndefined Nothing), "ProvisioningArtifacts": (NullOrUndefined Nothing) }
+newDescribeProductOutput  = DescribeProductOutput { "ProductViewSummary": Nothing, "ProvisioningArtifacts": Nothing }
 
 -- | Constructs DescribeProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProductOutput' :: ( { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary) , "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) } -> {"ProductViewSummary" :: NullOrUndefined (ProductViewSummary) , "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) } ) -> DescribeProductOutput
-newDescribeProductOutput'  customize = (DescribeProductOutput <<< customize) { "ProductViewSummary": (NullOrUndefined Nothing), "ProvisioningArtifacts": (NullOrUndefined Nothing) }
+newDescribeProductOutput' :: ( { "ProductViewSummary" :: Maybe (ProductViewSummary) , "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) } -> {"ProductViewSummary" :: Maybe (ProductViewSummary) , "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) } ) -> DescribeProductOutput
+newDescribeProductOutput'  customize = (DescribeProductOutput <<< customize) { "ProductViewSummary": Nothing, "ProvisioningArtifacts": Nothing }
 
 
 
 newtype DescribeProductViewInput = DescribeProductViewInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDescribeProductViewInput :: Newtype DescribeProductViewInput _
@@ -1259,18 +1258,18 @@ instance encodeDescribeProductViewInput :: Encode DescribeProductViewInput where
 
 -- | Constructs DescribeProductViewInput from required parameters
 newDescribeProductViewInput :: Id -> DescribeProductViewInput
-newDescribeProductViewInput _Id = DescribeProductViewInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProductViewInput _Id = DescribeProductViewInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DescribeProductViewInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProductViewInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProductViewInput
-newDescribeProductViewInput' _Id customize = (DescribeProductViewInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProductViewInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProductViewInput
+newDescribeProductViewInput' _Id customize = (DescribeProductViewInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
 newtype DescribeProductViewOutput = DescribeProductViewOutput 
-  { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary)
-  , "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts)
+  { "ProductViewSummary" :: Maybe (ProductViewSummary)
+  , "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts)
   }
 derive instance newtypeDescribeProductViewOutput :: Newtype DescribeProductViewOutput _
 derive instance repGenericDescribeProductViewOutput :: Generic DescribeProductViewOutput _
@@ -1280,17 +1279,17 @@ instance encodeDescribeProductViewOutput :: Encode DescribeProductViewOutput whe
 
 -- | Constructs DescribeProductViewOutput from required parameters
 newDescribeProductViewOutput :: DescribeProductViewOutput
-newDescribeProductViewOutput  = DescribeProductViewOutput { "ProductViewSummary": (NullOrUndefined Nothing), "ProvisioningArtifacts": (NullOrUndefined Nothing) }
+newDescribeProductViewOutput  = DescribeProductViewOutput { "ProductViewSummary": Nothing, "ProvisioningArtifacts": Nothing }
 
 -- | Constructs DescribeProductViewOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProductViewOutput' :: ( { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary) , "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) } -> {"ProductViewSummary" :: NullOrUndefined (ProductViewSummary) , "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) } ) -> DescribeProductViewOutput
-newDescribeProductViewOutput'  customize = (DescribeProductViewOutput <<< customize) { "ProductViewSummary": (NullOrUndefined Nothing), "ProvisioningArtifacts": (NullOrUndefined Nothing) }
+newDescribeProductViewOutput' :: ( { "ProductViewSummary" :: Maybe (ProductViewSummary) , "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) } -> {"ProductViewSummary" :: Maybe (ProductViewSummary) , "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) } ) -> DescribeProductViewOutput
+newDescribeProductViewOutput'  customize = (DescribeProductViewOutput <<< customize) { "ProductViewSummary": Nothing, "ProvisioningArtifacts": Nothing }
 
 
 
 newtype DescribeProvisionedProductInput = DescribeProvisionedProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
   }
 derive instance newtypeDescribeProvisionedProductInput :: Newtype DescribeProvisionedProductInput _
@@ -1301,18 +1300,18 @@ instance encodeDescribeProvisionedProductInput :: Encode DescribeProvisionedProd
 
 -- | Constructs DescribeProvisionedProductInput from required parameters
 newDescribeProvisionedProductInput :: Id -> DescribeProvisionedProductInput
-newDescribeProvisionedProductInput _Id = DescribeProvisionedProductInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductInput _Id = DescribeProvisionedProductInput { "Id": _Id, "AcceptLanguage": Nothing }
 
 -- | Constructs DescribeProvisionedProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisionedProductInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProvisionedProductInput
-newDescribeProvisionedProductInput' _Id customize = (DescribeProvisionedProductInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) } ) -> DescribeProvisionedProductInput
+newDescribeProvisionedProductInput' _Id customize = (DescribeProvisionedProductInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing }
 
 
 
 newtype DescribeProvisionedProductOutput = DescribeProvisionedProductOutput 
-  { "ProvisionedProductDetail" :: NullOrUndefined (ProvisionedProductDetail)
-  , "CloudWatchDashboards" :: NullOrUndefined (CloudWatchDashboards)
+  { "ProvisionedProductDetail" :: Maybe (ProvisionedProductDetail)
+  , "CloudWatchDashboards" :: Maybe (CloudWatchDashboards)
   }
 derive instance newtypeDescribeProvisionedProductOutput :: Newtype DescribeProvisionedProductOutput _
 derive instance repGenericDescribeProvisionedProductOutput :: Generic DescribeProvisionedProductOutput _
@@ -1322,20 +1321,20 @@ instance encodeDescribeProvisionedProductOutput :: Encode DescribeProvisionedPro
 
 -- | Constructs DescribeProvisionedProductOutput from required parameters
 newDescribeProvisionedProductOutput :: DescribeProvisionedProductOutput
-newDescribeProvisionedProductOutput  = DescribeProvisionedProductOutput { "CloudWatchDashboards": (NullOrUndefined Nothing), "ProvisionedProductDetail": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductOutput  = DescribeProvisionedProductOutput { "CloudWatchDashboards": Nothing, "ProvisionedProductDetail": Nothing }
 
 -- | Constructs DescribeProvisionedProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisionedProductOutput' :: ( { "ProvisionedProductDetail" :: NullOrUndefined (ProvisionedProductDetail) , "CloudWatchDashboards" :: NullOrUndefined (CloudWatchDashboards) } -> {"ProvisionedProductDetail" :: NullOrUndefined (ProvisionedProductDetail) , "CloudWatchDashboards" :: NullOrUndefined (CloudWatchDashboards) } ) -> DescribeProvisionedProductOutput
-newDescribeProvisionedProductOutput'  customize = (DescribeProvisionedProductOutput <<< customize) { "CloudWatchDashboards": (NullOrUndefined Nothing), "ProvisionedProductDetail": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductOutput' :: ( { "ProvisionedProductDetail" :: Maybe (ProvisionedProductDetail) , "CloudWatchDashboards" :: Maybe (CloudWatchDashboards) } -> {"ProvisionedProductDetail" :: Maybe (ProvisionedProductDetail) , "CloudWatchDashboards" :: Maybe (CloudWatchDashboards) } ) -> DescribeProvisionedProductOutput
+newDescribeProvisionedProductOutput'  customize = (DescribeProvisionedProductOutput <<< customize) { "CloudWatchDashboards": Nothing, "ProvisionedProductDetail": Nothing }
 
 
 
 newtype DescribeProvisionedProductPlanInput = DescribeProvisionedProductPlanInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PlanId" :: (Id)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeDescribeProvisionedProductPlanInput :: Newtype DescribeProvisionedProductPlanInput _
 derive instance repGenericDescribeProvisionedProductPlanInput :: Generic DescribeProvisionedProductPlanInput _
@@ -1345,19 +1344,19 @@ instance encodeDescribeProvisionedProductPlanInput :: Encode DescribeProvisioned
 
 -- | Constructs DescribeProvisionedProductPlanInput from required parameters
 newDescribeProvisionedProductPlanInput :: Id -> DescribeProvisionedProductPlanInput
-newDescribeProvisionedProductPlanInput _PlanId = DescribeProvisionedProductPlanInput { "PlanId": _PlanId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductPlanInput _PlanId = DescribeProvisionedProductPlanInput { "PlanId": _PlanId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs DescribeProvisionedProductPlanInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisionedProductPlanInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanId" :: (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanId" :: (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> DescribeProvisionedProductPlanInput
-newDescribeProvisionedProductPlanInput' _PlanId customize = (DescribeProvisionedProductPlanInput <<< customize) { "PlanId": _PlanId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductPlanInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanId" :: (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanId" :: (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> DescribeProvisionedProductPlanInput
+newDescribeProvisionedProductPlanInput' _PlanId customize = (DescribeProvisionedProductPlanInput <<< customize) { "PlanId": _PlanId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype DescribeProvisionedProductPlanOutput = DescribeProvisionedProductPlanOutput 
-  { "ProvisionedProductPlanDetails" :: NullOrUndefined (ProvisionedProductPlanDetails)
-  , "ResourceChanges" :: NullOrUndefined (ResourceChanges)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ProvisionedProductPlanDetails" :: Maybe (ProvisionedProductPlanDetails)
+  , "ResourceChanges" :: Maybe (ResourceChanges)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeDescribeProvisionedProductPlanOutput :: Newtype DescribeProvisionedProductPlanOutput _
 derive instance repGenericDescribeProvisionedProductPlanOutput :: Generic DescribeProvisionedProductPlanOutput _
@@ -1367,20 +1366,20 @@ instance encodeDescribeProvisionedProductPlanOutput :: Encode DescribeProvisione
 
 -- | Constructs DescribeProvisionedProductPlanOutput from required parameters
 newDescribeProvisionedProductPlanOutput :: DescribeProvisionedProductPlanOutput
-newDescribeProvisionedProductPlanOutput  = DescribeProvisionedProductPlanOutput { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProductPlanDetails": (NullOrUndefined Nothing), "ResourceChanges": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductPlanOutput  = DescribeProvisionedProductPlanOutput { "NextPageToken": Nothing, "ProvisionedProductPlanDetails": Nothing, "ResourceChanges": Nothing }
 
 -- | Constructs DescribeProvisionedProductPlanOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisionedProductPlanOutput' :: ( { "ProvisionedProductPlanDetails" :: NullOrUndefined (ProvisionedProductPlanDetails) , "ResourceChanges" :: NullOrUndefined (ResourceChanges) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ProvisionedProductPlanDetails" :: NullOrUndefined (ProvisionedProductPlanDetails) , "ResourceChanges" :: NullOrUndefined (ResourceChanges) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> DescribeProvisionedProductPlanOutput
-newDescribeProvisionedProductPlanOutput'  customize = (DescribeProvisionedProductPlanOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProductPlanDetails": (NullOrUndefined Nothing), "ResourceChanges": (NullOrUndefined Nothing) }
+newDescribeProvisionedProductPlanOutput' :: ( { "ProvisionedProductPlanDetails" :: Maybe (ProvisionedProductPlanDetails) , "ResourceChanges" :: Maybe (ResourceChanges) , "NextPageToken" :: Maybe (PageToken) } -> {"ProvisionedProductPlanDetails" :: Maybe (ProvisionedProductPlanDetails) , "ResourceChanges" :: Maybe (ResourceChanges) , "NextPageToken" :: Maybe (PageToken) } ) -> DescribeProvisionedProductPlanOutput
+newDescribeProvisionedProductPlanOutput'  customize = (DescribeProvisionedProductPlanOutput <<< customize) { "NextPageToken": Nothing, "ProvisionedProductPlanDetails": Nothing, "ResourceChanges": Nothing }
 
 
 
 newtype DescribeProvisioningArtifactInput = DescribeProvisioningArtifactInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProvisioningArtifactId" :: (Id)
   , "ProductId" :: (Id)
-  , "Verbose" :: NullOrUndefined (Verbose)
+  , "Verbose" :: Maybe (Verbose)
   }
 derive instance newtypeDescribeProvisioningArtifactInput :: Newtype DescribeProvisioningArtifactInput _
 derive instance repGenericDescribeProvisioningArtifactInput :: Generic DescribeProvisioningArtifactInput _
@@ -1390,19 +1389,19 @@ instance encodeDescribeProvisioningArtifactInput :: Encode DescribeProvisioningA
 
 -- | Constructs DescribeProvisioningArtifactInput from required parameters
 newDescribeProvisioningArtifactInput :: Id -> Id -> DescribeProvisioningArtifactInput
-newDescribeProvisioningArtifactInput _ProductId _ProvisioningArtifactId = DescribeProvisioningArtifactInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "Verbose": (NullOrUndefined Nothing) }
+newDescribeProvisioningArtifactInput _ProductId _ProvisioningArtifactId = DescribeProvisioningArtifactInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "Verbose": Nothing }
 
 -- | Constructs DescribeProvisioningArtifactInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisioningArtifactInput' :: Id -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProvisioningArtifactId" :: (Id) , "ProductId" :: (Id) , "Verbose" :: NullOrUndefined (Verbose) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProvisioningArtifactId" :: (Id) , "ProductId" :: (Id) , "Verbose" :: NullOrUndefined (Verbose) } ) -> DescribeProvisioningArtifactInput
-newDescribeProvisioningArtifactInput' _ProductId _ProvisioningArtifactId customize = (DescribeProvisioningArtifactInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "Verbose": (NullOrUndefined Nothing) }
+newDescribeProvisioningArtifactInput' :: Id -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProvisioningArtifactId" :: (Id) , "ProductId" :: (Id) , "Verbose" :: Maybe (Verbose) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProvisioningArtifactId" :: (Id) , "ProductId" :: (Id) , "Verbose" :: Maybe (Verbose) } ) -> DescribeProvisioningArtifactInput
+newDescribeProvisioningArtifactInput' _ProductId _ProvisioningArtifactId customize = (DescribeProvisioningArtifactInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "Verbose": Nothing }
 
 
 
 newtype DescribeProvisioningArtifactOutput = DescribeProvisioningArtifactOutput 
-  { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail)
-  , "Info" :: NullOrUndefined (ProvisioningArtifactInfo)
-  , "Status" :: NullOrUndefined (Status)
+  { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail)
+  , "Info" :: Maybe (ProvisioningArtifactInfo)
+  , "Status" :: Maybe (Status)
   }
 derive instance newtypeDescribeProvisioningArtifactOutput :: Newtype DescribeProvisioningArtifactOutput _
 derive instance repGenericDescribeProvisioningArtifactOutput :: Generic DescribeProvisioningArtifactOutput _
@@ -1412,20 +1411,20 @@ instance encodeDescribeProvisioningArtifactOutput :: Encode DescribeProvisioning
 
 -- | Constructs DescribeProvisioningArtifactOutput from required parameters
 newDescribeProvisioningArtifactOutput :: DescribeProvisioningArtifactOutput
-newDescribeProvisioningArtifactOutput  = DescribeProvisioningArtifactOutput { "Info": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeProvisioningArtifactOutput  = DescribeProvisioningArtifactOutput { "Info": Nothing, "ProvisioningArtifactDetail": Nothing, "Status": Nothing }
 
 -- | Constructs DescribeProvisioningArtifactOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisioningArtifactOutput' :: ( { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Info" :: NullOrUndefined (ProvisioningArtifactInfo) , "Status" :: NullOrUndefined (Status) } -> {"ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Info" :: NullOrUndefined (ProvisioningArtifactInfo) , "Status" :: NullOrUndefined (Status) } ) -> DescribeProvisioningArtifactOutput
-newDescribeProvisioningArtifactOutput'  customize = (DescribeProvisioningArtifactOutput <<< customize) { "Info": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newDescribeProvisioningArtifactOutput' :: ( { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Info" :: Maybe (ProvisioningArtifactInfo) , "Status" :: Maybe (Status) } -> {"ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Info" :: Maybe (ProvisioningArtifactInfo) , "Status" :: Maybe (Status) } ) -> DescribeProvisioningArtifactOutput
+newDescribeProvisioningArtifactOutput'  customize = (DescribeProvisioningArtifactOutput <<< customize) { "Info": Nothing, "ProvisioningArtifactDetail": Nothing, "Status": Nothing }
 
 
 
 newtype DescribeProvisioningParametersInput = DescribeProvisioningParametersInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   , "ProvisioningArtifactId" :: (Id)
-  , "PathId" :: NullOrUndefined (Id)
+  , "PathId" :: Maybe (Id)
   }
 derive instance newtypeDescribeProvisioningParametersInput :: Newtype DescribeProvisioningParametersInput _
 derive instance repGenericDescribeProvisioningParametersInput :: Generic DescribeProvisioningParametersInput _
@@ -1435,20 +1434,20 @@ instance encodeDescribeProvisioningParametersInput :: Encode DescribeProvisionin
 
 -- | Constructs DescribeProvisioningParametersInput from required parameters
 newDescribeProvisioningParametersInput :: Id -> Id -> DescribeProvisioningParametersInput
-newDescribeProvisioningParametersInput _ProductId _ProvisioningArtifactId = DescribeProvisioningParametersInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing) }
+newDescribeProvisioningParametersInput _ProductId _ProvisioningArtifactId = DescribeProvisioningParametersInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "PathId": Nothing }
 
 -- | Constructs DescribeProvisioningParametersInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisioningParametersInput' :: Id -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: NullOrUndefined (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: NullOrUndefined (Id) } ) -> DescribeProvisioningParametersInput
-newDescribeProvisioningParametersInput' _ProductId _ProvisioningArtifactId customize = (DescribeProvisioningParametersInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing) }
+newDescribeProvisioningParametersInput' :: Id -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: Maybe (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: Maybe (Id) } ) -> DescribeProvisioningParametersInput
+newDescribeProvisioningParametersInput' _ProductId _ProvisioningArtifactId customize = (DescribeProvisioningParametersInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "PathId": Nothing }
 
 
 
 newtype DescribeProvisioningParametersOutput = DescribeProvisioningParametersOutput 
-  { "ProvisioningArtifactParameters" :: NullOrUndefined (ProvisioningArtifactParameters)
-  , "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries)
-  , "UsageInstructions" :: NullOrUndefined (UsageInstructions)
-  , "TagOptions" :: NullOrUndefined (TagOptionSummaries)
+  { "ProvisioningArtifactParameters" :: Maybe (ProvisioningArtifactParameters)
+  , "ConstraintSummaries" :: Maybe (ConstraintSummaries)
+  , "UsageInstructions" :: Maybe (UsageInstructions)
+  , "TagOptions" :: Maybe (TagOptionSummaries)
   }
 derive instance newtypeDescribeProvisioningParametersOutput :: Newtype DescribeProvisioningParametersOutput _
 derive instance repGenericDescribeProvisioningParametersOutput :: Generic DescribeProvisioningParametersOutput _
@@ -1458,20 +1457,20 @@ instance encodeDescribeProvisioningParametersOutput :: Encode DescribeProvisioni
 
 -- | Constructs DescribeProvisioningParametersOutput from required parameters
 newDescribeProvisioningParametersOutput :: DescribeProvisioningParametersOutput
-newDescribeProvisioningParametersOutput  = DescribeProvisioningParametersOutput { "ConstraintSummaries": (NullOrUndefined Nothing), "ProvisioningArtifactParameters": (NullOrUndefined Nothing), "TagOptions": (NullOrUndefined Nothing), "UsageInstructions": (NullOrUndefined Nothing) }
+newDescribeProvisioningParametersOutput  = DescribeProvisioningParametersOutput { "ConstraintSummaries": Nothing, "ProvisioningArtifactParameters": Nothing, "TagOptions": Nothing, "UsageInstructions": Nothing }
 
 -- | Constructs DescribeProvisioningParametersOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeProvisioningParametersOutput' :: ( { "ProvisioningArtifactParameters" :: NullOrUndefined (ProvisioningArtifactParameters) , "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries) , "UsageInstructions" :: NullOrUndefined (UsageInstructions) , "TagOptions" :: NullOrUndefined (TagOptionSummaries) } -> {"ProvisioningArtifactParameters" :: NullOrUndefined (ProvisioningArtifactParameters) , "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries) , "UsageInstructions" :: NullOrUndefined (UsageInstructions) , "TagOptions" :: NullOrUndefined (TagOptionSummaries) } ) -> DescribeProvisioningParametersOutput
-newDescribeProvisioningParametersOutput'  customize = (DescribeProvisioningParametersOutput <<< customize) { "ConstraintSummaries": (NullOrUndefined Nothing), "ProvisioningArtifactParameters": (NullOrUndefined Nothing), "TagOptions": (NullOrUndefined Nothing), "UsageInstructions": (NullOrUndefined Nothing) }
+newDescribeProvisioningParametersOutput' :: ( { "ProvisioningArtifactParameters" :: Maybe (ProvisioningArtifactParameters) , "ConstraintSummaries" :: Maybe (ConstraintSummaries) , "UsageInstructions" :: Maybe (UsageInstructions) , "TagOptions" :: Maybe (TagOptionSummaries) } -> {"ProvisioningArtifactParameters" :: Maybe (ProvisioningArtifactParameters) , "ConstraintSummaries" :: Maybe (ConstraintSummaries) , "UsageInstructions" :: Maybe (UsageInstructions) , "TagOptions" :: Maybe (TagOptionSummaries) } ) -> DescribeProvisioningParametersOutput
+newDescribeProvisioningParametersOutput'  customize = (DescribeProvisioningParametersOutput <<< customize) { "ConstraintSummaries": Nothing, "ProvisioningArtifactParameters": Nothing, "TagOptions": Nothing, "UsageInstructions": Nothing }
 
 
 
 newtype DescribeRecordInput = DescribeRecordInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
-  , "PageToken" :: NullOrUndefined (PageToken)
-  , "PageSize" :: NullOrUndefined (PageSize)
+  , "PageToken" :: Maybe (PageToken)
+  , "PageSize" :: Maybe (PageSize)
   }
 derive instance newtypeDescribeRecordInput :: Newtype DescribeRecordInput _
 derive instance repGenericDescribeRecordInput :: Generic DescribeRecordInput _
@@ -1481,19 +1480,19 @@ instance encodeDescribeRecordInput :: Encode DescribeRecordInput where encode = 
 
 -- | Constructs DescribeRecordInput from required parameters
 newDescribeRecordInput :: Id -> DescribeRecordInput
-newDescribeRecordInput _Id = DescribeRecordInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newDescribeRecordInput _Id = DescribeRecordInput { "Id": _Id, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs DescribeRecordInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeRecordInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } ) -> DescribeRecordInput
-newDescribeRecordInput' _Id customize = (DescribeRecordInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newDescribeRecordInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } ) -> DescribeRecordInput
+newDescribeRecordInput' _Id customize = (DescribeRecordInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype DescribeRecordOutput = DescribeRecordOutput 
-  { "RecordDetail" :: NullOrUndefined (RecordDetail)
-  , "RecordOutputs" :: NullOrUndefined (RecordOutputs)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "RecordDetail" :: Maybe (RecordDetail)
+  , "RecordOutputs" :: Maybe (RecordOutputs)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeDescribeRecordOutput :: Newtype DescribeRecordOutput _
 derive instance repGenericDescribeRecordOutput :: Generic DescribeRecordOutput _
@@ -1503,12 +1502,12 @@ instance encodeDescribeRecordOutput :: Encode DescribeRecordOutput where encode 
 
 -- | Constructs DescribeRecordOutput from required parameters
 newDescribeRecordOutput :: DescribeRecordOutput
-newDescribeRecordOutput  = DescribeRecordOutput { "NextPageToken": (NullOrUndefined Nothing), "RecordDetail": (NullOrUndefined Nothing), "RecordOutputs": (NullOrUndefined Nothing) }
+newDescribeRecordOutput  = DescribeRecordOutput { "NextPageToken": Nothing, "RecordDetail": Nothing, "RecordOutputs": Nothing }
 
 -- | Constructs DescribeRecordOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeRecordOutput' :: ( { "RecordDetail" :: NullOrUndefined (RecordDetail) , "RecordOutputs" :: NullOrUndefined (RecordOutputs) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"RecordDetail" :: NullOrUndefined (RecordDetail) , "RecordOutputs" :: NullOrUndefined (RecordOutputs) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> DescribeRecordOutput
-newDescribeRecordOutput'  customize = (DescribeRecordOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "RecordDetail": (NullOrUndefined Nothing), "RecordOutputs": (NullOrUndefined Nothing) }
+newDescribeRecordOutput' :: ( { "RecordDetail" :: Maybe (RecordDetail) , "RecordOutputs" :: Maybe (RecordOutputs) , "NextPageToken" :: Maybe (PageToken) } -> {"RecordDetail" :: Maybe (RecordDetail) , "RecordOutputs" :: Maybe (RecordOutputs) , "NextPageToken" :: Maybe (PageToken) } ) -> DescribeRecordOutput
+newDescribeRecordOutput'  customize = (DescribeRecordOutput <<< customize) { "NextPageToken": Nothing, "RecordDetail": Nothing, "RecordOutputs": Nothing }
 
 
 
@@ -1533,7 +1532,7 @@ newDescribeTagOptionInput' _Id customize = (DescribeTagOptionInput <<< customize
 
 
 newtype DescribeTagOptionOutput = DescribeTagOptionOutput 
-  { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail)
+  { "TagOptionDetail" :: Maybe (TagOptionDetail)
   }
 derive instance newtypeDescribeTagOptionOutput :: Newtype DescribeTagOptionOutput _
 derive instance repGenericDescribeTagOptionOutput :: Generic DescribeTagOptionOutput _
@@ -1543,12 +1542,12 @@ instance encodeDescribeTagOptionOutput :: Encode DescribeTagOptionOutput where e
 
 -- | Constructs DescribeTagOptionOutput from required parameters
 newDescribeTagOptionOutput :: DescribeTagOptionOutput
-newDescribeTagOptionOutput  = DescribeTagOptionOutput { "TagOptionDetail": (NullOrUndefined Nothing) }
+newDescribeTagOptionOutput  = DescribeTagOptionOutput { "TagOptionDetail": Nothing }
 
 -- | Constructs DescribeTagOptionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDescribeTagOptionOutput' :: ( { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } -> {"TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } ) -> DescribeTagOptionOutput
-newDescribeTagOptionOutput'  customize = (DescribeTagOptionOutput <<< customize) { "TagOptionDetail": (NullOrUndefined Nothing) }
+newDescribeTagOptionOutput' :: ( { "TagOptionDetail" :: Maybe (TagOptionDetail) } -> {"TagOptionDetail" :: Maybe (TagOptionDetail) } ) -> DescribeTagOptionOutput
+newDescribeTagOptionOutput'  customize = (DescribeTagOptionOutput <<< customize) { "TagOptionDetail": Nothing }
 
 
 
@@ -1562,7 +1561,7 @@ instance encodeDescription :: Encode Description where encode = genericEncode op
 
 
 newtype DisassociatePrincipalFromPortfolioInput = DisassociatePrincipalFromPortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   , "PrincipalARN" :: (PrincipalARN)
   }
@@ -1574,12 +1573,12 @@ instance encodeDisassociatePrincipalFromPortfolioInput :: Encode DisassociatePri
 
 -- | Constructs DisassociatePrincipalFromPortfolioInput from required parameters
 newDisassociatePrincipalFromPortfolioInput :: Id -> PrincipalARN -> DisassociatePrincipalFromPortfolioInput
-newDisassociatePrincipalFromPortfolioInput _PortfolioId _PrincipalARN = DisassociatePrincipalFromPortfolioInput { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDisassociatePrincipalFromPortfolioInput _PortfolioId _PrincipalARN = DisassociatePrincipalFromPortfolioInput { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "AcceptLanguage": Nothing }
 
 -- | Constructs DisassociatePrincipalFromPortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDisassociatePrincipalFromPortfolioInput' :: Id -> PrincipalARN -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) } ) -> DisassociatePrincipalFromPortfolioInput
-newDisassociatePrincipalFromPortfolioInput' _PortfolioId _PrincipalARN customize = (DisassociatePrincipalFromPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDisassociatePrincipalFromPortfolioInput' :: Id -> PrincipalARN -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "PrincipalARN" :: (PrincipalARN) } ) -> DisassociatePrincipalFromPortfolioInput
+newDisassociatePrincipalFromPortfolioInput' _PortfolioId _PrincipalARN customize = (DisassociatePrincipalFromPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "PrincipalARN": _PrincipalARN, "AcceptLanguage": Nothing }
 
 
 
@@ -1593,7 +1592,7 @@ instance encodeDisassociatePrincipalFromPortfolioOutput :: Encode DisassociatePr
 
 
 newtype DisassociateProductFromPortfolioInput = DisassociateProductFromPortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   , "PortfolioId" :: (Id)
   }
@@ -1605,12 +1604,12 @@ instance encodeDisassociateProductFromPortfolioInput :: Encode DisassociateProdu
 
 -- | Constructs DisassociateProductFromPortfolioInput from required parameters
 newDisassociateProductFromPortfolioInput :: Id -> Id -> DisassociateProductFromPortfolioInput
-newDisassociateProductFromPortfolioInput _PortfolioId _ProductId = DisassociateProductFromPortfolioInput { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDisassociateProductFromPortfolioInput _PortfolioId _ProductId = DisassociateProductFromPortfolioInput { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": Nothing }
 
 -- | Constructs DisassociateProductFromPortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDisassociateProductFromPortfolioInput' :: Id -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) } ) -> DisassociateProductFromPortfolioInput
-newDisassociateProductFromPortfolioInput' _PortfolioId _ProductId customize = (DisassociateProductFromPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newDisassociateProductFromPortfolioInput' :: Id -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PortfolioId" :: (Id) } ) -> DisassociateProductFromPortfolioInput
+newDisassociateProductFromPortfolioInput' _PortfolioId _ProductId customize = (DisassociateProductFromPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "ProductId": _ProductId, "AcceptLanguage": Nothing }
 
 
 
@@ -1691,7 +1690,7 @@ instance encodeEvaluationType :: Encode EvaluationType where encode = genericEnc
 
 
 newtype ExecuteProvisionedProductPlanInput = ExecuteProvisionedProductPlanInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PlanId" :: (Id)
   , "IdempotencyToken" :: (IdempotencyToken)
   }
@@ -1703,17 +1702,17 @@ instance encodeExecuteProvisionedProductPlanInput :: Encode ExecuteProvisionedPr
 
 -- | Constructs ExecuteProvisionedProductPlanInput from required parameters
 newExecuteProvisionedProductPlanInput :: IdempotencyToken -> Id -> ExecuteProvisionedProductPlanInput
-newExecuteProvisionedProductPlanInput _IdempotencyToken _PlanId = ExecuteProvisionedProductPlanInput { "IdempotencyToken": _IdempotencyToken, "PlanId": _PlanId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newExecuteProvisionedProductPlanInput _IdempotencyToken _PlanId = ExecuteProvisionedProductPlanInput { "IdempotencyToken": _IdempotencyToken, "PlanId": _PlanId, "AcceptLanguage": Nothing }
 
 -- | Constructs ExecuteProvisionedProductPlanInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newExecuteProvisionedProductPlanInput' :: IdempotencyToken -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanId" :: (Id) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PlanId" :: (Id) , "IdempotencyToken" :: (IdempotencyToken) } ) -> ExecuteProvisionedProductPlanInput
-newExecuteProvisionedProductPlanInput' _IdempotencyToken _PlanId customize = (ExecuteProvisionedProductPlanInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "PlanId": _PlanId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newExecuteProvisionedProductPlanInput' :: IdempotencyToken -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanId" :: (Id) , "IdempotencyToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PlanId" :: (Id) , "IdempotencyToken" :: (IdempotencyToken) } ) -> ExecuteProvisionedProductPlanInput
+newExecuteProvisionedProductPlanInput' _IdempotencyToken _PlanId customize = (ExecuteProvisionedProductPlanInput <<< customize) { "IdempotencyToken": _IdempotencyToken, "PlanId": _PlanId, "AcceptLanguage": Nothing }
 
 
 
 newtype ExecuteProvisionedProductPlanOutput = ExecuteProvisionedProductPlanOutput 
-  { "RecordDetail" :: NullOrUndefined (RecordDetail)
+  { "RecordDetail" :: Maybe (RecordDetail)
   }
 derive instance newtypeExecuteProvisionedProductPlanOutput :: Newtype ExecuteProvisionedProductPlanOutput _
 derive instance repGenericExecuteProvisionedProductPlanOutput :: Generic ExecuteProvisionedProductPlanOutput _
@@ -1723,12 +1722,12 @@ instance encodeExecuteProvisionedProductPlanOutput :: Encode ExecuteProvisionedP
 
 -- | Constructs ExecuteProvisionedProductPlanOutput from required parameters
 newExecuteProvisionedProductPlanOutput :: ExecuteProvisionedProductPlanOutput
-newExecuteProvisionedProductPlanOutput  = ExecuteProvisionedProductPlanOutput { "RecordDetail": (NullOrUndefined Nothing) }
+newExecuteProvisionedProductPlanOutput  = ExecuteProvisionedProductPlanOutput { "RecordDetail": Nothing }
 
 -- | Constructs ExecuteProvisionedProductPlanOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newExecuteProvisionedProductPlanOutput' :: ( { "RecordDetail" :: NullOrUndefined (RecordDetail) } -> {"RecordDetail" :: NullOrUndefined (RecordDetail) } ) -> ExecuteProvisionedProductPlanOutput
-newExecuteProvisionedProductPlanOutput'  customize = (ExecuteProvisionedProductPlanOutput <<< customize) { "RecordDetail": (NullOrUndefined Nothing) }
+newExecuteProvisionedProductPlanOutput' :: ( { "RecordDetail" :: Maybe (RecordDetail) } -> {"RecordDetail" :: Maybe (RecordDetail) } ) -> ExecuteProvisionedProductPlanOutput
+newExecuteProvisionedProductPlanOutput'  customize = (ExecuteProvisionedProductPlanOutput <<< customize) { "RecordDetail": Nothing }
 
 
 
@@ -1826,10 +1825,10 @@ instance encodeLaunchPathSummaries :: Encode LaunchPathSummaries where encode = 
 
 -- | <p>Summary information about a product path for a user.</p>
 newtype LaunchPathSummary = LaunchPathSummary 
-  { "Id" :: NullOrUndefined (Id)
-  , "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries)
-  , "Tags" :: NullOrUndefined (Tags)
-  , "Name" :: NullOrUndefined (PortfolioName)
+  { "Id" :: Maybe (Id)
+  , "ConstraintSummaries" :: Maybe (ConstraintSummaries)
+  , "Tags" :: Maybe (Tags)
+  , "Name" :: Maybe (PortfolioName)
   }
 derive instance newtypeLaunchPathSummary :: Newtype LaunchPathSummary _
 derive instance repGenericLaunchPathSummary :: Generic LaunchPathSummary _
@@ -1839,12 +1838,12 @@ instance encodeLaunchPathSummary :: Encode LaunchPathSummary where encode = gene
 
 -- | Constructs LaunchPathSummary from required parameters
 newLaunchPathSummary :: LaunchPathSummary
-newLaunchPathSummary  = LaunchPathSummary { "ConstraintSummaries": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newLaunchPathSummary  = LaunchPathSummary { "ConstraintSummaries": Nothing, "Id": Nothing, "Name": Nothing, "Tags": Nothing }
 
 -- | Constructs LaunchPathSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLaunchPathSummary' :: ( { "Id" :: NullOrUndefined (Id) , "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries) , "Tags" :: NullOrUndefined (Tags) , "Name" :: NullOrUndefined (PortfolioName) } -> {"Id" :: NullOrUndefined (Id) , "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries) , "Tags" :: NullOrUndefined (Tags) , "Name" :: NullOrUndefined (PortfolioName) } ) -> LaunchPathSummary
-newLaunchPathSummary'  customize = (LaunchPathSummary <<< customize) { "ConstraintSummaries": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newLaunchPathSummary' :: ( { "Id" :: Maybe (Id) , "ConstraintSummaries" :: Maybe (ConstraintSummaries) , "Tags" :: Maybe (Tags) , "Name" :: Maybe (PortfolioName) } -> {"Id" :: Maybe (Id) , "ConstraintSummaries" :: Maybe (ConstraintSummaries) , "Tags" :: Maybe (Tags) , "Name" :: Maybe (PortfolioName) } ) -> LaunchPathSummary
+newLaunchPathSummary'  customize = (LaunchPathSummary <<< customize) { "ConstraintSummaries": Nothing, "Id": Nothing, "Name": Nothing, "Tags": Nothing }
 
 
 
@@ -1859,9 +1858,9 @@ instance encodeLimitExceededException :: Encode LimitExceededException where enc
 
 
 newtype ListAcceptedPortfolioSharesInput = ListAcceptedPortfolioSharesInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "PageToken" :: NullOrUndefined (PageToken)
-  , "PageSize" :: NullOrUndefined (PageSize)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "PageToken" :: Maybe (PageToken)
+  , "PageSize" :: Maybe (PageSize)
   }
 derive instance newtypeListAcceptedPortfolioSharesInput :: Newtype ListAcceptedPortfolioSharesInput _
 derive instance repGenericListAcceptedPortfolioSharesInput :: Generic ListAcceptedPortfolioSharesInput _
@@ -1871,18 +1870,18 @@ instance encodeListAcceptedPortfolioSharesInput :: Encode ListAcceptedPortfolioS
 
 -- | Constructs ListAcceptedPortfolioSharesInput from required parameters
 newListAcceptedPortfolioSharesInput :: ListAcceptedPortfolioSharesInput
-newListAcceptedPortfolioSharesInput  = ListAcceptedPortfolioSharesInput { "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListAcceptedPortfolioSharesInput  = ListAcceptedPortfolioSharesInput { "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs ListAcceptedPortfolioSharesInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListAcceptedPortfolioSharesInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } ) -> ListAcceptedPortfolioSharesInput
-newListAcceptedPortfolioSharesInput'  customize = (ListAcceptedPortfolioSharesInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListAcceptedPortfolioSharesInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } ) -> ListAcceptedPortfolioSharesInput
+newListAcceptedPortfolioSharesInput'  customize = (ListAcceptedPortfolioSharesInput <<< customize) { "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype ListAcceptedPortfolioSharesOutput = ListAcceptedPortfolioSharesOutput 
-  { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "PortfolioDetails" :: Maybe (PortfolioDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListAcceptedPortfolioSharesOutput :: Newtype ListAcceptedPortfolioSharesOutput _
 derive instance repGenericListAcceptedPortfolioSharesOutput :: Generic ListAcceptedPortfolioSharesOutput _
@@ -1892,21 +1891,21 @@ instance encodeListAcceptedPortfolioSharesOutput :: Encode ListAcceptedPortfolio
 
 -- | Constructs ListAcceptedPortfolioSharesOutput from required parameters
 newListAcceptedPortfolioSharesOutput :: ListAcceptedPortfolioSharesOutput
-newListAcceptedPortfolioSharesOutput  = ListAcceptedPortfolioSharesOutput { "NextPageToken": (NullOrUndefined Nothing), "PortfolioDetails": (NullOrUndefined Nothing) }
+newListAcceptedPortfolioSharesOutput  = ListAcceptedPortfolioSharesOutput { "NextPageToken": Nothing, "PortfolioDetails": Nothing }
 
 -- | Constructs ListAcceptedPortfolioSharesOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListAcceptedPortfolioSharesOutput' :: ( { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"PortfolioDetails" :: NullOrUndefined (PortfolioDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListAcceptedPortfolioSharesOutput
-newListAcceptedPortfolioSharesOutput'  customize = (ListAcceptedPortfolioSharesOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "PortfolioDetails": (NullOrUndefined Nothing) }
+newListAcceptedPortfolioSharesOutput' :: ( { "PortfolioDetails" :: Maybe (PortfolioDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"PortfolioDetails" :: Maybe (PortfolioDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> ListAcceptedPortfolioSharesOutput
+newListAcceptedPortfolioSharesOutput'  customize = (ListAcceptedPortfolioSharesOutput <<< customize) { "NextPageToken": Nothing, "PortfolioDetails": Nothing }
 
 
 
 newtype ListConstraintsForPortfolioInput = ListConstraintsForPortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
-  , "ProductId" :: NullOrUndefined (Id)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  , "ProductId" :: Maybe (Id)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListConstraintsForPortfolioInput :: Newtype ListConstraintsForPortfolioInput _
 derive instance repGenericListConstraintsForPortfolioInput :: Generic ListConstraintsForPortfolioInput _
@@ -1916,18 +1915,18 @@ instance encodeListConstraintsForPortfolioInput :: Encode ListConstraintsForPort
 
 -- | Constructs ListConstraintsForPortfolioInput from required parameters
 newListConstraintsForPortfolioInput :: Id -> ListConstraintsForPortfolioInput
-newListConstraintsForPortfolioInput _PortfolioId = ListConstraintsForPortfolioInput { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing) }
+newListConstraintsForPortfolioInput _PortfolioId = ListConstraintsForPortfolioInput { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing, "ProductId": Nothing }
 
 -- | Constructs ListConstraintsForPortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListConstraintsForPortfolioInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: NullOrUndefined (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: NullOrUndefined (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListConstraintsForPortfolioInput
-newListConstraintsForPortfolioInput' _PortfolioId customize = (ListConstraintsForPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing) }
+newListConstraintsForPortfolioInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: Maybe (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "ProductId" :: Maybe (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> ListConstraintsForPortfolioInput
+newListConstraintsForPortfolioInput' _PortfolioId customize = (ListConstraintsForPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing, "ProductId": Nothing }
 
 
 
 newtype ListConstraintsForPortfolioOutput = ListConstraintsForPortfolioOutput 
-  { "ConstraintDetails" :: NullOrUndefined (ConstraintDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ConstraintDetails" :: Maybe (ConstraintDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListConstraintsForPortfolioOutput :: Newtype ListConstraintsForPortfolioOutput _
 derive instance repGenericListConstraintsForPortfolioOutput :: Generic ListConstraintsForPortfolioOutput _
@@ -1937,20 +1936,20 @@ instance encodeListConstraintsForPortfolioOutput :: Encode ListConstraintsForPor
 
 -- | Constructs ListConstraintsForPortfolioOutput from required parameters
 newListConstraintsForPortfolioOutput :: ListConstraintsForPortfolioOutput
-newListConstraintsForPortfolioOutput  = ListConstraintsForPortfolioOutput { "ConstraintDetails": (NullOrUndefined Nothing), "NextPageToken": (NullOrUndefined Nothing) }
+newListConstraintsForPortfolioOutput  = ListConstraintsForPortfolioOutput { "ConstraintDetails": Nothing, "NextPageToken": Nothing }
 
 -- | Constructs ListConstraintsForPortfolioOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListConstraintsForPortfolioOutput' :: ( { "ConstraintDetails" :: NullOrUndefined (ConstraintDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ConstraintDetails" :: NullOrUndefined (ConstraintDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListConstraintsForPortfolioOutput
-newListConstraintsForPortfolioOutput'  customize = (ListConstraintsForPortfolioOutput <<< customize) { "ConstraintDetails": (NullOrUndefined Nothing), "NextPageToken": (NullOrUndefined Nothing) }
+newListConstraintsForPortfolioOutput' :: ( { "ConstraintDetails" :: Maybe (ConstraintDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"ConstraintDetails" :: Maybe (ConstraintDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> ListConstraintsForPortfolioOutput
+newListConstraintsForPortfolioOutput'  customize = (ListConstraintsForPortfolioOutput <<< customize) { "ConstraintDetails": Nothing, "NextPageToken": Nothing }
 
 
 
 newtype ListLaunchPathsInput = ListLaunchPathsInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListLaunchPathsInput :: Newtype ListLaunchPathsInput _
 derive instance repGenericListLaunchPathsInput :: Generic ListLaunchPathsInput _
@@ -1960,18 +1959,18 @@ instance encodeListLaunchPathsInput :: Encode ListLaunchPathsInput where encode 
 
 -- | Constructs ListLaunchPathsInput from required parameters
 newListLaunchPathsInput :: Id -> ListLaunchPathsInput
-newListLaunchPathsInput _ProductId = ListLaunchPathsInput { "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListLaunchPathsInput _ProductId = ListLaunchPathsInput { "ProductId": _ProductId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs ListLaunchPathsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLaunchPathsInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListLaunchPathsInput
-newListLaunchPathsInput' _ProductId customize = (ListLaunchPathsInput <<< customize) { "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListLaunchPathsInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> ListLaunchPathsInput
+newListLaunchPathsInput' _ProductId customize = (ListLaunchPathsInput <<< customize) { "ProductId": _ProductId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype ListLaunchPathsOutput = ListLaunchPathsOutput 
-  { "LaunchPathSummaries" :: NullOrUndefined (LaunchPathSummaries)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "LaunchPathSummaries" :: Maybe (LaunchPathSummaries)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListLaunchPathsOutput :: Newtype ListLaunchPathsOutput _
 derive instance repGenericListLaunchPathsOutput :: Generic ListLaunchPathsOutput _
@@ -1981,17 +1980,17 @@ instance encodeListLaunchPathsOutput :: Encode ListLaunchPathsOutput where encod
 
 -- | Constructs ListLaunchPathsOutput from required parameters
 newListLaunchPathsOutput :: ListLaunchPathsOutput
-newListLaunchPathsOutput  = ListLaunchPathsOutput { "LaunchPathSummaries": (NullOrUndefined Nothing), "NextPageToken": (NullOrUndefined Nothing) }
+newListLaunchPathsOutput  = ListLaunchPathsOutput { "LaunchPathSummaries": Nothing, "NextPageToken": Nothing }
 
 -- | Constructs ListLaunchPathsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListLaunchPathsOutput' :: ( { "LaunchPathSummaries" :: NullOrUndefined (LaunchPathSummaries) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"LaunchPathSummaries" :: NullOrUndefined (LaunchPathSummaries) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListLaunchPathsOutput
-newListLaunchPathsOutput'  customize = (ListLaunchPathsOutput <<< customize) { "LaunchPathSummaries": (NullOrUndefined Nothing), "NextPageToken": (NullOrUndefined Nothing) }
+newListLaunchPathsOutput' :: ( { "LaunchPathSummaries" :: Maybe (LaunchPathSummaries) , "NextPageToken" :: Maybe (PageToken) } -> {"LaunchPathSummaries" :: Maybe (LaunchPathSummaries) , "NextPageToken" :: Maybe (PageToken) } ) -> ListLaunchPathsOutput
+newListLaunchPathsOutput'  customize = (ListLaunchPathsOutput <<< customize) { "LaunchPathSummaries": Nothing, "NextPageToken": Nothing }
 
 
 
 newtype ListPortfolioAccessInput = ListPortfolioAccessInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   }
 derive instance newtypeListPortfolioAccessInput :: Newtype ListPortfolioAccessInput _
@@ -2002,18 +2001,18 @@ instance encodeListPortfolioAccessInput :: Encode ListPortfolioAccessInput where
 
 -- | Constructs ListPortfolioAccessInput from required parameters
 newListPortfolioAccessInput :: Id -> ListPortfolioAccessInput
-newListPortfolioAccessInput _PortfolioId = ListPortfolioAccessInput { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newListPortfolioAccessInput _PortfolioId = ListPortfolioAccessInput { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 -- | Constructs ListPortfolioAccessInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPortfolioAccessInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) } ) -> ListPortfolioAccessInput
-newListPortfolioAccessInput' _PortfolioId customize = (ListPortfolioAccessInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newListPortfolioAccessInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) } ) -> ListPortfolioAccessInput
+newListPortfolioAccessInput' _PortfolioId customize = (ListPortfolioAccessInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 
 
 newtype ListPortfolioAccessOutput = ListPortfolioAccessOutput 
-  { "AccountIds" :: NullOrUndefined (AccountIds)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "AccountIds" :: Maybe (AccountIds)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListPortfolioAccessOutput :: Newtype ListPortfolioAccessOutput _
 derive instance repGenericListPortfolioAccessOutput :: Generic ListPortfolioAccessOutput _
@@ -2023,20 +2022,20 @@ instance encodeListPortfolioAccessOutput :: Encode ListPortfolioAccessOutput whe
 
 -- | Constructs ListPortfolioAccessOutput from required parameters
 newListPortfolioAccessOutput :: ListPortfolioAccessOutput
-newListPortfolioAccessOutput  = ListPortfolioAccessOutput { "AccountIds": (NullOrUndefined Nothing), "NextPageToken": (NullOrUndefined Nothing) }
+newListPortfolioAccessOutput  = ListPortfolioAccessOutput { "AccountIds": Nothing, "NextPageToken": Nothing }
 
 -- | Constructs ListPortfolioAccessOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPortfolioAccessOutput' :: ( { "AccountIds" :: NullOrUndefined (AccountIds) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"AccountIds" :: NullOrUndefined (AccountIds) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListPortfolioAccessOutput
-newListPortfolioAccessOutput'  customize = (ListPortfolioAccessOutput <<< customize) { "AccountIds": (NullOrUndefined Nothing), "NextPageToken": (NullOrUndefined Nothing) }
+newListPortfolioAccessOutput' :: ( { "AccountIds" :: Maybe (AccountIds) , "NextPageToken" :: Maybe (PageToken) } -> {"AccountIds" :: Maybe (AccountIds) , "NextPageToken" :: Maybe (PageToken) } ) -> ListPortfolioAccessOutput
+newListPortfolioAccessOutput'  customize = (ListPortfolioAccessOutput <<< customize) { "AccountIds": Nothing, "NextPageToken": Nothing }
 
 
 
 newtype ListPortfoliosForProductInput = ListPortfoliosForProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
-  , "PageToken" :: NullOrUndefined (PageToken)
-  , "PageSize" :: NullOrUndefined (PageSize)
+  , "PageToken" :: Maybe (PageToken)
+  , "PageSize" :: Maybe (PageSize)
   }
 derive instance newtypeListPortfoliosForProductInput :: Newtype ListPortfoliosForProductInput _
 derive instance repGenericListPortfoliosForProductInput :: Generic ListPortfoliosForProductInput _
@@ -2046,18 +2045,18 @@ instance encodeListPortfoliosForProductInput :: Encode ListPortfoliosForProductI
 
 -- | Constructs ListPortfoliosForProductInput from required parameters
 newListPortfoliosForProductInput :: Id -> ListPortfoliosForProductInput
-newListPortfoliosForProductInput _ProductId = ListPortfoliosForProductInput { "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListPortfoliosForProductInput _ProductId = ListPortfoliosForProductInput { "ProductId": _ProductId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs ListPortfoliosForProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPortfoliosForProductInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } ) -> ListPortfoliosForProductInput
-newListPortfoliosForProductInput' _ProductId customize = (ListPortfoliosForProductInput <<< customize) { "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListPortfoliosForProductInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } ) -> ListPortfoliosForProductInput
+newListPortfoliosForProductInput' _ProductId customize = (ListPortfoliosForProductInput <<< customize) { "ProductId": _ProductId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype ListPortfoliosForProductOutput = ListPortfoliosForProductOutput 
-  { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "PortfolioDetails" :: Maybe (PortfolioDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListPortfoliosForProductOutput :: Newtype ListPortfoliosForProductOutput _
 derive instance repGenericListPortfoliosForProductOutput :: Generic ListPortfoliosForProductOutput _
@@ -2067,19 +2066,19 @@ instance encodeListPortfoliosForProductOutput :: Encode ListPortfoliosForProduct
 
 -- | Constructs ListPortfoliosForProductOutput from required parameters
 newListPortfoliosForProductOutput :: ListPortfoliosForProductOutput
-newListPortfoliosForProductOutput  = ListPortfoliosForProductOutput { "NextPageToken": (NullOrUndefined Nothing), "PortfolioDetails": (NullOrUndefined Nothing) }
+newListPortfoliosForProductOutput  = ListPortfoliosForProductOutput { "NextPageToken": Nothing, "PortfolioDetails": Nothing }
 
 -- | Constructs ListPortfoliosForProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPortfoliosForProductOutput' :: ( { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"PortfolioDetails" :: NullOrUndefined (PortfolioDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListPortfoliosForProductOutput
-newListPortfoliosForProductOutput'  customize = (ListPortfoliosForProductOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "PortfolioDetails": (NullOrUndefined Nothing) }
+newListPortfoliosForProductOutput' :: ( { "PortfolioDetails" :: Maybe (PortfolioDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"PortfolioDetails" :: Maybe (PortfolioDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> ListPortfoliosForProductOutput
+newListPortfoliosForProductOutput'  customize = (ListPortfoliosForProductOutput <<< customize) { "NextPageToken": Nothing, "PortfolioDetails": Nothing }
 
 
 
 newtype ListPortfoliosInput = ListPortfoliosInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "PageToken" :: NullOrUndefined (PageToken)
-  , "PageSize" :: NullOrUndefined (PageSize)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "PageToken" :: Maybe (PageToken)
+  , "PageSize" :: Maybe (PageSize)
   }
 derive instance newtypeListPortfoliosInput :: Newtype ListPortfoliosInput _
 derive instance repGenericListPortfoliosInput :: Generic ListPortfoliosInput _
@@ -2089,18 +2088,18 @@ instance encodeListPortfoliosInput :: Encode ListPortfoliosInput where encode = 
 
 -- | Constructs ListPortfoliosInput from required parameters
 newListPortfoliosInput :: ListPortfoliosInput
-newListPortfoliosInput  = ListPortfoliosInput { "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListPortfoliosInput  = ListPortfoliosInput { "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs ListPortfoliosInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPortfoliosInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) } ) -> ListPortfoliosInput
-newListPortfoliosInput'  customize = (ListPortfoliosInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListPortfoliosInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) } ) -> ListPortfoliosInput
+newListPortfoliosInput'  customize = (ListPortfoliosInput <<< customize) { "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype ListPortfoliosOutput = ListPortfoliosOutput 
-  { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "PortfolioDetails" :: Maybe (PortfolioDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListPortfoliosOutput :: Newtype ListPortfoliosOutput _
 derive instance repGenericListPortfoliosOutput :: Generic ListPortfoliosOutput _
@@ -2110,20 +2109,20 @@ instance encodeListPortfoliosOutput :: Encode ListPortfoliosOutput where encode 
 
 -- | Constructs ListPortfoliosOutput from required parameters
 newListPortfoliosOutput :: ListPortfoliosOutput
-newListPortfoliosOutput  = ListPortfoliosOutput { "NextPageToken": (NullOrUndefined Nothing), "PortfolioDetails": (NullOrUndefined Nothing) }
+newListPortfoliosOutput  = ListPortfoliosOutput { "NextPageToken": Nothing, "PortfolioDetails": Nothing }
 
 -- | Constructs ListPortfoliosOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPortfoliosOutput' :: ( { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"PortfolioDetails" :: NullOrUndefined (PortfolioDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListPortfoliosOutput
-newListPortfoliosOutput'  customize = (ListPortfoliosOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "PortfolioDetails": (NullOrUndefined Nothing) }
+newListPortfoliosOutput' :: ( { "PortfolioDetails" :: Maybe (PortfolioDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"PortfolioDetails" :: Maybe (PortfolioDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> ListPortfoliosOutput
+newListPortfoliosOutput'  customize = (ListPortfoliosOutput <<< customize) { "NextPageToken": Nothing, "PortfolioDetails": Nothing }
 
 
 
 newtype ListPrincipalsForPortfolioInput = ListPrincipalsForPortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListPrincipalsForPortfolioInput :: Newtype ListPrincipalsForPortfolioInput _
 derive instance repGenericListPrincipalsForPortfolioInput :: Generic ListPrincipalsForPortfolioInput _
@@ -2133,18 +2132,18 @@ instance encodeListPrincipalsForPortfolioInput :: Encode ListPrincipalsForPortfo
 
 -- | Constructs ListPrincipalsForPortfolioInput from required parameters
 newListPrincipalsForPortfolioInput :: Id -> ListPrincipalsForPortfolioInput
-newListPrincipalsForPortfolioInput _PortfolioId = ListPrincipalsForPortfolioInput { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListPrincipalsForPortfolioInput _PortfolioId = ListPrincipalsForPortfolioInput { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs ListPrincipalsForPortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPrincipalsForPortfolioInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListPrincipalsForPortfolioInput
-newListPrincipalsForPortfolioInput' _PortfolioId customize = (ListPrincipalsForPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListPrincipalsForPortfolioInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> ListPrincipalsForPortfolioInput
+newListPrincipalsForPortfolioInput' _PortfolioId customize = (ListPrincipalsForPortfolioInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype ListPrincipalsForPortfolioOutput = ListPrincipalsForPortfolioOutput 
-  { "Principals" :: NullOrUndefined (Principals)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "Principals" :: Maybe (Principals)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListPrincipalsForPortfolioOutput :: Newtype ListPrincipalsForPortfolioOutput _
 derive instance repGenericListPrincipalsForPortfolioOutput :: Generic ListPrincipalsForPortfolioOutput _
@@ -2154,21 +2153,21 @@ instance encodeListPrincipalsForPortfolioOutput :: Encode ListPrincipalsForPortf
 
 -- | Constructs ListPrincipalsForPortfolioOutput from required parameters
 newListPrincipalsForPortfolioOutput :: ListPrincipalsForPortfolioOutput
-newListPrincipalsForPortfolioOutput  = ListPrincipalsForPortfolioOutput { "NextPageToken": (NullOrUndefined Nothing), "Principals": (NullOrUndefined Nothing) }
+newListPrincipalsForPortfolioOutput  = ListPrincipalsForPortfolioOutput { "NextPageToken": Nothing, "Principals": Nothing }
 
 -- | Constructs ListPrincipalsForPortfolioOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListPrincipalsForPortfolioOutput' :: ( { "Principals" :: NullOrUndefined (Principals) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"Principals" :: NullOrUndefined (Principals) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListPrincipalsForPortfolioOutput
-newListPrincipalsForPortfolioOutput'  customize = (ListPrincipalsForPortfolioOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "Principals": (NullOrUndefined Nothing) }
+newListPrincipalsForPortfolioOutput' :: ( { "Principals" :: Maybe (Principals) , "NextPageToken" :: Maybe (PageToken) } -> {"Principals" :: Maybe (Principals) , "NextPageToken" :: Maybe (PageToken) } ) -> ListPrincipalsForPortfolioOutput
+newListPrincipalsForPortfolioOutput'  customize = (ListPrincipalsForPortfolioOutput <<< customize) { "NextPageToken": Nothing, "Principals": Nothing }
 
 
 
 newtype ListProvisionedProductPlansInput = ListProvisionedProductPlansInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "ProvisionProductId" :: NullOrUndefined (Id)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
-  , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "ProvisionProductId" :: Maybe (Id)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
+  , "AccessLevelFilter" :: Maybe (AccessLevelFilter)
   }
 derive instance newtypeListProvisionedProductPlansInput :: Newtype ListProvisionedProductPlansInput _
 derive instance repGenericListProvisionedProductPlansInput :: Generic ListProvisionedProductPlansInput _
@@ -2178,18 +2177,18 @@ instance encodeListProvisionedProductPlansInput :: Encode ListProvisionedProduct
 
 -- | Constructs ListProvisionedProductPlansInput from required parameters
 newListProvisionedProductPlansInput :: ListProvisionedProductPlansInput
-newListProvisionedProductPlansInput  = ListProvisionedProductPlansInput { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing) }
+newListProvisionedProductPlansInput  = ListProvisionedProductPlansInput { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "PageSize": Nothing, "PageToken": Nothing, "ProvisionProductId": Nothing }
 
 -- | Constructs ListProvisionedProductPlansInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListProvisionedProductPlansInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProvisionProductId" :: NullOrUndefined (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProvisionProductId" :: NullOrUndefined (Id) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) } ) -> ListProvisionedProductPlansInput
-newListProvisionedProductPlansInput'  customize = (ListProvisionedProductPlansInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing) }
+newListProvisionedProductPlansInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProvisionProductId" :: Maybe (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProvisionProductId" :: Maybe (Id) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) } ) -> ListProvisionedProductPlansInput
+newListProvisionedProductPlansInput'  customize = (ListProvisionedProductPlansInput <<< customize) { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "PageSize": Nothing, "PageToken": Nothing, "ProvisionProductId": Nothing }
 
 
 
 newtype ListProvisionedProductPlansOutput = ListProvisionedProductPlansOutput 
-  { "ProvisionedProductPlans" :: NullOrUndefined (ProvisionedProductPlans)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ProvisionedProductPlans" :: Maybe (ProvisionedProductPlans)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListProvisionedProductPlansOutput :: Newtype ListProvisionedProductPlansOutput _
 derive instance repGenericListProvisionedProductPlansOutput :: Generic ListProvisionedProductPlansOutput _
@@ -2199,17 +2198,17 @@ instance encodeListProvisionedProductPlansOutput :: Encode ListProvisionedProduc
 
 -- | Constructs ListProvisionedProductPlansOutput from required parameters
 newListProvisionedProductPlansOutput :: ListProvisionedProductPlansOutput
-newListProvisionedProductPlansOutput  = ListProvisionedProductPlansOutput { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProductPlans": (NullOrUndefined Nothing) }
+newListProvisionedProductPlansOutput  = ListProvisionedProductPlansOutput { "NextPageToken": Nothing, "ProvisionedProductPlans": Nothing }
 
 -- | Constructs ListProvisionedProductPlansOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListProvisionedProductPlansOutput' :: ( { "ProvisionedProductPlans" :: NullOrUndefined (ProvisionedProductPlans) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ProvisionedProductPlans" :: NullOrUndefined (ProvisionedProductPlans) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListProvisionedProductPlansOutput
-newListProvisionedProductPlansOutput'  customize = (ListProvisionedProductPlansOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProductPlans": (NullOrUndefined Nothing) }
+newListProvisionedProductPlansOutput' :: ( { "ProvisionedProductPlans" :: Maybe (ProvisionedProductPlans) , "NextPageToken" :: Maybe (PageToken) } -> {"ProvisionedProductPlans" :: Maybe (ProvisionedProductPlans) , "NextPageToken" :: Maybe (PageToken) } ) -> ListProvisionedProductPlansOutput
+newListProvisionedProductPlansOutput'  customize = (ListProvisionedProductPlansOutput <<< customize) { "NextPageToken": Nothing, "ProvisionedProductPlans": Nothing }
 
 
 
 newtype ListProvisioningArtifactsInput = ListProvisioningArtifactsInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   }
 derive instance newtypeListProvisioningArtifactsInput :: Newtype ListProvisioningArtifactsInput _
@@ -2220,18 +2219,18 @@ instance encodeListProvisioningArtifactsInput :: Encode ListProvisioningArtifact
 
 -- | Constructs ListProvisioningArtifactsInput from required parameters
 newListProvisioningArtifactsInput :: Id -> ListProvisioningArtifactsInput
-newListProvisioningArtifactsInput _ProductId = ListProvisioningArtifactsInput { "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newListProvisioningArtifactsInput _ProductId = ListProvisioningArtifactsInput { "ProductId": _ProductId, "AcceptLanguage": Nothing }
 
 -- | Constructs ListProvisioningArtifactsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListProvisioningArtifactsInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) } ) -> ListProvisioningArtifactsInput
-newListProvisioningArtifactsInput' _ProductId customize = (ListProvisioningArtifactsInput <<< customize) { "ProductId": _ProductId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newListProvisioningArtifactsInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) } ) -> ListProvisioningArtifactsInput
+newListProvisioningArtifactsInput' _ProductId customize = (ListProvisioningArtifactsInput <<< customize) { "ProductId": _ProductId, "AcceptLanguage": Nothing }
 
 
 
 newtype ListProvisioningArtifactsOutput = ListProvisioningArtifactsOutput 
-  { "ProvisioningArtifactDetails" :: NullOrUndefined (ProvisioningArtifactDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ProvisioningArtifactDetails" :: Maybe (ProvisioningArtifactDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListProvisioningArtifactsOutput :: Newtype ListProvisioningArtifactsOutput _
 derive instance repGenericListProvisioningArtifactsOutput :: Generic ListProvisioningArtifactsOutput _
@@ -2241,21 +2240,21 @@ instance encodeListProvisioningArtifactsOutput :: Encode ListProvisioningArtifac
 
 -- | Constructs ListProvisioningArtifactsOutput from required parameters
 newListProvisioningArtifactsOutput :: ListProvisioningArtifactsOutput
-newListProvisioningArtifactsOutput  = ListProvisioningArtifactsOutput { "NextPageToken": (NullOrUndefined Nothing), "ProvisioningArtifactDetails": (NullOrUndefined Nothing) }
+newListProvisioningArtifactsOutput  = ListProvisioningArtifactsOutput { "NextPageToken": Nothing, "ProvisioningArtifactDetails": Nothing }
 
 -- | Constructs ListProvisioningArtifactsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListProvisioningArtifactsOutput' :: ( { "ProvisioningArtifactDetails" :: NullOrUndefined (ProvisioningArtifactDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ProvisioningArtifactDetails" :: NullOrUndefined (ProvisioningArtifactDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListProvisioningArtifactsOutput
-newListProvisioningArtifactsOutput'  customize = (ListProvisioningArtifactsOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "ProvisioningArtifactDetails": (NullOrUndefined Nothing) }
+newListProvisioningArtifactsOutput' :: ( { "ProvisioningArtifactDetails" :: Maybe (ProvisioningArtifactDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"ProvisioningArtifactDetails" :: Maybe (ProvisioningArtifactDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> ListProvisioningArtifactsOutput
+newListProvisioningArtifactsOutput'  customize = (ListProvisioningArtifactsOutput <<< customize) { "NextPageToken": Nothing, "ProvisioningArtifactDetails": Nothing }
 
 
 
 newtype ListRecordHistoryInput = ListRecordHistoryInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter)
-  , "SearchFilter" :: NullOrUndefined (ListRecordHistorySearchFilter)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "AccessLevelFilter" :: Maybe (AccessLevelFilter)
+  , "SearchFilter" :: Maybe (ListRecordHistorySearchFilter)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListRecordHistoryInput :: Newtype ListRecordHistoryInput _
 derive instance repGenericListRecordHistoryInput :: Generic ListRecordHistoryInput _
@@ -2265,18 +2264,18 @@ instance encodeListRecordHistoryInput :: Encode ListRecordHistoryInput where enc
 
 -- | Constructs ListRecordHistoryInput from required parameters
 newListRecordHistoryInput :: ListRecordHistoryInput
-newListRecordHistoryInput  = ListRecordHistoryInput { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "SearchFilter": (NullOrUndefined Nothing) }
+newListRecordHistoryInput  = ListRecordHistoryInput { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "PageSize": Nothing, "PageToken": Nothing, "SearchFilter": Nothing }
 
 -- | Constructs ListRecordHistoryInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListRecordHistoryInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) , "SearchFilter" :: NullOrUndefined (ListRecordHistorySearchFilter) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) , "SearchFilter" :: NullOrUndefined (ListRecordHistorySearchFilter) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListRecordHistoryInput
-newListRecordHistoryInput'  customize = (ListRecordHistoryInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "SearchFilter": (NullOrUndefined Nothing) }
+newListRecordHistoryInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) , "SearchFilter" :: Maybe (ListRecordHistorySearchFilter) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) , "SearchFilter" :: Maybe (ListRecordHistorySearchFilter) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> ListRecordHistoryInput
+newListRecordHistoryInput'  customize = (ListRecordHistoryInput <<< customize) { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "PageSize": Nothing, "PageToken": Nothing, "SearchFilter": Nothing }
 
 
 
 newtype ListRecordHistoryOutput = ListRecordHistoryOutput 
-  { "RecordDetails" :: NullOrUndefined (RecordDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "RecordDetails" :: Maybe (RecordDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListRecordHistoryOutput :: Newtype ListRecordHistoryOutput _
 derive instance repGenericListRecordHistoryOutput :: Generic ListRecordHistoryOutput _
@@ -2286,19 +2285,19 @@ instance encodeListRecordHistoryOutput :: Encode ListRecordHistoryOutput where e
 
 -- | Constructs ListRecordHistoryOutput from required parameters
 newListRecordHistoryOutput :: ListRecordHistoryOutput
-newListRecordHistoryOutput  = ListRecordHistoryOutput { "NextPageToken": (NullOrUndefined Nothing), "RecordDetails": (NullOrUndefined Nothing) }
+newListRecordHistoryOutput  = ListRecordHistoryOutput { "NextPageToken": Nothing, "RecordDetails": Nothing }
 
 -- | Constructs ListRecordHistoryOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListRecordHistoryOutput' :: ( { "RecordDetails" :: NullOrUndefined (RecordDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"RecordDetails" :: NullOrUndefined (RecordDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ListRecordHistoryOutput
-newListRecordHistoryOutput'  customize = (ListRecordHistoryOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "RecordDetails": (NullOrUndefined Nothing) }
+newListRecordHistoryOutput' :: ( { "RecordDetails" :: Maybe (RecordDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"RecordDetails" :: Maybe (RecordDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> ListRecordHistoryOutput
+newListRecordHistoryOutput'  customize = (ListRecordHistoryOutput <<< customize) { "NextPageToken": Nothing, "RecordDetails": Nothing }
 
 
 
 -- | <p>The search filter to use when listing history records.</p>
 newtype ListRecordHistorySearchFilter = ListRecordHistorySearchFilter 
-  { "Key" :: NullOrUndefined (SearchFilterKey)
-  , "Value" :: NullOrUndefined (SearchFilterValue)
+  { "Key" :: Maybe (SearchFilterKey)
+  , "Value" :: Maybe (SearchFilterValue)
   }
 derive instance newtypeListRecordHistorySearchFilter :: Newtype ListRecordHistorySearchFilter _
 derive instance repGenericListRecordHistorySearchFilter :: Generic ListRecordHistorySearchFilter _
@@ -2308,20 +2307,20 @@ instance encodeListRecordHistorySearchFilter :: Encode ListRecordHistorySearchFi
 
 -- | Constructs ListRecordHistorySearchFilter from required parameters
 newListRecordHistorySearchFilter :: ListRecordHistorySearchFilter
-newListRecordHistorySearchFilter  = ListRecordHistorySearchFilter { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newListRecordHistorySearchFilter  = ListRecordHistorySearchFilter { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs ListRecordHistorySearchFilter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListRecordHistorySearchFilter' :: ( { "Key" :: NullOrUndefined (SearchFilterKey) , "Value" :: NullOrUndefined (SearchFilterValue) } -> {"Key" :: NullOrUndefined (SearchFilterKey) , "Value" :: NullOrUndefined (SearchFilterValue) } ) -> ListRecordHistorySearchFilter
-newListRecordHistorySearchFilter'  customize = (ListRecordHistorySearchFilter <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newListRecordHistorySearchFilter' :: ( { "Key" :: Maybe (SearchFilterKey) , "Value" :: Maybe (SearchFilterValue) } -> {"Key" :: Maybe (SearchFilterKey) , "Value" :: Maybe (SearchFilterValue) } ) -> ListRecordHistorySearchFilter
+newListRecordHistorySearchFilter'  customize = (ListRecordHistorySearchFilter <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
 newtype ListResourcesForTagOptionInput = ListResourcesForTagOptionInput 
   { "TagOptionId" :: (TagOptionId)
-  , "ResourceType" :: NullOrUndefined (ResourceType)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  , "ResourceType" :: Maybe (ResourceType)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListResourcesForTagOptionInput :: Newtype ListResourcesForTagOptionInput _
 derive instance repGenericListResourcesForTagOptionInput :: Generic ListResourcesForTagOptionInput _
@@ -2331,18 +2330,18 @@ instance encodeListResourcesForTagOptionInput :: Encode ListResourcesForTagOptio
 
 -- | Constructs ListResourcesForTagOptionInput from required parameters
 newListResourcesForTagOptionInput :: TagOptionId -> ListResourcesForTagOptionInput
-newListResourcesForTagOptionInput _TagOptionId = ListResourcesForTagOptionInput { "TagOptionId": _TagOptionId, "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing) }
+newListResourcesForTagOptionInput _TagOptionId = ListResourcesForTagOptionInput { "TagOptionId": _TagOptionId, "PageSize": Nothing, "PageToken": Nothing, "ResourceType": Nothing }
 
 -- | Constructs ListResourcesForTagOptionInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListResourcesForTagOptionInput' :: TagOptionId -> ( { "TagOptionId" :: (TagOptionId) , "ResourceType" :: NullOrUndefined (ResourceType) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"TagOptionId" :: (TagOptionId) , "ResourceType" :: NullOrUndefined (ResourceType) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListResourcesForTagOptionInput
-newListResourcesForTagOptionInput' _TagOptionId customize = (ListResourcesForTagOptionInput <<< customize) { "TagOptionId": _TagOptionId, "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing) }
+newListResourcesForTagOptionInput' :: TagOptionId -> ( { "TagOptionId" :: (TagOptionId) , "ResourceType" :: Maybe (ResourceType) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"TagOptionId" :: (TagOptionId) , "ResourceType" :: Maybe (ResourceType) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> ListResourcesForTagOptionInput
+newListResourcesForTagOptionInput' _TagOptionId customize = (ListResourcesForTagOptionInput <<< customize) { "TagOptionId": _TagOptionId, "PageSize": Nothing, "PageToken": Nothing, "ResourceType": Nothing }
 
 
 
 newtype ListResourcesForTagOptionOutput = ListResourcesForTagOptionOutput 
-  { "ResourceDetails" :: NullOrUndefined (ResourceDetails)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  { "ResourceDetails" :: Maybe (ResourceDetails)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListResourcesForTagOptionOutput :: Newtype ListResourcesForTagOptionOutput _
 derive instance repGenericListResourcesForTagOptionOutput :: Generic ListResourcesForTagOptionOutput _
@@ -2352,20 +2351,20 @@ instance encodeListResourcesForTagOptionOutput :: Encode ListResourcesForTagOpti
 
 -- | Constructs ListResourcesForTagOptionOutput from required parameters
 newListResourcesForTagOptionOutput :: ListResourcesForTagOptionOutput
-newListResourcesForTagOptionOutput  = ListResourcesForTagOptionOutput { "PageToken": (NullOrUndefined Nothing), "ResourceDetails": (NullOrUndefined Nothing) }
+newListResourcesForTagOptionOutput  = ListResourcesForTagOptionOutput { "PageToken": Nothing, "ResourceDetails": Nothing }
 
 -- | Constructs ListResourcesForTagOptionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListResourcesForTagOptionOutput' :: ( { "ResourceDetails" :: NullOrUndefined (ResourceDetails) , "PageToken" :: NullOrUndefined (PageToken) } -> {"ResourceDetails" :: NullOrUndefined (ResourceDetails) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListResourcesForTagOptionOutput
-newListResourcesForTagOptionOutput'  customize = (ListResourcesForTagOptionOutput <<< customize) { "PageToken": (NullOrUndefined Nothing), "ResourceDetails": (NullOrUndefined Nothing) }
+newListResourcesForTagOptionOutput' :: ( { "ResourceDetails" :: Maybe (ResourceDetails) , "PageToken" :: Maybe (PageToken) } -> {"ResourceDetails" :: Maybe (ResourceDetails) , "PageToken" :: Maybe (PageToken) } ) -> ListResourcesForTagOptionOutput
+newListResourcesForTagOptionOutput'  customize = (ListResourcesForTagOptionOutput <<< customize) { "PageToken": Nothing, "ResourceDetails": Nothing }
 
 
 
 -- | <p>Filters to use when listing TagOptions.</p>
 newtype ListTagOptionsFilters = ListTagOptionsFilters 
-  { "Key" :: NullOrUndefined (TagOptionKey)
-  , "Value" :: NullOrUndefined (TagOptionValue)
-  , "Active" :: NullOrUndefined (TagOptionActive)
+  { "Key" :: Maybe (TagOptionKey)
+  , "Value" :: Maybe (TagOptionValue)
+  , "Active" :: Maybe (TagOptionActive)
   }
 derive instance newtypeListTagOptionsFilters :: Newtype ListTagOptionsFilters _
 derive instance repGenericListTagOptionsFilters :: Generic ListTagOptionsFilters _
@@ -2375,19 +2374,19 @@ instance encodeListTagOptionsFilters :: Encode ListTagOptionsFilters where encod
 
 -- | Constructs ListTagOptionsFilters from required parameters
 newListTagOptionsFilters :: ListTagOptionsFilters
-newListTagOptionsFilters  = ListTagOptionsFilters { "Active": (NullOrUndefined Nothing), "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newListTagOptionsFilters  = ListTagOptionsFilters { "Active": Nothing, "Key": Nothing, "Value": Nothing }
 
 -- | Constructs ListTagOptionsFilters's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListTagOptionsFilters' :: ( { "Key" :: NullOrUndefined (TagOptionKey) , "Value" :: NullOrUndefined (TagOptionValue) , "Active" :: NullOrUndefined (TagOptionActive) } -> {"Key" :: NullOrUndefined (TagOptionKey) , "Value" :: NullOrUndefined (TagOptionValue) , "Active" :: NullOrUndefined (TagOptionActive) } ) -> ListTagOptionsFilters
-newListTagOptionsFilters'  customize = (ListTagOptionsFilters <<< customize) { "Active": (NullOrUndefined Nothing), "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newListTagOptionsFilters' :: ( { "Key" :: Maybe (TagOptionKey) , "Value" :: Maybe (TagOptionValue) , "Active" :: Maybe (TagOptionActive) } -> {"Key" :: Maybe (TagOptionKey) , "Value" :: Maybe (TagOptionValue) , "Active" :: Maybe (TagOptionActive) } ) -> ListTagOptionsFilters
+newListTagOptionsFilters'  customize = (ListTagOptionsFilters <<< customize) { "Active": Nothing, "Key": Nothing, "Value": Nothing }
 
 
 
 newtype ListTagOptionsInput = ListTagOptionsInput 
-  { "Filters" :: NullOrUndefined (ListTagOptionsFilters)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  { "Filters" :: Maybe (ListTagOptionsFilters)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListTagOptionsInput :: Newtype ListTagOptionsInput _
 derive instance repGenericListTagOptionsInput :: Generic ListTagOptionsInput _
@@ -2397,18 +2396,18 @@ instance encodeListTagOptionsInput :: Encode ListTagOptionsInput where encode = 
 
 -- | Constructs ListTagOptionsInput from required parameters
 newListTagOptionsInput :: ListTagOptionsInput
-newListTagOptionsInput  = ListTagOptionsInput { "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListTagOptionsInput  = ListTagOptionsInput { "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs ListTagOptionsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListTagOptionsInput' :: ( { "Filters" :: NullOrUndefined (ListTagOptionsFilters) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"Filters" :: NullOrUndefined (ListTagOptionsFilters) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListTagOptionsInput
-newListTagOptionsInput'  customize = (ListTagOptionsInput <<< customize) { "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newListTagOptionsInput' :: ( { "Filters" :: Maybe (ListTagOptionsFilters) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"Filters" :: Maybe (ListTagOptionsFilters) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> ListTagOptionsInput
+newListTagOptionsInput'  customize = (ListTagOptionsInput <<< customize) { "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype ListTagOptionsOutput = ListTagOptionsOutput 
-  { "TagOptionDetails" :: NullOrUndefined (TagOptionDetails)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  { "TagOptionDetails" :: Maybe (TagOptionDetails)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeListTagOptionsOutput :: Newtype ListTagOptionsOutput _
 derive instance repGenericListTagOptionsOutput :: Generic ListTagOptionsOutput _
@@ -2418,12 +2417,12 @@ instance encodeListTagOptionsOutput :: Encode ListTagOptionsOutput where encode 
 
 -- | Constructs ListTagOptionsOutput from required parameters
 newListTagOptionsOutput :: ListTagOptionsOutput
-newListTagOptionsOutput  = ListTagOptionsOutput { "PageToken": (NullOrUndefined Nothing), "TagOptionDetails": (NullOrUndefined Nothing) }
+newListTagOptionsOutput  = ListTagOptionsOutput { "PageToken": Nothing, "TagOptionDetails": Nothing }
 
 -- | Constructs ListTagOptionsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListTagOptionsOutput' :: ( { "TagOptionDetails" :: NullOrUndefined (TagOptionDetails) , "PageToken" :: NullOrUndefined (PageToken) } -> {"TagOptionDetails" :: NullOrUndefined (TagOptionDetails) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ListTagOptionsOutput
-newListTagOptionsOutput'  customize = (ListTagOptionsOutput <<< customize) { "PageToken": (NullOrUndefined Nothing), "TagOptionDetails": (NullOrUndefined Nothing) }
+newListTagOptionsOutput' :: ( { "TagOptionDetails" :: Maybe (TagOptionDetails) , "PageToken" :: Maybe (PageToken) } -> {"TagOptionDetails" :: Maybe (TagOptionDetails) , "PageToken" :: Maybe (PageToken) } ) -> ListTagOptionsOutput
+newListTagOptionsOutput'  customize = (ListTagOptionsOutput <<< customize) { "PageToken": Nothing, "TagOptionDetails": Nothing }
 
 
 
@@ -2501,7 +2500,7 @@ instance encodePageToken :: Encode PageToken where encode = genericEncode option
 
 -- | <p>The constraints that the administrator has put on the parameter.</p>
 newtype ParameterConstraints = ParameterConstraints 
-  { "AllowedValues" :: NullOrUndefined (AllowedValues)
+  { "AllowedValues" :: Maybe (AllowedValues)
   }
 derive instance newtypeParameterConstraints :: Newtype ParameterConstraints _
 derive instance repGenericParameterConstraints :: Generic ParameterConstraints _
@@ -2511,12 +2510,12 @@ instance encodeParameterConstraints :: Encode ParameterConstraints where encode 
 
 -- | Constructs ParameterConstraints from required parameters
 newParameterConstraints :: ParameterConstraints
-newParameterConstraints  = ParameterConstraints { "AllowedValues": (NullOrUndefined Nothing) }
+newParameterConstraints  = ParameterConstraints { "AllowedValues": Nothing }
 
 -- | Constructs ParameterConstraints's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newParameterConstraints' :: ( { "AllowedValues" :: NullOrUndefined (AllowedValues) } -> {"AllowedValues" :: NullOrUndefined (AllowedValues) } ) -> ParameterConstraints
-newParameterConstraints'  customize = (ParameterConstraints <<< customize) { "AllowedValues": (NullOrUndefined Nothing) }
+newParameterConstraints' :: ( { "AllowedValues" :: Maybe (AllowedValues) } -> {"AllowedValues" :: Maybe (AllowedValues) } ) -> ParameterConstraints
+newParameterConstraints'  customize = (ParameterConstraints <<< customize) { "AllowedValues": Nothing }
 
 
 
@@ -2585,12 +2584,12 @@ instance encodePortfolioDescription :: Encode PortfolioDescription where encode 
 
 -- | <p>Information about a portfolio.</p>
 newtype PortfolioDetail = PortfolioDetail 
-  { "Id" :: NullOrUndefined (Id)
-  , "ARN" :: NullOrUndefined (ResourceARN)
-  , "DisplayName" :: NullOrUndefined (PortfolioDisplayName)
-  , "Description" :: NullOrUndefined (PortfolioDescription)
-  , "CreatedTime" :: NullOrUndefined (CreationTime)
-  , "ProviderName" :: NullOrUndefined (ProviderName)
+  { "Id" :: Maybe (Id)
+  , "ARN" :: Maybe (ResourceARN)
+  , "DisplayName" :: Maybe (PortfolioDisplayName)
+  , "Description" :: Maybe (PortfolioDescription)
+  , "CreatedTime" :: Maybe (CreationTime)
+  , "ProviderName" :: Maybe (ProviderName)
   }
 derive instance newtypePortfolioDetail :: Newtype PortfolioDetail _
 derive instance repGenericPortfolioDetail :: Generic PortfolioDetail _
@@ -2600,12 +2599,12 @@ instance encodePortfolioDetail :: Encode PortfolioDetail where encode = genericE
 
 -- | Constructs PortfolioDetail from required parameters
 newPortfolioDetail :: PortfolioDetail
-newPortfolioDetail  = PortfolioDetail { "ARN": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "DisplayName": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "ProviderName": (NullOrUndefined Nothing) }
+newPortfolioDetail  = PortfolioDetail { "ARN": Nothing, "CreatedTime": Nothing, "Description": Nothing, "DisplayName": Nothing, "Id": Nothing, "ProviderName": Nothing }
 
 -- | Constructs PortfolioDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPortfolioDetail' :: ( { "Id" :: NullOrUndefined (Id) , "ARN" :: NullOrUndefined (ResourceARN) , "DisplayName" :: NullOrUndefined (PortfolioDisplayName) , "Description" :: NullOrUndefined (PortfolioDescription) , "CreatedTime" :: NullOrUndefined (CreationTime) , "ProviderName" :: NullOrUndefined (ProviderName) } -> {"Id" :: NullOrUndefined (Id) , "ARN" :: NullOrUndefined (ResourceARN) , "DisplayName" :: NullOrUndefined (PortfolioDisplayName) , "Description" :: NullOrUndefined (PortfolioDescription) , "CreatedTime" :: NullOrUndefined (CreationTime) , "ProviderName" :: NullOrUndefined (ProviderName) } ) -> PortfolioDetail
-newPortfolioDetail'  customize = (PortfolioDetail <<< customize) { "ARN": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "DisplayName": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "ProviderName": (NullOrUndefined Nothing) }
+newPortfolioDetail' :: ( { "Id" :: Maybe (Id) , "ARN" :: Maybe (ResourceARN) , "DisplayName" :: Maybe (PortfolioDisplayName) , "Description" :: Maybe (PortfolioDescription) , "CreatedTime" :: Maybe (CreationTime) , "ProviderName" :: Maybe (ProviderName) } -> {"Id" :: Maybe (Id) , "ARN" :: Maybe (ResourceARN) , "DisplayName" :: Maybe (PortfolioDisplayName) , "Description" :: Maybe (PortfolioDescription) , "CreatedTime" :: Maybe (CreationTime) , "ProviderName" :: Maybe (ProviderName) } ) -> PortfolioDetail
+newPortfolioDetail'  customize = (PortfolioDetail <<< customize) { "ARN": Nothing, "CreatedTime": Nothing, "Description": Nothing, "DisplayName": Nothing, "Id": Nothing, "ProviderName": Nothing }
 
 
 
@@ -2638,8 +2637,8 @@ instance encodePortfolioName :: Encode PortfolioName where encode = genericEncod
 
 -- | <p>Information about a principal.</p>
 newtype Principal = Principal 
-  { "PrincipalARN" :: NullOrUndefined (PrincipalARN)
-  , "PrincipalType" :: NullOrUndefined (PrincipalType)
+  { "PrincipalARN" :: Maybe (PrincipalARN)
+  , "PrincipalType" :: Maybe (PrincipalType)
   }
 derive instance newtypePrincipal :: Newtype Principal _
 derive instance repGenericPrincipal :: Generic Principal _
@@ -2649,12 +2648,12 @@ instance encodePrincipal :: Encode Principal where encode = genericEncode option
 
 -- | Constructs Principal from required parameters
 newPrincipal :: Principal
-newPrincipal  = Principal { "PrincipalARN": (NullOrUndefined Nothing), "PrincipalType": (NullOrUndefined Nothing) }
+newPrincipal  = Principal { "PrincipalARN": Nothing, "PrincipalType": Nothing }
 
 -- | Constructs Principal's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPrincipal' :: ( { "PrincipalARN" :: NullOrUndefined (PrincipalARN) , "PrincipalType" :: NullOrUndefined (PrincipalType) } -> {"PrincipalARN" :: NullOrUndefined (PrincipalARN) , "PrincipalType" :: NullOrUndefined (PrincipalType) } ) -> Principal
-newPrincipal'  customize = (Principal <<< customize) { "PrincipalARN": (NullOrUndefined Nothing), "PrincipalType": (NullOrUndefined Nothing) }
+newPrincipal' :: ( { "PrincipalARN" :: Maybe (PrincipalARN) , "PrincipalType" :: Maybe (PrincipalType) } -> {"PrincipalARN" :: Maybe (PrincipalARN) , "PrincipalType" :: Maybe (PrincipalType) } ) -> Principal
+newPrincipal'  customize = (Principal <<< customize) { "PrincipalARN": Nothing, "PrincipalType": Nothing }
 
 
 
@@ -2723,8 +2722,8 @@ instance encodeProductViewAggregationType :: Encode ProductViewAggregationType w
 
 -- | <p>A single product view aggregation value/count pair, containing metadata about each product to which the calling user has access.</p>
 newtype ProductViewAggregationValue = ProductViewAggregationValue 
-  { "Value" :: NullOrUndefined (AttributeValue)
-  , "ApproximateCount" :: NullOrUndefined (ApproximateCount)
+  { "Value" :: Maybe (AttributeValue)
+  , "ApproximateCount" :: Maybe (ApproximateCount)
   }
 derive instance newtypeProductViewAggregationValue :: Newtype ProductViewAggregationValue _
 derive instance repGenericProductViewAggregationValue :: Generic ProductViewAggregationValue _
@@ -2734,12 +2733,12 @@ instance encodeProductViewAggregationValue :: Encode ProductViewAggregationValue
 
 -- | Constructs ProductViewAggregationValue from required parameters
 newProductViewAggregationValue :: ProductViewAggregationValue
-newProductViewAggregationValue  = ProductViewAggregationValue { "ApproximateCount": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newProductViewAggregationValue  = ProductViewAggregationValue { "ApproximateCount": Nothing, "Value": Nothing }
 
 -- | Constructs ProductViewAggregationValue's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProductViewAggregationValue' :: ( { "Value" :: NullOrUndefined (AttributeValue) , "ApproximateCount" :: NullOrUndefined (ApproximateCount) } -> {"Value" :: NullOrUndefined (AttributeValue) , "ApproximateCount" :: NullOrUndefined (ApproximateCount) } ) -> ProductViewAggregationValue
-newProductViewAggregationValue'  customize = (ProductViewAggregationValue <<< customize) { "ApproximateCount": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newProductViewAggregationValue' :: ( { "Value" :: Maybe (AttributeValue) , "ApproximateCount" :: Maybe (ApproximateCount) } -> {"Value" :: Maybe (AttributeValue) , "ApproximateCount" :: Maybe (ApproximateCount) } ) -> ProductViewAggregationValue
+newProductViewAggregationValue'  customize = (ProductViewAggregationValue <<< customize) { "ApproximateCount": Nothing, "Value": Nothing }
 
 
 
@@ -2763,10 +2762,10 @@ instance encodeProductViewAggregations :: Encode ProductViewAggregations where e
 
 -- | <p>Information about a product view.</p>
 newtype ProductViewDetail = ProductViewDetail 
-  { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary)
-  , "Status" :: NullOrUndefined (Status)
-  , "ProductARN" :: NullOrUndefined (ResourceARN)
-  , "CreatedTime" :: NullOrUndefined (CreatedTime)
+  { "ProductViewSummary" :: Maybe (ProductViewSummary)
+  , "Status" :: Maybe (Status)
+  , "ProductARN" :: Maybe (ResourceARN)
+  , "CreatedTime" :: Maybe (CreatedTime)
   }
 derive instance newtypeProductViewDetail :: Newtype ProductViewDetail _
 derive instance repGenericProductViewDetail :: Generic ProductViewDetail _
@@ -2776,12 +2775,12 @@ instance encodeProductViewDetail :: Encode ProductViewDetail where encode = gene
 
 -- | Constructs ProductViewDetail from required parameters
 newProductViewDetail :: ProductViewDetail
-newProductViewDetail  = ProductViewDetail { "CreatedTime": (NullOrUndefined Nothing), "ProductARN": (NullOrUndefined Nothing), "ProductViewSummary": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newProductViewDetail  = ProductViewDetail { "CreatedTime": Nothing, "ProductARN": Nothing, "ProductViewSummary": Nothing, "Status": Nothing }
 
 -- | Constructs ProductViewDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProductViewDetail' :: ( { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary) , "Status" :: NullOrUndefined (Status) , "ProductARN" :: NullOrUndefined (ResourceARN) , "CreatedTime" :: NullOrUndefined (CreatedTime) } -> {"ProductViewSummary" :: NullOrUndefined (ProductViewSummary) , "Status" :: NullOrUndefined (Status) , "ProductARN" :: NullOrUndefined (ResourceARN) , "CreatedTime" :: NullOrUndefined (CreatedTime) } ) -> ProductViewDetail
-newProductViewDetail'  customize = (ProductViewDetail <<< customize) { "CreatedTime": (NullOrUndefined Nothing), "ProductARN": (NullOrUndefined Nothing), "ProductViewSummary": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newProductViewDetail' :: ( { "ProductViewSummary" :: Maybe (ProductViewSummary) , "Status" :: Maybe (Status) , "ProductARN" :: Maybe (ResourceARN) , "CreatedTime" :: Maybe (CreatedTime) } -> {"ProductViewSummary" :: Maybe (ProductViewSummary) , "Status" :: Maybe (Status) , "ProductARN" :: Maybe (ResourceARN) , "CreatedTime" :: Maybe (CreatedTime) } ) -> ProductViewDetail
+newProductViewDetail'  customize = (ProductViewDetail <<< customize) { "CreatedTime": Nothing, "ProductARN": Nothing, "ProductViewSummary": Nothing, "Status": Nothing }
 
 
 
@@ -2886,17 +2885,17 @@ instance encodeProductViewSummaries :: Encode ProductViewSummaries where encode 
 
 -- | <p>Summary information about a product view.</p>
 newtype ProductViewSummary = ProductViewSummary 
-  { "Id" :: NullOrUndefined (Id)
-  , "ProductId" :: NullOrUndefined (Id)
-  , "Name" :: NullOrUndefined (ProductViewName)
-  , "Owner" :: NullOrUndefined (ProductViewOwner)
-  , "ShortDescription" :: NullOrUndefined (ProductViewShortDescription)
-  , "Type" :: NullOrUndefined (ProductType)
-  , "Distributor" :: NullOrUndefined (ProductViewDistributor)
-  , "HasDefaultPath" :: NullOrUndefined (HasDefaultPath)
-  , "SupportEmail" :: NullOrUndefined (SupportEmail)
-  , "SupportDescription" :: NullOrUndefined (SupportDescription)
-  , "SupportUrl" :: NullOrUndefined (SupportUrl)
+  { "Id" :: Maybe (Id)
+  , "ProductId" :: Maybe (Id)
+  , "Name" :: Maybe (ProductViewName)
+  , "Owner" :: Maybe (ProductViewOwner)
+  , "ShortDescription" :: Maybe (ProductViewShortDescription)
+  , "Type" :: Maybe (ProductType)
+  , "Distributor" :: Maybe (ProductViewDistributor)
+  , "HasDefaultPath" :: Maybe (HasDefaultPath)
+  , "SupportEmail" :: Maybe (SupportEmail)
+  , "SupportDescription" :: Maybe (SupportDescription)
+  , "SupportUrl" :: Maybe (SupportUrl)
   }
 derive instance newtypeProductViewSummary :: Newtype ProductViewSummary _
 derive instance repGenericProductViewSummary :: Generic ProductViewSummary _
@@ -2906,12 +2905,12 @@ instance encodeProductViewSummary :: Encode ProductViewSummary where encode = ge
 
 -- | Constructs ProductViewSummary from required parameters
 newProductViewSummary :: ProductViewSummary
-newProductViewSummary  = ProductViewSummary { "Distributor": (NullOrUndefined Nothing), "HasDefaultPath": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Owner": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ShortDescription": (NullOrUndefined Nothing), "SupportDescription": (NullOrUndefined Nothing), "SupportEmail": (NullOrUndefined Nothing), "SupportUrl": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProductViewSummary  = ProductViewSummary { "Distributor": Nothing, "HasDefaultPath": Nothing, "Id": Nothing, "Name": Nothing, "Owner": Nothing, "ProductId": Nothing, "ShortDescription": Nothing, "SupportDescription": Nothing, "SupportEmail": Nothing, "SupportUrl": Nothing, "Type": Nothing }
 
 -- | Constructs ProductViewSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProductViewSummary' :: ( { "Id" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProductViewName) , "Owner" :: NullOrUndefined (ProductViewOwner) , "ShortDescription" :: NullOrUndefined (ProductViewShortDescription) , "Type" :: NullOrUndefined (ProductType) , "Distributor" :: NullOrUndefined (ProductViewDistributor) , "HasDefaultPath" :: NullOrUndefined (HasDefaultPath) , "SupportEmail" :: NullOrUndefined (SupportEmail) , "SupportDescription" :: NullOrUndefined (SupportDescription) , "SupportUrl" :: NullOrUndefined (SupportUrl) } -> {"Id" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProductViewName) , "Owner" :: NullOrUndefined (ProductViewOwner) , "ShortDescription" :: NullOrUndefined (ProductViewShortDescription) , "Type" :: NullOrUndefined (ProductType) , "Distributor" :: NullOrUndefined (ProductViewDistributor) , "HasDefaultPath" :: NullOrUndefined (HasDefaultPath) , "SupportEmail" :: NullOrUndefined (SupportEmail) , "SupportDescription" :: NullOrUndefined (SupportDescription) , "SupportUrl" :: NullOrUndefined (SupportUrl) } ) -> ProductViewSummary
-newProductViewSummary'  customize = (ProductViewSummary <<< customize) { "Distributor": (NullOrUndefined Nothing), "HasDefaultPath": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Owner": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ShortDescription": (NullOrUndefined Nothing), "SupportDescription": (NullOrUndefined Nothing), "SupportEmail": (NullOrUndefined Nothing), "SupportUrl": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProductViewSummary' :: ( { "Id" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "Name" :: Maybe (ProductViewName) , "Owner" :: Maybe (ProductViewOwner) , "ShortDescription" :: Maybe (ProductViewShortDescription) , "Type" :: Maybe (ProductType) , "Distributor" :: Maybe (ProductViewDistributor) , "HasDefaultPath" :: Maybe (HasDefaultPath) , "SupportEmail" :: Maybe (SupportEmail) , "SupportDescription" :: Maybe (SupportDescription) , "SupportUrl" :: Maybe (SupportUrl) } -> {"Id" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "Name" :: Maybe (ProductViewName) , "Owner" :: Maybe (ProductViewOwner) , "ShortDescription" :: Maybe (ProductViewShortDescription) , "Type" :: Maybe (ProductType) , "Distributor" :: Maybe (ProductViewDistributor) , "HasDefaultPath" :: Maybe (HasDefaultPath) , "SupportEmail" :: Maybe (SupportEmail) , "SupportDescription" :: Maybe (SupportDescription) , "SupportUrl" :: Maybe (SupportUrl) } ) -> ProductViewSummary
+newProductViewSummary'  customize = (ProductViewSummary <<< customize) { "Distributor": Nothing, "HasDefaultPath": Nothing, "Id": Nothing, "Name": Nothing, "Owner": Nothing, "ProductId": Nothing, "ShortDescription": Nothing, "SupportDescription": Nothing, "SupportEmail": Nothing, "SupportUrl": Nothing, "Type": Nothing }
 
 
 
@@ -2934,14 +2933,14 @@ instance encodeProviderName :: Encode ProviderName where encode = genericEncode 
 
 
 newtype ProvisionProductInput = ProvisionProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   , "ProvisioningArtifactId" :: (Id)
-  , "PathId" :: NullOrUndefined (Id)
+  , "PathId" :: Maybe (Id)
   , "ProvisionedProductName" :: (ProvisionedProductName)
-  , "ProvisioningParameters" :: NullOrUndefined (ProvisioningParameters)
-  , "Tags" :: NullOrUndefined (Tags)
-  , "NotificationArns" :: NullOrUndefined (NotificationArns)
+  , "ProvisioningParameters" :: Maybe (ProvisioningParameters)
+  , "Tags" :: Maybe (Tags)
+  , "NotificationArns" :: Maybe (NotificationArns)
   , "ProvisionToken" :: (IdempotencyToken)
   }
 derive instance newtypeProvisionProductInput :: Newtype ProvisionProductInput _
@@ -2952,17 +2951,17 @@ instance encodeProvisionProductInput :: Encode ProvisionProductInput where encod
 
 -- | Constructs ProvisionProductInput from required parameters
 newProvisionProductInput :: Id -> IdempotencyToken -> ProvisionedProductName -> Id -> ProvisionProductInput
-newProvisionProductInput _ProductId _ProvisionToken _ProvisionedProductName _ProvisioningArtifactId = ProvisionProductInput { "ProductId": _ProductId, "ProvisionToken": _ProvisionToken, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "NotificationArns": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newProvisionProductInput _ProductId _ProvisionToken _ProvisionedProductName _ProvisioningArtifactId = ProvisionProductInput { "ProductId": _ProductId, "ProvisionToken": _ProvisionToken, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "NotificationArns": Nothing, "PathId": Nothing, "ProvisioningParameters": Nothing, "Tags": Nothing }
 
 -- | Constructs ProvisionProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisionProductInput' :: Id -> IdempotencyToken -> ProvisionedProductName -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: NullOrUndefined (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningParameters" :: NullOrUndefined (ProvisioningParameters) , "Tags" :: NullOrUndefined (Tags) , "NotificationArns" :: NullOrUndefined (NotificationArns) , "ProvisionToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: NullOrUndefined (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningParameters" :: NullOrUndefined (ProvisioningParameters) , "Tags" :: NullOrUndefined (Tags) , "NotificationArns" :: NullOrUndefined (NotificationArns) , "ProvisionToken" :: (IdempotencyToken) } ) -> ProvisionProductInput
-newProvisionProductInput' _ProductId _ProvisionToken _ProvisionedProductName _ProvisioningArtifactId customize = (ProvisionProductInput <<< customize) { "ProductId": _ProductId, "ProvisionToken": _ProvisionToken, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "NotificationArns": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newProvisionProductInput' :: Id -> IdempotencyToken -> ProvisionedProductName -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: Maybe (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningParameters" :: Maybe (ProvisioningParameters) , "Tags" :: Maybe (Tags) , "NotificationArns" :: Maybe (NotificationArns) , "ProvisionToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "PathId" :: Maybe (Id) , "ProvisionedProductName" :: (ProvisionedProductName) , "ProvisioningParameters" :: Maybe (ProvisioningParameters) , "Tags" :: Maybe (Tags) , "NotificationArns" :: Maybe (NotificationArns) , "ProvisionToken" :: (IdempotencyToken) } ) -> ProvisionProductInput
+newProvisionProductInput' _ProductId _ProvisionToken _ProvisionedProductName _ProvisioningArtifactId customize = (ProvisionProductInput <<< customize) { "ProductId": _ProductId, "ProvisionToken": _ProvisionToken, "ProvisionedProductName": _ProvisionedProductName, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "NotificationArns": Nothing, "PathId": Nothing, "ProvisioningParameters": Nothing, "Tags": Nothing }
 
 
 
 newtype ProvisionProductOutput = ProvisionProductOutput 
-  { "RecordDetail" :: NullOrUndefined (RecordDetail)
+  { "RecordDetail" :: Maybe (RecordDetail)
   }
 derive instance newtypeProvisionProductOutput :: Newtype ProvisionProductOutput _
 derive instance repGenericProvisionProductOutput :: Generic ProvisionProductOutput _
@@ -2972,32 +2971,32 @@ instance encodeProvisionProductOutput :: Encode ProvisionProductOutput where enc
 
 -- | Constructs ProvisionProductOutput from required parameters
 newProvisionProductOutput :: ProvisionProductOutput
-newProvisionProductOutput  = ProvisionProductOutput { "RecordDetail": (NullOrUndefined Nothing) }
+newProvisionProductOutput  = ProvisionProductOutput { "RecordDetail": Nothing }
 
 -- | Constructs ProvisionProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisionProductOutput' :: ( { "RecordDetail" :: NullOrUndefined (RecordDetail) } -> {"RecordDetail" :: NullOrUndefined (RecordDetail) } ) -> ProvisionProductOutput
-newProvisionProductOutput'  customize = (ProvisionProductOutput <<< customize) { "RecordDetail": (NullOrUndefined Nothing) }
+newProvisionProductOutput' :: ( { "RecordDetail" :: Maybe (RecordDetail) } -> {"RecordDetail" :: Maybe (RecordDetail) } ) -> ProvisionProductOutput
+newProvisionProductOutput'  customize = (ProvisionProductOutput <<< customize) { "RecordDetail": Nothing }
 
 
 
 -- | <p>Information about a provisioned product.</p>
 newtype ProvisionedProductAttribute = ProvisionedProductAttribute 
-  { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn)
-  , "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn)
-  , "Type" :: NullOrUndefined (ProvisionedProductType)
-  , "Id" :: NullOrUndefined (Id)
-  , "Status" :: NullOrUndefined (ProvisionedProductStatus)
-  , "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage)
-  , "CreatedTime" :: NullOrUndefined (CreatedTime)
-  , "IdempotencyToken" :: NullOrUndefined (IdempotencyToken)
-  , "LastRecordId" :: NullOrUndefined (Id)
-  , "Tags" :: NullOrUndefined (Tags)
-  , "PhysicalId" :: NullOrUndefined (PhysicalId)
-  , "ProductId" :: NullOrUndefined (Id)
-  , "ProvisioningArtifactId" :: NullOrUndefined (Id)
-  , "UserArn" :: NullOrUndefined (UserArn)
-  , "UserArnSession" :: NullOrUndefined (UserArnSession)
+  { "Name" :: Maybe (ProvisionedProductNameOrArn)
+  , "Arn" :: Maybe (ProvisionedProductNameOrArn)
+  , "Type" :: Maybe (ProvisionedProductType)
+  , "Id" :: Maybe (Id)
+  , "Status" :: Maybe (ProvisionedProductStatus)
+  , "StatusMessage" :: Maybe (ProvisionedProductStatusMessage)
+  , "CreatedTime" :: Maybe (CreatedTime)
+  , "IdempotencyToken" :: Maybe (IdempotencyToken)
+  , "LastRecordId" :: Maybe (Id)
+  , "Tags" :: Maybe (Tags)
+  , "PhysicalId" :: Maybe (PhysicalId)
+  , "ProductId" :: Maybe (Id)
+  , "ProvisioningArtifactId" :: Maybe (Id)
+  , "UserArn" :: Maybe (UserArn)
+  , "UserArnSession" :: Maybe (UserArnSession)
   }
 derive instance newtypeProvisionedProductAttribute :: Newtype ProvisionedProductAttribute _
 derive instance repGenericProvisionedProductAttribute :: Generic ProvisionedProductAttribute _
@@ -3007,12 +3006,12 @@ instance encodeProvisionedProductAttribute :: Encode ProvisionedProductAttribute
 
 -- | Constructs ProvisionedProductAttribute from required parameters
 newProvisionedProductAttribute :: ProvisionedProductAttribute
-newProvisionedProductAttribute  = ProvisionedProductAttribute { "Arn": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IdempotencyToken": (NullOrUndefined Nothing), "LastRecordId": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "PhysicalId": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing), "UserArn": (NullOrUndefined Nothing), "UserArnSession": (NullOrUndefined Nothing) }
+newProvisionedProductAttribute  = ProvisionedProductAttribute { "Arn": Nothing, "CreatedTime": Nothing, "Id": Nothing, "IdempotencyToken": Nothing, "LastRecordId": Nothing, "Name": Nothing, "PhysicalId": Nothing, "ProductId": Nothing, "ProvisioningArtifactId": Nothing, "Status": Nothing, "StatusMessage": Nothing, "Tags": Nothing, "Type": Nothing, "UserArn": Nothing, "UserArnSession": Nothing }
 
 -- | Constructs ProvisionedProductAttribute's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisionedProductAttribute' :: ( { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Type" :: NullOrUndefined (ProvisionedProductType) , "Id" :: NullOrUndefined (Id) , "Status" :: NullOrUndefined (ProvisionedProductStatus) , "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage) , "CreatedTime" :: NullOrUndefined (CreatedTime) , "IdempotencyToken" :: NullOrUndefined (IdempotencyToken) , "LastRecordId" :: NullOrUndefined (Id) , "Tags" :: NullOrUndefined (Tags) , "PhysicalId" :: NullOrUndefined (PhysicalId) , "ProductId" :: NullOrUndefined (Id) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "UserArn" :: NullOrUndefined (UserArn) , "UserArnSession" :: NullOrUndefined (UserArnSession) } -> {"Name" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Type" :: NullOrUndefined (ProvisionedProductType) , "Id" :: NullOrUndefined (Id) , "Status" :: NullOrUndefined (ProvisionedProductStatus) , "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage) , "CreatedTime" :: NullOrUndefined (CreatedTime) , "IdempotencyToken" :: NullOrUndefined (IdempotencyToken) , "LastRecordId" :: NullOrUndefined (Id) , "Tags" :: NullOrUndefined (Tags) , "PhysicalId" :: NullOrUndefined (PhysicalId) , "ProductId" :: NullOrUndefined (Id) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "UserArn" :: NullOrUndefined (UserArn) , "UserArnSession" :: NullOrUndefined (UserArnSession) } ) -> ProvisionedProductAttribute
-newProvisionedProductAttribute'  customize = (ProvisionedProductAttribute <<< customize) { "Arn": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IdempotencyToken": (NullOrUndefined Nothing), "LastRecordId": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "PhysicalId": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing), "UserArn": (NullOrUndefined Nothing), "UserArnSession": (NullOrUndefined Nothing) }
+newProvisionedProductAttribute' :: ( { "Name" :: Maybe (ProvisionedProductNameOrArn) , "Arn" :: Maybe (ProvisionedProductNameOrArn) , "Type" :: Maybe (ProvisionedProductType) , "Id" :: Maybe (Id) , "Status" :: Maybe (ProvisionedProductStatus) , "StatusMessage" :: Maybe (ProvisionedProductStatusMessage) , "CreatedTime" :: Maybe (CreatedTime) , "IdempotencyToken" :: Maybe (IdempotencyToken) , "LastRecordId" :: Maybe (Id) , "Tags" :: Maybe (Tags) , "PhysicalId" :: Maybe (PhysicalId) , "ProductId" :: Maybe (Id) , "ProvisioningArtifactId" :: Maybe (Id) , "UserArn" :: Maybe (UserArn) , "UserArnSession" :: Maybe (UserArnSession) } -> {"Name" :: Maybe (ProvisionedProductNameOrArn) , "Arn" :: Maybe (ProvisionedProductNameOrArn) , "Type" :: Maybe (ProvisionedProductType) , "Id" :: Maybe (Id) , "Status" :: Maybe (ProvisionedProductStatus) , "StatusMessage" :: Maybe (ProvisionedProductStatusMessage) , "CreatedTime" :: Maybe (CreatedTime) , "IdempotencyToken" :: Maybe (IdempotencyToken) , "LastRecordId" :: Maybe (Id) , "Tags" :: Maybe (Tags) , "PhysicalId" :: Maybe (PhysicalId) , "ProductId" :: Maybe (Id) , "ProvisioningArtifactId" :: Maybe (Id) , "UserArn" :: Maybe (UserArn) , "UserArnSession" :: Maybe (UserArnSession) } ) -> ProvisionedProductAttribute
+newProvisionedProductAttribute'  customize = (ProvisionedProductAttribute <<< customize) { "Arn": Nothing, "CreatedTime": Nothing, "Id": Nothing, "IdempotencyToken": Nothing, "LastRecordId": Nothing, "Name": Nothing, "PhysicalId": Nothing, "ProductId": Nothing, "ProvisioningArtifactId": Nothing, "Status": Nothing, "StatusMessage": Nothing, "Tags": Nothing, "Type": Nothing, "UserArn": Nothing, "UserArnSession": Nothing }
 
 
 
@@ -3027,15 +3026,15 @@ instance encodeProvisionedProductAttributes :: Encode ProvisionedProductAttribut
 
 -- | <p>Information about a provisioned product.</p>
 newtype ProvisionedProductDetail = ProvisionedProductDetail 
-  { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn)
-  , "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn)
-  , "Type" :: NullOrUndefined (ProvisionedProductType)
-  , "Id" :: NullOrUndefined (ProvisionedProductId)
-  , "Status" :: NullOrUndefined (ProvisionedProductStatus)
-  , "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage)
-  , "CreatedTime" :: NullOrUndefined (CreatedTime)
-  , "IdempotencyToken" :: NullOrUndefined (IdempotencyToken)
-  , "LastRecordId" :: NullOrUndefined (LastRequestId)
+  { "Name" :: Maybe (ProvisionedProductNameOrArn)
+  , "Arn" :: Maybe (ProvisionedProductNameOrArn)
+  , "Type" :: Maybe (ProvisionedProductType)
+  , "Id" :: Maybe (ProvisionedProductId)
+  , "Status" :: Maybe (ProvisionedProductStatus)
+  , "StatusMessage" :: Maybe (ProvisionedProductStatusMessage)
+  , "CreatedTime" :: Maybe (CreatedTime)
+  , "IdempotencyToken" :: Maybe (IdempotencyToken)
+  , "LastRecordId" :: Maybe (LastRequestId)
   }
 derive instance newtypeProvisionedProductDetail :: Newtype ProvisionedProductDetail _
 derive instance repGenericProvisionedProductDetail :: Generic ProvisionedProductDetail _
@@ -3045,12 +3044,12 @@ instance encodeProvisionedProductDetail :: Encode ProvisionedProductDetail where
 
 -- | Constructs ProvisionedProductDetail from required parameters
 newProvisionedProductDetail :: ProvisionedProductDetail
-newProvisionedProductDetail  = ProvisionedProductDetail { "Arn": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IdempotencyToken": (NullOrUndefined Nothing), "LastRecordId": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProvisionedProductDetail  = ProvisionedProductDetail { "Arn": Nothing, "CreatedTime": Nothing, "Id": Nothing, "IdempotencyToken": Nothing, "LastRecordId": Nothing, "Name": Nothing, "Status": Nothing, "StatusMessage": Nothing, "Type": Nothing }
 
 -- | Constructs ProvisionedProductDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisionedProductDetail' :: ( { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Type" :: NullOrUndefined (ProvisionedProductType) , "Id" :: NullOrUndefined (ProvisionedProductId) , "Status" :: NullOrUndefined (ProvisionedProductStatus) , "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage) , "CreatedTime" :: NullOrUndefined (CreatedTime) , "IdempotencyToken" :: NullOrUndefined (IdempotencyToken) , "LastRecordId" :: NullOrUndefined (LastRequestId) } -> {"Name" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn) , "Type" :: NullOrUndefined (ProvisionedProductType) , "Id" :: NullOrUndefined (ProvisionedProductId) , "Status" :: NullOrUndefined (ProvisionedProductStatus) , "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage) , "CreatedTime" :: NullOrUndefined (CreatedTime) , "IdempotencyToken" :: NullOrUndefined (IdempotencyToken) , "LastRecordId" :: NullOrUndefined (LastRequestId) } ) -> ProvisionedProductDetail
-newProvisionedProductDetail'  customize = (ProvisionedProductDetail <<< customize) { "Arn": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IdempotencyToken": (NullOrUndefined Nothing), "LastRecordId": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProvisionedProductDetail' :: ( { "Name" :: Maybe (ProvisionedProductNameOrArn) , "Arn" :: Maybe (ProvisionedProductNameOrArn) , "Type" :: Maybe (ProvisionedProductType) , "Id" :: Maybe (ProvisionedProductId) , "Status" :: Maybe (ProvisionedProductStatus) , "StatusMessage" :: Maybe (ProvisionedProductStatusMessage) , "CreatedTime" :: Maybe (CreatedTime) , "IdempotencyToken" :: Maybe (IdempotencyToken) , "LastRecordId" :: Maybe (LastRequestId) } -> {"Name" :: Maybe (ProvisionedProductNameOrArn) , "Arn" :: Maybe (ProvisionedProductNameOrArn) , "Type" :: Maybe (ProvisionedProductType) , "Id" :: Maybe (ProvisionedProductId) , "Status" :: Maybe (ProvisionedProductStatus) , "StatusMessage" :: Maybe (ProvisionedProductStatusMessage) , "CreatedTime" :: Maybe (CreatedTime) , "IdempotencyToken" :: Maybe (IdempotencyToken) , "LastRecordId" :: Maybe (LastRequestId) } ) -> ProvisionedProductDetail
+newProvisionedProductDetail'  customize = (ProvisionedProductDetail <<< customize) { "Arn": Nothing, "CreatedTime": Nothing, "Id": Nothing, "IdempotencyToken": Nothing, "LastRecordId": Nothing, "Name": Nothing, "Status": Nothing, "StatusMessage": Nothing, "Type": Nothing }
 
 
 
@@ -3101,21 +3100,21 @@ instance encodeProvisionedProductNameOrArn :: Encode ProvisionedProductNameOrArn
 
 -- | <p>Information about a plan.</p>
 newtype ProvisionedProductPlanDetails = ProvisionedProductPlanDetails 
-  { "CreatedTime" :: NullOrUndefined (CreatedTime)
-  , "PathId" :: NullOrUndefined (Id)
-  , "ProductId" :: NullOrUndefined (Id)
-  , "PlanName" :: NullOrUndefined (ProvisionedProductPlanName)
-  , "PlanId" :: NullOrUndefined (Id)
-  , "ProvisionProductId" :: NullOrUndefined (Id)
-  , "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName)
-  , "PlanType" :: NullOrUndefined (ProvisionedProductPlanType)
-  , "ProvisioningArtifactId" :: NullOrUndefined (Id)
-  , "Status" :: NullOrUndefined (ProvisionedProductPlanStatus)
-  , "UpdatedTime" :: NullOrUndefined (UpdatedTime)
-  , "NotificationArns" :: NullOrUndefined (NotificationArns)
-  , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters)
-  , "Tags" :: NullOrUndefined (Tags)
-  , "StatusMessage" :: NullOrUndefined (StatusMessage)
+  { "CreatedTime" :: Maybe (CreatedTime)
+  , "PathId" :: Maybe (Id)
+  , "ProductId" :: Maybe (Id)
+  , "PlanName" :: Maybe (ProvisionedProductPlanName)
+  , "PlanId" :: Maybe (Id)
+  , "ProvisionProductId" :: Maybe (Id)
+  , "ProvisionProductName" :: Maybe (ProvisionedProductName)
+  , "PlanType" :: Maybe (ProvisionedProductPlanType)
+  , "ProvisioningArtifactId" :: Maybe (Id)
+  , "Status" :: Maybe (ProvisionedProductPlanStatus)
+  , "UpdatedTime" :: Maybe (UpdatedTime)
+  , "NotificationArns" :: Maybe (NotificationArns)
+  , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters)
+  , "Tags" :: Maybe (Tags)
+  , "StatusMessage" :: Maybe (StatusMessage)
   }
 derive instance newtypeProvisionedProductPlanDetails :: Newtype ProvisionedProductPlanDetails _
 derive instance repGenericProvisionedProductPlanDetails :: Generic ProvisionedProductPlanDetails _
@@ -3125,12 +3124,12 @@ instance encodeProvisionedProductPlanDetails :: Encode ProvisionedProductPlanDet
 
 -- | Constructs ProvisionedProductPlanDetails from required parameters
 newProvisionedProductPlanDetails :: ProvisionedProductPlanDetails
-newProvisionedProductPlanDetails  = ProvisionedProductPlanDetails { "CreatedTime": (NullOrUndefined Nothing), "NotificationArns": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "PlanId": (NullOrUndefined Nothing), "PlanName": (NullOrUndefined Nothing), "PlanType": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing), "ProvisionProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing), "UpdatedTime": (NullOrUndefined Nothing) }
+newProvisionedProductPlanDetails  = ProvisionedProductPlanDetails { "CreatedTime": Nothing, "NotificationArns": Nothing, "PathId": Nothing, "PlanId": Nothing, "PlanName": Nothing, "PlanType": Nothing, "ProductId": Nothing, "ProvisionProductId": Nothing, "ProvisionProductName": Nothing, "ProvisioningArtifactId": Nothing, "ProvisioningParameters": Nothing, "Status": Nothing, "StatusMessage": Nothing, "Tags": Nothing, "UpdatedTime": Nothing }
 
 -- | Constructs ProvisionedProductPlanDetails's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisionedProductPlanDetails' :: ( { "CreatedTime" :: NullOrUndefined (CreatedTime) , "PathId" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "PlanName" :: NullOrUndefined (ProvisionedProductPlanName) , "PlanId" :: NullOrUndefined (Id) , "ProvisionProductId" :: NullOrUndefined (Id) , "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName) , "PlanType" :: NullOrUndefined (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "Status" :: NullOrUndefined (ProvisionedProductPlanStatus) , "UpdatedTime" :: NullOrUndefined (UpdatedTime) , "NotificationArns" :: NullOrUndefined (NotificationArns) , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters) , "Tags" :: NullOrUndefined (Tags) , "StatusMessage" :: NullOrUndefined (StatusMessage) } -> {"CreatedTime" :: NullOrUndefined (CreatedTime) , "PathId" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "PlanName" :: NullOrUndefined (ProvisionedProductPlanName) , "PlanId" :: NullOrUndefined (Id) , "ProvisionProductId" :: NullOrUndefined (Id) , "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName) , "PlanType" :: NullOrUndefined (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "Status" :: NullOrUndefined (ProvisionedProductPlanStatus) , "UpdatedTime" :: NullOrUndefined (UpdatedTime) , "NotificationArns" :: NullOrUndefined (NotificationArns) , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters) , "Tags" :: NullOrUndefined (Tags) , "StatusMessage" :: NullOrUndefined (StatusMessage) } ) -> ProvisionedProductPlanDetails
-newProvisionedProductPlanDetails'  customize = (ProvisionedProductPlanDetails <<< customize) { "CreatedTime": (NullOrUndefined Nothing), "NotificationArns": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "PlanId": (NullOrUndefined Nothing), "PlanName": (NullOrUndefined Nothing), "PlanType": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing), "ProvisionProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing), "UpdatedTime": (NullOrUndefined Nothing) }
+newProvisionedProductPlanDetails' :: ( { "CreatedTime" :: Maybe (CreatedTime) , "PathId" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "PlanName" :: Maybe (ProvisionedProductPlanName) , "PlanId" :: Maybe (Id) , "ProvisionProductId" :: Maybe (Id) , "ProvisionProductName" :: Maybe (ProvisionedProductName) , "PlanType" :: Maybe (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: Maybe (Id) , "Status" :: Maybe (ProvisionedProductPlanStatus) , "UpdatedTime" :: Maybe (UpdatedTime) , "NotificationArns" :: Maybe (NotificationArns) , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters) , "Tags" :: Maybe (Tags) , "StatusMessage" :: Maybe (StatusMessage) } -> {"CreatedTime" :: Maybe (CreatedTime) , "PathId" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "PlanName" :: Maybe (ProvisionedProductPlanName) , "PlanId" :: Maybe (Id) , "ProvisionProductId" :: Maybe (Id) , "ProvisionProductName" :: Maybe (ProvisionedProductName) , "PlanType" :: Maybe (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: Maybe (Id) , "Status" :: Maybe (ProvisionedProductPlanStatus) , "UpdatedTime" :: Maybe (UpdatedTime) , "NotificationArns" :: Maybe (NotificationArns) , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters) , "Tags" :: Maybe (Tags) , "StatusMessage" :: Maybe (StatusMessage) } ) -> ProvisionedProductPlanDetails
+newProvisionedProductPlanDetails'  customize = (ProvisionedProductPlanDetails <<< customize) { "CreatedTime": Nothing, "NotificationArns": Nothing, "PathId": Nothing, "PlanId": Nothing, "PlanName": Nothing, "PlanType": Nothing, "ProductId": Nothing, "ProvisionProductId": Nothing, "ProvisionProductName": Nothing, "ProvisioningArtifactId": Nothing, "ProvisioningParameters": Nothing, "Status": Nothing, "StatusMessage": Nothing, "Tags": Nothing, "UpdatedTime": Nothing }
 
 
 
@@ -3154,12 +3153,12 @@ instance encodeProvisionedProductPlanStatus :: Encode ProvisionedProductPlanStat
 
 -- | <p>Summary information about a plan.</p>
 newtype ProvisionedProductPlanSummary = ProvisionedProductPlanSummary 
-  { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName)
-  , "PlanId" :: NullOrUndefined (Id)
-  , "ProvisionProductId" :: NullOrUndefined (Id)
-  , "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName)
-  , "PlanType" :: NullOrUndefined (ProvisionedProductPlanType)
-  , "ProvisioningArtifactId" :: NullOrUndefined (Id)
+  { "PlanName" :: Maybe (ProvisionedProductPlanName)
+  , "PlanId" :: Maybe (Id)
+  , "ProvisionProductId" :: Maybe (Id)
+  , "ProvisionProductName" :: Maybe (ProvisionedProductName)
+  , "PlanType" :: Maybe (ProvisionedProductPlanType)
+  , "ProvisioningArtifactId" :: Maybe (Id)
   }
 derive instance newtypeProvisionedProductPlanSummary :: Newtype ProvisionedProductPlanSummary _
 derive instance repGenericProvisionedProductPlanSummary :: Generic ProvisionedProductPlanSummary _
@@ -3169,12 +3168,12 @@ instance encodeProvisionedProductPlanSummary :: Encode ProvisionedProductPlanSum
 
 -- | Constructs ProvisionedProductPlanSummary from required parameters
 newProvisionedProductPlanSummary :: ProvisionedProductPlanSummary
-newProvisionedProductPlanSummary  = ProvisionedProductPlanSummary { "PlanId": (NullOrUndefined Nothing), "PlanName": (NullOrUndefined Nothing), "PlanType": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing), "ProvisionProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing) }
+newProvisionedProductPlanSummary  = ProvisionedProductPlanSummary { "PlanId": Nothing, "PlanName": Nothing, "PlanType": Nothing, "ProvisionProductId": Nothing, "ProvisionProductName": Nothing, "ProvisioningArtifactId": Nothing }
 
 -- | Constructs ProvisionedProductPlanSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisionedProductPlanSummary' :: ( { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName) , "PlanId" :: NullOrUndefined (Id) , "ProvisionProductId" :: NullOrUndefined (Id) , "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName) , "PlanType" :: NullOrUndefined (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: NullOrUndefined (Id) } -> {"PlanName" :: NullOrUndefined (ProvisionedProductPlanName) , "PlanId" :: NullOrUndefined (Id) , "ProvisionProductId" :: NullOrUndefined (Id) , "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName) , "PlanType" :: NullOrUndefined (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: NullOrUndefined (Id) } ) -> ProvisionedProductPlanSummary
-newProvisionedProductPlanSummary'  customize = (ProvisionedProductPlanSummary <<< customize) { "PlanId": (NullOrUndefined Nothing), "PlanName": (NullOrUndefined Nothing), "PlanType": (NullOrUndefined Nothing), "ProvisionProductId": (NullOrUndefined Nothing), "ProvisionProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing) }
+newProvisionedProductPlanSummary' :: ( { "PlanName" :: Maybe (ProvisionedProductPlanName) , "PlanId" :: Maybe (Id) , "ProvisionProductId" :: Maybe (Id) , "ProvisionProductName" :: Maybe (ProvisionedProductName) , "PlanType" :: Maybe (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: Maybe (Id) } -> {"PlanName" :: Maybe (ProvisionedProductPlanName) , "PlanId" :: Maybe (Id) , "ProvisionProductId" :: Maybe (Id) , "ProvisionProductName" :: Maybe (ProvisionedProductName) , "PlanType" :: Maybe (ProvisionedProductPlanType) , "ProvisioningArtifactId" :: Maybe (Id) } ) -> ProvisionedProductPlanSummary
+newProvisionedProductPlanSummary'  customize = (ProvisionedProductPlanSummary <<< customize) { "PlanId": Nothing, "PlanName": Nothing, "PlanType": Nothing, "ProvisionProductId": Nothing, "ProvisionProductName": Nothing, "ProvisioningArtifactId": Nothing }
 
 
 
@@ -3252,10 +3251,10 @@ instance encodeProvisionedProductViewFilterValues :: Encode ProvisionedProductVi
 
 -- | <p>Information about a provisioning artifact. A provisioning artifact is also known as a product version.</p>
 newtype ProvisioningArtifact = ProvisioningArtifact 
-  { "Id" :: NullOrUndefined (Id)
-  , "Name" :: NullOrUndefined (ProvisioningArtifactName)
-  , "Description" :: NullOrUndefined (ProvisioningArtifactDescription)
-  , "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime)
+  { "Id" :: Maybe (Id)
+  , "Name" :: Maybe (ProvisioningArtifactName)
+  , "Description" :: Maybe (ProvisioningArtifactDescription)
+  , "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime)
   }
 derive instance newtypeProvisioningArtifact :: Newtype ProvisioningArtifact _
 derive instance repGenericProvisioningArtifact :: Generic ProvisioningArtifact _
@@ -3265,12 +3264,12 @@ instance encodeProvisioningArtifact :: Encode ProvisioningArtifact where encode 
 
 -- | Constructs ProvisioningArtifact from required parameters
 newProvisioningArtifact :: ProvisioningArtifact
-newProvisioningArtifact  = ProvisioningArtifact { "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newProvisioningArtifact  = ProvisioningArtifact { "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing }
 
 -- | Constructs ProvisioningArtifact's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisioningArtifact' :: ( { "Id" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime) } -> {"Id" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime) } ) -> ProvisioningArtifact
-newProvisioningArtifact'  customize = (ProvisioningArtifact <<< customize) { "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newProvisioningArtifact' :: ( { "Id" :: Maybe (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime) } -> {"Id" :: Maybe (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime) } ) -> ProvisioningArtifact
+newProvisioningArtifact'  customize = (ProvisioningArtifact <<< customize) { "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing }
 
 
 
@@ -3303,12 +3302,12 @@ instance encodeProvisioningArtifactDescription :: Encode ProvisioningArtifactDes
 
 -- | <p>Information about a provisioning artifact (also known as a version) for a product.</p>
 newtype ProvisioningArtifactDetail = ProvisioningArtifactDetail 
-  { "Id" :: NullOrUndefined (Id)
-  , "Name" :: NullOrUndefined (ProvisioningArtifactName)
-  , "Description" :: NullOrUndefined (ProvisioningArtifactName)
-  , "Type" :: NullOrUndefined (ProvisioningArtifactType)
-  , "CreatedTime" :: NullOrUndefined (CreationTime)
-  , "Active" :: NullOrUndefined (ProvisioningArtifactActive)
+  { "Id" :: Maybe (Id)
+  , "Name" :: Maybe (ProvisioningArtifactName)
+  , "Description" :: Maybe (ProvisioningArtifactName)
+  , "Type" :: Maybe (ProvisioningArtifactType)
+  , "CreatedTime" :: Maybe (CreationTime)
+  , "Active" :: Maybe (ProvisioningArtifactActive)
   }
 derive instance newtypeProvisioningArtifactDetail :: Newtype ProvisioningArtifactDetail _
 derive instance repGenericProvisioningArtifactDetail :: Generic ProvisioningArtifactDetail _
@@ -3318,12 +3317,12 @@ instance encodeProvisioningArtifactDetail :: Encode ProvisioningArtifactDetail w
 
 -- | Constructs ProvisioningArtifactDetail from required parameters
 newProvisioningArtifactDetail :: ProvisioningArtifactDetail
-newProvisioningArtifactDetail  = ProvisioningArtifactDetail { "Active": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProvisioningArtifactDetail  = ProvisioningArtifactDetail { "Active": Nothing, "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing, "Type": Nothing }
 
 -- | Constructs ProvisioningArtifactDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisioningArtifactDetail' :: ( { "Id" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactName) , "Type" :: NullOrUndefined (ProvisioningArtifactType) , "CreatedTime" :: NullOrUndefined (CreationTime) , "Active" :: NullOrUndefined (ProvisioningArtifactActive) } -> {"Id" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactName) , "Type" :: NullOrUndefined (ProvisioningArtifactType) , "CreatedTime" :: NullOrUndefined (CreationTime) , "Active" :: NullOrUndefined (ProvisioningArtifactActive) } ) -> ProvisioningArtifactDetail
-newProvisioningArtifactDetail'  customize = (ProvisioningArtifactDetail <<< customize) { "Active": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProvisioningArtifactDetail' :: ( { "Id" :: Maybe (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactName) , "Type" :: Maybe (ProvisioningArtifactType) , "CreatedTime" :: Maybe (CreationTime) , "Active" :: Maybe (ProvisioningArtifactActive) } -> {"Id" :: Maybe (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactName) , "Type" :: Maybe (ProvisioningArtifactType) , "CreatedTime" :: Maybe (CreationTime) , "Active" :: Maybe (ProvisioningArtifactActive) } ) -> ProvisioningArtifactDetail
+newProvisioningArtifactDetail'  customize = (ProvisioningArtifactDetail <<< customize) { "Active": Nothing, "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing, "Type": Nothing }
 
 
 
@@ -3374,12 +3373,12 @@ instance encodeProvisioningArtifactName :: Encode ProvisioningArtifactName where
 
 -- | <p>Information about a parameter used to provision a product.</p>
 newtype ProvisioningArtifactParameter = ProvisioningArtifactParameter 
-  { "ParameterKey" :: NullOrUndefined (ParameterKey)
-  , "DefaultValue" :: NullOrUndefined (DefaultValue)
-  , "ParameterType" :: NullOrUndefined (ParameterType)
-  , "IsNoEcho" :: NullOrUndefined (NoEcho)
-  , "Description" :: NullOrUndefined (Description)
-  , "ParameterConstraints" :: NullOrUndefined (ParameterConstraints)
+  { "ParameterKey" :: Maybe (ParameterKey)
+  , "DefaultValue" :: Maybe (DefaultValue)
+  , "ParameterType" :: Maybe (ParameterType)
+  , "IsNoEcho" :: Maybe (NoEcho)
+  , "Description" :: Maybe (Description)
+  , "ParameterConstraints" :: Maybe (ParameterConstraints)
   }
 derive instance newtypeProvisioningArtifactParameter :: Newtype ProvisioningArtifactParameter _
 derive instance repGenericProvisioningArtifactParameter :: Generic ProvisioningArtifactParameter _
@@ -3389,12 +3388,12 @@ instance encodeProvisioningArtifactParameter :: Encode ProvisioningArtifactParam
 
 -- | Constructs ProvisioningArtifactParameter from required parameters
 newProvisioningArtifactParameter :: ProvisioningArtifactParameter
-newProvisioningArtifactParameter  = ProvisioningArtifactParameter { "DefaultValue": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "IsNoEcho": (NullOrUndefined Nothing), "ParameterConstraints": (NullOrUndefined Nothing), "ParameterKey": (NullOrUndefined Nothing), "ParameterType": (NullOrUndefined Nothing) }
+newProvisioningArtifactParameter  = ProvisioningArtifactParameter { "DefaultValue": Nothing, "Description": Nothing, "IsNoEcho": Nothing, "ParameterConstraints": Nothing, "ParameterKey": Nothing, "ParameterType": Nothing }
 
 -- | Constructs ProvisioningArtifactParameter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisioningArtifactParameter' :: ( { "ParameterKey" :: NullOrUndefined (ParameterKey) , "DefaultValue" :: NullOrUndefined (DefaultValue) , "ParameterType" :: NullOrUndefined (ParameterType) , "IsNoEcho" :: NullOrUndefined (NoEcho) , "Description" :: NullOrUndefined (Description) , "ParameterConstraints" :: NullOrUndefined (ParameterConstraints) } -> {"ParameterKey" :: NullOrUndefined (ParameterKey) , "DefaultValue" :: NullOrUndefined (DefaultValue) , "ParameterType" :: NullOrUndefined (ParameterType) , "IsNoEcho" :: NullOrUndefined (NoEcho) , "Description" :: NullOrUndefined (Description) , "ParameterConstraints" :: NullOrUndefined (ParameterConstraints) } ) -> ProvisioningArtifactParameter
-newProvisioningArtifactParameter'  customize = (ProvisioningArtifactParameter <<< customize) { "DefaultValue": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "IsNoEcho": (NullOrUndefined Nothing), "ParameterConstraints": (NullOrUndefined Nothing), "ParameterKey": (NullOrUndefined Nothing), "ParameterType": (NullOrUndefined Nothing) }
+newProvisioningArtifactParameter' :: ( { "ParameterKey" :: Maybe (ParameterKey) , "DefaultValue" :: Maybe (DefaultValue) , "ParameterType" :: Maybe (ParameterType) , "IsNoEcho" :: Maybe (NoEcho) , "Description" :: Maybe (Description) , "ParameterConstraints" :: Maybe (ParameterConstraints) } -> {"ParameterKey" :: Maybe (ParameterKey) , "DefaultValue" :: Maybe (DefaultValue) , "ParameterType" :: Maybe (ParameterType) , "IsNoEcho" :: Maybe (NoEcho) , "Description" :: Maybe (Description) , "ParameterConstraints" :: Maybe (ParameterConstraints) } ) -> ProvisioningArtifactParameter
+newProvisioningArtifactParameter'  customize = (ProvisioningArtifactParameter <<< customize) { "DefaultValue": Nothing, "Description": Nothing, "IsNoEcho": Nothing, "ParameterConstraints": Nothing, "ParameterKey": Nothing, "ParameterType": Nothing }
 
 
 
@@ -3409,10 +3408,10 @@ instance encodeProvisioningArtifactParameters :: Encode ProvisioningArtifactPara
 
 -- | <p>Information about a provisioning artifact (also known as a version) for a product.</p>
 newtype ProvisioningArtifactProperties = ProvisioningArtifactProperties 
-  { "Name" :: NullOrUndefined (ProvisioningArtifactName)
-  , "Description" :: NullOrUndefined (ProvisioningArtifactDescription)
+  { "Name" :: Maybe (ProvisioningArtifactName)
+  , "Description" :: Maybe (ProvisioningArtifactDescription)
   , "Info" :: (ProvisioningArtifactInfo)
-  , "Type" :: NullOrUndefined (ProvisioningArtifactType)
+  , "Type" :: Maybe (ProvisioningArtifactType)
   }
 derive instance newtypeProvisioningArtifactProperties :: Newtype ProvisioningArtifactProperties _
 derive instance repGenericProvisioningArtifactProperties :: Generic ProvisioningArtifactProperties _
@@ -3422,12 +3421,12 @@ instance encodeProvisioningArtifactProperties :: Encode ProvisioningArtifactProp
 
 -- | Constructs ProvisioningArtifactProperties from required parameters
 newProvisioningArtifactProperties :: ProvisioningArtifactInfo -> ProvisioningArtifactProperties
-newProvisioningArtifactProperties _Info = ProvisioningArtifactProperties { "Info": _Info, "Description": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProvisioningArtifactProperties _Info = ProvisioningArtifactProperties { "Info": _Info, "Description": Nothing, "Name": Nothing, "Type": Nothing }
 
 -- | Constructs ProvisioningArtifactProperties's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisioningArtifactProperties' :: ProvisioningArtifactInfo -> ( { "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "Info" :: (ProvisioningArtifactInfo) , "Type" :: NullOrUndefined (ProvisioningArtifactType) } -> {"Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "Info" :: (ProvisioningArtifactInfo) , "Type" :: NullOrUndefined (ProvisioningArtifactType) } ) -> ProvisioningArtifactProperties
-newProvisioningArtifactProperties' _Info customize = (ProvisioningArtifactProperties <<< customize) { "Info": _Info, "Description": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newProvisioningArtifactProperties' :: ProvisioningArtifactInfo -> ( { "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "Info" :: (ProvisioningArtifactInfo) , "Type" :: Maybe (ProvisioningArtifactType) } -> {"Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "Info" :: (ProvisioningArtifactInfo) , "Type" :: Maybe (ProvisioningArtifactType) } ) -> ProvisioningArtifactProperties
+newProvisioningArtifactProperties' _Info customize = (ProvisioningArtifactProperties <<< customize) { "Info": _Info, "Description": Nothing, "Name": Nothing, "Type": Nothing }
 
 
 
@@ -3460,11 +3459,11 @@ instance encodeProvisioningArtifactSummaries :: Encode ProvisioningArtifactSumma
 
 -- | <p>Summary information about a provisioning artifact (also known as a version) for a product.</p>
 newtype ProvisioningArtifactSummary = ProvisioningArtifactSummary 
-  { "Id" :: NullOrUndefined (Id)
-  , "Name" :: NullOrUndefined (ProvisioningArtifactName)
-  , "Description" :: NullOrUndefined (ProvisioningArtifactDescription)
-  , "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime)
-  , "ProvisioningArtifactMetadata" :: NullOrUndefined (ProvisioningArtifactInfo)
+  { "Id" :: Maybe (Id)
+  , "Name" :: Maybe (ProvisioningArtifactName)
+  , "Description" :: Maybe (ProvisioningArtifactDescription)
+  , "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime)
+  , "ProvisioningArtifactMetadata" :: Maybe (ProvisioningArtifactInfo)
   }
 derive instance newtypeProvisioningArtifactSummary :: Newtype ProvisioningArtifactSummary _
 derive instance repGenericProvisioningArtifactSummary :: Generic ProvisioningArtifactSummary _
@@ -3474,12 +3473,12 @@ instance encodeProvisioningArtifactSummary :: Encode ProvisioningArtifactSummary
 
 -- | Constructs ProvisioningArtifactSummary from required parameters
 newProvisioningArtifactSummary :: ProvisioningArtifactSummary
-newProvisioningArtifactSummary  = ProvisioningArtifactSummary { "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "ProvisioningArtifactMetadata": (NullOrUndefined Nothing) }
+newProvisioningArtifactSummary  = ProvisioningArtifactSummary { "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing, "ProvisioningArtifactMetadata": Nothing }
 
 -- | Constructs ProvisioningArtifactSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisioningArtifactSummary' :: ( { "Id" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime) , "ProvisioningArtifactMetadata" :: NullOrUndefined (ProvisioningArtifactInfo) } -> {"Id" :: NullOrUndefined (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime) , "ProvisioningArtifactMetadata" :: NullOrUndefined (ProvisioningArtifactInfo) } ) -> ProvisioningArtifactSummary
-newProvisioningArtifactSummary'  customize = (ProvisioningArtifactSummary <<< customize) { "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "ProvisioningArtifactMetadata": (NullOrUndefined Nothing) }
+newProvisioningArtifactSummary' :: ( { "Id" :: Maybe (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime) , "ProvisioningArtifactMetadata" :: Maybe (ProvisioningArtifactInfo) } -> {"Id" :: Maybe (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime) , "ProvisioningArtifactMetadata" :: Maybe (ProvisioningArtifactInfo) } ) -> ProvisioningArtifactSummary
+newProvisioningArtifactSummary'  customize = (ProvisioningArtifactSummary <<< customize) { "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing, "ProvisioningArtifactMetadata": Nothing }
 
 
 
@@ -3503,8 +3502,8 @@ instance encodeProvisioningArtifacts :: Encode ProvisioningArtifacts where encod
 
 -- | <p>Information about a parameter used to provision a product.</p>
 newtype ProvisioningParameter = ProvisioningParameter 
-  { "Key" :: NullOrUndefined (ParameterKey)
-  , "Value" :: NullOrUndefined (ParameterValue)
+  { "Key" :: Maybe (ParameterKey)
+  , "Value" :: Maybe (ParameterValue)
   }
 derive instance newtypeProvisioningParameter :: Newtype ProvisioningParameter _
 derive instance repGenericProvisioningParameter :: Generic ProvisioningParameter _
@@ -3514,12 +3513,12 @@ instance encodeProvisioningParameter :: Encode ProvisioningParameter where encod
 
 -- | Constructs ProvisioningParameter from required parameters
 newProvisioningParameter :: ProvisioningParameter
-newProvisioningParameter  = ProvisioningParameter { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newProvisioningParameter  = ProvisioningParameter { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs ProvisioningParameter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProvisioningParameter' :: ( { "Key" :: NullOrUndefined (ParameterKey) , "Value" :: NullOrUndefined (ParameterValue) } -> {"Key" :: NullOrUndefined (ParameterKey) , "Value" :: NullOrUndefined (ParameterValue) } ) -> ProvisioningParameter
-newProvisioningParameter'  customize = (ProvisioningParameter <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newProvisioningParameter' :: ( { "Key" :: Maybe (ParameterKey) , "Value" :: Maybe (ParameterValue) } -> {"Key" :: Maybe (ParameterKey) , "Value" :: Maybe (ParameterValue) } ) -> ProvisioningParameter
+newProvisioningParameter'  customize = (ProvisioningParameter <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
@@ -3534,19 +3533,19 @@ instance encodeProvisioningParameters :: Encode ProvisioningParameters where enc
 
 -- | <p>Information about a request operation.</p>
 newtype RecordDetail = RecordDetail 
-  { "RecordId" :: NullOrUndefined (Id)
-  , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName)
-  , "Status" :: NullOrUndefined (RecordStatus)
-  , "CreatedTime" :: NullOrUndefined (CreatedTime)
-  , "UpdatedTime" :: NullOrUndefined (UpdatedTime)
-  , "ProvisionedProductType" :: NullOrUndefined (ProvisionedProductType)
-  , "RecordType" :: NullOrUndefined (RecordType)
-  , "ProvisionedProductId" :: NullOrUndefined (Id)
-  , "ProductId" :: NullOrUndefined (Id)
-  , "ProvisioningArtifactId" :: NullOrUndefined (Id)
-  , "PathId" :: NullOrUndefined (Id)
-  , "RecordErrors" :: NullOrUndefined (RecordErrors)
-  , "RecordTags" :: NullOrUndefined (RecordTags)
+  { "RecordId" :: Maybe (Id)
+  , "ProvisionedProductName" :: Maybe (ProvisionedProductName)
+  , "Status" :: Maybe (RecordStatus)
+  , "CreatedTime" :: Maybe (CreatedTime)
+  , "UpdatedTime" :: Maybe (UpdatedTime)
+  , "ProvisionedProductType" :: Maybe (ProvisionedProductType)
+  , "RecordType" :: Maybe (RecordType)
+  , "ProvisionedProductId" :: Maybe (Id)
+  , "ProductId" :: Maybe (Id)
+  , "ProvisioningArtifactId" :: Maybe (Id)
+  , "PathId" :: Maybe (Id)
+  , "RecordErrors" :: Maybe (RecordErrors)
+  , "RecordTags" :: Maybe (RecordTags)
   }
 derive instance newtypeRecordDetail :: Newtype RecordDetail _
 derive instance repGenericRecordDetail :: Generic RecordDetail _
@@ -3556,12 +3555,12 @@ instance encodeRecordDetail :: Encode RecordDetail where encode = genericEncode 
 
 -- | Constructs RecordDetail from required parameters
 newRecordDetail :: RecordDetail
-newRecordDetail  = RecordDetail { "CreatedTime": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisionedProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing), "ProvisionedProductType": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "RecordErrors": (NullOrUndefined Nothing), "RecordId": (NullOrUndefined Nothing), "RecordTags": (NullOrUndefined Nothing), "RecordType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "UpdatedTime": (NullOrUndefined Nothing) }
+newRecordDetail  = RecordDetail { "CreatedTime": Nothing, "PathId": Nothing, "ProductId": Nothing, "ProvisionedProductId": Nothing, "ProvisionedProductName": Nothing, "ProvisionedProductType": Nothing, "ProvisioningArtifactId": Nothing, "RecordErrors": Nothing, "RecordId": Nothing, "RecordTags": Nothing, "RecordType": Nothing, "Status": Nothing, "UpdatedTime": Nothing }
 
 -- | Constructs RecordDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRecordDetail' :: ( { "RecordId" :: NullOrUndefined (Id) , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName) , "Status" :: NullOrUndefined (RecordStatus) , "CreatedTime" :: NullOrUndefined (CreatedTime) , "UpdatedTime" :: NullOrUndefined (UpdatedTime) , "ProvisionedProductType" :: NullOrUndefined (ProvisionedProductType) , "RecordType" :: NullOrUndefined (RecordType) , "ProvisionedProductId" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "PathId" :: NullOrUndefined (Id) , "RecordErrors" :: NullOrUndefined (RecordErrors) , "RecordTags" :: NullOrUndefined (RecordTags) } -> {"RecordId" :: NullOrUndefined (Id) , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName) , "Status" :: NullOrUndefined (RecordStatus) , "CreatedTime" :: NullOrUndefined (CreatedTime) , "UpdatedTime" :: NullOrUndefined (UpdatedTime) , "ProvisionedProductType" :: NullOrUndefined (ProvisionedProductType) , "RecordType" :: NullOrUndefined (RecordType) , "ProvisionedProductId" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "PathId" :: NullOrUndefined (Id) , "RecordErrors" :: NullOrUndefined (RecordErrors) , "RecordTags" :: NullOrUndefined (RecordTags) } ) -> RecordDetail
-newRecordDetail'  customize = (RecordDetail <<< customize) { "CreatedTime": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisionedProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing), "ProvisionedProductType": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "RecordErrors": (NullOrUndefined Nothing), "RecordId": (NullOrUndefined Nothing), "RecordTags": (NullOrUndefined Nothing), "RecordType": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing), "UpdatedTime": (NullOrUndefined Nothing) }
+newRecordDetail' :: ( { "RecordId" :: Maybe (Id) , "ProvisionedProductName" :: Maybe (ProvisionedProductName) , "Status" :: Maybe (RecordStatus) , "CreatedTime" :: Maybe (CreatedTime) , "UpdatedTime" :: Maybe (UpdatedTime) , "ProvisionedProductType" :: Maybe (ProvisionedProductType) , "RecordType" :: Maybe (RecordType) , "ProvisionedProductId" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "ProvisioningArtifactId" :: Maybe (Id) , "PathId" :: Maybe (Id) , "RecordErrors" :: Maybe (RecordErrors) , "RecordTags" :: Maybe (RecordTags) } -> {"RecordId" :: Maybe (Id) , "ProvisionedProductName" :: Maybe (ProvisionedProductName) , "Status" :: Maybe (RecordStatus) , "CreatedTime" :: Maybe (CreatedTime) , "UpdatedTime" :: Maybe (UpdatedTime) , "ProvisionedProductType" :: Maybe (ProvisionedProductType) , "RecordType" :: Maybe (RecordType) , "ProvisionedProductId" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "ProvisioningArtifactId" :: Maybe (Id) , "PathId" :: Maybe (Id) , "RecordErrors" :: Maybe (RecordErrors) , "RecordTags" :: Maybe (RecordTags) } ) -> RecordDetail
+newRecordDetail'  customize = (RecordDetail <<< customize) { "CreatedTime": Nothing, "PathId": Nothing, "ProductId": Nothing, "ProvisionedProductId": Nothing, "ProvisionedProductName": Nothing, "ProvisionedProductType": Nothing, "ProvisioningArtifactId": Nothing, "RecordErrors": Nothing, "RecordId": Nothing, "RecordTags": Nothing, "RecordType": Nothing, "Status": Nothing, "UpdatedTime": Nothing }
 
 
 
@@ -3576,8 +3575,8 @@ instance encodeRecordDetails :: Encode RecordDetails where encode = genericEncod
 
 -- | <p>The error code and description resulting from an operation.</p>
 newtype RecordError = RecordError 
-  { "Code" :: NullOrUndefined (ErrorCode)
-  , "Description" :: NullOrUndefined (ErrorDescription)
+  { "Code" :: Maybe (ErrorCode)
+  , "Description" :: Maybe (ErrorDescription)
   }
 derive instance newtypeRecordError :: Newtype RecordError _
 derive instance repGenericRecordError :: Generic RecordError _
@@ -3587,12 +3586,12 @@ instance encodeRecordError :: Encode RecordError where encode = genericEncode op
 
 -- | Constructs RecordError from required parameters
 newRecordError :: RecordError
-newRecordError  = RecordError { "Code": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newRecordError  = RecordError { "Code": Nothing, "Description": Nothing }
 
 -- | Constructs RecordError's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRecordError' :: ( { "Code" :: NullOrUndefined (ErrorCode) , "Description" :: NullOrUndefined (ErrorDescription) } -> {"Code" :: NullOrUndefined (ErrorCode) , "Description" :: NullOrUndefined (ErrorDescription) } ) -> RecordError
-newRecordError'  customize = (RecordError <<< customize) { "Code": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newRecordError' :: ( { "Code" :: Maybe (ErrorCode) , "Description" :: Maybe (ErrorDescription) } -> {"Code" :: Maybe (ErrorCode) , "Description" :: Maybe (ErrorDescription) } ) -> RecordError
+newRecordError'  customize = (RecordError <<< customize) { "Code": Nothing, "Description": Nothing }
 
 
 
@@ -3607,9 +3606,9 @@ instance encodeRecordErrors :: Encode RecordErrors where encode = genericEncode 
 
 -- | <p>The output for the product created as the result of a request. For example, the output for a CloudFormation-backed product that creates an S3 bucket would include the S3 bucket URL.</p>
 newtype RecordOutput = RecordOutput 
-  { "OutputKey" :: NullOrUndefined (OutputKey)
-  , "OutputValue" :: NullOrUndefined (OutputValue)
-  , "Description" :: NullOrUndefined (Description)
+  { "OutputKey" :: Maybe (OutputKey)
+  , "OutputValue" :: Maybe (OutputValue)
+  , "Description" :: Maybe (Description)
   }
 derive instance newtypeRecordOutput :: Newtype RecordOutput _
 derive instance repGenericRecordOutput :: Generic RecordOutput _
@@ -3619,12 +3618,12 @@ instance encodeRecordOutput :: Encode RecordOutput where encode = genericEncode 
 
 -- | Constructs RecordOutput from required parameters
 newRecordOutput :: RecordOutput
-newRecordOutput  = RecordOutput { "Description": (NullOrUndefined Nothing), "OutputKey": (NullOrUndefined Nothing), "OutputValue": (NullOrUndefined Nothing) }
+newRecordOutput  = RecordOutput { "Description": Nothing, "OutputKey": Nothing, "OutputValue": Nothing }
 
 -- | Constructs RecordOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRecordOutput' :: ( { "OutputKey" :: NullOrUndefined (OutputKey) , "OutputValue" :: NullOrUndefined (OutputValue) , "Description" :: NullOrUndefined (Description) } -> {"OutputKey" :: NullOrUndefined (OutputKey) , "OutputValue" :: NullOrUndefined (OutputValue) , "Description" :: NullOrUndefined (Description) } ) -> RecordOutput
-newRecordOutput'  customize = (RecordOutput <<< customize) { "Description": (NullOrUndefined Nothing), "OutputKey": (NullOrUndefined Nothing), "OutputValue": (NullOrUndefined Nothing) }
+newRecordOutput' :: ( { "OutputKey" :: Maybe (OutputKey) , "OutputValue" :: Maybe (OutputValue) , "Description" :: Maybe (Description) } -> {"OutputKey" :: Maybe (OutputKey) , "OutputValue" :: Maybe (OutputValue) , "Description" :: Maybe (Description) } ) -> RecordOutput
+newRecordOutput'  customize = (RecordOutput <<< customize) { "Description": Nothing, "OutputKey": Nothing, "OutputValue": Nothing }
 
 
 
@@ -3648,8 +3647,8 @@ instance encodeRecordStatus :: Encode RecordStatus where encode = genericEncode 
 
 -- | <p>Information about a tag, which is a key-value pair.</p>
 newtype RecordTag = RecordTag 
-  { "Key" :: NullOrUndefined (RecordTagKey)
-  , "Value" :: NullOrUndefined (RecordTagValue)
+  { "Key" :: Maybe (RecordTagKey)
+  , "Value" :: Maybe (RecordTagValue)
   }
 derive instance newtypeRecordTag :: Newtype RecordTag _
 derive instance repGenericRecordTag :: Generic RecordTag _
@@ -3659,12 +3658,12 @@ instance encodeRecordTag :: Encode RecordTag where encode = genericEncode option
 
 -- | Constructs RecordTag from required parameters
 newRecordTag :: RecordTag
-newRecordTag  = RecordTag { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newRecordTag  = RecordTag { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs RecordTag's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRecordTag' :: ( { "Key" :: NullOrUndefined (RecordTagKey) , "Value" :: NullOrUndefined (RecordTagValue) } -> {"Key" :: NullOrUndefined (RecordTagKey) , "Value" :: NullOrUndefined (RecordTagValue) } ) -> RecordTag
-newRecordTag'  customize = (RecordTag <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newRecordTag' :: ( { "Key" :: Maybe (RecordTagKey) , "Value" :: Maybe (RecordTagValue) } -> {"Key" :: Maybe (RecordTagKey) , "Value" :: Maybe (RecordTagValue) } ) -> RecordTag
+newRecordTag'  customize = (RecordTag <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
@@ -3705,7 +3704,7 @@ instance encodeRecordType :: Encode RecordType where encode = genericEncode opti
 
 
 newtype RejectPortfolioShareInput = RejectPortfolioShareInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "PortfolioId" :: (Id)
   }
 derive instance newtypeRejectPortfolioShareInput :: Newtype RejectPortfolioShareInput _
@@ -3716,12 +3715,12 @@ instance encodeRejectPortfolioShareInput :: Encode RejectPortfolioShareInput whe
 
 -- | Constructs RejectPortfolioShareInput from required parameters
 newRejectPortfolioShareInput :: Id -> RejectPortfolioShareInput
-newRejectPortfolioShareInput _PortfolioId = RejectPortfolioShareInput { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newRejectPortfolioShareInput _PortfolioId = RejectPortfolioShareInput { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 -- | Constructs RejectPortfolioShareInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRejectPortfolioShareInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: (Id) } ) -> RejectPortfolioShareInput
-newRejectPortfolioShareInput' _PortfolioId customize = (RejectPortfolioShareInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": (NullOrUndefined Nothing) }
+newRejectPortfolioShareInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: (Id) } ) -> RejectPortfolioShareInput
+newRejectPortfolioShareInput' _PortfolioId customize = (RejectPortfolioShareInput <<< customize) { "PortfolioId": _PortfolioId, "AcceptLanguage": Nothing }
 
 
 
@@ -3772,13 +3771,13 @@ instance encodeResourceAttribute :: Encode ResourceAttribute where encode = gene
 
 -- | <p>Information about a resource change that will occur when a plan is executed.</p>
 newtype ResourceChange = ResourceChange 
-  { "Action" :: NullOrUndefined (ChangeAction)
-  , "LogicalResourceId" :: NullOrUndefined (LogicalResourceId)
-  , "PhysicalResourceId" :: NullOrUndefined (PhysicalResourceId)
-  , "ResourceType" :: NullOrUndefined (PlanResourceType)
-  , "Replacement" :: NullOrUndefined (Replacement)
-  , "Scope" :: NullOrUndefined (Scope)
-  , "Details" :: NullOrUndefined (ResourceChangeDetails)
+  { "Action" :: Maybe (ChangeAction)
+  , "LogicalResourceId" :: Maybe (LogicalResourceId)
+  , "PhysicalResourceId" :: Maybe (PhysicalResourceId)
+  , "ResourceType" :: Maybe (PlanResourceType)
+  , "Replacement" :: Maybe (Replacement)
+  , "Scope" :: Maybe (Scope)
+  , "Details" :: Maybe (ResourceChangeDetails)
   }
 derive instance newtypeResourceChange :: Newtype ResourceChange _
 derive instance repGenericResourceChange :: Generic ResourceChange _
@@ -3788,20 +3787,20 @@ instance encodeResourceChange :: Encode ResourceChange where encode = genericEnc
 
 -- | Constructs ResourceChange from required parameters
 newResourceChange :: ResourceChange
-newResourceChange  = ResourceChange { "Action": (NullOrUndefined Nothing), "Details": (NullOrUndefined Nothing), "LogicalResourceId": (NullOrUndefined Nothing), "PhysicalResourceId": (NullOrUndefined Nothing), "Replacement": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing), "Scope": (NullOrUndefined Nothing) }
+newResourceChange  = ResourceChange { "Action": Nothing, "Details": Nothing, "LogicalResourceId": Nothing, "PhysicalResourceId": Nothing, "Replacement": Nothing, "ResourceType": Nothing, "Scope": Nothing }
 
 -- | Constructs ResourceChange's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceChange' :: ( { "Action" :: NullOrUndefined (ChangeAction) , "LogicalResourceId" :: NullOrUndefined (LogicalResourceId) , "PhysicalResourceId" :: NullOrUndefined (PhysicalResourceId) , "ResourceType" :: NullOrUndefined (PlanResourceType) , "Replacement" :: NullOrUndefined (Replacement) , "Scope" :: NullOrUndefined (Scope) , "Details" :: NullOrUndefined (ResourceChangeDetails) } -> {"Action" :: NullOrUndefined (ChangeAction) , "LogicalResourceId" :: NullOrUndefined (LogicalResourceId) , "PhysicalResourceId" :: NullOrUndefined (PhysicalResourceId) , "ResourceType" :: NullOrUndefined (PlanResourceType) , "Replacement" :: NullOrUndefined (Replacement) , "Scope" :: NullOrUndefined (Scope) , "Details" :: NullOrUndefined (ResourceChangeDetails) } ) -> ResourceChange
-newResourceChange'  customize = (ResourceChange <<< customize) { "Action": (NullOrUndefined Nothing), "Details": (NullOrUndefined Nothing), "LogicalResourceId": (NullOrUndefined Nothing), "PhysicalResourceId": (NullOrUndefined Nothing), "Replacement": (NullOrUndefined Nothing), "ResourceType": (NullOrUndefined Nothing), "Scope": (NullOrUndefined Nothing) }
+newResourceChange' :: ( { "Action" :: Maybe (ChangeAction) , "LogicalResourceId" :: Maybe (LogicalResourceId) , "PhysicalResourceId" :: Maybe (PhysicalResourceId) , "ResourceType" :: Maybe (PlanResourceType) , "Replacement" :: Maybe (Replacement) , "Scope" :: Maybe (Scope) , "Details" :: Maybe (ResourceChangeDetails) } -> {"Action" :: Maybe (ChangeAction) , "LogicalResourceId" :: Maybe (LogicalResourceId) , "PhysicalResourceId" :: Maybe (PhysicalResourceId) , "ResourceType" :: Maybe (PlanResourceType) , "Replacement" :: Maybe (Replacement) , "Scope" :: Maybe (Scope) , "Details" :: Maybe (ResourceChangeDetails) } ) -> ResourceChange
+newResourceChange'  customize = (ResourceChange <<< customize) { "Action": Nothing, "Details": Nothing, "LogicalResourceId": Nothing, "PhysicalResourceId": Nothing, "Replacement": Nothing, "ResourceType": Nothing, "Scope": Nothing }
 
 
 
 -- | <p>Information about a change to a resource attribute.</p>
 newtype ResourceChangeDetail = ResourceChangeDetail 
-  { "Target" :: NullOrUndefined (ResourceTargetDefinition)
-  , "Evaluation" :: NullOrUndefined (EvaluationType)
-  , "CausingEntity" :: NullOrUndefined (CausingEntity)
+  { "Target" :: Maybe (ResourceTargetDefinition)
+  , "Evaluation" :: Maybe (EvaluationType)
+  , "CausingEntity" :: Maybe (CausingEntity)
   }
 derive instance newtypeResourceChangeDetail :: Newtype ResourceChangeDetail _
 derive instance repGenericResourceChangeDetail :: Generic ResourceChangeDetail _
@@ -3811,12 +3810,12 @@ instance encodeResourceChangeDetail :: Encode ResourceChangeDetail where encode 
 
 -- | Constructs ResourceChangeDetail from required parameters
 newResourceChangeDetail :: ResourceChangeDetail
-newResourceChangeDetail  = ResourceChangeDetail { "CausingEntity": (NullOrUndefined Nothing), "Evaluation": (NullOrUndefined Nothing), "Target": (NullOrUndefined Nothing) }
+newResourceChangeDetail  = ResourceChangeDetail { "CausingEntity": Nothing, "Evaluation": Nothing, "Target": Nothing }
 
 -- | Constructs ResourceChangeDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceChangeDetail' :: ( { "Target" :: NullOrUndefined (ResourceTargetDefinition) , "Evaluation" :: NullOrUndefined (EvaluationType) , "CausingEntity" :: NullOrUndefined (CausingEntity) } -> {"Target" :: NullOrUndefined (ResourceTargetDefinition) , "Evaluation" :: NullOrUndefined (EvaluationType) , "CausingEntity" :: NullOrUndefined (CausingEntity) } ) -> ResourceChangeDetail
-newResourceChangeDetail'  customize = (ResourceChangeDetail <<< customize) { "CausingEntity": (NullOrUndefined Nothing), "Evaluation": (NullOrUndefined Nothing), "Target": (NullOrUndefined Nothing) }
+newResourceChangeDetail' :: ( { "Target" :: Maybe (ResourceTargetDefinition) , "Evaluation" :: Maybe (EvaluationType) , "CausingEntity" :: Maybe (CausingEntity) } -> {"Target" :: Maybe (ResourceTargetDefinition) , "Evaluation" :: Maybe (EvaluationType) , "CausingEntity" :: Maybe (CausingEntity) } ) -> ResourceChangeDetail
+newResourceChangeDetail'  customize = (ResourceChangeDetail <<< customize) { "CausingEntity": Nothing, "Evaluation": Nothing, "Target": Nothing }
 
 
 
@@ -3840,11 +3839,11 @@ instance encodeResourceChanges :: Encode ResourceChanges where encode = genericE
 
 -- | <p>Information about a resource.</p>
 newtype ResourceDetail = ResourceDetail 
-  { "Id" :: NullOrUndefined (ResourceDetailId)
-  , "ARN" :: NullOrUndefined (ResourceDetailARN)
-  , "Name" :: NullOrUndefined (ResourceDetailName)
-  , "Description" :: NullOrUndefined (ResourceDetailDescription)
-  , "CreatedTime" :: NullOrUndefined (ResourceDetailCreatedTime)
+  { "Id" :: Maybe (ResourceDetailId)
+  , "ARN" :: Maybe (ResourceDetailARN)
+  , "Name" :: Maybe (ResourceDetailName)
+  , "Description" :: Maybe (ResourceDetailDescription)
+  , "CreatedTime" :: Maybe (ResourceDetailCreatedTime)
   }
 derive instance newtypeResourceDetail :: Newtype ResourceDetail _
 derive instance repGenericResourceDetail :: Generic ResourceDetail _
@@ -3854,12 +3853,12 @@ instance encodeResourceDetail :: Encode ResourceDetail where encode = genericEnc
 
 -- | Constructs ResourceDetail from required parameters
 newResourceDetail :: ResourceDetail
-newResourceDetail  = ResourceDetail { "ARN": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newResourceDetail  = ResourceDetail { "ARN": Nothing, "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing }
 
 -- | Constructs ResourceDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceDetail' :: ( { "Id" :: NullOrUndefined (ResourceDetailId) , "ARN" :: NullOrUndefined (ResourceDetailARN) , "Name" :: NullOrUndefined (ResourceDetailName) , "Description" :: NullOrUndefined (ResourceDetailDescription) , "CreatedTime" :: NullOrUndefined (ResourceDetailCreatedTime) } -> {"Id" :: NullOrUndefined (ResourceDetailId) , "ARN" :: NullOrUndefined (ResourceDetailARN) , "Name" :: NullOrUndefined (ResourceDetailName) , "Description" :: NullOrUndefined (ResourceDetailDescription) , "CreatedTime" :: NullOrUndefined (ResourceDetailCreatedTime) } ) -> ResourceDetail
-newResourceDetail'  customize = (ResourceDetail <<< customize) { "ARN": (NullOrUndefined Nothing), "CreatedTime": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newResourceDetail' :: ( { "Id" :: Maybe (ResourceDetailId) , "ARN" :: Maybe (ResourceDetailARN) , "Name" :: Maybe (ResourceDetailName) , "Description" :: Maybe (ResourceDetailDescription) , "CreatedTime" :: Maybe (ResourceDetailCreatedTime) } -> {"Id" :: Maybe (ResourceDetailId) , "ARN" :: Maybe (ResourceDetailARN) , "Name" :: Maybe (ResourceDetailName) , "Description" :: Maybe (ResourceDetailDescription) , "CreatedTime" :: Maybe (ResourceDetailCreatedTime) } ) -> ResourceDetail
+newResourceDetail'  customize = (ResourceDetail <<< customize) { "ARN": Nothing, "CreatedTime": Nothing, "Description": Nothing, "Id": Nothing, "Name": Nothing }
 
 
 
@@ -3948,9 +3947,9 @@ instance encodeResourceNotFoundException :: Encode ResourceNotFoundException whe
 
 -- | <p>Information about a change to a resource attribute.</p>
 newtype ResourceTargetDefinition = ResourceTargetDefinition 
-  { "Attribute" :: NullOrUndefined (ResourceAttribute)
-  , "Name" :: NullOrUndefined (PropertyName)
-  , "RequiresRecreation" :: NullOrUndefined (RequiresRecreation)
+  { "Attribute" :: Maybe (ResourceAttribute)
+  , "Name" :: Maybe (PropertyName)
+  , "RequiresRecreation" :: Maybe (RequiresRecreation)
   }
 derive instance newtypeResourceTargetDefinition :: Newtype ResourceTargetDefinition _
 derive instance repGenericResourceTargetDefinition :: Generic ResourceTargetDefinition _
@@ -3960,12 +3959,12 @@ instance encodeResourceTargetDefinition :: Encode ResourceTargetDefinition where
 
 -- | Constructs ResourceTargetDefinition from required parameters
 newResourceTargetDefinition :: ResourceTargetDefinition
-newResourceTargetDefinition  = ResourceTargetDefinition { "Attribute": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "RequiresRecreation": (NullOrUndefined Nothing) }
+newResourceTargetDefinition  = ResourceTargetDefinition { "Attribute": Nothing, "Name": Nothing, "RequiresRecreation": Nothing }
 
 -- | Constructs ResourceTargetDefinition's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceTargetDefinition' :: ( { "Attribute" :: NullOrUndefined (ResourceAttribute) , "Name" :: NullOrUndefined (PropertyName) , "RequiresRecreation" :: NullOrUndefined (RequiresRecreation) } -> {"Attribute" :: NullOrUndefined (ResourceAttribute) , "Name" :: NullOrUndefined (PropertyName) , "RequiresRecreation" :: NullOrUndefined (RequiresRecreation) } ) -> ResourceTargetDefinition
-newResourceTargetDefinition'  customize = (ResourceTargetDefinition <<< customize) { "Attribute": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "RequiresRecreation": (NullOrUndefined Nothing) }
+newResourceTargetDefinition' :: ( { "Attribute" :: Maybe (ResourceAttribute) , "Name" :: Maybe (PropertyName) , "RequiresRecreation" :: Maybe (RequiresRecreation) } -> {"Attribute" :: Maybe (ResourceAttribute) , "Name" :: Maybe (PropertyName) , "RequiresRecreation" :: Maybe (RequiresRecreation) } ) -> ResourceTargetDefinition
+newResourceTargetDefinition'  customize = (ResourceTargetDefinition <<< customize) { "Attribute": Nothing, "Name": Nothing, "RequiresRecreation": Nothing }
 
 
 
@@ -3979,10 +3978,10 @@ instance encodeResourceType :: Encode ResourceType where encode = genericEncode 
 
 
 newtype ScanProvisionedProductsInput = ScanProvisionedProductsInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "AccessLevelFilter" :: Maybe (AccessLevelFilter)
+  , "PageSize" :: Maybe (PageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeScanProvisionedProductsInput :: Newtype ScanProvisionedProductsInput _
 derive instance repGenericScanProvisionedProductsInput :: Generic ScanProvisionedProductsInput _
@@ -3992,18 +3991,18 @@ instance encodeScanProvisionedProductsInput :: Encode ScanProvisionedProductsInp
 
 -- | Constructs ScanProvisionedProductsInput from required parameters
 newScanProvisionedProductsInput :: ScanProvisionedProductsInput
-newScanProvisionedProductsInput  = ScanProvisionedProductsInput { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newScanProvisionedProductsInput  = ScanProvisionedProductsInput { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 -- | Constructs ScanProvisionedProductsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newScanProvisionedProductsInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) , "PageSize" :: NullOrUndefined (PageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> ScanProvisionedProductsInput
-newScanProvisionedProductsInput'  customize = (ScanProvisionedProductsInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing) }
+newScanProvisionedProductsInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) , "PageSize" :: Maybe (PageSize) , "PageToken" :: Maybe (PageToken) } ) -> ScanProvisionedProductsInput
+newScanProvisionedProductsInput'  customize = (ScanProvisionedProductsInput <<< customize) { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "PageSize": Nothing, "PageToken": Nothing }
 
 
 
 newtype ScanProvisionedProductsOutput = ScanProvisionedProductsOutput 
-  { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ProvisionedProducts" :: Maybe (ProvisionedProductDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeScanProvisionedProductsOutput :: Newtype ScanProvisionedProductsOutput _
 derive instance repGenericScanProvisionedProductsOutput :: Generic ScanProvisionedProductsOutput _
@@ -4013,12 +4012,12 @@ instance encodeScanProvisionedProductsOutput :: Encode ScanProvisionedProductsOu
 
 -- | Constructs ScanProvisionedProductsOutput from required parameters
 newScanProvisionedProductsOutput :: ScanProvisionedProductsOutput
-newScanProvisionedProductsOutput  = ScanProvisionedProductsOutput { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProducts": (NullOrUndefined Nothing) }
+newScanProvisionedProductsOutput  = ScanProvisionedProductsOutput { "NextPageToken": Nothing, "ProvisionedProducts": Nothing }
 
 -- | Constructs ScanProvisionedProductsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newScanProvisionedProductsOutput' :: ( { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ProvisionedProducts" :: NullOrUndefined (ProvisionedProductDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> ScanProvisionedProductsOutput
-newScanProvisionedProductsOutput'  customize = (ScanProvisionedProductsOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProducts": (NullOrUndefined Nothing) }
+newScanProvisionedProductsOutput' :: ( { "ProvisionedProducts" :: Maybe (ProvisionedProductDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"ProvisionedProducts" :: Maybe (ProvisionedProductDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> ScanProvisionedProductsOutput
+newScanProvisionedProductsOutput'  customize = (ScanProvisionedProductsOutput <<< customize) { "NextPageToken": Nothing, "ProvisionedProducts": Nothing }
 
 
 
@@ -4050,14 +4049,14 @@ instance encodeSearchFilterValue :: Encode SearchFilterValue where encode = gene
 
 
 newtype SearchProductsAsAdminInput = SearchProductsAsAdminInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "PortfolioId" :: NullOrUndefined (Id)
-  , "Filters" :: NullOrUndefined (ProductViewFilters)
-  , "SortBy" :: NullOrUndefined (ProductViewSortBy)
-  , "SortOrder" :: NullOrUndefined (SortOrder)
-  , "PageToken" :: NullOrUndefined (PageToken)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "ProductSource" :: NullOrUndefined (ProductSource)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "PortfolioId" :: Maybe (Id)
+  , "Filters" :: Maybe (ProductViewFilters)
+  , "SortBy" :: Maybe (ProductViewSortBy)
+  , "SortOrder" :: Maybe (SortOrder)
+  , "PageToken" :: Maybe (PageToken)
+  , "PageSize" :: Maybe (PageSize)
+  , "ProductSource" :: Maybe (ProductSource)
   }
 derive instance newtypeSearchProductsAsAdminInput :: Newtype SearchProductsAsAdminInput _
 derive instance repGenericSearchProductsAsAdminInput :: Generic SearchProductsAsAdminInput _
@@ -4067,18 +4066,18 @@ instance encodeSearchProductsAsAdminInput :: Encode SearchProductsAsAdminInput w
 
 -- | Constructs SearchProductsAsAdminInput from required parameters
 newSearchProductsAsAdminInput :: SearchProductsAsAdminInput
-newSearchProductsAsAdminInput  = SearchProductsAsAdminInput { "AcceptLanguage": (NullOrUndefined Nothing), "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "PortfolioId": (NullOrUndefined Nothing), "ProductSource": (NullOrUndefined Nothing), "SortBy": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newSearchProductsAsAdminInput  = SearchProductsAsAdminInput { "AcceptLanguage": Nothing, "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing, "PortfolioId": Nothing, "ProductSource": Nothing, "SortBy": Nothing, "SortOrder": Nothing }
 
 -- | Constructs SearchProductsAsAdminInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProductsAsAdminInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: NullOrUndefined (Id) , "Filters" :: NullOrUndefined (ProductViewFilters) , "SortBy" :: NullOrUndefined (ProductViewSortBy) , "SortOrder" :: NullOrUndefined (SortOrder) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) , "ProductSource" :: NullOrUndefined (ProductSource) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "PortfolioId" :: NullOrUndefined (Id) , "Filters" :: NullOrUndefined (ProductViewFilters) , "SortBy" :: NullOrUndefined (ProductViewSortBy) , "SortOrder" :: NullOrUndefined (SortOrder) , "PageToken" :: NullOrUndefined (PageToken) , "PageSize" :: NullOrUndefined (PageSize) , "ProductSource" :: NullOrUndefined (ProductSource) } ) -> SearchProductsAsAdminInput
-newSearchProductsAsAdminInput'  customize = (SearchProductsAsAdminInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "PortfolioId": (NullOrUndefined Nothing), "ProductSource": (NullOrUndefined Nothing), "SortBy": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newSearchProductsAsAdminInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: Maybe (Id) , "Filters" :: Maybe (ProductViewFilters) , "SortBy" :: Maybe (ProductViewSortBy) , "SortOrder" :: Maybe (SortOrder) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) , "ProductSource" :: Maybe (ProductSource) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "PortfolioId" :: Maybe (Id) , "Filters" :: Maybe (ProductViewFilters) , "SortBy" :: Maybe (ProductViewSortBy) , "SortOrder" :: Maybe (SortOrder) , "PageToken" :: Maybe (PageToken) , "PageSize" :: Maybe (PageSize) , "ProductSource" :: Maybe (ProductSource) } ) -> SearchProductsAsAdminInput
+newSearchProductsAsAdminInput'  customize = (SearchProductsAsAdminInput <<< customize) { "AcceptLanguage": Nothing, "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing, "PortfolioId": Nothing, "ProductSource": Nothing, "SortBy": Nothing, "SortOrder": Nothing }
 
 
 
 newtype SearchProductsAsAdminOutput = SearchProductsAsAdminOutput 
-  { "ProductViewDetails" :: NullOrUndefined (ProductViewDetails)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ProductViewDetails" :: Maybe (ProductViewDetails)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeSearchProductsAsAdminOutput :: Newtype SearchProductsAsAdminOutput _
 derive instance repGenericSearchProductsAsAdminOutput :: Generic SearchProductsAsAdminOutput _
@@ -4088,22 +4087,22 @@ instance encodeSearchProductsAsAdminOutput :: Encode SearchProductsAsAdminOutput
 
 -- | Constructs SearchProductsAsAdminOutput from required parameters
 newSearchProductsAsAdminOutput :: SearchProductsAsAdminOutput
-newSearchProductsAsAdminOutput  = SearchProductsAsAdminOutput { "NextPageToken": (NullOrUndefined Nothing), "ProductViewDetails": (NullOrUndefined Nothing) }
+newSearchProductsAsAdminOutput  = SearchProductsAsAdminOutput { "NextPageToken": Nothing, "ProductViewDetails": Nothing }
 
 -- | Constructs SearchProductsAsAdminOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProductsAsAdminOutput' :: ( { "ProductViewDetails" :: NullOrUndefined (ProductViewDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ProductViewDetails" :: NullOrUndefined (ProductViewDetails) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> SearchProductsAsAdminOutput
-newSearchProductsAsAdminOutput'  customize = (SearchProductsAsAdminOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "ProductViewDetails": (NullOrUndefined Nothing) }
+newSearchProductsAsAdminOutput' :: ( { "ProductViewDetails" :: Maybe (ProductViewDetails) , "NextPageToken" :: Maybe (PageToken) } -> {"ProductViewDetails" :: Maybe (ProductViewDetails) , "NextPageToken" :: Maybe (PageToken) } ) -> SearchProductsAsAdminOutput
+newSearchProductsAsAdminOutput'  customize = (SearchProductsAsAdminOutput <<< customize) { "NextPageToken": Nothing, "ProductViewDetails": Nothing }
 
 
 
 newtype SearchProductsInput = SearchProductsInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "Filters" :: NullOrUndefined (ProductViewFilters)
-  , "PageSize" :: NullOrUndefined (PageSize)
-  , "SortBy" :: NullOrUndefined (ProductViewSortBy)
-  , "SortOrder" :: NullOrUndefined (SortOrder)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "Filters" :: Maybe (ProductViewFilters)
+  , "PageSize" :: Maybe (PageSize)
+  , "SortBy" :: Maybe (ProductViewSortBy)
+  , "SortOrder" :: Maybe (SortOrder)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeSearchProductsInput :: Newtype SearchProductsInput _
 derive instance repGenericSearchProductsInput :: Generic SearchProductsInput _
@@ -4113,19 +4112,19 @@ instance encodeSearchProductsInput :: Encode SearchProductsInput where encode = 
 
 -- | Constructs SearchProductsInput from required parameters
 newSearchProductsInput :: SearchProductsInput
-newSearchProductsInput  = SearchProductsInput { "AcceptLanguage": (NullOrUndefined Nothing), "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "SortBy": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newSearchProductsInput  = SearchProductsInput { "AcceptLanguage": Nothing, "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing, "SortBy": Nothing, "SortOrder": Nothing }
 
 -- | Constructs SearchProductsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProductsInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Filters" :: NullOrUndefined (ProductViewFilters) , "PageSize" :: NullOrUndefined (PageSize) , "SortBy" :: NullOrUndefined (ProductViewSortBy) , "SortOrder" :: NullOrUndefined (SortOrder) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Filters" :: NullOrUndefined (ProductViewFilters) , "PageSize" :: NullOrUndefined (PageSize) , "SortBy" :: NullOrUndefined (ProductViewSortBy) , "SortOrder" :: NullOrUndefined (SortOrder) , "PageToken" :: NullOrUndefined (PageToken) } ) -> SearchProductsInput
-newSearchProductsInput'  customize = (SearchProductsInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "SortBy": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newSearchProductsInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Filters" :: Maybe (ProductViewFilters) , "PageSize" :: Maybe (PageSize) , "SortBy" :: Maybe (ProductViewSortBy) , "SortOrder" :: Maybe (SortOrder) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Filters" :: Maybe (ProductViewFilters) , "PageSize" :: Maybe (PageSize) , "SortBy" :: Maybe (ProductViewSortBy) , "SortOrder" :: Maybe (SortOrder) , "PageToken" :: Maybe (PageToken) } ) -> SearchProductsInput
+newSearchProductsInput'  customize = (SearchProductsInput <<< customize) { "AcceptLanguage": Nothing, "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing, "SortBy": Nothing, "SortOrder": Nothing }
 
 
 
 newtype SearchProductsOutput = SearchProductsOutput 
-  { "ProductViewSummaries" :: NullOrUndefined (ProductViewSummaries)
-  , "ProductViewAggregations" :: NullOrUndefined (ProductViewAggregations)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ProductViewSummaries" :: Maybe (ProductViewSummaries)
+  , "ProductViewAggregations" :: Maybe (ProductViewAggregations)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeSearchProductsOutput :: Newtype SearchProductsOutput _
 derive instance repGenericSearchProductsOutput :: Generic SearchProductsOutput _
@@ -4135,23 +4134,23 @@ instance encodeSearchProductsOutput :: Encode SearchProductsOutput where encode 
 
 -- | Constructs SearchProductsOutput from required parameters
 newSearchProductsOutput :: SearchProductsOutput
-newSearchProductsOutput  = SearchProductsOutput { "NextPageToken": (NullOrUndefined Nothing), "ProductViewAggregations": (NullOrUndefined Nothing), "ProductViewSummaries": (NullOrUndefined Nothing) }
+newSearchProductsOutput  = SearchProductsOutput { "NextPageToken": Nothing, "ProductViewAggregations": Nothing, "ProductViewSummaries": Nothing }
 
 -- | Constructs SearchProductsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProductsOutput' :: ( { "ProductViewSummaries" :: NullOrUndefined (ProductViewSummaries) , "ProductViewAggregations" :: NullOrUndefined (ProductViewAggregations) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ProductViewSummaries" :: NullOrUndefined (ProductViewSummaries) , "ProductViewAggregations" :: NullOrUndefined (ProductViewAggregations) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> SearchProductsOutput
-newSearchProductsOutput'  customize = (SearchProductsOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "ProductViewAggregations": (NullOrUndefined Nothing), "ProductViewSummaries": (NullOrUndefined Nothing) }
+newSearchProductsOutput' :: ( { "ProductViewSummaries" :: Maybe (ProductViewSummaries) , "ProductViewAggregations" :: Maybe (ProductViewAggregations) , "NextPageToken" :: Maybe (PageToken) } -> {"ProductViewSummaries" :: Maybe (ProductViewSummaries) , "ProductViewAggregations" :: Maybe (ProductViewAggregations) , "NextPageToken" :: Maybe (PageToken) } ) -> SearchProductsOutput
+newSearchProductsOutput'  customize = (SearchProductsOutput <<< customize) { "NextPageToken": Nothing, "ProductViewAggregations": Nothing, "ProductViewSummaries": Nothing }
 
 
 
 newtype SearchProvisionedProductsInput = SearchProvisionedProductsInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter)
-  , "Filters" :: NullOrUndefined (ProvisionedProductFilters)
-  , "SortBy" :: NullOrUndefined (SortField)
-  , "SortOrder" :: NullOrUndefined (SortOrder)
-  , "PageSize" :: NullOrUndefined (SearchProvisionedProductsPageSize)
-  , "PageToken" :: NullOrUndefined (PageToken)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "AccessLevelFilter" :: Maybe (AccessLevelFilter)
+  , "Filters" :: Maybe (ProvisionedProductFilters)
+  , "SortBy" :: Maybe (SortField)
+  , "SortOrder" :: Maybe (SortOrder)
+  , "PageSize" :: Maybe (SearchProvisionedProductsPageSize)
+  , "PageToken" :: Maybe (PageToken)
   }
 derive instance newtypeSearchProvisionedProductsInput :: Newtype SearchProvisionedProductsInput _
 derive instance repGenericSearchProvisionedProductsInput :: Generic SearchProvisionedProductsInput _
@@ -4161,19 +4160,19 @@ instance encodeSearchProvisionedProductsInput :: Encode SearchProvisionedProduct
 
 -- | Constructs SearchProvisionedProductsInput from required parameters
 newSearchProvisionedProductsInput :: SearchProvisionedProductsInput
-newSearchProvisionedProductsInput  = SearchProvisionedProductsInput { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "SortBy": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newSearchProvisionedProductsInput  = SearchProvisionedProductsInput { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing, "SortBy": Nothing, "SortOrder": Nothing }
 
 -- | Constructs SearchProvisionedProductsInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProvisionedProductsInput' :: ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) , "Filters" :: NullOrUndefined (ProvisionedProductFilters) , "SortBy" :: NullOrUndefined (SortField) , "SortOrder" :: NullOrUndefined (SortOrder) , "PageSize" :: NullOrUndefined (SearchProvisionedProductsPageSize) , "PageToken" :: NullOrUndefined (PageToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) , "Filters" :: NullOrUndefined (ProvisionedProductFilters) , "SortBy" :: NullOrUndefined (SortField) , "SortOrder" :: NullOrUndefined (SortOrder) , "PageSize" :: NullOrUndefined (SearchProvisionedProductsPageSize) , "PageToken" :: NullOrUndefined (PageToken) } ) -> SearchProvisionedProductsInput
-newSearchProvisionedProductsInput'  customize = (SearchProvisionedProductsInput <<< customize) { "AcceptLanguage": (NullOrUndefined Nothing), "AccessLevelFilter": (NullOrUndefined Nothing), "Filters": (NullOrUndefined Nothing), "PageSize": (NullOrUndefined Nothing), "PageToken": (NullOrUndefined Nothing), "SortBy": (NullOrUndefined Nothing), "SortOrder": (NullOrUndefined Nothing) }
+newSearchProvisionedProductsInput' :: ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) , "Filters" :: Maybe (ProvisionedProductFilters) , "SortBy" :: Maybe (SortField) , "SortOrder" :: Maybe (SortOrder) , "PageSize" :: Maybe (SearchProvisionedProductsPageSize) , "PageToken" :: Maybe (PageToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "AccessLevelFilter" :: Maybe (AccessLevelFilter) , "Filters" :: Maybe (ProvisionedProductFilters) , "SortBy" :: Maybe (SortField) , "SortOrder" :: Maybe (SortOrder) , "PageSize" :: Maybe (SearchProvisionedProductsPageSize) , "PageToken" :: Maybe (PageToken) } ) -> SearchProvisionedProductsInput
+newSearchProvisionedProductsInput'  customize = (SearchProvisionedProductsInput <<< customize) { "AcceptLanguage": Nothing, "AccessLevelFilter": Nothing, "Filters": Nothing, "PageSize": Nothing, "PageToken": Nothing, "SortBy": Nothing, "SortOrder": Nothing }
 
 
 
 newtype SearchProvisionedProductsOutput = SearchProvisionedProductsOutput 
-  { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductAttributes)
-  , "TotalResultsCount" :: NullOrUndefined (TotalResultsCount)
-  , "NextPageToken" :: NullOrUndefined (PageToken)
+  { "ProvisionedProducts" :: Maybe (ProvisionedProductAttributes)
+  , "TotalResultsCount" :: Maybe (TotalResultsCount)
+  , "NextPageToken" :: Maybe (PageToken)
   }
 derive instance newtypeSearchProvisionedProductsOutput :: Newtype SearchProvisionedProductsOutput _
 derive instance repGenericSearchProvisionedProductsOutput :: Generic SearchProvisionedProductsOutput _
@@ -4183,12 +4182,12 @@ instance encodeSearchProvisionedProductsOutput :: Encode SearchProvisionedProduc
 
 -- | Constructs SearchProvisionedProductsOutput from required parameters
 newSearchProvisionedProductsOutput :: SearchProvisionedProductsOutput
-newSearchProvisionedProductsOutput  = SearchProvisionedProductsOutput { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProducts": (NullOrUndefined Nothing), "TotalResultsCount": (NullOrUndefined Nothing) }
+newSearchProvisionedProductsOutput  = SearchProvisionedProductsOutput { "NextPageToken": Nothing, "ProvisionedProducts": Nothing, "TotalResultsCount": Nothing }
 
 -- | Constructs SearchProvisionedProductsOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProvisionedProductsOutput' :: ( { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductAttributes) , "TotalResultsCount" :: NullOrUndefined (TotalResultsCount) , "NextPageToken" :: NullOrUndefined (PageToken) } -> {"ProvisionedProducts" :: NullOrUndefined (ProvisionedProductAttributes) , "TotalResultsCount" :: NullOrUndefined (TotalResultsCount) , "NextPageToken" :: NullOrUndefined (PageToken) } ) -> SearchProvisionedProductsOutput
-newSearchProvisionedProductsOutput'  customize = (SearchProvisionedProductsOutput <<< customize) { "NextPageToken": (NullOrUndefined Nothing), "ProvisionedProducts": (NullOrUndefined Nothing), "TotalResultsCount": (NullOrUndefined Nothing) }
+newSearchProvisionedProductsOutput' :: ( { "ProvisionedProducts" :: Maybe (ProvisionedProductAttributes) , "TotalResultsCount" :: Maybe (TotalResultsCount) , "NextPageToken" :: Maybe (PageToken) } -> {"ProvisionedProducts" :: Maybe (ProvisionedProductAttributes) , "TotalResultsCount" :: Maybe (TotalResultsCount) , "NextPageToken" :: Maybe (PageToken) } ) -> SearchProvisionedProductsOutput
+newSearchProvisionedProductsOutput'  customize = (SearchProvisionedProductsOutput <<< customize) { "NextPageToken": Nothing, "ProvisionedProducts": Nothing, "TotalResultsCount": Nothing }
 
 
 
@@ -4342,10 +4341,10 @@ instance encodeTagOptionActive :: Encode TagOptionActive where encode = genericE
 
 -- | <p>Information about a TagOption.</p>
 newtype TagOptionDetail = TagOptionDetail 
-  { "Key" :: NullOrUndefined (TagOptionKey)
-  , "Value" :: NullOrUndefined (TagOptionValue)
-  , "Active" :: NullOrUndefined (TagOptionActive)
-  , "Id" :: NullOrUndefined (TagOptionId)
+  { "Key" :: Maybe (TagOptionKey)
+  , "Value" :: Maybe (TagOptionValue)
+  , "Active" :: Maybe (TagOptionActive)
+  , "Id" :: Maybe (TagOptionId)
   }
 derive instance newtypeTagOptionDetail :: Newtype TagOptionDetail _
 derive instance repGenericTagOptionDetail :: Generic TagOptionDetail _
@@ -4355,12 +4354,12 @@ instance encodeTagOptionDetail :: Encode TagOptionDetail where encode = genericE
 
 -- | Constructs TagOptionDetail from required parameters
 newTagOptionDetail :: TagOptionDetail
-newTagOptionDetail  = TagOptionDetail { "Active": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTagOptionDetail  = TagOptionDetail { "Active": Nothing, "Id": Nothing, "Key": Nothing, "Value": Nothing }
 
 -- | Constructs TagOptionDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTagOptionDetail' :: ( { "Key" :: NullOrUndefined (TagOptionKey) , "Value" :: NullOrUndefined (TagOptionValue) , "Active" :: NullOrUndefined (TagOptionActive) , "Id" :: NullOrUndefined (TagOptionId) } -> {"Key" :: NullOrUndefined (TagOptionKey) , "Value" :: NullOrUndefined (TagOptionValue) , "Active" :: NullOrUndefined (TagOptionActive) , "Id" :: NullOrUndefined (TagOptionId) } ) -> TagOptionDetail
-newTagOptionDetail'  customize = (TagOptionDetail <<< customize) { "Active": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTagOptionDetail' :: ( { "Key" :: Maybe (TagOptionKey) , "Value" :: Maybe (TagOptionValue) , "Active" :: Maybe (TagOptionActive) , "Id" :: Maybe (TagOptionId) } -> {"Key" :: Maybe (TagOptionKey) , "Value" :: Maybe (TagOptionValue) , "Active" :: Maybe (TagOptionActive) , "Id" :: Maybe (TagOptionId) } ) -> TagOptionDetail
+newTagOptionDetail'  customize = (TagOptionDetail <<< customize) { "Active": Nothing, "Id": Nothing, "Key": Nothing, "Value": Nothing }
 
 
 
@@ -4412,8 +4411,8 @@ instance encodeTagOptionSummaries :: Encode TagOptionSummaries where encode = ge
 
 -- | <p>Summary information about a TagOption.</p>
 newtype TagOptionSummary = TagOptionSummary 
-  { "Key" :: NullOrUndefined (TagOptionKey)
-  , "Values" :: NullOrUndefined (TagOptionValues)
+  { "Key" :: Maybe (TagOptionKey)
+  , "Values" :: Maybe (TagOptionValues)
   }
 derive instance newtypeTagOptionSummary :: Newtype TagOptionSummary _
 derive instance repGenericTagOptionSummary :: Generic TagOptionSummary _
@@ -4423,12 +4422,12 @@ instance encodeTagOptionSummary :: Encode TagOptionSummary where encode = generi
 
 -- | Constructs TagOptionSummary from required parameters
 newTagOptionSummary :: TagOptionSummary
-newTagOptionSummary  = TagOptionSummary { "Key": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newTagOptionSummary  = TagOptionSummary { "Key": Nothing, "Values": Nothing }
 
 -- | Constructs TagOptionSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTagOptionSummary' :: ( { "Key" :: NullOrUndefined (TagOptionKey) , "Values" :: NullOrUndefined (TagOptionValues) } -> {"Key" :: NullOrUndefined (TagOptionKey) , "Values" :: NullOrUndefined (TagOptionValues) } ) -> TagOptionSummary
-newTagOptionSummary'  customize = (TagOptionSummary <<< customize) { "Key": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newTagOptionSummary' :: ( { "Key" :: Maybe (TagOptionKey) , "Values" :: Maybe (TagOptionValues) } -> {"Key" :: Maybe (TagOptionKey) , "Values" :: Maybe (TagOptionValues) } ) -> TagOptionSummary
+newTagOptionSummary'  customize = (TagOptionSummary <<< customize) { "Key": Nothing, "Values": Nothing }
 
 
 
@@ -4469,11 +4468,11 @@ instance encodeTags :: Encode Tags where encode = genericEncode options
 
 
 newtype TerminateProvisionedProductInput = TerminateProvisionedProductInput 
-  { "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn)
-  , "ProvisionedProductId" :: NullOrUndefined (Id)
+  { "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn)
+  , "ProvisionedProductId" :: Maybe (Id)
   , "TerminateToken" :: (IdempotencyToken)
-  , "IgnoreErrors" :: NullOrUndefined (IgnoreErrors)
-  , "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  , "IgnoreErrors" :: Maybe (IgnoreErrors)
+  , "AcceptLanguage" :: Maybe (AcceptLanguage)
   }
 derive instance newtypeTerminateProvisionedProductInput :: Newtype TerminateProvisionedProductInput _
 derive instance repGenericTerminateProvisionedProductInput :: Generic TerminateProvisionedProductInput _
@@ -4483,17 +4482,17 @@ instance encodeTerminateProvisionedProductInput :: Encode TerminateProvisionedPr
 
 -- | Constructs TerminateProvisionedProductInput from required parameters
 newTerminateProvisionedProductInput :: IdempotencyToken -> TerminateProvisionedProductInput
-newTerminateProvisionedProductInput _TerminateToken = TerminateProvisionedProductInput { "TerminateToken": _TerminateToken, "AcceptLanguage": (NullOrUndefined Nothing), "IgnoreErrors": (NullOrUndefined Nothing), "ProvisionedProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing) }
+newTerminateProvisionedProductInput _TerminateToken = TerminateProvisionedProductInput { "TerminateToken": _TerminateToken, "AcceptLanguage": Nothing, "IgnoreErrors": Nothing, "ProvisionedProductId": Nothing, "ProvisionedProductName": Nothing }
 
 -- | Constructs TerminateProvisionedProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTerminateProvisionedProductInput' :: IdempotencyToken -> ( { "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: NullOrUndefined (Id) , "TerminateToken" :: (IdempotencyToken) , "IgnoreErrors" :: NullOrUndefined (IgnoreErrors) , "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) } -> {"ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: NullOrUndefined (Id) , "TerminateToken" :: (IdempotencyToken) , "IgnoreErrors" :: NullOrUndefined (IgnoreErrors) , "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) } ) -> TerminateProvisionedProductInput
-newTerminateProvisionedProductInput' _TerminateToken customize = (TerminateProvisionedProductInput <<< customize) { "TerminateToken": _TerminateToken, "AcceptLanguage": (NullOrUndefined Nothing), "IgnoreErrors": (NullOrUndefined Nothing), "ProvisionedProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing) }
+newTerminateProvisionedProductInput' :: IdempotencyToken -> ( { "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: Maybe (Id) , "TerminateToken" :: (IdempotencyToken) , "IgnoreErrors" :: Maybe (IgnoreErrors) , "AcceptLanguage" :: Maybe (AcceptLanguage) } -> {"ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: Maybe (Id) , "TerminateToken" :: (IdempotencyToken) , "IgnoreErrors" :: Maybe (IgnoreErrors) , "AcceptLanguage" :: Maybe (AcceptLanguage) } ) -> TerminateProvisionedProductInput
+newTerminateProvisionedProductInput' _TerminateToken customize = (TerminateProvisionedProductInput <<< customize) { "TerminateToken": _TerminateToken, "AcceptLanguage": Nothing, "IgnoreErrors": Nothing, "ProvisionedProductId": Nothing, "ProvisionedProductName": Nothing }
 
 
 
 newtype TerminateProvisionedProductOutput = TerminateProvisionedProductOutput 
-  { "RecordDetail" :: NullOrUndefined (RecordDetail)
+  { "RecordDetail" :: Maybe (RecordDetail)
   }
 derive instance newtypeTerminateProvisionedProductOutput :: Newtype TerminateProvisionedProductOutput _
 derive instance repGenericTerminateProvisionedProductOutput :: Generic TerminateProvisionedProductOutput _
@@ -4503,12 +4502,12 @@ instance encodeTerminateProvisionedProductOutput :: Encode TerminateProvisionedP
 
 -- | Constructs TerminateProvisionedProductOutput from required parameters
 newTerminateProvisionedProductOutput :: TerminateProvisionedProductOutput
-newTerminateProvisionedProductOutput  = TerminateProvisionedProductOutput { "RecordDetail": (NullOrUndefined Nothing) }
+newTerminateProvisionedProductOutput  = TerminateProvisionedProductOutput { "RecordDetail": Nothing }
 
 -- | Constructs TerminateProvisionedProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTerminateProvisionedProductOutput' :: ( { "RecordDetail" :: NullOrUndefined (RecordDetail) } -> {"RecordDetail" :: NullOrUndefined (RecordDetail) } ) -> TerminateProvisionedProductOutput
-newTerminateProvisionedProductOutput'  customize = (TerminateProvisionedProductOutput <<< customize) { "RecordDetail": (NullOrUndefined Nothing) }
+newTerminateProvisionedProductOutput' :: ( { "RecordDetail" :: Maybe (RecordDetail) } -> {"RecordDetail" :: Maybe (RecordDetail) } ) -> TerminateProvisionedProductOutput
+newTerminateProvisionedProductOutput'  customize = (TerminateProvisionedProductOutput <<< customize) { "RecordDetail": Nothing }
 
 
 
@@ -4522,9 +4521,9 @@ instance encodeTotalResultsCount :: Encode TotalResultsCount where encode = gene
 
 
 newtype UpdateConstraintInput = UpdateConstraintInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
-  , "Description" :: NullOrUndefined (ConstraintDescription)
+  , "Description" :: Maybe (ConstraintDescription)
   }
 derive instance newtypeUpdateConstraintInput :: Newtype UpdateConstraintInput _
 derive instance repGenericUpdateConstraintInput :: Generic UpdateConstraintInput _
@@ -4534,19 +4533,19 @@ instance encodeUpdateConstraintInput :: Encode UpdateConstraintInput where encod
 
 -- | Constructs UpdateConstraintInput from required parameters
 newUpdateConstraintInput :: Id -> UpdateConstraintInput
-newUpdateConstraintInput _Id = UpdateConstraintInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newUpdateConstraintInput _Id = UpdateConstraintInput { "Id": _Id, "AcceptLanguage": Nothing, "Description": Nothing }
 
 -- | Constructs UpdateConstraintInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateConstraintInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "Description" :: NullOrUndefined (ConstraintDescription) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "Description" :: NullOrUndefined (ConstraintDescription) } ) -> UpdateConstraintInput
-newUpdateConstraintInput' _Id customize = (UpdateConstraintInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newUpdateConstraintInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "Description" :: Maybe (ConstraintDescription) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "Description" :: Maybe (ConstraintDescription) } ) -> UpdateConstraintInput
+newUpdateConstraintInput' _Id customize = (UpdateConstraintInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing, "Description": Nothing }
 
 
 
 newtype UpdateConstraintOutput = UpdateConstraintOutput 
-  { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail)
-  , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters)
-  , "Status" :: NullOrUndefined (Status)
+  { "ConstraintDetail" :: Maybe (ConstraintDetail)
+  , "ConstraintParameters" :: Maybe (ConstraintParameters)
+  , "Status" :: Maybe (Status)
   }
 derive instance newtypeUpdateConstraintOutput :: Newtype UpdateConstraintOutput _
 derive instance repGenericUpdateConstraintOutput :: Generic UpdateConstraintOutput _
@@ -4556,23 +4555,23 @@ instance encodeUpdateConstraintOutput :: Encode UpdateConstraintOutput where enc
 
 -- | Constructs UpdateConstraintOutput from required parameters
 newUpdateConstraintOutput :: UpdateConstraintOutput
-newUpdateConstraintOutput  = UpdateConstraintOutput { "ConstraintDetail": (NullOrUndefined Nothing), "ConstraintParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newUpdateConstraintOutput  = UpdateConstraintOutput { "ConstraintDetail": Nothing, "ConstraintParameters": Nothing, "Status": Nothing }
 
 -- | Constructs UpdateConstraintOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateConstraintOutput' :: ( { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail) , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters) , "Status" :: NullOrUndefined (Status) } -> {"ConstraintDetail" :: NullOrUndefined (ConstraintDetail) , "ConstraintParameters" :: NullOrUndefined (ConstraintParameters) , "Status" :: NullOrUndefined (Status) } ) -> UpdateConstraintOutput
-newUpdateConstraintOutput'  customize = (UpdateConstraintOutput <<< customize) { "ConstraintDetail": (NullOrUndefined Nothing), "ConstraintParameters": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newUpdateConstraintOutput' :: ( { "ConstraintDetail" :: Maybe (ConstraintDetail) , "ConstraintParameters" :: Maybe (ConstraintParameters) , "Status" :: Maybe (Status) } -> {"ConstraintDetail" :: Maybe (ConstraintDetail) , "ConstraintParameters" :: Maybe (ConstraintParameters) , "Status" :: Maybe (Status) } ) -> UpdateConstraintOutput
+newUpdateConstraintOutput'  customize = (UpdateConstraintOutput <<< customize) { "ConstraintDetail": Nothing, "ConstraintParameters": Nothing, "Status": Nothing }
 
 
 
 newtype UpdatePortfolioInput = UpdatePortfolioInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
-  , "DisplayName" :: NullOrUndefined (PortfolioDisplayName)
-  , "Description" :: NullOrUndefined (PortfolioDescription)
-  , "ProviderName" :: NullOrUndefined (ProviderName)
-  , "AddTags" :: NullOrUndefined (AddTags)
-  , "RemoveTags" :: NullOrUndefined (TagKeys)
+  , "DisplayName" :: Maybe (PortfolioDisplayName)
+  , "Description" :: Maybe (PortfolioDescription)
+  , "ProviderName" :: Maybe (ProviderName)
+  , "AddTags" :: Maybe (AddTags)
+  , "RemoveTags" :: Maybe (TagKeys)
   }
 derive instance newtypeUpdatePortfolioInput :: Newtype UpdatePortfolioInput _
 derive instance repGenericUpdatePortfolioInput :: Generic UpdatePortfolioInput _
@@ -4582,18 +4581,18 @@ instance encodeUpdatePortfolioInput :: Encode UpdatePortfolioInput where encode 
 
 -- | Constructs UpdatePortfolioInput from required parameters
 newUpdatePortfolioInput :: Id -> UpdatePortfolioInput
-newUpdatePortfolioInput _Id = UpdatePortfolioInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "AddTags": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "DisplayName": (NullOrUndefined Nothing), "ProviderName": (NullOrUndefined Nothing), "RemoveTags": (NullOrUndefined Nothing) }
+newUpdatePortfolioInput _Id = UpdatePortfolioInput { "Id": _Id, "AcceptLanguage": Nothing, "AddTags": Nothing, "Description": Nothing, "DisplayName": Nothing, "ProviderName": Nothing, "RemoveTags": Nothing }
 
 -- | Constructs UpdatePortfolioInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdatePortfolioInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "DisplayName" :: NullOrUndefined (PortfolioDisplayName) , "Description" :: NullOrUndefined (PortfolioDescription) , "ProviderName" :: NullOrUndefined (ProviderName) , "AddTags" :: NullOrUndefined (AddTags) , "RemoveTags" :: NullOrUndefined (TagKeys) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "DisplayName" :: NullOrUndefined (PortfolioDisplayName) , "Description" :: NullOrUndefined (PortfolioDescription) , "ProviderName" :: NullOrUndefined (ProviderName) , "AddTags" :: NullOrUndefined (AddTags) , "RemoveTags" :: NullOrUndefined (TagKeys) } ) -> UpdatePortfolioInput
-newUpdatePortfolioInput' _Id customize = (UpdatePortfolioInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "AddTags": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "DisplayName": (NullOrUndefined Nothing), "ProviderName": (NullOrUndefined Nothing), "RemoveTags": (NullOrUndefined Nothing) }
+newUpdatePortfolioInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "DisplayName" :: Maybe (PortfolioDisplayName) , "Description" :: Maybe (PortfolioDescription) , "ProviderName" :: Maybe (ProviderName) , "AddTags" :: Maybe (AddTags) , "RemoveTags" :: Maybe (TagKeys) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "DisplayName" :: Maybe (PortfolioDisplayName) , "Description" :: Maybe (PortfolioDescription) , "ProviderName" :: Maybe (ProviderName) , "AddTags" :: Maybe (AddTags) , "RemoveTags" :: Maybe (TagKeys) } ) -> UpdatePortfolioInput
+newUpdatePortfolioInput' _Id customize = (UpdatePortfolioInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing, "AddTags": Nothing, "Description": Nothing, "DisplayName": Nothing, "ProviderName": Nothing, "RemoveTags": Nothing }
 
 
 
 newtype UpdatePortfolioOutput = UpdatePortfolioOutput 
-  { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail)
-  , "Tags" :: NullOrUndefined (Tags)
+  { "PortfolioDetail" :: Maybe (PortfolioDetail)
+  , "Tags" :: Maybe (Tags)
   }
 derive instance newtypeUpdatePortfolioOutput :: Newtype UpdatePortfolioOutput _
 derive instance repGenericUpdatePortfolioOutput :: Generic UpdatePortfolioOutput _
@@ -4603,27 +4602,27 @@ instance encodeUpdatePortfolioOutput :: Encode UpdatePortfolioOutput where encod
 
 -- | Constructs UpdatePortfolioOutput from required parameters
 newUpdatePortfolioOutput :: UpdatePortfolioOutput
-newUpdatePortfolioOutput  = UpdatePortfolioOutput { "PortfolioDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newUpdatePortfolioOutput  = UpdatePortfolioOutput { "PortfolioDetail": Nothing, "Tags": Nothing }
 
 -- | Constructs UpdatePortfolioOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdatePortfolioOutput' :: ( { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail) , "Tags" :: NullOrUndefined (Tags) } -> {"PortfolioDetail" :: NullOrUndefined (PortfolioDetail) , "Tags" :: NullOrUndefined (Tags) } ) -> UpdatePortfolioOutput
-newUpdatePortfolioOutput'  customize = (UpdatePortfolioOutput <<< customize) { "PortfolioDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newUpdatePortfolioOutput' :: ( { "PortfolioDetail" :: Maybe (PortfolioDetail) , "Tags" :: Maybe (Tags) } -> {"PortfolioDetail" :: Maybe (PortfolioDetail) , "Tags" :: Maybe (Tags) } ) -> UpdatePortfolioOutput
+newUpdatePortfolioOutput'  customize = (UpdatePortfolioOutput <<< customize) { "PortfolioDetail": Nothing, "Tags": Nothing }
 
 
 
 newtype UpdateProductInput = UpdateProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "Id" :: (Id)
-  , "Name" :: NullOrUndefined (ProductViewName)
-  , "Owner" :: NullOrUndefined (ProductViewOwner)
-  , "Description" :: NullOrUndefined (ProductViewShortDescription)
-  , "Distributor" :: NullOrUndefined (ProductViewOwner)
-  , "SupportDescription" :: NullOrUndefined (SupportDescription)
-  , "SupportEmail" :: NullOrUndefined (SupportEmail)
-  , "SupportUrl" :: NullOrUndefined (SupportUrl)
-  , "AddTags" :: NullOrUndefined (AddTags)
-  , "RemoveTags" :: NullOrUndefined (TagKeys)
+  , "Name" :: Maybe (ProductViewName)
+  , "Owner" :: Maybe (ProductViewOwner)
+  , "Description" :: Maybe (ProductViewShortDescription)
+  , "Distributor" :: Maybe (ProductViewOwner)
+  , "SupportDescription" :: Maybe (SupportDescription)
+  , "SupportEmail" :: Maybe (SupportEmail)
+  , "SupportUrl" :: Maybe (SupportUrl)
+  , "AddTags" :: Maybe (AddTags)
+  , "RemoveTags" :: Maybe (TagKeys)
   }
 derive instance newtypeUpdateProductInput :: Newtype UpdateProductInput _
 derive instance repGenericUpdateProductInput :: Generic UpdateProductInput _
@@ -4633,18 +4632,18 @@ instance encodeUpdateProductInput :: Encode UpdateProductInput where encode = ge
 
 -- | Constructs UpdateProductInput from required parameters
 newUpdateProductInput :: Id -> UpdateProductInput
-newUpdateProductInput _Id = UpdateProductInput { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "AddTags": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Distributor": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Owner": (NullOrUndefined Nothing), "RemoveTags": (NullOrUndefined Nothing), "SupportDescription": (NullOrUndefined Nothing), "SupportEmail": (NullOrUndefined Nothing), "SupportUrl": (NullOrUndefined Nothing) }
+newUpdateProductInput _Id = UpdateProductInput { "Id": _Id, "AcceptLanguage": Nothing, "AddTags": Nothing, "Description": Nothing, "Distributor": Nothing, "Name": Nothing, "Owner": Nothing, "RemoveTags": Nothing, "SupportDescription": Nothing, "SupportEmail": Nothing, "SupportUrl": Nothing }
 
 -- | Constructs UpdateProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProductInput' :: Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "Name" :: NullOrUndefined (ProductViewName) , "Owner" :: NullOrUndefined (ProductViewOwner) , "Description" :: NullOrUndefined (ProductViewShortDescription) , "Distributor" :: NullOrUndefined (ProductViewOwner) , "SupportDescription" :: NullOrUndefined (SupportDescription) , "SupportEmail" :: NullOrUndefined (SupportEmail) , "SupportUrl" :: NullOrUndefined (SupportUrl) , "AddTags" :: NullOrUndefined (AddTags) , "RemoveTags" :: NullOrUndefined (TagKeys) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "Id" :: (Id) , "Name" :: NullOrUndefined (ProductViewName) , "Owner" :: NullOrUndefined (ProductViewOwner) , "Description" :: NullOrUndefined (ProductViewShortDescription) , "Distributor" :: NullOrUndefined (ProductViewOwner) , "SupportDescription" :: NullOrUndefined (SupportDescription) , "SupportEmail" :: NullOrUndefined (SupportEmail) , "SupportUrl" :: NullOrUndefined (SupportUrl) , "AddTags" :: NullOrUndefined (AddTags) , "RemoveTags" :: NullOrUndefined (TagKeys) } ) -> UpdateProductInput
-newUpdateProductInput' _Id customize = (UpdateProductInput <<< customize) { "Id": _Id, "AcceptLanguage": (NullOrUndefined Nothing), "AddTags": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Distributor": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Owner": (NullOrUndefined Nothing), "RemoveTags": (NullOrUndefined Nothing), "SupportDescription": (NullOrUndefined Nothing), "SupportEmail": (NullOrUndefined Nothing), "SupportUrl": (NullOrUndefined Nothing) }
+newUpdateProductInput' :: Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "Name" :: Maybe (ProductViewName) , "Owner" :: Maybe (ProductViewOwner) , "Description" :: Maybe (ProductViewShortDescription) , "Distributor" :: Maybe (ProductViewOwner) , "SupportDescription" :: Maybe (SupportDescription) , "SupportEmail" :: Maybe (SupportEmail) , "SupportUrl" :: Maybe (SupportUrl) , "AddTags" :: Maybe (AddTags) , "RemoveTags" :: Maybe (TagKeys) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "Id" :: (Id) , "Name" :: Maybe (ProductViewName) , "Owner" :: Maybe (ProductViewOwner) , "Description" :: Maybe (ProductViewShortDescription) , "Distributor" :: Maybe (ProductViewOwner) , "SupportDescription" :: Maybe (SupportDescription) , "SupportEmail" :: Maybe (SupportEmail) , "SupportUrl" :: Maybe (SupportUrl) , "AddTags" :: Maybe (AddTags) , "RemoveTags" :: Maybe (TagKeys) } ) -> UpdateProductInput
+newUpdateProductInput' _Id customize = (UpdateProductInput <<< customize) { "Id": _Id, "AcceptLanguage": Nothing, "AddTags": Nothing, "Description": Nothing, "Distributor": Nothing, "Name": Nothing, "Owner": Nothing, "RemoveTags": Nothing, "SupportDescription": Nothing, "SupportEmail": Nothing, "SupportUrl": Nothing }
 
 
 
 newtype UpdateProductOutput = UpdateProductOutput 
-  { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail)
-  , "Tags" :: NullOrUndefined (Tags)
+  { "ProductViewDetail" :: Maybe (ProductViewDetail)
+  , "Tags" :: Maybe (Tags)
   }
 derive instance newtypeUpdateProductOutput :: Newtype UpdateProductOutput _
 derive instance repGenericUpdateProductOutput :: Generic UpdateProductOutput _
@@ -4654,23 +4653,23 @@ instance encodeUpdateProductOutput :: Encode UpdateProductOutput where encode = 
 
 -- | Constructs UpdateProductOutput from required parameters
 newUpdateProductOutput :: UpdateProductOutput
-newUpdateProductOutput  = UpdateProductOutput { "ProductViewDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newUpdateProductOutput  = UpdateProductOutput { "ProductViewDetail": Nothing, "Tags": Nothing }
 
 -- | Constructs UpdateProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProductOutput' :: ( { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail) , "Tags" :: NullOrUndefined (Tags) } -> {"ProductViewDetail" :: NullOrUndefined (ProductViewDetail) , "Tags" :: NullOrUndefined (Tags) } ) -> UpdateProductOutput
-newUpdateProductOutput'  customize = (UpdateProductOutput <<< customize) { "ProductViewDetail": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newUpdateProductOutput' :: ( { "ProductViewDetail" :: Maybe (ProductViewDetail) , "Tags" :: Maybe (Tags) } -> {"ProductViewDetail" :: Maybe (ProductViewDetail) , "Tags" :: Maybe (Tags) } ) -> UpdateProductOutput
+newUpdateProductOutput'  customize = (UpdateProductOutput <<< customize) { "ProductViewDetail": Nothing, "Tags": Nothing }
 
 
 
 newtype UpdateProvisionedProductInput = UpdateProvisionedProductInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
-  , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn)
-  , "ProvisionedProductId" :: NullOrUndefined (Id)
-  , "ProductId" :: NullOrUndefined (Id)
-  , "ProvisioningArtifactId" :: NullOrUndefined (Id)
-  , "PathId" :: NullOrUndefined (Id)
-  , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
+  , "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn)
+  , "ProvisionedProductId" :: Maybe (Id)
+  , "ProductId" :: Maybe (Id)
+  , "ProvisioningArtifactId" :: Maybe (Id)
+  , "PathId" :: Maybe (Id)
+  , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters)
   , "UpdateToken" :: (IdempotencyToken)
   }
 derive instance newtypeUpdateProvisionedProductInput :: Newtype UpdateProvisionedProductInput _
@@ -4681,17 +4680,17 @@ instance encodeUpdateProvisionedProductInput :: Encode UpdateProvisionedProductI
 
 -- | Constructs UpdateProvisionedProductInput from required parameters
 newUpdateProvisionedProductInput :: IdempotencyToken -> UpdateProvisionedProductInput
-newUpdateProvisionedProductInput _UpdateToken = UpdateProvisionedProductInput { "UpdateToken": _UpdateToken, "AcceptLanguage": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisionedProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing) }
+newUpdateProvisionedProductInput _UpdateToken = UpdateProvisionedProductInput { "UpdateToken": _UpdateToken, "AcceptLanguage": Nothing, "PathId": Nothing, "ProductId": Nothing, "ProvisionedProductId": Nothing, "ProvisionedProductName": Nothing, "ProvisioningArtifactId": Nothing, "ProvisioningParameters": Nothing }
 
 -- | Constructs UpdateProvisionedProductInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProvisionedProductInput' :: IdempotencyToken -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "PathId" :: NullOrUndefined (Id) , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters) , "UpdateToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: NullOrUndefined (Id) , "ProductId" :: NullOrUndefined (Id) , "ProvisioningArtifactId" :: NullOrUndefined (Id) , "PathId" :: NullOrUndefined (Id) , "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters) , "UpdateToken" :: (IdempotencyToken) } ) -> UpdateProvisionedProductInput
-newUpdateProvisionedProductInput' _UpdateToken customize = (UpdateProvisionedProductInput <<< customize) { "UpdateToken": _UpdateToken, "AcceptLanguage": (NullOrUndefined Nothing), "PathId": (NullOrUndefined Nothing), "ProductId": (NullOrUndefined Nothing), "ProvisionedProductId": (NullOrUndefined Nothing), "ProvisionedProductName": (NullOrUndefined Nothing), "ProvisioningArtifactId": (NullOrUndefined Nothing), "ProvisioningParameters": (NullOrUndefined Nothing) }
+newUpdateProvisionedProductInput' :: IdempotencyToken -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "ProvisioningArtifactId" :: Maybe (Id) , "PathId" :: Maybe (Id) , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters) , "UpdateToken" :: (IdempotencyToken) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn) , "ProvisionedProductId" :: Maybe (Id) , "ProductId" :: Maybe (Id) , "ProvisioningArtifactId" :: Maybe (Id) , "PathId" :: Maybe (Id) , "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters) , "UpdateToken" :: (IdempotencyToken) } ) -> UpdateProvisionedProductInput
+newUpdateProvisionedProductInput' _UpdateToken customize = (UpdateProvisionedProductInput <<< customize) { "UpdateToken": _UpdateToken, "AcceptLanguage": Nothing, "PathId": Nothing, "ProductId": Nothing, "ProvisionedProductId": Nothing, "ProvisionedProductName": Nothing, "ProvisioningArtifactId": Nothing, "ProvisioningParameters": Nothing }
 
 
 
 newtype UpdateProvisionedProductOutput = UpdateProvisionedProductOutput 
-  { "RecordDetail" :: NullOrUndefined (RecordDetail)
+  { "RecordDetail" :: Maybe (RecordDetail)
   }
 derive instance newtypeUpdateProvisionedProductOutput :: Newtype UpdateProvisionedProductOutput _
 derive instance repGenericUpdateProvisionedProductOutput :: Generic UpdateProvisionedProductOutput _
@@ -4701,22 +4700,22 @@ instance encodeUpdateProvisionedProductOutput :: Encode UpdateProvisionedProduct
 
 -- | Constructs UpdateProvisionedProductOutput from required parameters
 newUpdateProvisionedProductOutput :: UpdateProvisionedProductOutput
-newUpdateProvisionedProductOutput  = UpdateProvisionedProductOutput { "RecordDetail": (NullOrUndefined Nothing) }
+newUpdateProvisionedProductOutput  = UpdateProvisionedProductOutput { "RecordDetail": Nothing }
 
 -- | Constructs UpdateProvisionedProductOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProvisionedProductOutput' :: ( { "RecordDetail" :: NullOrUndefined (RecordDetail) } -> {"RecordDetail" :: NullOrUndefined (RecordDetail) } ) -> UpdateProvisionedProductOutput
-newUpdateProvisionedProductOutput'  customize = (UpdateProvisionedProductOutput <<< customize) { "RecordDetail": (NullOrUndefined Nothing) }
+newUpdateProvisionedProductOutput' :: ( { "RecordDetail" :: Maybe (RecordDetail) } -> {"RecordDetail" :: Maybe (RecordDetail) } ) -> UpdateProvisionedProductOutput
+newUpdateProvisionedProductOutput'  customize = (UpdateProvisionedProductOutput <<< customize) { "RecordDetail": Nothing }
 
 
 
 newtype UpdateProvisioningArtifactInput = UpdateProvisioningArtifactInput 
-  { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage)
+  { "AcceptLanguage" :: Maybe (AcceptLanguage)
   , "ProductId" :: (Id)
   , "ProvisioningArtifactId" :: (Id)
-  , "Name" :: NullOrUndefined (ProvisioningArtifactName)
-  , "Description" :: NullOrUndefined (ProvisioningArtifactDescription)
-  , "Active" :: NullOrUndefined (ProvisioningArtifactActive)
+  , "Name" :: Maybe (ProvisioningArtifactName)
+  , "Description" :: Maybe (ProvisioningArtifactDescription)
+  , "Active" :: Maybe (ProvisioningArtifactActive)
   }
 derive instance newtypeUpdateProvisioningArtifactInput :: Newtype UpdateProvisioningArtifactInput _
 derive instance repGenericUpdateProvisioningArtifactInput :: Generic UpdateProvisioningArtifactInput _
@@ -4726,19 +4725,19 @@ instance encodeUpdateProvisioningArtifactInput :: Encode UpdateProvisioningArtif
 
 -- | Constructs UpdateProvisioningArtifactInput from required parameters
 newUpdateProvisioningArtifactInput :: Id -> Id -> UpdateProvisioningArtifactInput
-newUpdateProvisioningArtifactInput _ProductId _ProvisioningArtifactId = UpdateProvisioningArtifactInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "Active": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newUpdateProvisioningArtifactInput _ProductId _ProvisioningArtifactId = UpdateProvisioningArtifactInput { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "Active": Nothing, "Description": Nothing, "Name": Nothing }
 
 -- | Constructs UpdateProvisioningArtifactInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProvisioningArtifactInput' :: Id -> Id -> ( { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "Active" :: NullOrUndefined (ProvisioningArtifactActive) } -> {"AcceptLanguage" :: NullOrUndefined (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "Name" :: NullOrUndefined (ProvisioningArtifactName) , "Description" :: NullOrUndefined (ProvisioningArtifactDescription) , "Active" :: NullOrUndefined (ProvisioningArtifactActive) } ) -> UpdateProvisioningArtifactInput
-newUpdateProvisioningArtifactInput' _ProductId _ProvisioningArtifactId customize = (UpdateProvisioningArtifactInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": (NullOrUndefined Nothing), "Active": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newUpdateProvisioningArtifactInput' :: Id -> Id -> ( { "AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "Active" :: Maybe (ProvisioningArtifactActive) } -> {"AcceptLanguage" :: Maybe (AcceptLanguage) , "ProductId" :: (Id) , "ProvisioningArtifactId" :: (Id) , "Name" :: Maybe (ProvisioningArtifactName) , "Description" :: Maybe (ProvisioningArtifactDescription) , "Active" :: Maybe (ProvisioningArtifactActive) } ) -> UpdateProvisioningArtifactInput
+newUpdateProvisioningArtifactInput' _ProductId _ProvisioningArtifactId customize = (UpdateProvisioningArtifactInput <<< customize) { "ProductId": _ProductId, "ProvisioningArtifactId": _ProvisioningArtifactId, "AcceptLanguage": Nothing, "Active": Nothing, "Description": Nothing, "Name": Nothing }
 
 
 
 newtype UpdateProvisioningArtifactOutput = UpdateProvisioningArtifactOutput 
-  { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail)
-  , "Info" :: NullOrUndefined (ProvisioningArtifactInfo)
-  , "Status" :: NullOrUndefined (Status)
+  { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail)
+  , "Info" :: Maybe (ProvisioningArtifactInfo)
+  , "Status" :: Maybe (Status)
   }
 derive instance newtypeUpdateProvisioningArtifactOutput :: Newtype UpdateProvisioningArtifactOutput _
 derive instance repGenericUpdateProvisioningArtifactOutput :: Generic UpdateProvisioningArtifactOutput _
@@ -4748,20 +4747,20 @@ instance encodeUpdateProvisioningArtifactOutput :: Encode UpdateProvisioningArti
 
 -- | Constructs UpdateProvisioningArtifactOutput from required parameters
 newUpdateProvisioningArtifactOutput :: UpdateProvisioningArtifactOutput
-newUpdateProvisioningArtifactOutput  = UpdateProvisioningArtifactOutput { "Info": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newUpdateProvisioningArtifactOutput  = UpdateProvisioningArtifactOutput { "Info": Nothing, "ProvisioningArtifactDetail": Nothing, "Status": Nothing }
 
 -- | Constructs UpdateProvisioningArtifactOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProvisioningArtifactOutput' :: ( { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Info" :: NullOrUndefined (ProvisioningArtifactInfo) , "Status" :: NullOrUndefined (Status) } -> {"ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail) , "Info" :: NullOrUndefined (ProvisioningArtifactInfo) , "Status" :: NullOrUndefined (Status) } ) -> UpdateProvisioningArtifactOutput
-newUpdateProvisioningArtifactOutput'  customize = (UpdateProvisioningArtifactOutput <<< customize) { "Info": (NullOrUndefined Nothing), "ProvisioningArtifactDetail": (NullOrUndefined Nothing), "Status": (NullOrUndefined Nothing) }
+newUpdateProvisioningArtifactOutput' :: ( { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Info" :: Maybe (ProvisioningArtifactInfo) , "Status" :: Maybe (Status) } -> {"ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail) , "Info" :: Maybe (ProvisioningArtifactInfo) , "Status" :: Maybe (Status) } ) -> UpdateProvisioningArtifactOutput
+newUpdateProvisioningArtifactOutput'  customize = (UpdateProvisioningArtifactOutput <<< customize) { "Info": Nothing, "ProvisioningArtifactDetail": Nothing, "Status": Nothing }
 
 
 
 -- | <p>The parameter key-value pair used to update a provisioned product.</p>
 newtype UpdateProvisioningParameter = UpdateProvisioningParameter 
-  { "Key" :: NullOrUndefined (ParameterKey)
-  , "Value" :: NullOrUndefined (ParameterValue)
-  , "UsePreviousValue" :: NullOrUndefined (UsePreviousValue)
+  { "Key" :: Maybe (ParameterKey)
+  , "Value" :: Maybe (ParameterValue)
+  , "UsePreviousValue" :: Maybe (UsePreviousValue)
   }
 derive instance newtypeUpdateProvisioningParameter :: Newtype UpdateProvisioningParameter _
 derive instance repGenericUpdateProvisioningParameter :: Generic UpdateProvisioningParameter _
@@ -4771,12 +4770,12 @@ instance encodeUpdateProvisioningParameter :: Encode UpdateProvisioningParameter
 
 -- | Constructs UpdateProvisioningParameter from required parameters
 newUpdateProvisioningParameter :: UpdateProvisioningParameter
-newUpdateProvisioningParameter  = UpdateProvisioningParameter { "Key": (NullOrUndefined Nothing), "UsePreviousValue": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newUpdateProvisioningParameter  = UpdateProvisioningParameter { "Key": Nothing, "UsePreviousValue": Nothing, "Value": Nothing }
 
 -- | Constructs UpdateProvisioningParameter's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProvisioningParameter' :: ( { "Key" :: NullOrUndefined (ParameterKey) , "Value" :: NullOrUndefined (ParameterValue) , "UsePreviousValue" :: NullOrUndefined (UsePreviousValue) } -> {"Key" :: NullOrUndefined (ParameterKey) , "Value" :: NullOrUndefined (ParameterValue) , "UsePreviousValue" :: NullOrUndefined (UsePreviousValue) } ) -> UpdateProvisioningParameter
-newUpdateProvisioningParameter'  customize = (UpdateProvisioningParameter <<< customize) { "Key": (NullOrUndefined Nothing), "UsePreviousValue": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newUpdateProvisioningParameter' :: ( { "Key" :: Maybe (ParameterKey) , "Value" :: Maybe (ParameterValue) , "UsePreviousValue" :: Maybe (UsePreviousValue) } -> {"Key" :: Maybe (ParameterKey) , "Value" :: Maybe (ParameterValue) , "UsePreviousValue" :: Maybe (UsePreviousValue) } ) -> UpdateProvisioningParameter
+newUpdateProvisioningParameter'  customize = (UpdateProvisioningParameter <<< customize) { "Key": Nothing, "UsePreviousValue": Nothing, "Value": Nothing }
 
 
 
@@ -4791,8 +4790,8 @@ instance encodeUpdateProvisioningParameters :: Encode UpdateProvisioningParamete
 
 newtype UpdateTagOptionInput = UpdateTagOptionInput 
   { "Id" :: (TagOptionId)
-  , "Value" :: NullOrUndefined (TagOptionValue)
-  , "Active" :: NullOrUndefined (TagOptionActive)
+  , "Value" :: Maybe (TagOptionValue)
+  , "Active" :: Maybe (TagOptionActive)
   }
 derive instance newtypeUpdateTagOptionInput :: Newtype UpdateTagOptionInput _
 derive instance repGenericUpdateTagOptionInput :: Generic UpdateTagOptionInput _
@@ -4802,17 +4801,17 @@ instance encodeUpdateTagOptionInput :: Encode UpdateTagOptionInput where encode 
 
 -- | Constructs UpdateTagOptionInput from required parameters
 newUpdateTagOptionInput :: TagOptionId -> UpdateTagOptionInput
-newUpdateTagOptionInput _Id = UpdateTagOptionInput { "Id": _Id, "Active": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newUpdateTagOptionInput _Id = UpdateTagOptionInput { "Id": _Id, "Active": Nothing, "Value": Nothing }
 
 -- | Constructs UpdateTagOptionInput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateTagOptionInput' :: TagOptionId -> ( { "Id" :: (TagOptionId) , "Value" :: NullOrUndefined (TagOptionValue) , "Active" :: NullOrUndefined (TagOptionActive) } -> {"Id" :: (TagOptionId) , "Value" :: NullOrUndefined (TagOptionValue) , "Active" :: NullOrUndefined (TagOptionActive) } ) -> UpdateTagOptionInput
-newUpdateTagOptionInput' _Id customize = (UpdateTagOptionInput <<< customize) { "Id": _Id, "Active": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newUpdateTagOptionInput' :: TagOptionId -> ( { "Id" :: (TagOptionId) , "Value" :: Maybe (TagOptionValue) , "Active" :: Maybe (TagOptionActive) } -> {"Id" :: (TagOptionId) , "Value" :: Maybe (TagOptionValue) , "Active" :: Maybe (TagOptionActive) } ) -> UpdateTagOptionInput
+newUpdateTagOptionInput' _Id customize = (UpdateTagOptionInput <<< customize) { "Id": _Id, "Active": Nothing, "Value": Nothing }
 
 
 
 newtype UpdateTagOptionOutput = UpdateTagOptionOutput 
-  { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail)
+  { "TagOptionDetail" :: Maybe (TagOptionDetail)
   }
 derive instance newtypeUpdateTagOptionOutput :: Newtype UpdateTagOptionOutput _
 derive instance repGenericUpdateTagOptionOutput :: Generic UpdateTagOptionOutput _
@@ -4822,12 +4821,12 @@ instance encodeUpdateTagOptionOutput :: Encode UpdateTagOptionOutput where encod
 
 -- | Constructs UpdateTagOptionOutput from required parameters
 newUpdateTagOptionOutput :: UpdateTagOptionOutput
-newUpdateTagOptionOutput  = UpdateTagOptionOutput { "TagOptionDetail": (NullOrUndefined Nothing) }
+newUpdateTagOptionOutput  = UpdateTagOptionOutput { "TagOptionDetail": Nothing }
 
 -- | Constructs UpdateTagOptionOutput's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateTagOptionOutput' :: ( { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } -> {"TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } ) -> UpdateTagOptionOutput
-newUpdateTagOptionOutput'  customize = (UpdateTagOptionOutput <<< customize) { "TagOptionDetail": (NullOrUndefined Nothing) }
+newUpdateTagOptionOutput' :: ( { "TagOptionDetail" :: Maybe (TagOptionDetail) } -> {"TagOptionDetail" :: Maybe (TagOptionDetail) } ) -> UpdateTagOptionOutput
+newUpdateTagOptionOutput'  customize = (UpdateTagOptionOutput <<< customize) { "TagOptionDetail": Nothing }
 
 
 
@@ -4842,8 +4841,8 @@ instance encodeUpdatedTime :: Encode UpdatedTime where encode = genericEncode op
 
 -- | <p>Additional information provided by the administrator.</p>
 newtype UsageInstruction = UsageInstruction 
-  { "Type" :: NullOrUndefined (InstructionType)
-  , "Value" :: NullOrUndefined (InstructionValue)
+  { "Type" :: Maybe (InstructionType)
+  , "Value" :: Maybe (InstructionValue)
   }
 derive instance newtypeUsageInstruction :: Newtype UsageInstruction _
 derive instance repGenericUsageInstruction :: Generic UsageInstruction _
@@ -4853,12 +4852,12 @@ instance encodeUsageInstruction :: Encode UsageInstruction where encode = generi
 
 -- | Constructs UsageInstruction from required parameters
 newUsageInstruction :: UsageInstruction
-newUsageInstruction  = UsageInstruction { "Type": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newUsageInstruction  = UsageInstruction { "Type": Nothing, "Value": Nothing }
 
 -- | Constructs UsageInstruction's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUsageInstruction' :: ( { "Type" :: NullOrUndefined (InstructionType) , "Value" :: NullOrUndefined (InstructionValue) } -> {"Type" :: NullOrUndefined (InstructionType) , "Value" :: NullOrUndefined (InstructionValue) } ) -> UsageInstruction
-newUsageInstruction'  customize = (UsageInstruction <<< customize) { "Type": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newUsageInstruction' :: ( { "Type" :: Maybe (InstructionType) , "Value" :: Maybe (InstructionValue) } -> {"Type" :: Maybe (InstructionType) , "Value" :: Maybe (InstructionValue) } ) -> UsageInstruction
+newUsageInstruction'  customize = (UsageInstruction <<< customize) { "Type": Nothing, "Value": Nothing }
 
 
 

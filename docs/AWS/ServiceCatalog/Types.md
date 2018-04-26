@@ -26,7 +26,7 @@ Encode AcceptLanguage
 
 ``` purescript
 newtype AcceptPortfolioShareInput
-  = AcceptPortfolioShareInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id }
+  = AcceptPortfolioShareInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id }
 ```
 
 ##### Instances
@@ -49,7 +49,7 @@ Constructs AcceptPortfolioShareInput from required parameters
 #### `newAcceptPortfolioShareInput'`
 
 ``` purescript
-newAcceptPortfolioShareInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id }) -> AcceptPortfolioShareInput
+newAcceptPortfolioShareInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id }) -> AcceptPortfolioShareInput
 ```
 
 Constructs AcceptPortfolioShareInput's fields from required parameters
@@ -74,7 +74,7 @@ Encode AcceptPortfolioShareOutput
 
 ``` purescript
 newtype AccessLevelFilter
-  = AccessLevelFilter { "Key" :: NullOrUndefined (AccessLevelFilterKey), "Value" :: NullOrUndefined (AccessLevelFilterValue) }
+  = AccessLevelFilter { "Key" :: Maybe (AccessLevelFilterKey), "Value" :: Maybe (AccessLevelFilterValue) }
 ```
 
 <p>The access level to use to filter results.</p>
@@ -99,7 +99,7 @@ Constructs AccessLevelFilter from required parameters
 #### `newAccessLevelFilter'`
 
 ``` purescript
-newAccessLevelFilter' :: ({ "Key" :: NullOrUndefined (AccessLevelFilterKey), "Value" :: NullOrUndefined (AccessLevelFilterValue) } -> { "Key" :: NullOrUndefined (AccessLevelFilterKey), "Value" :: NullOrUndefined (AccessLevelFilterValue) }) -> AccessLevelFilter
+newAccessLevelFilter' :: ({ "Key" :: Maybe (AccessLevelFilterKey), "Value" :: Maybe (AccessLevelFilterValue) } -> { "Key" :: Maybe (AccessLevelFilterKey), "Value" :: Maybe (AccessLevelFilterValue) }) -> AccessLevelFilter
 ```
 
 Constructs AccessLevelFilter's fields from required parameters
@@ -236,7 +236,7 @@ Encode ApproximateCount
 
 ``` purescript
 newtype AssociatePrincipalWithPortfolioInput
-  = AssociatePrincipalWithPortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN, "PrincipalType" :: PrincipalType }
+  = AssociatePrincipalWithPortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN, "PrincipalType" :: PrincipalType }
 ```
 
 ##### Instances
@@ -259,7 +259,7 @@ Constructs AssociatePrincipalWithPortfolioInput from required parameters
 #### `newAssociatePrincipalWithPortfolioInput'`
 
 ``` purescript
-newAssociatePrincipalWithPortfolioInput' :: Id -> PrincipalARN -> PrincipalType -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN, "PrincipalType" :: PrincipalType } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN, "PrincipalType" :: PrincipalType }) -> AssociatePrincipalWithPortfolioInput
+newAssociatePrincipalWithPortfolioInput' :: Id -> PrincipalARN -> PrincipalType -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN, "PrincipalType" :: PrincipalType } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN, "PrincipalType" :: PrincipalType }) -> AssociatePrincipalWithPortfolioInput
 ```
 
 Constructs AssociatePrincipalWithPortfolioInput's fields from required parameters
@@ -284,7 +284,7 @@ Encode AssociatePrincipalWithPortfolioOutput
 
 ``` purescript
 newtype AssociateProductWithPortfolioInput
-  = AssociateProductWithPortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id, "SourcePortfolioId" :: NullOrUndefined (Id) }
+  = AssociateProductWithPortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id, "SourcePortfolioId" :: Maybe (Id) }
 ```
 
 ##### Instances
@@ -307,7 +307,7 @@ Constructs AssociateProductWithPortfolioInput from required parameters
 #### `newAssociateProductWithPortfolioInput'`
 
 ``` purescript
-newAssociateProductWithPortfolioInput' :: Id -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id, "SourcePortfolioId" :: NullOrUndefined (Id) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id, "SourcePortfolioId" :: NullOrUndefined (Id) }) -> AssociateProductWithPortfolioInput
+newAssociateProductWithPortfolioInput' :: Id -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id, "SourcePortfolioId" :: Maybe (Id) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id, "SourcePortfolioId" :: Maybe (Id) }) -> AssociateProductWithPortfolioInput
 ```
 
 Constructs AssociateProductWithPortfolioInput's fields from required parameters
@@ -428,7 +428,7 @@ Encode ChangeAction
 
 ``` purescript
 newtype CloudWatchDashboard
-  = CloudWatchDashboard { "Name" :: NullOrUndefined (CloudWatchDashboardName) }
+  = CloudWatchDashboard { "Name" :: Maybe (CloudWatchDashboardName) }
 ```
 
 <p>Information about a CloudWatch dashboard.</p>
@@ -453,7 +453,7 @@ Constructs CloudWatchDashboard from required parameters
 #### `newCloudWatchDashboard'`
 
 ``` purescript
-newCloudWatchDashboard' :: ({ "Name" :: NullOrUndefined (CloudWatchDashboardName) } -> { "Name" :: NullOrUndefined (CloudWatchDashboardName) }) -> CloudWatchDashboard
+newCloudWatchDashboard' :: ({ "Name" :: Maybe (CloudWatchDashboardName) } -> { "Name" :: Maybe (CloudWatchDashboardName) }) -> CloudWatchDashboard
 ```
 
 Constructs CloudWatchDashboard's fields from required parameters
@@ -510,7 +510,7 @@ Encode ConstraintDescription
 
 ``` purescript
 newtype ConstraintDetail
-  = ConstraintDetail { "ConstraintId" :: NullOrUndefined (Id), "Type" :: NullOrUndefined (ConstraintType), "Description" :: NullOrUndefined (ConstraintDescription), "Owner" :: NullOrUndefined (AccountId) }
+  = ConstraintDetail { "ConstraintId" :: Maybe (Id), "Type" :: Maybe (ConstraintType), "Description" :: Maybe (ConstraintDescription), "Owner" :: Maybe (AccountId) }
 ```
 
 <p>Information about a constraint.</p>
@@ -535,7 +535,7 @@ Constructs ConstraintDetail from required parameters
 #### `newConstraintDetail'`
 
 ``` purescript
-newConstraintDetail' :: ({ "ConstraintId" :: NullOrUndefined (Id), "Type" :: NullOrUndefined (ConstraintType), "Description" :: NullOrUndefined (ConstraintDescription), "Owner" :: NullOrUndefined (AccountId) } -> { "ConstraintId" :: NullOrUndefined (Id), "Type" :: NullOrUndefined (ConstraintType), "Description" :: NullOrUndefined (ConstraintDescription), "Owner" :: NullOrUndefined (AccountId) }) -> ConstraintDetail
+newConstraintDetail' :: ({ "ConstraintId" :: Maybe (Id), "Type" :: Maybe (ConstraintType), "Description" :: Maybe (ConstraintDescription), "Owner" :: Maybe (AccountId) } -> { "ConstraintId" :: Maybe (Id), "Type" :: Maybe (ConstraintType), "Description" :: Maybe (ConstraintDescription), "Owner" :: Maybe (AccountId) }) -> ConstraintDetail
 ```
 
 Constructs ConstraintDetail's fields from required parameters
@@ -592,7 +592,7 @@ Encode ConstraintSummaries
 
 ``` purescript
 newtype ConstraintSummary
-  = ConstraintSummary { "Type" :: NullOrUndefined (ConstraintType), "Description" :: NullOrUndefined (ConstraintDescription) }
+  = ConstraintSummary { "Type" :: Maybe (ConstraintType), "Description" :: Maybe (ConstraintDescription) }
 ```
 
 <p>Summary information about a constraint.</p>
@@ -617,7 +617,7 @@ Constructs ConstraintSummary from required parameters
 #### `newConstraintSummary'`
 
 ``` purescript
-newConstraintSummary' :: ({ "Type" :: NullOrUndefined (ConstraintType), "Description" :: NullOrUndefined (ConstraintDescription) } -> { "Type" :: NullOrUndefined (ConstraintType), "Description" :: NullOrUndefined (ConstraintDescription) }) -> ConstraintSummary
+newConstraintSummary' :: ({ "Type" :: Maybe (ConstraintType), "Description" :: Maybe (ConstraintDescription) } -> { "Type" :: Maybe (ConstraintType), "Description" :: Maybe (ConstraintDescription) }) -> ConstraintSummary
 ```
 
 Constructs ConstraintSummary's fields from required parameters
@@ -674,7 +674,7 @@ Encode CopyOptions
 
 ``` purescript
 newtype CopyProductInput
-  = CopyProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "SourceProductArn" :: ProductArn, "TargetProductId" :: NullOrUndefined (Id), "TargetProductName" :: NullOrUndefined (ProductViewName), "SourceProvisioningArtifactIdentifiers" :: NullOrUndefined (SourceProvisioningArtifactProperties), "CopyOptions" :: NullOrUndefined (CopyOptions), "IdempotencyToken" :: IdempotencyToken }
+  = CopyProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "SourceProductArn" :: ProductArn, "TargetProductId" :: Maybe (Id), "TargetProductName" :: Maybe (ProductViewName), "SourceProvisioningArtifactIdentifiers" :: Maybe (SourceProvisioningArtifactProperties), "CopyOptions" :: Maybe (CopyOptions), "IdempotencyToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -697,7 +697,7 @@ Constructs CopyProductInput from required parameters
 #### `newCopyProductInput'`
 
 ``` purescript
-newCopyProductInput' :: IdempotencyToken -> ProductArn -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "SourceProductArn" :: ProductArn, "TargetProductId" :: NullOrUndefined (Id), "TargetProductName" :: NullOrUndefined (ProductViewName), "SourceProvisioningArtifactIdentifiers" :: NullOrUndefined (SourceProvisioningArtifactProperties), "CopyOptions" :: NullOrUndefined (CopyOptions), "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "SourceProductArn" :: ProductArn, "TargetProductId" :: NullOrUndefined (Id), "TargetProductName" :: NullOrUndefined (ProductViewName), "SourceProvisioningArtifactIdentifiers" :: NullOrUndefined (SourceProvisioningArtifactProperties), "CopyOptions" :: NullOrUndefined (CopyOptions), "IdempotencyToken" :: IdempotencyToken }) -> CopyProductInput
+newCopyProductInput' :: IdempotencyToken -> ProductArn -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "SourceProductArn" :: ProductArn, "TargetProductId" :: Maybe (Id), "TargetProductName" :: Maybe (ProductViewName), "SourceProvisioningArtifactIdentifiers" :: Maybe (SourceProvisioningArtifactProperties), "CopyOptions" :: Maybe (CopyOptions), "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "SourceProductArn" :: ProductArn, "TargetProductId" :: Maybe (Id), "TargetProductName" :: Maybe (ProductViewName), "SourceProvisioningArtifactIdentifiers" :: Maybe (SourceProvisioningArtifactProperties), "CopyOptions" :: Maybe (CopyOptions), "IdempotencyToken" :: IdempotencyToken }) -> CopyProductInput
 ```
 
 Constructs CopyProductInput's fields from required parameters
@@ -706,7 +706,7 @@ Constructs CopyProductInput's fields from required parameters
 
 ``` purescript
 newtype CopyProductOutput
-  = CopyProductOutput { "CopyProductToken" :: NullOrUndefined (Id) }
+  = CopyProductOutput { "CopyProductToken" :: Maybe (Id) }
 ```
 
 ##### Instances
@@ -729,7 +729,7 @@ Constructs CopyProductOutput from required parameters
 #### `newCopyProductOutput'`
 
 ``` purescript
-newCopyProductOutput' :: ({ "CopyProductToken" :: NullOrUndefined (Id) } -> { "CopyProductToken" :: NullOrUndefined (Id) }) -> CopyProductOutput
+newCopyProductOutput' :: ({ "CopyProductToken" :: Maybe (Id) } -> { "CopyProductToken" :: Maybe (Id) }) -> CopyProductOutput
 ```
 
 Constructs CopyProductOutput's fields from required parameters
@@ -754,7 +754,7 @@ Encode CopyProductStatus
 
 ``` purescript
 newtype CreateConstraintInput
-  = CreateConstraintInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Id, "Parameters" :: ConstraintParameters, "Type" :: ConstraintType, "Description" :: NullOrUndefined (ConstraintDescription), "IdempotencyToken" :: IdempotencyToken }
+  = CreateConstraintInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Id, "Parameters" :: ConstraintParameters, "Type" :: ConstraintType, "Description" :: Maybe (ConstraintDescription), "IdempotencyToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -777,7 +777,7 @@ Constructs CreateConstraintInput from required parameters
 #### `newCreateConstraintInput'`
 
 ``` purescript
-newCreateConstraintInput' :: IdempotencyToken -> ConstraintParameters -> Id -> Id -> ConstraintType -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Id, "Parameters" :: ConstraintParameters, "Type" :: ConstraintType, "Description" :: NullOrUndefined (ConstraintDescription), "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Id, "Parameters" :: ConstraintParameters, "Type" :: ConstraintType, "Description" :: NullOrUndefined (ConstraintDescription), "IdempotencyToken" :: IdempotencyToken }) -> CreateConstraintInput
+newCreateConstraintInput' :: IdempotencyToken -> ConstraintParameters -> Id -> Id -> ConstraintType -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Id, "Parameters" :: ConstraintParameters, "Type" :: ConstraintType, "Description" :: Maybe (ConstraintDescription), "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Id, "Parameters" :: ConstraintParameters, "Type" :: ConstraintType, "Description" :: Maybe (ConstraintDescription), "IdempotencyToken" :: IdempotencyToken }) -> CreateConstraintInput
 ```
 
 Constructs CreateConstraintInput's fields from required parameters
@@ -786,7 +786,7 @@ Constructs CreateConstraintInput's fields from required parameters
 
 ``` purescript
 newtype CreateConstraintOutput
-  = CreateConstraintOutput { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) }
+  = CreateConstraintOutput { "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) }
 ```
 
 ##### Instances
@@ -809,7 +809,7 @@ Constructs CreateConstraintOutput from required parameters
 #### `newCreateConstraintOutput'`
 
 ``` purescript
-newCreateConstraintOutput' :: ({ "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) } -> { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) }) -> CreateConstraintOutput
+newCreateConstraintOutput' :: ({ "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) } -> { "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) }) -> CreateConstraintOutput
 ```
 
 Constructs CreateConstraintOutput's fields from required parameters
@@ -818,7 +818,7 @@ Constructs CreateConstraintOutput's fields from required parameters
 
 ``` purescript
 newtype CreatePortfolioInput
-  = CreatePortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "DisplayName" :: PortfolioDisplayName, "Description" :: NullOrUndefined (PortfolioDescription), "ProviderName" :: ProviderName, "Tags" :: NullOrUndefined (AddTags), "IdempotencyToken" :: IdempotencyToken }
+  = CreatePortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "DisplayName" :: PortfolioDisplayName, "Description" :: Maybe (PortfolioDescription), "ProviderName" :: ProviderName, "Tags" :: Maybe (AddTags), "IdempotencyToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -841,7 +841,7 @@ Constructs CreatePortfolioInput from required parameters
 #### `newCreatePortfolioInput'`
 
 ``` purescript
-newCreatePortfolioInput' :: PortfolioDisplayName -> IdempotencyToken -> ProviderName -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "DisplayName" :: PortfolioDisplayName, "Description" :: NullOrUndefined (PortfolioDescription), "ProviderName" :: ProviderName, "Tags" :: NullOrUndefined (AddTags), "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "DisplayName" :: PortfolioDisplayName, "Description" :: NullOrUndefined (PortfolioDescription), "ProviderName" :: ProviderName, "Tags" :: NullOrUndefined (AddTags), "IdempotencyToken" :: IdempotencyToken }) -> CreatePortfolioInput
+newCreatePortfolioInput' :: PortfolioDisplayName -> IdempotencyToken -> ProviderName -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "DisplayName" :: PortfolioDisplayName, "Description" :: Maybe (PortfolioDescription), "ProviderName" :: ProviderName, "Tags" :: Maybe (AddTags), "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "DisplayName" :: PortfolioDisplayName, "Description" :: Maybe (PortfolioDescription), "ProviderName" :: ProviderName, "Tags" :: Maybe (AddTags), "IdempotencyToken" :: IdempotencyToken }) -> CreatePortfolioInput
 ```
 
 Constructs CreatePortfolioInput's fields from required parameters
@@ -850,7 +850,7 @@ Constructs CreatePortfolioInput's fields from required parameters
 
 ``` purescript
 newtype CreatePortfolioOutput
-  = CreatePortfolioOutput { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags) }
+  = CreatePortfolioOutput { "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags) }
 ```
 
 ##### Instances
@@ -873,7 +873,7 @@ Constructs CreatePortfolioOutput from required parameters
 #### `newCreatePortfolioOutput'`
 
 ``` purescript
-newCreatePortfolioOutput' :: ({ "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags) } -> { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags) }) -> CreatePortfolioOutput
+newCreatePortfolioOutput' :: ({ "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags) } -> { "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags) }) -> CreatePortfolioOutput
 ```
 
 Constructs CreatePortfolioOutput's fields from required parameters
@@ -882,7 +882,7 @@ Constructs CreatePortfolioOutput's fields from required parameters
 
 ``` purescript
 newtype CreatePortfolioShareInput
-  = CreatePortfolioShareInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }
+  = CreatePortfolioShareInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }
 ```
 
 ##### Instances
@@ -905,7 +905,7 @@ Constructs CreatePortfolioShareInput from required parameters
 #### `newCreatePortfolioShareInput'`
 
 ``` purescript
-newCreatePortfolioShareInput' :: AccountId -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }) -> CreatePortfolioShareInput
+newCreatePortfolioShareInput' :: AccountId -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }) -> CreatePortfolioShareInput
 ```
 
 Constructs CreatePortfolioShareInput's fields from required parameters
@@ -930,7 +930,7 @@ Encode CreatePortfolioShareOutput
 
 ``` purescript
 newtype CreateProductInput
-  = CreateProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Name" :: ProductViewName, "Owner" :: ProductViewOwner, "Description" :: NullOrUndefined (ProductViewShortDescription), "Distributor" :: NullOrUndefined (ProductViewOwner), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportUrl" :: NullOrUndefined (SupportUrl), "ProductType" :: ProductType, "Tags" :: NullOrUndefined (AddTags), "ProvisioningArtifactParameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }
+  = CreateProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Name" :: ProductViewName, "Owner" :: ProductViewOwner, "Description" :: Maybe (ProductViewShortDescription), "Distributor" :: Maybe (ProductViewOwner), "SupportDescription" :: Maybe (SupportDescription), "SupportEmail" :: Maybe (SupportEmail), "SupportUrl" :: Maybe (SupportUrl), "ProductType" :: ProductType, "Tags" :: Maybe (AddTags), "ProvisioningArtifactParameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -953,7 +953,7 @@ Constructs CreateProductInput from required parameters
 #### `newCreateProductInput'`
 
 ``` purescript
-newCreateProductInput' :: IdempotencyToken -> ProductViewName -> ProductViewOwner -> ProductType -> ProvisioningArtifactProperties -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Name" :: ProductViewName, "Owner" :: ProductViewOwner, "Description" :: NullOrUndefined (ProductViewShortDescription), "Distributor" :: NullOrUndefined (ProductViewOwner), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportUrl" :: NullOrUndefined (SupportUrl), "ProductType" :: ProductType, "Tags" :: NullOrUndefined (AddTags), "ProvisioningArtifactParameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Name" :: ProductViewName, "Owner" :: ProductViewOwner, "Description" :: NullOrUndefined (ProductViewShortDescription), "Distributor" :: NullOrUndefined (ProductViewOwner), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportUrl" :: NullOrUndefined (SupportUrl), "ProductType" :: ProductType, "Tags" :: NullOrUndefined (AddTags), "ProvisioningArtifactParameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }) -> CreateProductInput
+newCreateProductInput' :: IdempotencyToken -> ProductViewName -> ProductViewOwner -> ProductType -> ProvisioningArtifactProperties -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Name" :: ProductViewName, "Owner" :: ProductViewOwner, "Description" :: Maybe (ProductViewShortDescription), "Distributor" :: Maybe (ProductViewOwner), "SupportDescription" :: Maybe (SupportDescription), "SupportEmail" :: Maybe (SupportEmail), "SupportUrl" :: Maybe (SupportUrl), "ProductType" :: ProductType, "Tags" :: Maybe (AddTags), "ProvisioningArtifactParameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Name" :: ProductViewName, "Owner" :: ProductViewOwner, "Description" :: Maybe (ProductViewShortDescription), "Distributor" :: Maybe (ProductViewOwner), "SupportDescription" :: Maybe (SupportDescription), "SupportEmail" :: Maybe (SupportEmail), "SupportUrl" :: Maybe (SupportUrl), "ProductType" :: ProductType, "Tags" :: Maybe (AddTags), "ProvisioningArtifactParameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }) -> CreateProductInput
 ```
 
 Constructs CreateProductInput's fields from required parameters
@@ -962,7 +962,7 @@ Constructs CreateProductInput's fields from required parameters
 
 ``` purescript
 newtype CreateProductOutput
-  = CreateProductOutput { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Tags" :: NullOrUndefined (Tags) }
+  = CreateProductOutput { "ProductViewDetail" :: Maybe (ProductViewDetail), "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Tags" :: Maybe (Tags) }
 ```
 
 ##### Instances
@@ -985,7 +985,7 @@ Constructs CreateProductOutput from required parameters
 #### `newCreateProductOutput'`
 
 ``` purescript
-newCreateProductOutput' :: ({ "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Tags" :: NullOrUndefined (Tags) } -> { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Tags" :: NullOrUndefined (Tags) }) -> CreateProductOutput
+newCreateProductOutput' :: ({ "ProductViewDetail" :: Maybe (ProductViewDetail), "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Tags" :: Maybe (Tags) } -> { "ProductViewDetail" :: Maybe (ProductViewDetail), "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Tags" :: Maybe (Tags) }) -> CreateProductOutput
 ```
 
 Constructs CreateProductOutput's fields from required parameters
@@ -994,7 +994,7 @@ Constructs CreateProductOutput's fields from required parameters
 
 ``` purescript
 newtype CreateProvisionedProductPlanInput
-  = CreateProvisionedProductPlanInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanName" :: ProvisionedProductPlanName, "PlanType" :: ProvisionedProductPlanType, "NotificationArns" :: NullOrUndefined (NotificationArns), "PathId" :: NullOrUndefined (Id), "ProductId" :: Id, "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningArtifactId" :: Id, "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "IdempotencyToken" :: IdempotencyToken, "Tags" :: NullOrUndefined (Tags) }
+  = CreateProvisionedProductPlanInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanName" :: ProvisionedProductPlanName, "PlanType" :: ProvisionedProductPlanType, "NotificationArns" :: Maybe (NotificationArns), "PathId" :: Maybe (Id), "ProductId" :: Id, "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningArtifactId" :: Id, "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "IdempotencyToken" :: IdempotencyToken, "Tags" :: Maybe (Tags) }
 ```
 
 ##### Instances
@@ -1017,7 +1017,7 @@ Constructs CreateProvisionedProductPlanInput from required parameters
 #### `newCreateProvisionedProductPlanInput'`
 
 ``` purescript
-newCreateProvisionedProductPlanInput' :: IdempotencyToken -> ProvisionedProductPlanName -> ProvisionedProductPlanType -> Id -> ProvisionedProductName -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanName" :: ProvisionedProductPlanName, "PlanType" :: ProvisionedProductPlanType, "NotificationArns" :: NullOrUndefined (NotificationArns), "PathId" :: NullOrUndefined (Id), "ProductId" :: Id, "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningArtifactId" :: Id, "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "IdempotencyToken" :: IdempotencyToken, "Tags" :: NullOrUndefined (Tags) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanName" :: ProvisionedProductPlanName, "PlanType" :: ProvisionedProductPlanType, "NotificationArns" :: NullOrUndefined (NotificationArns), "PathId" :: NullOrUndefined (Id), "ProductId" :: Id, "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningArtifactId" :: Id, "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "IdempotencyToken" :: IdempotencyToken, "Tags" :: NullOrUndefined (Tags) }) -> CreateProvisionedProductPlanInput
+newCreateProvisionedProductPlanInput' :: IdempotencyToken -> ProvisionedProductPlanName -> ProvisionedProductPlanType -> Id -> ProvisionedProductName -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanName" :: ProvisionedProductPlanName, "PlanType" :: ProvisionedProductPlanType, "NotificationArns" :: Maybe (NotificationArns), "PathId" :: Maybe (Id), "ProductId" :: Id, "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningArtifactId" :: Id, "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "IdempotencyToken" :: IdempotencyToken, "Tags" :: Maybe (Tags) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanName" :: ProvisionedProductPlanName, "PlanType" :: ProvisionedProductPlanType, "NotificationArns" :: Maybe (NotificationArns), "PathId" :: Maybe (Id), "ProductId" :: Id, "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningArtifactId" :: Id, "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "IdempotencyToken" :: IdempotencyToken, "Tags" :: Maybe (Tags) }) -> CreateProvisionedProductPlanInput
 ```
 
 Constructs CreateProvisionedProductPlanInput's fields from required parameters
@@ -1026,7 +1026,7 @@ Constructs CreateProvisionedProductPlanInput's fields from required parameters
 
 ``` purescript
 newtype CreateProvisionedProductPlanOutput
-  = CreateProvisionedProductPlanOutput { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName), "ProvisioningArtifactId" :: NullOrUndefined (Id) }
+  = CreateProvisionedProductPlanOutput { "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionedProductName" :: Maybe (ProvisionedProductName), "ProvisioningArtifactId" :: Maybe (Id) }
 ```
 
 ##### Instances
@@ -1049,7 +1049,7 @@ Constructs CreateProvisionedProductPlanOutput from required parameters
 #### `newCreateProvisionedProductPlanOutput'`
 
 ``` purescript
-newCreateProvisionedProductPlanOutput' :: ({ "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName), "ProvisioningArtifactId" :: NullOrUndefined (Id) } -> { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName), "ProvisioningArtifactId" :: NullOrUndefined (Id) }) -> CreateProvisionedProductPlanOutput
+newCreateProvisionedProductPlanOutput' :: ({ "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionedProductName" :: Maybe (ProvisionedProductName), "ProvisioningArtifactId" :: Maybe (Id) } -> { "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionedProductName" :: Maybe (ProvisionedProductName), "ProvisioningArtifactId" :: Maybe (Id) }) -> CreateProvisionedProductPlanOutput
 ```
 
 Constructs CreateProvisionedProductPlanOutput's fields from required parameters
@@ -1058,7 +1058,7 @@ Constructs CreateProvisionedProductPlanOutput's fields from required parameters
 
 ``` purescript
 newtype CreateProvisioningArtifactInput
-  = CreateProvisioningArtifactInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "Parameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }
+  = CreateProvisioningArtifactInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "Parameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -1081,7 +1081,7 @@ Constructs CreateProvisioningArtifactInput from required parameters
 #### `newCreateProvisioningArtifactInput'`
 
 ``` purescript
-newCreateProvisioningArtifactInput' :: IdempotencyToken -> ProvisioningArtifactProperties -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "Parameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "Parameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }) -> CreateProvisioningArtifactInput
+newCreateProvisioningArtifactInput' :: IdempotencyToken -> ProvisioningArtifactProperties -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "Parameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "Parameters" :: ProvisioningArtifactProperties, "IdempotencyToken" :: IdempotencyToken }) -> CreateProvisioningArtifactInput
 ```
 
 Constructs CreateProvisioningArtifactInput's fields from required parameters
@@ -1090,7 +1090,7 @@ Constructs CreateProvisioningArtifactInput's fields from required parameters
 
 ``` purescript
 newtype CreateProvisioningArtifactOutput
-  = CreateProvisioningArtifactOutput { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) }
+  = CreateProvisioningArtifactOutput { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) }
 ```
 
 ##### Instances
@@ -1113,7 +1113,7 @@ Constructs CreateProvisioningArtifactOutput from required parameters
 #### `newCreateProvisioningArtifactOutput'`
 
 ``` purescript
-newCreateProvisioningArtifactOutput' :: ({ "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) } -> { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) }) -> CreateProvisioningArtifactOutput
+newCreateProvisioningArtifactOutput' :: ({ "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) } -> { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) }) -> CreateProvisioningArtifactOutput
 ```
 
 Constructs CreateProvisioningArtifactOutput's fields from required parameters
@@ -1154,7 +1154,7 @@ Constructs CreateTagOptionInput's fields from required parameters
 
 ``` purescript
 newtype CreateTagOptionOutput
-  = CreateTagOptionOutput { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) }
+  = CreateTagOptionOutput { "TagOptionDetail" :: Maybe (TagOptionDetail) }
 ```
 
 ##### Instances
@@ -1177,7 +1177,7 @@ Constructs CreateTagOptionOutput from required parameters
 #### `newCreateTagOptionOutput'`
 
 ``` purescript
-newCreateTagOptionOutput' :: ({ "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } -> { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) }) -> CreateTagOptionOutput
+newCreateTagOptionOutput' :: ({ "TagOptionDetail" :: Maybe (TagOptionDetail) } -> { "TagOptionDetail" :: Maybe (TagOptionDetail) }) -> CreateTagOptionOutput
 ```
 
 Constructs CreateTagOptionOutput's fields from required parameters
@@ -1234,7 +1234,7 @@ Encode DefaultValue
 
 ``` purescript
 newtype DeleteConstraintInput
-  = DeleteConstraintInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DeleteConstraintInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1257,7 +1257,7 @@ Constructs DeleteConstraintInput from required parameters
 #### `newDeleteConstraintInput'`
 
 ``` purescript
-newDeleteConstraintInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DeleteConstraintInput
+newDeleteConstraintInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DeleteConstraintInput
 ```
 
 Constructs DeleteConstraintInput's fields from required parameters
@@ -1282,7 +1282,7 @@ Encode DeleteConstraintOutput
 
 ``` purescript
 newtype DeletePortfolioInput
-  = DeletePortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DeletePortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1305,7 +1305,7 @@ Constructs DeletePortfolioInput from required parameters
 #### `newDeletePortfolioInput'`
 
 ``` purescript
-newDeletePortfolioInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DeletePortfolioInput
+newDeletePortfolioInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DeletePortfolioInput
 ```
 
 Constructs DeletePortfolioInput's fields from required parameters
@@ -1330,7 +1330,7 @@ Encode DeletePortfolioOutput
 
 ``` purescript
 newtype DeletePortfolioShareInput
-  = DeletePortfolioShareInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }
+  = DeletePortfolioShareInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }
 ```
 
 ##### Instances
@@ -1353,7 +1353,7 @@ Constructs DeletePortfolioShareInput from required parameters
 #### `newDeletePortfolioShareInput'`
 
 ``` purescript
-newDeletePortfolioShareInput' :: AccountId -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }) -> DeletePortfolioShareInput
+newDeletePortfolioShareInput' :: AccountId -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "AccountId" :: AccountId }) -> DeletePortfolioShareInput
 ```
 
 Constructs DeletePortfolioShareInput's fields from required parameters
@@ -1378,7 +1378,7 @@ Encode DeletePortfolioShareOutput
 
 ``` purescript
 newtype DeleteProductInput
-  = DeleteProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DeleteProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1401,7 +1401,7 @@ Constructs DeleteProductInput from required parameters
 #### `newDeleteProductInput'`
 
 ``` purescript
-newDeleteProductInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DeleteProductInput
+newDeleteProductInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DeleteProductInput
 ```
 
 Constructs DeleteProductInput's fields from required parameters
@@ -1426,7 +1426,7 @@ Encode DeleteProductOutput
 
 ``` purescript
 newtype DeleteProvisionedProductPlanInput
-  = DeleteProvisionedProductPlanInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "IgnoreErrors" :: NullOrUndefined (IgnoreErrors) }
+  = DeleteProvisionedProductPlanInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "IgnoreErrors" :: Maybe (IgnoreErrors) }
 ```
 
 ##### Instances
@@ -1449,7 +1449,7 @@ Constructs DeleteProvisionedProductPlanInput from required parameters
 #### `newDeleteProvisionedProductPlanInput'`
 
 ``` purescript
-newDeleteProvisionedProductPlanInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "IgnoreErrors" :: NullOrUndefined (IgnoreErrors) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "IgnoreErrors" :: NullOrUndefined (IgnoreErrors) }) -> DeleteProvisionedProductPlanInput
+newDeleteProvisionedProductPlanInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "IgnoreErrors" :: Maybe (IgnoreErrors) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "IgnoreErrors" :: Maybe (IgnoreErrors) }) -> DeleteProvisionedProductPlanInput
 ```
 
 Constructs DeleteProvisionedProductPlanInput's fields from required parameters
@@ -1474,7 +1474,7 @@ Encode DeleteProvisionedProductPlanOutput
 
 ``` purescript
 newtype DeleteProvisioningArtifactInput
-  = DeleteProvisioningArtifactInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id }
+  = DeleteProvisioningArtifactInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id }
 ```
 
 ##### Instances
@@ -1497,7 +1497,7 @@ Constructs DeleteProvisioningArtifactInput from required parameters
 #### `newDeleteProvisioningArtifactInput'`
 
 ``` purescript
-newDeleteProvisioningArtifactInput' :: Id -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id }) -> DeleteProvisioningArtifactInput
+newDeleteProvisioningArtifactInput' :: Id -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id }) -> DeleteProvisioningArtifactInput
 ```
 
 Constructs DeleteProvisioningArtifactInput's fields from required parameters
@@ -1570,7 +1570,7 @@ Encode DeleteTagOptionOutput
 
 ``` purescript
 newtype DescribeConstraintInput
-  = DescribeConstraintInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DescribeConstraintInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1593,7 +1593,7 @@ Constructs DescribeConstraintInput from required parameters
 #### `newDescribeConstraintInput'`
 
 ``` purescript
-newDescribeConstraintInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DescribeConstraintInput
+newDescribeConstraintInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DescribeConstraintInput
 ```
 
 Constructs DescribeConstraintInput's fields from required parameters
@@ -1602,7 +1602,7 @@ Constructs DescribeConstraintInput's fields from required parameters
 
 ``` purescript
 newtype DescribeConstraintOutput
-  = DescribeConstraintOutput { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) }
+  = DescribeConstraintOutput { "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) }
 ```
 
 ##### Instances
@@ -1625,7 +1625,7 @@ Constructs DescribeConstraintOutput from required parameters
 #### `newDescribeConstraintOutput'`
 
 ``` purescript
-newDescribeConstraintOutput' :: ({ "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) } -> { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) }) -> DescribeConstraintOutput
+newDescribeConstraintOutput' :: ({ "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) } -> { "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) }) -> DescribeConstraintOutput
 ```
 
 Constructs DescribeConstraintOutput's fields from required parameters
@@ -1634,7 +1634,7 @@ Constructs DescribeConstraintOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeCopyProductStatusInput
-  = DescribeCopyProductStatusInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "CopyProductToken" :: Id }
+  = DescribeCopyProductStatusInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "CopyProductToken" :: Id }
 ```
 
 ##### Instances
@@ -1657,7 +1657,7 @@ Constructs DescribeCopyProductStatusInput from required parameters
 #### `newDescribeCopyProductStatusInput'`
 
 ``` purescript
-newDescribeCopyProductStatusInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "CopyProductToken" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "CopyProductToken" :: Id }) -> DescribeCopyProductStatusInput
+newDescribeCopyProductStatusInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "CopyProductToken" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "CopyProductToken" :: Id }) -> DescribeCopyProductStatusInput
 ```
 
 Constructs DescribeCopyProductStatusInput's fields from required parameters
@@ -1666,7 +1666,7 @@ Constructs DescribeCopyProductStatusInput's fields from required parameters
 
 ``` purescript
 newtype DescribeCopyProductStatusOutput
-  = DescribeCopyProductStatusOutput { "CopyProductStatus" :: NullOrUndefined (CopyProductStatus), "TargetProductId" :: NullOrUndefined (Id), "StatusDetail" :: NullOrUndefined (StatusDetail) }
+  = DescribeCopyProductStatusOutput { "CopyProductStatus" :: Maybe (CopyProductStatus), "TargetProductId" :: Maybe (Id), "StatusDetail" :: Maybe (StatusDetail) }
 ```
 
 ##### Instances
@@ -1689,7 +1689,7 @@ Constructs DescribeCopyProductStatusOutput from required parameters
 #### `newDescribeCopyProductStatusOutput'`
 
 ``` purescript
-newDescribeCopyProductStatusOutput' :: ({ "CopyProductStatus" :: NullOrUndefined (CopyProductStatus), "TargetProductId" :: NullOrUndefined (Id), "StatusDetail" :: NullOrUndefined (StatusDetail) } -> { "CopyProductStatus" :: NullOrUndefined (CopyProductStatus), "TargetProductId" :: NullOrUndefined (Id), "StatusDetail" :: NullOrUndefined (StatusDetail) }) -> DescribeCopyProductStatusOutput
+newDescribeCopyProductStatusOutput' :: ({ "CopyProductStatus" :: Maybe (CopyProductStatus), "TargetProductId" :: Maybe (Id), "StatusDetail" :: Maybe (StatusDetail) } -> { "CopyProductStatus" :: Maybe (CopyProductStatus), "TargetProductId" :: Maybe (Id), "StatusDetail" :: Maybe (StatusDetail) }) -> DescribeCopyProductStatusOutput
 ```
 
 Constructs DescribeCopyProductStatusOutput's fields from required parameters
@@ -1698,7 +1698,7 @@ Constructs DescribeCopyProductStatusOutput's fields from required parameters
 
 ``` purescript
 newtype DescribePortfolioInput
-  = DescribePortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DescribePortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1721,7 +1721,7 @@ Constructs DescribePortfolioInput from required parameters
 #### `newDescribePortfolioInput'`
 
 ``` purescript
-newDescribePortfolioInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DescribePortfolioInput
+newDescribePortfolioInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DescribePortfolioInput
 ```
 
 Constructs DescribePortfolioInput's fields from required parameters
@@ -1730,7 +1730,7 @@ Constructs DescribePortfolioInput's fields from required parameters
 
 ``` purescript
 newtype DescribePortfolioOutput
-  = DescribePortfolioOutput { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags), "TagOptions" :: NullOrUndefined (TagOptionDetails) }
+  = DescribePortfolioOutput { "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags), "TagOptions" :: Maybe (TagOptionDetails) }
 ```
 
 ##### Instances
@@ -1753,7 +1753,7 @@ Constructs DescribePortfolioOutput from required parameters
 #### `newDescribePortfolioOutput'`
 
 ``` purescript
-newDescribePortfolioOutput' :: ({ "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags), "TagOptions" :: NullOrUndefined (TagOptionDetails) } -> { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags), "TagOptions" :: NullOrUndefined (TagOptionDetails) }) -> DescribePortfolioOutput
+newDescribePortfolioOutput' :: ({ "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags), "TagOptions" :: Maybe (TagOptionDetails) } -> { "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags), "TagOptions" :: Maybe (TagOptionDetails) }) -> DescribePortfolioOutput
 ```
 
 Constructs DescribePortfolioOutput's fields from required parameters
@@ -1762,7 +1762,7 @@ Constructs DescribePortfolioOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeProductAsAdminInput
-  = DescribeProductAsAdminInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DescribeProductAsAdminInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1785,7 +1785,7 @@ Constructs DescribeProductAsAdminInput from required parameters
 #### `newDescribeProductAsAdminInput'`
 
 ``` purescript
-newDescribeProductAsAdminInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DescribeProductAsAdminInput
+newDescribeProductAsAdminInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DescribeProductAsAdminInput
 ```
 
 Constructs DescribeProductAsAdminInput's fields from required parameters
@@ -1794,7 +1794,7 @@ Constructs DescribeProductAsAdminInput's fields from required parameters
 
 ``` purescript
 newtype DescribeProductAsAdminOutput
-  = DescribeProductAsAdminOutput { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "ProvisioningArtifactSummaries" :: NullOrUndefined (ProvisioningArtifactSummaries), "Tags" :: NullOrUndefined (Tags), "TagOptions" :: NullOrUndefined (TagOptionDetails) }
+  = DescribeProductAsAdminOutput { "ProductViewDetail" :: Maybe (ProductViewDetail), "ProvisioningArtifactSummaries" :: Maybe (ProvisioningArtifactSummaries), "Tags" :: Maybe (Tags), "TagOptions" :: Maybe (TagOptionDetails) }
 ```
 
 ##### Instances
@@ -1817,7 +1817,7 @@ Constructs DescribeProductAsAdminOutput from required parameters
 #### `newDescribeProductAsAdminOutput'`
 
 ``` purescript
-newDescribeProductAsAdminOutput' :: ({ "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "ProvisioningArtifactSummaries" :: NullOrUndefined (ProvisioningArtifactSummaries), "Tags" :: NullOrUndefined (Tags), "TagOptions" :: NullOrUndefined (TagOptionDetails) } -> { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "ProvisioningArtifactSummaries" :: NullOrUndefined (ProvisioningArtifactSummaries), "Tags" :: NullOrUndefined (Tags), "TagOptions" :: NullOrUndefined (TagOptionDetails) }) -> DescribeProductAsAdminOutput
+newDescribeProductAsAdminOutput' :: ({ "ProductViewDetail" :: Maybe (ProductViewDetail), "ProvisioningArtifactSummaries" :: Maybe (ProvisioningArtifactSummaries), "Tags" :: Maybe (Tags), "TagOptions" :: Maybe (TagOptionDetails) } -> { "ProductViewDetail" :: Maybe (ProductViewDetail), "ProvisioningArtifactSummaries" :: Maybe (ProvisioningArtifactSummaries), "Tags" :: Maybe (Tags), "TagOptions" :: Maybe (TagOptionDetails) }) -> DescribeProductAsAdminOutput
 ```
 
 Constructs DescribeProductAsAdminOutput's fields from required parameters
@@ -1826,7 +1826,7 @@ Constructs DescribeProductAsAdminOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeProductInput
-  = DescribeProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DescribeProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1849,7 +1849,7 @@ Constructs DescribeProductInput from required parameters
 #### `newDescribeProductInput'`
 
 ``` purescript
-newDescribeProductInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DescribeProductInput
+newDescribeProductInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DescribeProductInput
 ```
 
 Constructs DescribeProductInput's fields from required parameters
@@ -1858,7 +1858,7 @@ Constructs DescribeProductInput's fields from required parameters
 
 ``` purescript
 newtype DescribeProductOutput
-  = DescribeProductOutput { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) }
+  = DescribeProductOutput { "ProductViewSummary" :: Maybe (ProductViewSummary), "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) }
 ```
 
 ##### Instances
@@ -1881,7 +1881,7 @@ Constructs DescribeProductOutput from required parameters
 #### `newDescribeProductOutput'`
 
 ``` purescript
-newDescribeProductOutput' :: ({ "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) } -> { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) }) -> DescribeProductOutput
+newDescribeProductOutput' :: ({ "ProductViewSummary" :: Maybe (ProductViewSummary), "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) } -> { "ProductViewSummary" :: Maybe (ProductViewSummary), "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) }) -> DescribeProductOutput
 ```
 
 Constructs DescribeProductOutput's fields from required parameters
@@ -1890,7 +1890,7 @@ Constructs DescribeProductOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeProductViewInput
-  = DescribeProductViewInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DescribeProductViewInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1913,7 +1913,7 @@ Constructs DescribeProductViewInput from required parameters
 #### `newDescribeProductViewInput'`
 
 ``` purescript
-newDescribeProductViewInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DescribeProductViewInput
+newDescribeProductViewInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DescribeProductViewInput
 ```
 
 Constructs DescribeProductViewInput's fields from required parameters
@@ -1922,7 +1922,7 @@ Constructs DescribeProductViewInput's fields from required parameters
 
 ``` purescript
 newtype DescribeProductViewOutput
-  = DescribeProductViewOutput { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) }
+  = DescribeProductViewOutput { "ProductViewSummary" :: Maybe (ProductViewSummary), "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) }
 ```
 
 ##### Instances
@@ -1945,7 +1945,7 @@ Constructs DescribeProductViewOutput from required parameters
 #### `newDescribeProductViewOutput'`
 
 ``` purescript
-newDescribeProductViewOutput' :: ({ "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) } -> { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "ProvisioningArtifacts" :: NullOrUndefined (ProvisioningArtifacts) }) -> DescribeProductViewOutput
+newDescribeProductViewOutput' :: ({ "ProductViewSummary" :: Maybe (ProductViewSummary), "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) } -> { "ProductViewSummary" :: Maybe (ProductViewSummary), "ProvisioningArtifacts" :: Maybe (ProvisioningArtifacts) }) -> DescribeProductViewOutput
 ```
 
 Constructs DescribeProductViewOutput's fields from required parameters
@@ -1954,7 +1954,7 @@ Constructs DescribeProductViewOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeProvisionedProductInput
-  = DescribeProvisionedProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }
+  = DescribeProvisionedProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }
 ```
 
 ##### Instances
@@ -1977,7 +1977,7 @@ Constructs DescribeProvisionedProductInput from required parameters
 #### `newDescribeProvisionedProductInput'`
 
 ``` purescript
-newDescribeProvisionedProductInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id }) -> DescribeProvisionedProductInput
+newDescribeProvisionedProductInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id }) -> DescribeProvisionedProductInput
 ```
 
 Constructs DescribeProvisionedProductInput's fields from required parameters
@@ -1986,7 +1986,7 @@ Constructs DescribeProvisionedProductInput's fields from required parameters
 
 ``` purescript
 newtype DescribeProvisionedProductOutput
-  = DescribeProvisionedProductOutput { "ProvisionedProductDetail" :: NullOrUndefined (ProvisionedProductDetail), "CloudWatchDashboards" :: NullOrUndefined (CloudWatchDashboards) }
+  = DescribeProvisionedProductOutput { "ProvisionedProductDetail" :: Maybe (ProvisionedProductDetail), "CloudWatchDashboards" :: Maybe (CloudWatchDashboards) }
 ```
 
 ##### Instances
@@ -2009,7 +2009,7 @@ Constructs DescribeProvisionedProductOutput from required parameters
 #### `newDescribeProvisionedProductOutput'`
 
 ``` purescript
-newDescribeProvisionedProductOutput' :: ({ "ProvisionedProductDetail" :: NullOrUndefined (ProvisionedProductDetail), "CloudWatchDashboards" :: NullOrUndefined (CloudWatchDashboards) } -> { "ProvisionedProductDetail" :: NullOrUndefined (ProvisionedProductDetail), "CloudWatchDashboards" :: NullOrUndefined (CloudWatchDashboards) }) -> DescribeProvisionedProductOutput
+newDescribeProvisionedProductOutput' :: ({ "ProvisionedProductDetail" :: Maybe (ProvisionedProductDetail), "CloudWatchDashboards" :: Maybe (CloudWatchDashboards) } -> { "ProvisionedProductDetail" :: Maybe (ProvisionedProductDetail), "CloudWatchDashboards" :: Maybe (CloudWatchDashboards) }) -> DescribeProvisionedProductOutput
 ```
 
 Constructs DescribeProvisionedProductOutput's fields from required parameters
@@ -2018,7 +2018,7 @@ Constructs DescribeProvisionedProductOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeProvisionedProductPlanInput
-  = DescribeProvisionedProductPlanInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = DescribeProvisionedProductPlanInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2041,7 +2041,7 @@ Constructs DescribeProvisionedProductPlanInput from required parameters
 #### `newDescribeProvisionedProductPlanInput'`
 
 ``` purescript
-newDescribeProvisionedProductPlanInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> DescribeProvisionedProductPlanInput
+newDescribeProvisionedProductPlanInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> DescribeProvisionedProductPlanInput
 ```
 
 Constructs DescribeProvisionedProductPlanInput's fields from required parameters
@@ -2050,7 +2050,7 @@ Constructs DescribeProvisionedProductPlanInput's fields from required parameters
 
 ``` purescript
 newtype DescribeProvisionedProductPlanOutput
-  = DescribeProvisionedProductPlanOutput { "ProvisionedProductPlanDetails" :: NullOrUndefined (ProvisionedProductPlanDetails), "ResourceChanges" :: NullOrUndefined (ResourceChanges), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = DescribeProvisionedProductPlanOutput { "ProvisionedProductPlanDetails" :: Maybe (ProvisionedProductPlanDetails), "ResourceChanges" :: Maybe (ResourceChanges), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2073,7 +2073,7 @@ Constructs DescribeProvisionedProductPlanOutput from required parameters
 #### `newDescribeProvisionedProductPlanOutput'`
 
 ``` purescript
-newDescribeProvisionedProductPlanOutput' :: ({ "ProvisionedProductPlanDetails" :: NullOrUndefined (ProvisionedProductPlanDetails), "ResourceChanges" :: NullOrUndefined (ResourceChanges), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ProvisionedProductPlanDetails" :: NullOrUndefined (ProvisionedProductPlanDetails), "ResourceChanges" :: NullOrUndefined (ResourceChanges), "NextPageToken" :: NullOrUndefined (PageToken) }) -> DescribeProvisionedProductPlanOutput
+newDescribeProvisionedProductPlanOutput' :: ({ "ProvisionedProductPlanDetails" :: Maybe (ProvisionedProductPlanDetails), "ResourceChanges" :: Maybe (ResourceChanges), "NextPageToken" :: Maybe (PageToken) } -> { "ProvisionedProductPlanDetails" :: Maybe (ProvisionedProductPlanDetails), "ResourceChanges" :: Maybe (ResourceChanges), "NextPageToken" :: Maybe (PageToken) }) -> DescribeProvisionedProductPlanOutput
 ```
 
 Constructs DescribeProvisionedProductPlanOutput's fields from required parameters
@@ -2082,7 +2082,7 @@ Constructs DescribeProvisionedProductPlanOutput's fields from required parameter
 
 ``` purescript
 newtype DescribeProvisioningArtifactInput
-  = DescribeProvisioningArtifactInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisioningArtifactId" :: Id, "ProductId" :: Id, "Verbose" :: NullOrUndefined (Verbose) }
+  = DescribeProvisioningArtifactInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisioningArtifactId" :: Id, "ProductId" :: Id, "Verbose" :: Maybe (Verbose) }
 ```
 
 ##### Instances
@@ -2105,7 +2105,7 @@ Constructs DescribeProvisioningArtifactInput from required parameters
 #### `newDescribeProvisioningArtifactInput'`
 
 ``` purescript
-newDescribeProvisioningArtifactInput' :: Id -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisioningArtifactId" :: Id, "ProductId" :: Id, "Verbose" :: NullOrUndefined (Verbose) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisioningArtifactId" :: Id, "ProductId" :: Id, "Verbose" :: NullOrUndefined (Verbose) }) -> DescribeProvisioningArtifactInput
+newDescribeProvisioningArtifactInput' :: Id -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisioningArtifactId" :: Id, "ProductId" :: Id, "Verbose" :: Maybe (Verbose) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisioningArtifactId" :: Id, "ProductId" :: Id, "Verbose" :: Maybe (Verbose) }) -> DescribeProvisioningArtifactInput
 ```
 
 Constructs DescribeProvisioningArtifactInput's fields from required parameters
@@ -2114,7 +2114,7 @@ Constructs DescribeProvisioningArtifactInput's fields from required parameters
 
 ``` purescript
 newtype DescribeProvisioningArtifactOutput
-  = DescribeProvisioningArtifactOutput { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) }
+  = DescribeProvisioningArtifactOutput { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) }
 ```
 
 ##### Instances
@@ -2137,7 +2137,7 @@ Constructs DescribeProvisioningArtifactOutput from required parameters
 #### `newDescribeProvisioningArtifactOutput'`
 
 ``` purescript
-newDescribeProvisioningArtifactOutput' :: ({ "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) } -> { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) }) -> DescribeProvisioningArtifactOutput
+newDescribeProvisioningArtifactOutput' :: ({ "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) } -> { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) }) -> DescribeProvisioningArtifactOutput
 ```
 
 Constructs DescribeProvisioningArtifactOutput's fields from required parameters
@@ -2146,7 +2146,7 @@ Constructs DescribeProvisioningArtifactOutput's fields from required parameters
 
 ``` purescript
 newtype DescribeProvisioningParametersInput
-  = DescribeProvisioningParametersInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: NullOrUndefined (Id) }
+  = DescribeProvisioningParametersInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: Maybe (Id) }
 ```
 
 ##### Instances
@@ -2169,7 +2169,7 @@ Constructs DescribeProvisioningParametersInput from required parameters
 #### `newDescribeProvisioningParametersInput'`
 
 ``` purescript
-newDescribeProvisioningParametersInput' :: Id -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: NullOrUndefined (Id) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: NullOrUndefined (Id) }) -> DescribeProvisioningParametersInput
+newDescribeProvisioningParametersInput' :: Id -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: Maybe (Id) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: Maybe (Id) }) -> DescribeProvisioningParametersInput
 ```
 
 Constructs DescribeProvisioningParametersInput's fields from required parameters
@@ -2178,7 +2178,7 @@ Constructs DescribeProvisioningParametersInput's fields from required parameters
 
 ``` purescript
 newtype DescribeProvisioningParametersOutput
-  = DescribeProvisioningParametersOutput { "ProvisioningArtifactParameters" :: NullOrUndefined (ProvisioningArtifactParameters), "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries), "UsageInstructions" :: NullOrUndefined (UsageInstructions), "TagOptions" :: NullOrUndefined (TagOptionSummaries) }
+  = DescribeProvisioningParametersOutput { "ProvisioningArtifactParameters" :: Maybe (ProvisioningArtifactParameters), "ConstraintSummaries" :: Maybe (ConstraintSummaries), "UsageInstructions" :: Maybe (UsageInstructions), "TagOptions" :: Maybe (TagOptionSummaries) }
 ```
 
 ##### Instances
@@ -2201,7 +2201,7 @@ Constructs DescribeProvisioningParametersOutput from required parameters
 #### `newDescribeProvisioningParametersOutput'`
 
 ``` purescript
-newDescribeProvisioningParametersOutput' :: ({ "ProvisioningArtifactParameters" :: NullOrUndefined (ProvisioningArtifactParameters), "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries), "UsageInstructions" :: NullOrUndefined (UsageInstructions), "TagOptions" :: NullOrUndefined (TagOptionSummaries) } -> { "ProvisioningArtifactParameters" :: NullOrUndefined (ProvisioningArtifactParameters), "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries), "UsageInstructions" :: NullOrUndefined (UsageInstructions), "TagOptions" :: NullOrUndefined (TagOptionSummaries) }) -> DescribeProvisioningParametersOutput
+newDescribeProvisioningParametersOutput' :: ({ "ProvisioningArtifactParameters" :: Maybe (ProvisioningArtifactParameters), "ConstraintSummaries" :: Maybe (ConstraintSummaries), "UsageInstructions" :: Maybe (UsageInstructions), "TagOptions" :: Maybe (TagOptionSummaries) } -> { "ProvisioningArtifactParameters" :: Maybe (ProvisioningArtifactParameters), "ConstraintSummaries" :: Maybe (ConstraintSummaries), "UsageInstructions" :: Maybe (UsageInstructions), "TagOptions" :: Maybe (TagOptionSummaries) }) -> DescribeProvisioningParametersOutput
 ```
 
 Constructs DescribeProvisioningParametersOutput's fields from required parameters
@@ -2210,7 +2210,7 @@ Constructs DescribeProvisioningParametersOutput's fields from required parameter
 
 ``` purescript
 newtype DescribeRecordInput
-  = DescribeRecordInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }
+  = DescribeRecordInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }
 ```
 
 ##### Instances
@@ -2233,7 +2233,7 @@ Constructs DescribeRecordInput from required parameters
 #### `newDescribeRecordInput'`
 
 ``` purescript
-newDescribeRecordInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }) -> DescribeRecordInput
+newDescribeRecordInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }) -> DescribeRecordInput
 ```
 
 Constructs DescribeRecordInput's fields from required parameters
@@ -2242,7 +2242,7 @@ Constructs DescribeRecordInput's fields from required parameters
 
 ``` purescript
 newtype DescribeRecordOutput
-  = DescribeRecordOutput { "RecordDetail" :: NullOrUndefined (RecordDetail), "RecordOutputs" :: NullOrUndefined (RecordOutputs), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = DescribeRecordOutput { "RecordDetail" :: Maybe (RecordDetail), "RecordOutputs" :: Maybe (RecordOutputs), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2265,7 +2265,7 @@ Constructs DescribeRecordOutput from required parameters
 #### `newDescribeRecordOutput'`
 
 ``` purescript
-newDescribeRecordOutput' :: ({ "RecordDetail" :: NullOrUndefined (RecordDetail), "RecordOutputs" :: NullOrUndefined (RecordOutputs), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "RecordDetail" :: NullOrUndefined (RecordDetail), "RecordOutputs" :: NullOrUndefined (RecordOutputs), "NextPageToken" :: NullOrUndefined (PageToken) }) -> DescribeRecordOutput
+newDescribeRecordOutput' :: ({ "RecordDetail" :: Maybe (RecordDetail), "RecordOutputs" :: Maybe (RecordOutputs), "NextPageToken" :: Maybe (PageToken) } -> { "RecordDetail" :: Maybe (RecordDetail), "RecordOutputs" :: Maybe (RecordOutputs), "NextPageToken" :: Maybe (PageToken) }) -> DescribeRecordOutput
 ```
 
 Constructs DescribeRecordOutput's fields from required parameters
@@ -2306,7 +2306,7 @@ Constructs DescribeTagOptionInput's fields from required parameters
 
 ``` purescript
 newtype DescribeTagOptionOutput
-  = DescribeTagOptionOutput { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) }
+  = DescribeTagOptionOutput { "TagOptionDetail" :: Maybe (TagOptionDetail) }
 ```
 
 ##### Instances
@@ -2329,7 +2329,7 @@ Constructs DescribeTagOptionOutput from required parameters
 #### `newDescribeTagOptionOutput'`
 
 ``` purescript
-newDescribeTagOptionOutput' :: ({ "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } -> { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) }) -> DescribeTagOptionOutput
+newDescribeTagOptionOutput' :: ({ "TagOptionDetail" :: Maybe (TagOptionDetail) } -> { "TagOptionDetail" :: Maybe (TagOptionDetail) }) -> DescribeTagOptionOutput
 ```
 
 Constructs DescribeTagOptionOutput's fields from required parameters
@@ -2354,7 +2354,7 @@ Encode Description
 
 ``` purescript
 newtype DisassociatePrincipalFromPortfolioInput
-  = DisassociatePrincipalFromPortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN }
+  = DisassociatePrincipalFromPortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN }
 ```
 
 ##### Instances
@@ -2377,7 +2377,7 @@ Constructs DisassociatePrincipalFromPortfolioInput from required parameters
 #### `newDisassociatePrincipalFromPortfolioInput'`
 
 ``` purescript
-newDisassociatePrincipalFromPortfolioInput' :: Id -> PrincipalARN -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN }) -> DisassociatePrincipalFromPortfolioInput
+newDisassociatePrincipalFromPortfolioInput' :: Id -> PrincipalARN -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PrincipalARN" :: PrincipalARN }) -> DisassociatePrincipalFromPortfolioInput
 ```
 
 Constructs DisassociatePrincipalFromPortfolioInput's fields from required parameters
@@ -2402,7 +2402,7 @@ Encode DisassociatePrincipalFromPortfolioOutput
 
 ``` purescript
 newtype DisassociateProductFromPortfolioInput
-  = DisassociateProductFromPortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id }
+  = DisassociateProductFromPortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id }
 ```
 
 ##### Instances
@@ -2425,7 +2425,7 @@ Constructs DisassociateProductFromPortfolioInput from required parameters
 #### `newDisassociateProductFromPortfolioInput'`
 
 ``` purescript
-newDisassociateProductFromPortfolioInput' :: Id -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id }) -> DisassociateProductFromPortfolioInput
+newDisassociateProductFromPortfolioInput' :: Id -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PortfolioId" :: Id }) -> DisassociateProductFromPortfolioInput
 ```
 
 Constructs DisassociateProductFromPortfolioInput's fields from required parameters
@@ -2564,7 +2564,7 @@ Encode EvaluationType
 
 ``` purescript
 newtype ExecuteProvisionedProductPlanInput
-  = ExecuteProvisionedProductPlanInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "IdempotencyToken" :: IdempotencyToken }
+  = ExecuteProvisionedProductPlanInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "IdempotencyToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -2587,7 +2587,7 @@ Constructs ExecuteProvisionedProductPlanInput from required parameters
 #### `newExecuteProvisionedProductPlanInput'`
 
 ``` purescript
-newExecuteProvisionedProductPlanInput' :: IdempotencyToken -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PlanId" :: Id, "IdempotencyToken" :: IdempotencyToken }) -> ExecuteProvisionedProductPlanInput
+newExecuteProvisionedProductPlanInput' :: IdempotencyToken -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "IdempotencyToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PlanId" :: Id, "IdempotencyToken" :: IdempotencyToken }) -> ExecuteProvisionedProductPlanInput
 ```
 
 Constructs ExecuteProvisionedProductPlanInput's fields from required parameters
@@ -2596,7 +2596,7 @@ Constructs ExecuteProvisionedProductPlanInput's fields from required parameters
 
 ``` purescript
 newtype ExecuteProvisionedProductPlanOutput
-  = ExecuteProvisionedProductPlanOutput { "RecordDetail" :: NullOrUndefined (RecordDetail) }
+  = ExecuteProvisionedProductPlanOutput { "RecordDetail" :: Maybe (RecordDetail) }
 ```
 
 ##### Instances
@@ -2619,7 +2619,7 @@ Constructs ExecuteProvisionedProductPlanOutput from required parameters
 #### `newExecuteProvisionedProductPlanOutput'`
 
 ``` purescript
-newExecuteProvisionedProductPlanOutput' :: ({ "RecordDetail" :: NullOrUndefined (RecordDetail) } -> { "RecordDetail" :: NullOrUndefined (RecordDetail) }) -> ExecuteProvisionedProductPlanOutput
+newExecuteProvisionedProductPlanOutput' :: ({ "RecordDetail" :: Maybe (RecordDetail) } -> { "RecordDetail" :: Maybe (RecordDetail) }) -> ExecuteProvisionedProductPlanOutput
 ```
 
 Constructs ExecuteProvisionedProductPlanOutput's fields from required parameters
@@ -2792,7 +2792,7 @@ Encode LaunchPathSummaries
 
 ``` purescript
 newtype LaunchPathSummary
-  = LaunchPathSummary { "Id" :: NullOrUndefined (Id), "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries), "Tags" :: NullOrUndefined (Tags), "Name" :: NullOrUndefined (PortfolioName) }
+  = LaunchPathSummary { "Id" :: Maybe (Id), "ConstraintSummaries" :: Maybe (ConstraintSummaries), "Tags" :: Maybe (Tags), "Name" :: Maybe (PortfolioName) }
 ```
 
 <p>Summary information about a product path for a user.</p>
@@ -2817,7 +2817,7 @@ Constructs LaunchPathSummary from required parameters
 #### `newLaunchPathSummary'`
 
 ``` purescript
-newLaunchPathSummary' :: ({ "Id" :: NullOrUndefined (Id), "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries), "Tags" :: NullOrUndefined (Tags), "Name" :: NullOrUndefined (PortfolioName) } -> { "Id" :: NullOrUndefined (Id), "ConstraintSummaries" :: NullOrUndefined (ConstraintSummaries), "Tags" :: NullOrUndefined (Tags), "Name" :: NullOrUndefined (PortfolioName) }) -> LaunchPathSummary
+newLaunchPathSummary' :: ({ "Id" :: Maybe (Id), "ConstraintSummaries" :: Maybe (ConstraintSummaries), "Tags" :: Maybe (Tags), "Name" :: Maybe (PortfolioName) } -> { "Id" :: Maybe (Id), "ConstraintSummaries" :: Maybe (ConstraintSummaries), "Tags" :: Maybe (Tags), "Name" :: Maybe (PortfolioName) }) -> LaunchPathSummary
 ```
 
 Constructs LaunchPathSummary's fields from required parameters
@@ -2844,7 +2844,7 @@ Encode LimitExceededException
 
 ``` purescript
 newtype ListAcceptedPortfolioSharesInput
-  = ListAcceptedPortfolioSharesInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }
+  = ListAcceptedPortfolioSharesInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }
 ```
 
 ##### Instances
@@ -2867,7 +2867,7 @@ Constructs ListAcceptedPortfolioSharesInput from required parameters
 #### `newListAcceptedPortfolioSharesInput'`
 
 ``` purescript
-newListAcceptedPortfolioSharesInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }) -> ListAcceptedPortfolioSharesInput
+newListAcceptedPortfolioSharesInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }) -> ListAcceptedPortfolioSharesInput
 ```
 
 Constructs ListAcceptedPortfolioSharesInput's fields from required parameters
@@ -2876,7 +2876,7 @@ Constructs ListAcceptedPortfolioSharesInput's fields from required parameters
 
 ``` purescript
 newtype ListAcceptedPortfolioSharesOutput
-  = ListAcceptedPortfolioSharesOutput { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListAcceptedPortfolioSharesOutput { "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2899,7 +2899,7 @@ Constructs ListAcceptedPortfolioSharesOutput from required parameters
 #### `newListAcceptedPortfolioSharesOutput'`
 
 ``` purescript
-newListAcceptedPortfolioSharesOutput' :: ({ "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListAcceptedPortfolioSharesOutput
+newListAcceptedPortfolioSharesOutput' :: ({ "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) } -> { "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) }) -> ListAcceptedPortfolioSharesOutput
 ```
 
 Constructs ListAcceptedPortfolioSharesOutput's fields from required parameters
@@ -2908,7 +2908,7 @@ Constructs ListAcceptedPortfolioSharesOutput's fields from required parameters
 
 ``` purescript
 newtype ListConstraintsForPortfolioInput
-  = ListConstraintsForPortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: NullOrUndefined (Id), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListConstraintsForPortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Maybe (Id), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2931,7 +2931,7 @@ Constructs ListConstraintsForPortfolioInput from required parameters
 #### `newListConstraintsForPortfolioInput'`
 
 ``` purescript
-newListConstraintsForPortfolioInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: NullOrUndefined (Id), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: NullOrUndefined (Id), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> ListConstraintsForPortfolioInput
+newListConstraintsForPortfolioInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Maybe (Id), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "ProductId" :: Maybe (Id), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> ListConstraintsForPortfolioInput
 ```
 
 Constructs ListConstraintsForPortfolioInput's fields from required parameters
@@ -2940,7 +2940,7 @@ Constructs ListConstraintsForPortfolioInput's fields from required parameters
 
 ``` purescript
 newtype ListConstraintsForPortfolioOutput
-  = ListConstraintsForPortfolioOutput { "ConstraintDetails" :: NullOrUndefined (ConstraintDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListConstraintsForPortfolioOutput { "ConstraintDetails" :: Maybe (ConstraintDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2963,7 +2963,7 @@ Constructs ListConstraintsForPortfolioOutput from required parameters
 #### `newListConstraintsForPortfolioOutput'`
 
 ``` purescript
-newListConstraintsForPortfolioOutput' :: ({ "ConstraintDetails" :: NullOrUndefined (ConstraintDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ConstraintDetails" :: NullOrUndefined (ConstraintDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListConstraintsForPortfolioOutput
+newListConstraintsForPortfolioOutput' :: ({ "ConstraintDetails" :: Maybe (ConstraintDetails), "NextPageToken" :: Maybe (PageToken) } -> { "ConstraintDetails" :: Maybe (ConstraintDetails), "NextPageToken" :: Maybe (PageToken) }) -> ListConstraintsForPortfolioOutput
 ```
 
 Constructs ListConstraintsForPortfolioOutput's fields from required parameters
@@ -2972,7 +2972,7 @@ Constructs ListConstraintsForPortfolioOutput's fields from required parameters
 
 ``` purescript
 newtype ListLaunchPathsInput
-  = ListLaunchPathsInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListLaunchPathsInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2995,7 +2995,7 @@ Constructs ListLaunchPathsInput from required parameters
 #### `newListLaunchPathsInput'`
 
 ``` purescript
-newListLaunchPathsInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> ListLaunchPathsInput
+newListLaunchPathsInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> ListLaunchPathsInput
 ```
 
 Constructs ListLaunchPathsInput's fields from required parameters
@@ -3004,7 +3004,7 @@ Constructs ListLaunchPathsInput's fields from required parameters
 
 ``` purescript
 newtype ListLaunchPathsOutput
-  = ListLaunchPathsOutput { "LaunchPathSummaries" :: NullOrUndefined (LaunchPathSummaries), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListLaunchPathsOutput { "LaunchPathSummaries" :: Maybe (LaunchPathSummaries), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3027,7 +3027,7 @@ Constructs ListLaunchPathsOutput from required parameters
 #### `newListLaunchPathsOutput'`
 
 ``` purescript
-newListLaunchPathsOutput' :: ({ "LaunchPathSummaries" :: NullOrUndefined (LaunchPathSummaries), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "LaunchPathSummaries" :: NullOrUndefined (LaunchPathSummaries), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListLaunchPathsOutput
+newListLaunchPathsOutput' :: ({ "LaunchPathSummaries" :: Maybe (LaunchPathSummaries), "NextPageToken" :: Maybe (PageToken) } -> { "LaunchPathSummaries" :: Maybe (LaunchPathSummaries), "NextPageToken" :: Maybe (PageToken) }) -> ListLaunchPathsOutput
 ```
 
 Constructs ListLaunchPathsOutput's fields from required parameters
@@ -3036,7 +3036,7 @@ Constructs ListLaunchPathsOutput's fields from required parameters
 
 ``` purescript
 newtype ListPortfolioAccessInput
-  = ListPortfolioAccessInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id }
+  = ListPortfolioAccessInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id }
 ```
 
 ##### Instances
@@ -3059,7 +3059,7 @@ Constructs ListPortfolioAccessInput from required parameters
 #### `newListPortfolioAccessInput'`
 
 ``` purescript
-newListPortfolioAccessInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id }) -> ListPortfolioAccessInput
+newListPortfolioAccessInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id }) -> ListPortfolioAccessInput
 ```
 
 Constructs ListPortfolioAccessInput's fields from required parameters
@@ -3068,7 +3068,7 @@ Constructs ListPortfolioAccessInput's fields from required parameters
 
 ``` purescript
 newtype ListPortfolioAccessOutput
-  = ListPortfolioAccessOutput { "AccountIds" :: NullOrUndefined (AccountIds), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListPortfolioAccessOutput { "AccountIds" :: Maybe (AccountIds), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3091,7 +3091,7 @@ Constructs ListPortfolioAccessOutput from required parameters
 #### `newListPortfolioAccessOutput'`
 
 ``` purescript
-newListPortfolioAccessOutput' :: ({ "AccountIds" :: NullOrUndefined (AccountIds), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "AccountIds" :: NullOrUndefined (AccountIds), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListPortfolioAccessOutput
+newListPortfolioAccessOutput' :: ({ "AccountIds" :: Maybe (AccountIds), "NextPageToken" :: Maybe (PageToken) } -> { "AccountIds" :: Maybe (AccountIds), "NextPageToken" :: Maybe (PageToken) }) -> ListPortfolioAccessOutput
 ```
 
 Constructs ListPortfolioAccessOutput's fields from required parameters
@@ -3100,7 +3100,7 @@ Constructs ListPortfolioAccessOutput's fields from required parameters
 
 ``` purescript
 newtype ListPortfoliosForProductInput
-  = ListPortfoliosForProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }
+  = ListPortfoliosForProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }
 ```
 
 ##### Instances
@@ -3123,7 +3123,7 @@ Constructs ListPortfoliosForProductInput from required parameters
 #### `newListPortfoliosForProductInput'`
 
 ``` purescript
-newListPortfoliosForProductInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }) -> ListPortfoliosForProductInput
+newListPortfoliosForProductInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }) -> ListPortfoliosForProductInput
 ```
 
 Constructs ListPortfoliosForProductInput's fields from required parameters
@@ -3132,7 +3132,7 @@ Constructs ListPortfoliosForProductInput's fields from required parameters
 
 ``` purescript
 newtype ListPortfoliosForProductOutput
-  = ListPortfoliosForProductOutput { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListPortfoliosForProductOutput { "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3155,7 +3155,7 @@ Constructs ListPortfoliosForProductOutput from required parameters
 #### `newListPortfoliosForProductOutput'`
 
 ``` purescript
-newListPortfoliosForProductOutput' :: ({ "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListPortfoliosForProductOutput
+newListPortfoliosForProductOutput' :: ({ "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) } -> { "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) }) -> ListPortfoliosForProductOutput
 ```
 
 Constructs ListPortfoliosForProductOutput's fields from required parameters
@@ -3164,7 +3164,7 @@ Constructs ListPortfoliosForProductOutput's fields from required parameters
 
 ``` purescript
 newtype ListPortfoliosInput
-  = ListPortfoliosInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }
+  = ListPortfoliosInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }
 ```
 
 ##### Instances
@@ -3187,7 +3187,7 @@ Constructs ListPortfoliosInput from required parameters
 #### `newListPortfoliosInput'`
 
 ``` purescript
-newListPortfoliosInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize) }) -> ListPortfoliosInput
+newListPortfoliosInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize) }) -> ListPortfoliosInput
 ```
 
 Constructs ListPortfoliosInput's fields from required parameters
@@ -3196,7 +3196,7 @@ Constructs ListPortfoliosInput's fields from required parameters
 
 ``` purescript
 newtype ListPortfoliosOutput
-  = ListPortfoliosOutput { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListPortfoliosOutput { "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3219,7 +3219,7 @@ Constructs ListPortfoliosOutput from required parameters
 #### `newListPortfoliosOutput'`
 
 ``` purescript
-newListPortfoliosOutput' :: ({ "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "PortfolioDetails" :: NullOrUndefined (PortfolioDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListPortfoliosOutput
+newListPortfoliosOutput' :: ({ "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) } -> { "PortfolioDetails" :: Maybe (PortfolioDetails), "NextPageToken" :: Maybe (PageToken) }) -> ListPortfoliosOutput
 ```
 
 Constructs ListPortfoliosOutput's fields from required parameters
@@ -3228,7 +3228,7 @@ Constructs ListPortfoliosOutput's fields from required parameters
 
 ``` purescript
 newtype ListPrincipalsForPortfolioInput
-  = ListPrincipalsForPortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListPrincipalsForPortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3251,7 +3251,7 @@ Constructs ListPrincipalsForPortfolioInput from required parameters
 #### `newListPrincipalsForPortfolioInput'`
 
 ``` purescript
-newListPrincipalsForPortfolioInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id, "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> ListPrincipalsForPortfolioInput
+newListPrincipalsForPortfolioInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id, "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> ListPrincipalsForPortfolioInput
 ```
 
 Constructs ListPrincipalsForPortfolioInput's fields from required parameters
@@ -3260,7 +3260,7 @@ Constructs ListPrincipalsForPortfolioInput's fields from required parameters
 
 ``` purescript
 newtype ListPrincipalsForPortfolioOutput
-  = ListPrincipalsForPortfolioOutput { "Principals" :: NullOrUndefined (Principals), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListPrincipalsForPortfolioOutput { "Principals" :: Maybe (Principals), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3283,7 +3283,7 @@ Constructs ListPrincipalsForPortfolioOutput from required parameters
 #### `newListPrincipalsForPortfolioOutput'`
 
 ``` purescript
-newListPrincipalsForPortfolioOutput' :: ({ "Principals" :: NullOrUndefined (Principals), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "Principals" :: NullOrUndefined (Principals), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListPrincipalsForPortfolioOutput
+newListPrincipalsForPortfolioOutput' :: ({ "Principals" :: Maybe (Principals), "NextPageToken" :: Maybe (PageToken) } -> { "Principals" :: Maybe (Principals), "NextPageToken" :: Maybe (PageToken) }) -> ListPrincipalsForPortfolioOutput
 ```
 
 Constructs ListPrincipalsForPortfolioOutput's fields from required parameters
@@ -3292,7 +3292,7 @@ Constructs ListPrincipalsForPortfolioOutput's fields from required parameters
 
 ``` purescript
 newtype ListProvisionedProductPlansInput
-  = ListProvisionedProductPlansInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisionProductId" :: NullOrUndefined (Id), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) }
+  = ListProvisionedProductPlansInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisionProductId" :: Maybe (Id), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken), "AccessLevelFilter" :: Maybe (AccessLevelFilter) }
 ```
 
 ##### Instances
@@ -3315,7 +3315,7 @@ Constructs ListProvisionedProductPlansInput from required parameters
 #### `newListProvisionedProductPlansInput'`
 
 ``` purescript
-newListProvisionedProductPlansInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisionProductId" :: NullOrUndefined (Id), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisionProductId" :: NullOrUndefined (Id), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter) }) -> ListProvisionedProductPlansInput
+newListProvisionedProductPlansInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisionProductId" :: Maybe (Id), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken), "AccessLevelFilter" :: Maybe (AccessLevelFilter) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisionProductId" :: Maybe (Id), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken), "AccessLevelFilter" :: Maybe (AccessLevelFilter) }) -> ListProvisionedProductPlansInput
 ```
 
 Constructs ListProvisionedProductPlansInput's fields from required parameters
@@ -3324,7 +3324,7 @@ Constructs ListProvisionedProductPlansInput's fields from required parameters
 
 ``` purescript
 newtype ListProvisionedProductPlansOutput
-  = ListProvisionedProductPlansOutput { "ProvisionedProductPlans" :: NullOrUndefined (ProvisionedProductPlans), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListProvisionedProductPlansOutput { "ProvisionedProductPlans" :: Maybe (ProvisionedProductPlans), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3347,7 +3347,7 @@ Constructs ListProvisionedProductPlansOutput from required parameters
 #### `newListProvisionedProductPlansOutput'`
 
 ``` purescript
-newListProvisionedProductPlansOutput' :: ({ "ProvisionedProductPlans" :: NullOrUndefined (ProvisionedProductPlans), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ProvisionedProductPlans" :: NullOrUndefined (ProvisionedProductPlans), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListProvisionedProductPlansOutput
+newListProvisionedProductPlansOutput' :: ({ "ProvisionedProductPlans" :: Maybe (ProvisionedProductPlans), "NextPageToken" :: Maybe (PageToken) } -> { "ProvisionedProductPlans" :: Maybe (ProvisionedProductPlans), "NextPageToken" :: Maybe (PageToken) }) -> ListProvisionedProductPlansOutput
 ```
 
 Constructs ListProvisionedProductPlansOutput's fields from required parameters
@@ -3356,7 +3356,7 @@ Constructs ListProvisionedProductPlansOutput's fields from required parameters
 
 ``` purescript
 newtype ListProvisioningArtifactsInput
-  = ListProvisioningArtifactsInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id }
+  = ListProvisioningArtifactsInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id }
 ```
 
 ##### Instances
@@ -3379,7 +3379,7 @@ Constructs ListProvisioningArtifactsInput from required parameters
 #### `newListProvisioningArtifactsInput'`
 
 ``` purescript
-newListProvisioningArtifactsInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id }) -> ListProvisioningArtifactsInput
+newListProvisioningArtifactsInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id }) -> ListProvisioningArtifactsInput
 ```
 
 Constructs ListProvisioningArtifactsInput's fields from required parameters
@@ -3388,7 +3388,7 @@ Constructs ListProvisioningArtifactsInput's fields from required parameters
 
 ``` purescript
 newtype ListProvisioningArtifactsOutput
-  = ListProvisioningArtifactsOutput { "ProvisioningArtifactDetails" :: NullOrUndefined (ProvisioningArtifactDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListProvisioningArtifactsOutput { "ProvisioningArtifactDetails" :: Maybe (ProvisioningArtifactDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3411,7 +3411,7 @@ Constructs ListProvisioningArtifactsOutput from required parameters
 #### `newListProvisioningArtifactsOutput'`
 
 ``` purescript
-newListProvisioningArtifactsOutput' :: ({ "ProvisioningArtifactDetails" :: NullOrUndefined (ProvisioningArtifactDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ProvisioningArtifactDetails" :: NullOrUndefined (ProvisioningArtifactDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListProvisioningArtifactsOutput
+newListProvisioningArtifactsOutput' :: ({ "ProvisioningArtifactDetails" :: Maybe (ProvisioningArtifactDetails), "NextPageToken" :: Maybe (PageToken) } -> { "ProvisioningArtifactDetails" :: Maybe (ProvisioningArtifactDetails), "NextPageToken" :: Maybe (PageToken) }) -> ListProvisioningArtifactsOutput
 ```
 
 Constructs ListProvisioningArtifactsOutput's fields from required parameters
@@ -3420,7 +3420,7 @@ Constructs ListProvisioningArtifactsOutput's fields from required parameters
 
 ``` purescript
 newtype ListRecordHistoryInput
-  = ListRecordHistoryInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "SearchFilter" :: NullOrUndefined (ListRecordHistorySearchFilter), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListRecordHistoryInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "SearchFilter" :: Maybe (ListRecordHistorySearchFilter), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3443,7 +3443,7 @@ Constructs ListRecordHistoryInput from required parameters
 #### `newListRecordHistoryInput'`
 
 ``` purescript
-newListRecordHistoryInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "SearchFilter" :: NullOrUndefined (ListRecordHistorySearchFilter), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "SearchFilter" :: NullOrUndefined (ListRecordHistorySearchFilter), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> ListRecordHistoryInput
+newListRecordHistoryInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "SearchFilter" :: Maybe (ListRecordHistorySearchFilter), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "SearchFilter" :: Maybe (ListRecordHistorySearchFilter), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> ListRecordHistoryInput
 ```
 
 Constructs ListRecordHistoryInput's fields from required parameters
@@ -3452,7 +3452,7 @@ Constructs ListRecordHistoryInput's fields from required parameters
 
 ``` purescript
 newtype ListRecordHistoryOutput
-  = ListRecordHistoryOutput { "RecordDetails" :: NullOrUndefined (RecordDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ListRecordHistoryOutput { "RecordDetails" :: Maybe (RecordDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3475,7 +3475,7 @@ Constructs ListRecordHistoryOutput from required parameters
 #### `newListRecordHistoryOutput'`
 
 ``` purescript
-newListRecordHistoryOutput' :: ({ "RecordDetails" :: NullOrUndefined (RecordDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "RecordDetails" :: NullOrUndefined (RecordDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ListRecordHistoryOutput
+newListRecordHistoryOutput' :: ({ "RecordDetails" :: Maybe (RecordDetails), "NextPageToken" :: Maybe (PageToken) } -> { "RecordDetails" :: Maybe (RecordDetails), "NextPageToken" :: Maybe (PageToken) }) -> ListRecordHistoryOutput
 ```
 
 Constructs ListRecordHistoryOutput's fields from required parameters
@@ -3484,7 +3484,7 @@ Constructs ListRecordHistoryOutput's fields from required parameters
 
 ``` purescript
 newtype ListRecordHistorySearchFilter
-  = ListRecordHistorySearchFilter { "Key" :: NullOrUndefined (SearchFilterKey), "Value" :: NullOrUndefined (SearchFilterValue) }
+  = ListRecordHistorySearchFilter { "Key" :: Maybe (SearchFilterKey), "Value" :: Maybe (SearchFilterValue) }
 ```
 
 <p>The search filter to use when listing history records.</p>
@@ -3509,7 +3509,7 @@ Constructs ListRecordHistorySearchFilter from required parameters
 #### `newListRecordHistorySearchFilter'`
 
 ``` purescript
-newListRecordHistorySearchFilter' :: ({ "Key" :: NullOrUndefined (SearchFilterKey), "Value" :: NullOrUndefined (SearchFilterValue) } -> { "Key" :: NullOrUndefined (SearchFilterKey), "Value" :: NullOrUndefined (SearchFilterValue) }) -> ListRecordHistorySearchFilter
+newListRecordHistorySearchFilter' :: ({ "Key" :: Maybe (SearchFilterKey), "Value" :: Maybe (SearchFilterValue) } -> { "Key" :: Maybe (SearchFilterKey), "Value" :: Maybe (SearchFilterValue) }) -> ListRecordHistorySearchFilter
 ```
 
 Constructs ListRecordHistorySearchFilter's fields from required parameters
@@ -3518,7 +3518,7 @@ Constructs ListRecordHistorySearchFilter's fields from required parameters
 
 ``` purescript
 newtype ListResourcesForTagOptionInput
-  = ListResourcesForTagOptionInput { "TagOptionId" :: TagOptionId, "ResourceType" :: NullOrUndefined (ResourceType), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListResourcesForTagOptionInput { "TagOptionId" :: TagOptionId, "ResourceType" :: Maybe (ResourceType), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3541,7 +3541,7 @@ Constructs ListResourcesForTagOptionInput from required parameters
 #### `newListResourcesForTagOptionInput'`
 
 ``` purescript
-newListResourcesForTagOptionInput' :: TagOptionId -> ({ "TagOptionId" :: TagOptionId, "ResourceType" :: NullOrUndefined (ResourceType), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "TagOptionId" :: TagOptionId, "ResourceType" :: NullOrUndefined (ResourceType), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> ListResourcesForTagOptionInput
+newListResourcesForTagOptionInput' :: TagOptionId -> ({ "TagOptionId" :: TagOptionId, "ResourceType" :: Maybe (ResourceType), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "TagOptionId" :: TagOptionId, "ResourceType" :: Maybe (ResourceType), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> ListResourcesForTagOptionInput
 ```
 
 Constructs ListResourcesForTagOptionInput's fields from required parameters
@@ -3550,7 +3550,7 @@ Constructs ListResourcesForTagOptionInput's fields from required parameters
 
 ``` purescript
 newtype ListResourcesForTagOptionOutput
-  = ListResourcesForTagOptionOutput { "ResourceDetails" :: NullOrUndefined (ResourceDetails), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListResourcesForTagOptionOutput { "ResourceDetails" :: Maybe (ResourceDetails), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3573,7 +3573,7 @@ Constructs ListResourcesForTagOptionOutput from required parameters
 #### `newListResourcesForTagOptionOutput'`
 
 ``` purescript
-newListResourcesForTagOptionOutput' :: ({ "ResourceDetails" :: NullOrUndefined (ResourceDetails), "PageToken" :: NullOrUndefined (PageToken) } -> { "ResourceDetails" :: NullOrUndefined (ResourceDetails), "PageToken" :: NullOrUndefined (PageToken) }) -> ListResourcesForTagOptionOutput
+newListResourcesForTagOptionOutput' :: ({ "ResourceDetails" :: Maybe (ResourceDetails), "PageToken" :: Maybe (PageToken) } -> { "ResourceDetails" :: Maybe (ResourceDetails), "PageToken" :: Maybe (PageToken) }) -> ListResourcesForTagOptionOutput
 ```
 
 Constructs ListResourcesForTagOptionOutput's fields from required parameters
@@ -3582,7 +3582,7 @@ Constructs ListResourcesForTagOptionOutput's fields from required parameters
 
 ``` purescript
 newtype ListTagOptionsFilters
-  = ListTagOptionsFilters { "Key" :: NullOrUndefined (TagOptionKey), "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive) }
+  = ListTagOptionsFilters { "Key" :: Maybe (TagOptionKey), "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive) }
 ```
 
 <p>Filters to use when listing TagOptions.</p>
@@ -3607,7 +3607,7 @@ Constructs ListTagOptionsFilters from required parameters
 #### `newListTagOptionsFilters'`
 
 ``` purescript
-newListTagOptionsFilters' :: ({ "Key" :: NullOrUndefined (TagOptionKey), "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive) } -> { "Key" :: NullOrUndefined (TagOptionKey), "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive) }) -> ListTagOptionsFilters
+newListTagOptionsFilters' :: ({ "Key" :: Maybe (TagOptionKey), "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive) } -> { "Key" :: Maybe (TagOptionKey), "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive) }) -> ListTagOptionsFilters
 ```
 
 Constructs ListTagOptionsFilters's fields from required parameters
@@ -3616,7 +3616,7 @@ Constructs ListTagOptionsFilters's fields from required parameters
 
 ``` purescript
 newtype ListTagOptionsInput
-  = ListTagOptionsInput { "Filters" :: NullOrUndefined (ListTagOptionsFilters), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListTagOptionsInput { "Filters" :: Maybe (ListTagOptionsFilters), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3639,7 +3639,7 @@ Constructs ListTagOptionsInput from required parameters
 #### `newListTagOptionsInput'`
 
 ``` purescript
-newListTagOptionsInput' :: ({ "Filters" :: NullOrUndefined (ListTagOptionsFilters), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "Filters" :: NullOrUndefined (ListTagOptionsFilters), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> ListTagOptionsInput
+newListTagOptionsInput' :: ({ "Filters" :: Maybe (ListTagOptionsFilters), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "Filters" :: Maybe (ListTagOptionsFilters), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> ListTagOptionsInput
 ```
 
 Constructs ListTagOptionsInput's fields from required parameters
@@ -3648,7 +3648,7 @@ Constructs ListTagOptionsInput's fields from required parameters
 
 ``` purescript
 newtype ListTagOptionsOutput
-  = ListTagOptionsOutput { "TagOptionDetails" :: NullOrUndefined (TagOptionDetails), "PageToken" :: NullOrUndefined (PageToken) }
+  = ListTagOptionsOutput { "TagOptionDetails" :: Maybe (TagOptionDetails), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -3671,7 +3671,7 @@ Constructs ListTagOptionsOutput from required parameters
 #### `newListTagOptionsOutput'`
 
 ``` purescript
-newListTagOptionsOutput' :: ({ "TagOptionDetails" :: NullOrUndefined (TagOptionDetails), "PageToken" :: NullOrUndefined (PageToken) } -> { "TagOptionDetails" :: NullOrUndefined (TagOptionDetails), "PageToken" :: NullOrUndefined (PageToken) }) -> ListTagOptionsOutput
+newListTagOptionsOutput' :: ({ "TagOptionDetails" :: Maybe (TagOptionDetails), "PageToken" :: Maybe (PageToken) } -> { "TagOptionDetails" :: Maybe (TagOptionDetails), "PageToken" :: Maybe (PageToken) }) -> ListTagOptionsOutput
 ```
 
 Constructs ListTagOptionsOutput's fields from required parameters
@@ -3808,7 +3808,7 @@ Encode PageToken
 
 ``` purescript
 newtype ParameterConstraints
-  = ParameterConstraints { "AllowedValues" :: NullOrUndefined (AllowedValues) }
+  = ParameterConstraints { "AllowedValues" :: Maybe (AllowedValues) }
 ```
 
 <p>The constraints that the administrator has put on the parameter.</p>
@@ -3833,7 +3833,7 @@ Constructs ParameterConstraints from required parameters
 #### `newParameterConstraints'`
 
 ``` purescript
-newParameterConstraints' :: ({ "AllowedValues" :: NullOrUndefined (AllowedValues) } -> { "AllowedValues" :: NullOrUndefined (AllowedValues) }) -> ParameterConstraints
+newParameterConstraints' :: ({ "AllowedValues" :: Maybe (AllowedValues) } -> { "AllowedValues" :: Maybe (AllowedValues) }) -> ParameterConstraints
 ```
 
 Constructs ParameterConstraints's fields from required parameters
@@ -3954,7 +3954,7 @@ Encode PortfolioDescription
 
 ``` purescript
 newtype PortfolioDetail
-  = PortfolioDetail { "Id" :: NullOrUndefined (Id), "ARN" :: NullOrUndefined (ResourceARN), "DisplayName" :: NullOrUndefined (PortfolioDisplayName), "Description" :: NullOrUndefined (PortfolioDescription), "CreatedTime" :: NullOrUndefined (CreationTime), "ProviderName" :: NullOrUndefined (ProviderName) }
+  = PortfolioDetail { "Id" :: Maybe (Id), "ARN" :: Maybe (ResourceARN), "DisplayName" :: Maybe (PortfolioDisplayName), "Description" :: Maybe (PortfolioDescription), "CreatedTime" :: Maybe (CreationTime), "ProviderName" :: Maybe (ProviderName) }
 ```
 
 <p>Information about a portfolio.</p>
@@ -3979,7 +3979,7 @@ Constructs PortfolioDetail from required parameters
 #### `newPortfolioDetail'`
 
 ``` purescript
-newPortfolioDetail' :: ({ "Id" :: NullOrUndefined (Id), "ARN" :: NullOrUndefined (ResourceARN), "DisplayName" :: NullOrUndefined (PortfolioDisplayName), "Description" :: NullOrUndefined (PortfolioDescription), "CreatedTime" :: NullOrUndefined (CreationTime), "ProviderName" :: NullOrUndefined (ProviderName) } -> { "Id" :: NullOrUndefined (Id), "ARN" :: NullOrUndefined (ResourceARN), "DisplayName" :: NullOrUndefined (PortfolioDisplayName), "Description" :: NullOrUndefined (PortfolioDescription), "CreatedTime" :: NullOrUndefined (CreationTime), "ProviderName" :: NullOrUndefined (ProviderName) }) -> PortfolioDetail
+newPortfolioDetail' :: ({ "Id" :: Maybe (Id), "ARN" :: Maybe (ResourceARN), "DisplayName" :: Maybe (PortfolioDisplayName), "Description" :: Maybe (PortfolioDescription), "CreatedTime" :: Maybe (CreationTime), "ProviderName" :: Maybe (ProviderName) } -> { "Id" :: Maybe (Id), "ARN" :: Maybe (ResourceARN), "DisplayName" :: Maybe (PortfolioDisplayName), "Description" :: Maybe (PortfolioDescription), "CreatedTime" :: Maybe (CreationTime), "ProviderName" :: Maybe (ProviderName) }) -> PortfolioDetail
 ```
 
 Constructs PortfolioDetail's fields from required parameters
@@ -4036,7 +4036,7 @@ Encode PortfolioName
 
 ``` purescript
 newtype Principal
-  = Principal { "PrincipalARN" :: NullOrUndefined (PrincipalARN), "PrincipalType" :: NullOrUndefined (PrincipalType) }
+  = Principal { "PrincipalARN" :: Maybe (PrincipalARN), "PrincipalType" :: Maybe (PrincipalType) }
 ```
 
 <p>Information about a principal.</p>
@@ -4061,7 +4061,7 @@ Constructs Principal from required parameters
 #### `newPrincipal'`
 
 ``` purescript
-newPrincipal' :: ({ "PrincipalARN" :: NullOrUndefined (PrincipalARN), "PrincipalType" :: NullOrUndefined (PrincipalType) } -> { "PrincipalARN" :: NullOrUndefined (PrincipalARN), "PrincipalType" :: NullOrUndefined (PrincipalType) }) -> Principal
+newPrincipal' :: ({ "PrincipalARN" :: Maybe (PrincipalARN), "PrincipalType" :: Maybe (PrincipalType) } -> { "PrincipalARN" :: Maybe (PrincipalARN), "PrincipalType" :: Maybe (PrincipalType) }) -> Principal
 ```
 
 Constructs Principal's fields from required parameters
@@ -4182,7 +4182,7 @@ Encode ProductViewAggregationType
 
 ``` purescript
 newtype ProductViewAggregationValue
-  = ProductViewAggregationValue { "Value" :: NullOrUndefined (AttributeValue), "ApproximateCount" :: NullOrUndefined (ApproximateCount) }
+  = ProductViewAggregationValue { "Value" :: Maybe (AttributeValue), "ApproximateCount" :: Maybe (ApproximateCount) }
 ```
 
 <p>A single product view aggregation value/count pair, containing metadata about each product to which the calling user has access.</p>
@@ -4207,7 +4207,7 @@ Constructs ProductViewAggregationValue from required parameters
 #### `newProductViewAggregationValue'`
 
 ``` purescript
-newProductViewAggregationValue' :: ({ "Value" :: NullOrUndefined (AttributeValue), "ApproximateCount" :: NullOrUndefined (ApproximateCount) } -> { "Value" :: NullOrUndefined (AttributeValue), "ApproximateCount" :: NullOrUndefined (ApproximateCount) }) -> ProductViewAggregationValue
+newProductViewAggregationValue' :: ({ "Value" :: Maybe (AttributeValue), "ApproximateCount" :: Maybe (ApproximateCount) } -> { "Value" :: Maybe (AttributeValue), "ApproximateCount" :: Maybe (ApproximateCount) }) -> ProductViewAggregationValue
 ```
 
 Constructs ProductViewAggregationValue's fields from required parameters
@@ -4248,7 +4248,7 @@ Encode ProductViewAggregations
 
 ``` purescript
 newtype ProductViewDetail
-  = ProductViewDetail { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "Status" :: NullOrUndefined (Status), "ProductARN" :: NullOrUndefined (ResourceARN), "CreatedTime" :: NullOrUndefined (CreatedTime) }
+  = ProductViewDetail { "ProductViewSummary" :: Maybe (ProductViewSummary), "Status" :: Maybe (Status), "ProductARN" :: Maybe (ResourceARN), "CreatedTime" :: Maybe (CreatedTime) }
 ```
 
 <p>Information about a product view.</p>
@@ -4273,7 +4273,7 @@ Constructs ProductViewDetail from required parameters
 #### `newProductViewDetail'`
 
 ``` purescript
-newProductViewDetail' :: ({ "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "Status" :: NullOrUndefined (Status), "ProductARN" :: NullOrUndefined (ResourceARN), "CreatedTime" :: NullOrUndefined (CreatedTime) } -> { "ProductViewSummary" :: NullOrUndefined (ProductViewSummary), "Status" :: NullOrUndefined (Status), "ProductARN" :: NullOrUndefined (ResourceARN), "CreatedTime" :: NullOrUndefined (CreatedTime) }) -> ProductViewDetail
+newProductViewDetail' :: ({ "ProductViewSummary" :: Maybe (ProductViewSummary), "Status" :: Maybe (Status), "ProductARN" :: Maybe (ResourceARN), "CreatedTime" :: Maybe (CreatedTime) } -> { "ProductViewSummary" :: Maybe (ProductViewSummary), "Status" :: Maybe (Status), "ProductARN" :: Maybe (ResourceARN), "CreatedTime" :: Maybe (CreatedTime) }) -> ProductViewDetail
 ```
 
 Constructs ProductViewDetail's fields from required parameters
@@ -4458,7 +4458,7 @@ Encode ProductViewSummaries
 
 ``` purescript
 newtype ProductViewSummary
-  = ProductViewSummary { "Id" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProductViewName), "Owner" :: NullOrUndefined (ProductViewOwner), "ShortDescription" :: NullOrUndefined (ProductViewShortDescription), "Type" :: NullOrUndefined (ProductType), "Distributor" :: NullOrUndefined (ProductViewDistributor), "HasDefaultPath" :: NullOrUndefined (HasDefaultPath), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportUrl" :: NullOrUndefined (SupportUrl) }
+  = ProductViewSummary { "Id" :: Maybe (Id), "ProductId" :: Maybe (Id), "Name" :: Maybe (ProductViewName), "Owner" :: Maybe (ProductViewOwner), "ShortDescription" :: Maybe (ProductViewShortDescription), "Type" :: Maybe (ProductType), "Distributor" :: Maybe (ProductViewDistributor), "HasDefaultPath" :: Maybe (HasDefaultPath), "SupportEmail" :: Maybe (SupportEmail), "SupportDescription" :: Maybe (SupportDescription), "SupportUrl" :: Maybe (SupportUrl) }
 ```
 
 <p>Summary information about a product view.</p>
@@ -4483,7 +4483,7 @@ Constructs ProductViewSummary from required parameters
 #### `newProductViewSummary'`
 
 ``` purescript
-newProductViewSummary' :: ({ "Id" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProductViewName), "Owner" :: NullOrUndefined (ProductViewOwner), "ShortDescription" :: NullOrUndefined (ProductViewShortDescription), "Type" :: NullOrUndefined (ProductType), "Distributor" :: NullOrUndefined (ProductViewDistributor), "HasDefaultPath" :: NullOrUndefined (HasDefaultPath), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportUrl" :: NullOrUndefined (SupportUrl) } -> { "Id" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProductViewName), "Owner" :: NullOrUndefined (ProductViewOwner), "ShortDescription" :: NullOrUndefined (ProductViewShortDescription), "Type" :: NullOrUndefined (ProductType), "Distributor" :: NullOrUndefined (ProductViewDistributor), "HasDefaultPath" :: NullOrUndefined (HasDefaultPath), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportUrl" :: NullOrUndefined (SupportUrl) }) -> ProductViewSummary
+newProductViewSummary' :: ({ "Id" :: Maybe (Id), "ProductId" :: Maybe (Id), "Name" :: Maybe (ProductViewName), "Owner" :: Maybe (ProductViewOwner), "ShortDescription" :: Maybe (ProductViewShortDescription), "Type" :: Maybe (ProductType), "Distributor" :: Maybe (ProductViewDistributor), "HasDefaultPath" :: Maybe (HasDefaultPath), "SupportEmail" :: Maybe (SupportEmail), "SupportDescription" :: Maybe (SupportDescription), "SupportUrl" :: Maybe (SupportUrl) } -> { "Id" :: Maybe (Id), "ProductId" :: Maybe (Id), "Name" :: Maybe (ProductViewName), "Owner" :: Maybe (ProductViewOwner), "ShortDescription" :: Maybe (ProductViewShortDescription), "Type" :: Maybe (ProductType), "Distributor" :: Maybe (ProductViewDistributor), "HasDefaultPath" :: Maybe (HasDefaultPath), "SupportEmail" :: Maybe (SupportEmail), "SupportDescription" :: Maybe (SupportDescription), "SupportUrl" :: Maybe (SupportUrl) }) -> ProductViewSummary
 ```
 
 Constructs ProductViewSummary's fields from required parameters
@@ -4524,7 +4524,7 @@ Encode ProviderName
 
 ``` purescript
 newtype ProvisionProductInput
-  = ProvisionProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: NullOrUndefined (Id), "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningParameters" :: NullOrUndefined (ProvisioningParameters), "Tags" :: NullOrUndefined (Tags), "NotificationArns" :: NullOrUndefined (NotificationArns), "ProvisionToken" :: IdempotencyToken }
+  = ProvisionProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: Maybe (Id), "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningParameters" :: Maybe (ProvisioningParameters), "Tags" :: Maybe (Tags), "NotificationArns" :: Maybe (NotificationArns), "ProvisionToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -4547,7 +4547,7 @@ Constructs ProvisionProductInput from required parameters
 #### `newProvisionProductInput'`
 
 ``` purescript
-newProvisionProductInput' :: Id -> IdempotencyToken -> ProvisionedProductName -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: NullOrUndefined (Id), "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningParameters" :: NullOrUndefined (ProvisioningParameters), "Tags" :: NullOrUndefined (Tags), "NotificationArns" :: NullOrUndefined (NotificationArns), "ProvisionToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: NullOrUndefined (Id), "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningParameters" :: NullOrUndefined (ProvisioningParameters), "Tags" :: NullOrUndefined (Tags), "NotificationArns" :: NullOrUndefined (NotificationArns), "ProvisionToken" :: IdempotencyToken }) -> ProvisionProductInput
+newProvisionProductInput' :: Id -> IdempotencyToken -> ProvisionedProductName -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: Maybe (Id), "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningParameters" :: Maybe (ProvisioningParameters), "Tags" :: Maybe (Tags), "NotificationArns" :: Maybe (NotificationArns), "ProvisionToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "PathId" :: Maybe (Id), "ProvisionedProductName" :: ProvisionedProductName, "ProvisioningParameters" :: Maybe (ProvisioningParameters), "Tags" :: Maybe (Tags), "NotificationArns" :: Maybe (NotificationArns), "ProvisionToken" :: IdempotencyToken }) -> ProvisionProductInput
 ```
 
 Constructs ProvisionProductInput's fields from required parameters
@@ -4556,7 +4556,7 @@ Constructs ProvisionProductInput's fields from required parameters
 
 ``` purescript
 newtype ProvisionProductOutput
-  = ProvisionProductOutput { "RecordDetail" :: NullOrUndefined (RecordDetail) }
+  = ProvisionProductOutput { "RecordDetail" :: Maybe (RecordDetail) }
 ```
 
 ##### Instances
@@ -4579,7 +4579,7 @@ Constructs ProvisionProductOutput from required parameters
 #### `newProvisionProductOutput'`
 
 ``` purescript
-newProvisionProductOutput' :: ({ "RecordDetail" :: NullOrUndefined (RecordDetail) } -> { "RecordDetail" :: NullOrUndefined (RecordDetail) }) -> ProvisionProductOutput
+newProvisionProductOutput' :: ({ "RecordDetail" :: Maybe (RecordDetail) } -> { "RecordDetail" :: Maybe (RecordDetail) }) -> ProvisionProductOutput
 ```
 
 Constructs ProvisionProductOutput's fields from required parameters
@@ -4588,7 +4588,7 @@ Constructs ProvisionProductOutput's fields from required parameters
 
 ``` purescript
 newtype ProvisionedProductAttribute
-  = ProvisionedProductAttribute { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn), "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn), "Type" :: NullOrUndefined (ProvisionedProductType), "Id" :: NullOrUndefined (Id), "Status" :: NullOrUndefined (ProvisionedProductStatus), "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage), "CreatedTime" :: NullOrUndefined (CreatedTime), "IdempotencyToken" :: NullOrUndefined (IdempotencyToken), "LastRecordId" :: NullOrUndefined (Id), "Tags" :: NullOrUndefined (Tags), "PhysicalId" :: NullOrUndefined (PhysicalId), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "UserArn" :: NullOrUndefined (UserArn), "UserArnSession" :: NullOrUndefined (UserArnSession) }
+  = ProvisionedProductAttribute { "Name" :: Maybe (ProvisionedProductNameOrArn), "Arn" :: Maybe (ProvisionedProductNameOrArn), "Type" :: Maybe (ProvisionedProductType), "Id" :: Maybe (Id), "Status" :: Maybe (ProvisionedProductStatus), "StatusMessage" :: Maybe (ProvisionedProductStatusMessage), "CreatedTime" :: Maybe (CreatedTime), "IdempotencyToken" :: Maybe (IdempotencyToken), "LastRecordId" :: Maybe (Id), "Tags" :: Maybe (Tags), "PhysicalId" :: Maybe (PhysicalId), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "UserArn" :: Maybe (UserArn), "UserArnSession" :: Maybe (UserArnSession) }
 ```
 
 <p>Information about a provisioned product.</p>
@@ -4613,7 +4613,7 @@ Constructs ProvisionedProductAttribute from required parameters
 #### `newProvisionedProductAttribute'`
 
 ``` purescript
-newProvisionedProductAttribute' :: ({ "Name" :: NullOrUndefined (ProvisionedProductNameOrArn), "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn), "Type" :: NullOrUndefined (ProvisionedProductType), "Id" :: NullOrUndefined (Id), "Status" :: NullOrUndefined (ProvisionedProductStatus), "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage), "CreatedTime" :: NullOrUndefined (CreatedTime), "IdempotencyToken" :: NullOrUndefined (IdempotencyToken), "LastRecordId" :: NullOrUndefined (Id), "Tags" :: NullOrUndefined (Tags), "PhysicalId" :: NullOrUndefined (PhysicalId), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "UserArn" :: NullOrUndefined (UserArn), "UserArnSession" :: NullOrUndefined (UserArnSession) } -> { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn), "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn), "Type" :: NullOrUndefined (ProvisionedProductType), "Id" :: NullOrUndefined (Id), "Status" :: NullOrUndefined (ProvisionedProductStatus), "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage), "CreatedTime" :: NullOrUndefined (CreatedTime), "IdempotencyToken" :: NullOrUndefined (IdempotencyToken), "LastRecordId" :: NullOrUndefined (Id), "Tags" :: NullOrUndefined (Tags), "PhysicalId" :: NullOrUndefined (PhysicalId), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "UserArn" :: NullOrUndefined (UserArn), "UserArnSession" :: NullOrUndefined (UserArnSession) }) -> ProvisionedProductAttribute
+newProvisionedProductAttribute' :: ({ "Name" :: Maybe (ProvisionedProductNameOrArn), "Arn" :: Maybe (ProvisionedProductNameOrArn), "Type" :: Maybe (ProvisionedProductType), "Id" :: Maybe (Id), "Status" :: Maybe (ProvisionedProductStatus), "StatusMessage" :: Maybe (ProvisionedProductStatusMessage), "CreatedTime" :: Maybe (CreatedTime), "IdempotencyToken" :: Maybe (IdempotencyToken), "LastRecordId" :: Maybe (Id), "Tags" :: Maybe (Tags), "PhysicalId" :: Maybe (PhysicalId), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "UserArn" :: Maybe (UserArn), "UserArnSession" :: Maybe (UserArnSession) } -> { "Name" :: Maybe (ProvisionedProductNameOrArn), "Arn" :: Maybe (ProvisionedProductNameOrArn), "Type" :: Maybe (ProvisionedProductType), "Id" :: Maybe (Id), "Status" :: Maybe (ProvisionedProductStatus), "StatusMessage" :: Maybe (ProvisionedProductStatusMessage), "CreatedTime" :: Maybe (CreatedTime), "IdempotencyToken" :: Maybe (IdempotencyToken), "LastRecordId" :: Maybe (Id), "Tags" :: Maybe (Tags), "PhysicalId" :: Maybe (PhysicalId), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "UserArn" :: Maybe (UserArn), "UserArnSession" :: Maybe (UserArnSession) }) -> ProvisionedProductAttribute
 ```
 
 Constructs ProvisionedProductAttribute's fields from required parameters
@@ -4638,7 +4638,7 @@ Encode ProvisionedProductAttributes
 
 ``` purescript
 newtype ProvisionedProductDetail
-  = ProvisionedProductDetail { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn), "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn), "Type" :: NullOrUndefined (ProvisionedProductType), "Id" :: NullOrUndefined (ProvisionedProductId), "Status" :: NullOrUndefined (ProvisionedProductStatus), "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage), "CreatedTime" :: NullOrUndefined (CreatedTime), "IdempotencyToken" :: NullOrUndefined (IdempotencyToken), "LastRecordId" :: NullOrUndefined (LastRequestId) }
+  = ProvisionedProductDetail { "Name" :: Maybe (ProvisionedProductNameOrArn), "Arn" :: Maybe (ProvisionedProductNameOrArn), "Type" :: Maybe (ProvisionedProductType), "Id" :: Maybe (ProvisionedProductId), "Status" :: Maybe (ProvisionedProductStatus), "StatusMessage" :: Maybe (ProvisionedProductStatusMessage), "CreatedTime" :: Maybe (CreatedTime), "IdempotencyToken" :: Maybe (IdempotencyToken), "LastRecordId" :: Maybe (LastRequestId) }
 ```
 
 <p>Information about a provisioned product.</p>
@@ -4663,7 +4663,7 @@ Constructs ProvisionedProductDetail from required parameters
 #### `newProvisionedProductDetail'`
 
 ``` purescript
-newProvisionedProductDetail' :: ({ "Name" :: NullOrUndefined (ProvisionedProductNameOrArn), "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn), "Type" :: NullOrUndefined (ProvisionedProductType), "Id" :: NullOrUndefined (ProvisionedProductId), "Status" :: NullOrUndefined (ProvisionedProductStatus), "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage), "CreatedTime" :: NullOrUndefined (CreatedTime), "IdempotencyToken" :: NullOrUndefined (IdempotencyToken), "LastRecordId" :: NullOrUndefined (LastRequestId) } -> { "Name" :: NullOrUndefined (ProvisionedProductNameOrArn), "Arn" :: NullOrUndefined (ProvisionedProductNameOrArn), "Type" :: NullOrUndefined (ProvisionedProductType), "Id" :: NullOrUndefined (ProvisionedProductId), "Status" :: NullOrUndefined (ProvisionedProductStatus), "StatusMessage" :: NullOrUndefined (ProvisionedProductStatusMessage), "CreatedTime" :: NullOrUndefined (CreatedTime), "IdempotencyToken" :: NullOrUndefined (IdempotencyToken), "LastRecordId" :: NullOrUndefined (LastRequestId) }) -> ProvisionedProductDetail
+newProvisionedProductDetail' :: ({ "Name" :: Maybe (ProvisionedProductNameOrArn), "Arn" :: Maybe (ProvisionedProductNameOrArn), "Type" :: Maybe (ProvisionedProductType), "Id" :: Maybe (ProvisionedProductId), "Status" :: Maybe (ProvisionedProductStatus), "StatusMessage" :: Maybe (ProvisionedProductStatusMessage), "CreatedTime" :: Maybe (CreatedTime), "IdempotencyToken" :: Maybe (IdempotencyToken), "LastRecordId" :: Maybe (LastRequestId) } -> { "Name" :: Maybe (ProvisionedProductNameOrArn), "Arn" :: Maybe (ProvisionedProductNameOrArn), "Type" :: Maybe (ProvisionedProductType), "Id" :: Maybe (ProvisionedProductId), "Status" :: Maybe (ProvisionedProductStatus), "StatusMessage" :: Maybe (ProvisionedProductStatusMessage), "CreatedTime" :: Maybe (CreatedTime), "IdempotencyToken" :: Maybe (IdempotencyToken), "LastRecordId" :: Maybe (LastRequestId) }) -> ProvisionedProductDetail
 ```
 
 Constructs ProvisionedProductDetail's fields from required parameters
@@ -4752,7 +4752,7 @@ Encode ProvisionedProductNameOrArn
 
 ``` purescript
 newtype ProvisionedProductPlanDetails
-  = ProvisionedProductPlanDetails { "CreatedTime" :: NullOrUndefined (CreatedTime), "PathId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName), "PlanType" :: NullOrUndefined (ProvisionedProductPlanType), "ProvisioningArtifactId" :: NullOrUndefined (Id), "Status" :: NullOrUndefined (ProvisionedProductPlanStatus), "UpdatedTime" :: NullOrUndefined (UpdatedTime), "NotificationArns" :: NullOrUndefined (NotificationArns), "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "Tags" :: NullOrUndefined (Tags), "StatusMessage" :: NullOrUndefined (StatusMessage) }
+  = ProvisionedProductPlanDetails { "CreatedTime" :: Maybe (CreatedTime), "PathId" :: Maybe (Id), "ProductId" :: Maybe (Id), "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionProductName" :: Maybe (ProvisionedProductName), "PlanType" :: Maybe (ProvisionedProductPlanType), "ProvisioningArtifactId" :: Maybe (Id), "Status" :: Maybe (ProvisionedProductPlanStatus), "UpdatedTime" :: Maybe (UpdatedTime), "NotificationArns" :: Maybe (NotificationArns), "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "Tags" :: Maybe (Tags), "StatusMessage" :: Maybe (StatusMessage) }
 ```
 
 <p>Information about a plan.</p>
@@ -4777,7 +4777,7 @@ Constructs ProvisionedProductPlanDetails from required parameters
 #### `newProvisionedProductPlanDetails'`
 
 ``` purescript
-newProvisionedProductPlanDetails' :: ({ "CreatedTime" :: NullOrUndefined (CreatedTime), "PathId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName), "PlanType" :: NullOrUndefined (ProvisionedProductPlanType), "ProvisioningArtifactId" :: NullOrUndefined (Id), "Status" :: NullOrUndefined (ProvisionedProductPlanStatus), "UpdatedTime" :: NullOrUndefined (UpdatedTime), "NotificationArns" :: NullOrUndefined (NotificationArns), "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "Tags" :: NullOrUndefined (Tags), "StatusMessage" :: NullOrUndefined (StatusMessage) } -> { "CreatedTime" :: NullOrUndefined (CreatedTime), "PathId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName), "PlanType" :: NullOrUndefined (ProvisionedProductPlanType), "ProvisioningArtifactId" :: NullOrUndefined (Id), "Status" :: NullOrUndefined (ProvisionedProductPlanStatus), "UpdatedTime" :: NullOrUndefined (UpdatedTime), "NotificationArns" :: NullOrUndefined (NotificationArns), "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "Tags" :: NullOrUndefined (Tags), "StatusMessage" :: NullOrUndefined (StatusMessage) }) -> ProvisionedProductPlanDetails
+newProvisionedProductPlanDetails' :: ({ "CreatedTime" :: Maybe (CreatedTime), "PathId" :: Maybe (Id), "ProductId" :: Maybe (Id), "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionProductName" :: Maybe (ProvisionedProductName), "PlanType" :: Maybe (ProvisionedProductPlanType), "ProvisioningArtifactId" :: Maybe (Id), "Status" :: Maybe (ProvisionedProductPlanStatus), "UpdatedTime" :: Maybe (UpdatedTime), "NotificationArns" :: Maybe (NotificationArns), "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "Tags" :: Maybe (Tags), "StatusMessage" :: Maybe (StatusMessage) } -> { "CreatedTime" :: Maybe (CreatedTime), "PathId" :: Maybe (Id), "ProductId" :: Maybe (Id), "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionProductName" :: Maybe (ProvisionedProductName), "PlanType" :: Maybe (ProvisionedProductPlanType), "ProvisioningArtifactId" :: Maybe (Id), "Status" :: Maybe (ProvisionedProductPlanStatus), "UpdatedTime" :: Maybe (UpdatedTime), "NotificationArns" :: Maybe (NotificationArns), "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "Tags" :: Maybe (Tags), "StatusMessage" :: Maybe (StatusMessage) }) -> ProvisionedProductPlanDetails
 ```
 
 Constructs ProvisionedProductPlanDetails's fields from required parameters
@@ -4818,7 +4818,7 @@ Encode ProvisionedProductPlanStatus
 
 ``` purescript
 newtype ProvisionedProductPlanSummary
-  = ProvisionedProductPlanSummary { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName), "PlanType" :: NullOrUndefined (ProvisionedProductPlanType), "ProvisioningArtifactId" :: NullOrUndefined (Id) }
+  = ProvisionedProductPlanSummary { "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionProductName" :: Maybe (ProvisionedProductName), "PlanType" :: Maybe (ProvisionedProductPlanType), "ProvisioningArtifactId" :: Maybe (Id) }
 ```
 
 <p>Summary information about a plan.</p>
@@ -4843,7 +4843,7 @@ Constructs ProvisionedProductPlanSummary from required parameters
 #### `newProvisionedProductPlanSummary'`
 
 ``` purescript
-newProvisionedProductPlanSummary' :: ({ "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName), "PlanType" :: NullOrUndefined (ProvisionedProductPlanType), "ProvisioningArtifactId" :: NullOrUndefined (Id) } -> { "PlanName" :: NullOrUndefined (ProvisionedProductPlanName), "PlanId" :: NullOrUndefined (Id), "ProvisionProductId" :: NullOrUndefined (Id), "ProvisionProductName" :: NullOrUndefined (ProvisionedProductName), "PlanType" :: NullOrUndefined (ProvisionedProductPlanType), "ProvisioningArtifactId" :: NullOrUndefined (Id) }) -> ProvisionedProductPlanSummary
+newProvisionedProductPlanSummary' :: ({ "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionProductName" :: Maybe (ProvisionedProductName), "PlanType" :: Maybe (ProvisionedProductPlanType), "ProvisioningArtifactId" :: Maybe (Id) } -> { "PlanName" :: Maybe (ProvisionedProductPlanName), "PlanId" :: Maybe (Id), "ProvisionProductId" :: Maybe (Id), "ProvisionProductName" :: Maybe (ProvisionedProductName), "PlanType" :: Maybe (ProvisionedProductPlanType), "ProvisioningArtifactId" :: Maybe (Id) }) -> ProvisionedProductPlanSummary
 ```
 
 Constructs ProvisionedProductPlanSummary's fields from required parameters
@@ -4980,7 +4980,7 @@ Encode ProvisionedProductViewFilterValues
 
 ``` purescript
 newtype ProvisioningArtifact
-  = ProvisioningArtifact { "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime) }
+  = ProvisioningArtifact { "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime) }
 ```
 
 <p>Information about a provisioning artifact. A provisioning artifact is also known as a product version.</p>
@@ -5005,7 +5005,7 @@ Constructs ProvisioningArtifact from required parameters
 #### `newProvisioningArtifact'`
 
 ``` purescript
-newProvisioningArtifact' :: ({ "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime) } -> { "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime) }) -> ProvisioningArtifact
+newProvisioningArtifact' :: ({ "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime) } -> { "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime) }) -> ProvisioningArtifact
 ```
 
 Constructs ProvisioningArtifact's fields from required parameters
@@ -5062,7 +5062,7 @@ Encode ProvisioningArtifactDescription
 
 ``` purescript
 newtype ProvisioningArtifactDetail
-  = ProvisioningArtifactDetail { "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactName), "Type" :: NullOrUndefined (ProvisioningArtifactType), "CreatedTime" :: NullOrUndefined (CreationTime), "Active" :: NullOrUndefined (ProvisioningArtifactActive) }
+  = ProvisioningArtifactDetail { "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactName), "Type" :: Maybe (ProvisioningArtifactType), "CreatedTime" :: Maybe (CreationTime), "Active" :: Maybe (ProvisioningArtifactActive) }
 ```
 
 <p>Information about a provisioning artifact (also known as a version) for a product.</p>
@@ -5087,7 +5087,7 @@ Constructs ProvisioningArtifactDetail from required parameters
 #### `newProvisioningArtifactDetail'`
 
 ``` purescript
-newProvisioningArtifactDetail' :: ({ "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactName), "Type" :: NullOrUndefined (ProvisioningArtifactType), "CreatedTime" :: NullOrUndefined (CreationTime), "Active" :: NullOrUndefined (ProvisioningArtifactActive) } -> { "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactName), "Type" :: NullOrUndefined (ProvisioningArtifactType), "CreatedTime" :: NullOrUndefined (CreationTime), "Active" :: NullOrUndefined (ProvisioningArtifactActive) }) -> ProvisioningArtifactDetail
+newProvisioningArtifactDetail' :: ({ "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactName), "Type" :: Maybe (ProvisioningArtifactType), "CreatedTime" :: Maybe (CreationTime), "Active" :: Maybe (ProvisioningArtifactActive) } -> { "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactName), "Type" :: Maybe (ProvisioningArtifactType), "CreatedTime" :: Maybe (CreationTime), "Active" :: Maybe (ProvisioningArtifactActive) }) -> ProvisioningArtifactDetail
 ```
 
 Constructs ProvisioningArtifactDetail's fields from required parameters
@@ -5176,7 +5176,7 @@ Encode ProvisioningArtifactName
 
 ``` purescript
 newtype ProvisioningArtifactParameter
-  = ProvisioningArtifactParameter { "ParameterKey" :: NullOrUndefined (ParameterKey), "DefaultValue" :: NullOrUndefined (DefaultValue), "ParameterType" :: NullOrUndefined (ParameterType), "IsNoEcho" :: NullOrUndefined (NoEcho), "Description" :: NullOrUndefined (Description), "ParameterConstraints" :: NullOrUndefined (ParameterConstraints) }
+  = ProvisioningArtifactParameter { "ParameterKey" :: Maybe (ParameterKey), "DefaultValue" :: Maybe (DefaultValue), "ParameterType" :: Maybe (ParameterType), "IsNoEcho" :: Maybe (NoEcho), "Description" :: Maybe (Description), "ParameterConstraints" :: Maybe (ParameterConstraints) }
 ```
 
 <p>Information about a parameter used to provision a product.</p>
@@ -5201,7 +5201,7 @@ Constructs ProvisioningArtifactParameter from required parameters
 #### `newProvisioningArtifactParameter'`
 
 ``` purescript
-newProvisioningArtifactParameter' :: ({ "ParameterKey" :: NullOrUndefined (ParameterKey), "DefaultValue" :: NullOrUndefined (DefaultValue), "ParameterType" :: NullOrUndefined (ParameterType), "IsNoEcho" :: NullOrUndefined (NoEcho), "Description" :: NullOrUndefined (Description), "ParameterConstraints" :: NullOrUndefined (ParameterConstraints) } -> { "ParameterKey" :: NullOrUndefined (ParameterKey), "DefaultValue" :: NullOrUndefined (DefaultValue), "ParameterType" :: NullOrUndefined (ParameterType), "IsNoEcho" :: NullOrUndefined (NoEcho), "Description" :: NullOrUndefined (Description), "ParameterConstraints" :: NullOrUndefined (ParameterConstraints) }) -> ProvisioningArtifactParameter
+newProvisioningArtifactParameter' :: ({ "ParameterKey" :: Maybe (ParameterKey), "DefaultValue" :: Maybe (DefaultValue), "ParameterType" :: Maybe (ParameterType), "IsNoEcho" :: Maybe (NoEcho), "Description" :: Maybe (Description), "ParameterConstraints" :: Maybe (ParameterConstraints) } -> { "ParameterKey" :: Maybe (ParameterKey), "DefaultValue" :: Maybe (DefaultValue), "ParameterType" :: Maybe (ParameterType), "IsNoEcho" :: Maybe (NoEcho), "Description" :: Maybe (Description), "ParameterConstraints" :: Maybe (ParameterConstraints) }) -> ProvisioningArtifactParameter
 ```
 
 Constructs ProvisioningArtifactParameter's fields from required parameters
@@ -5226,7 +5226,7 @@ Encode ProvisioningArtifactParameters
 
 ``` purescript
 newtype ProvisioningArtifactProperties
-  = ProvisioningArtifactProperties { "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "Info" :: ProvisioningArtifactInfo, "Type" :: NullOrUndefined (ProvisioningArtifactType) }
+  = ProvisioningArtifactProperties { "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "Info" :: ProvisioningArtifactInfo, "Type" :: Maybe (ProvisioningArtifactType) }
 ```
 
 <p>Information about a provisioning artifact (also known as a version) for a product.</p>
@@ -5251,7 +5251,7 @@ Constructs ProvisioningArtifactProperties from required parameters
 #### `newProvisioningArtifactProperties'`
 
 ``` purescript
-newProvisioningArtifactProperties' :: ProvisioningArtifactInfo -> ({ "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "Info" :: ProvisioningArtifactInfo, "Type" :: NullOrUndefined (ProvisioningArtifactType) } -> { "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "Info" :: ProvisioningArtifactInfo, "Type" :: NullOrUndefined (ProvisioningArtifactType) }) -> ProvisioningArtifactProperties
+newProvisioningArtifactProperties' :: ProvisioningArtifactInfo -> ({ "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "Info" :: ProvisioningArtifactInfo, "Type" :: Maybe (ProvisioningArtifactType) } -> { "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "Info" :: ProvisioningArtifactInfo, "Type" :: Maybe (ProvisioningArtifactType) }) -> ProvisioningArtifactProperties
 ```
 
 Constructs ProvisioningArtifactProperties's fields from required parameters
@@ -5308,7 +5308,7 @@ Encode ProvisioningArtifactSummaries
 
 ``` purescript
 newtype ProvisioningArtifactSummary
-  = ProvisioningArtifactSummary { "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime), "ProvisioningArtifactMetadata" :: NullOrUndefined (ProvisioningArtifactInfo) }
+  = ProvisioningArtifactSummary { "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime), "ProvisioningArtifactMetadata" :: Maybe (ProvisioningArtifactInfo) }
 ```
 
 <p>Summary information about a provisioning artifact (also known as a version) for a product.</p>
@@ -5333,7 +5333,7 @@ Constructs ProvisioningArtifactSummary from required parameters
 #### `newProvisioningArtifactSummary'`
 
 ``` purescript
-newProvisioningArtifactSummary' :: ({ "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime), "ProvisioningArtifactMetadata" :: NullOrUndefined (ProvisioningArtifactInfo) } -> { "Id" :: NullOrUndefined (Id), "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "CreatedTime" :: NullOrUndefined (ProvisioningArtifactCreatedTime), "ProvisioningArtifactMetadata" :: NullOrUndefined (ProvisioningArtifactInfo) }) -> ProvisioningArtifactSummary
+newProvisioningArtifactSummary' :: ({ "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime), "ProvisioningArtifactMetadata" :: Maybe (ProvisioningArtifactInfo) } -> { "Id" :: Maybe (Id), "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "CreatedTime" :: Maybe (ProvisioningArtifactCreatedTime), "ProvisioningArtifactMetadata" :: Maybe (ProvisioningArtifactInfo) }) -> ProvisioningArtifactSummary
 ```
 
 Constructs ProvisioningArtifactSummary's fields from required parameters
@@ -5374,7 +5374,7 @@ Encode ProvisioningArtifacts
 
 ``` purescript
 newtype ProvisioningParameter
-  = ProvisioningParameter { "Key" :: NullOrUndefined (ParameterKey), "Value" :: NullOrUndefined (ParameterValue) }
+  = ProvisioningParameter { "Key" :: Maybe (ParameterKey), "Value" :: Maybe (ParameterValue) }
 ```
 
 <p>Information about a parameter used to provision a product.</p>
@@ -5399,7 +5399,7 @@ Constructs ProvisioningParameter from required parameters
 #### `newProvisioningParameter'`
 
 ``` purescript
-newProvisioningParameter' :: ({ "Key" :: NullOrUndefined (ParameterKey), "Value" :: NullOrUndefined (ParameterValue) } -> { "Key" :: NullOrUndefined (ParameterKey), "Value" :: NullOrUndefined (ParameterValue) }) -> ProvisioningParameter
+newProvisioningParameter' :: ({ "Key" :: Maybe (ParameterKey), "Value" :: Maybe (ParameterValue) } -> { "Key" :: Maybe (ParameterKey), "Value" :: Maybe (ParameterValue) }) -> ProvisioningParameter
 ```
 
 Constructs ProvisioningParameter's fields from required parameters
@@ -5424,7 +5424,7 @@ Encode ProvisioningParameters
 
 ``` purescript
 newtype RecordDetail
-  = RecordDetail { "RecordId" :: NullOrUndefined (Id), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName), "Status" :: NullOrUndefined (RecordStatus), "CreatedTime" :: NullOrUndefined (CreatedTime), "UpdatedTime" :: NullOrUndefined (UpdatedTime), "ProvisionedProductType" :: NullOrUndefined (ProvisionedProductType), "RecordType" :: NullOrUndefined (RecordType), "ProvisionedProductId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "PathId" :: NullOrUndefined (Id), "RecordErrors" :: NullOrUndefined (RecordErrors), "RecordTags" :: NullOrUndefined (RecordTags) }
+  = RecordDetail { "RecordId" :: Maybe (Id), "ProvisionedProductName" :: Maybe (ProvisionedProductName), "Status" :: Maybe (RecordStatus), "CreatedTime" :: Maybe (CreatedTime), "UpdatedTime" :: Maybe (UpdatedTime), "ProvisionedProductType" :: Maybe (ProvisionedProductType), "RecordType" :: Maybe (RecordType), "ProvisionedProductId" :: Maybe (Id), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "PathId" :: Maybe (Id), "RecordErrors" :: Maybe (RecordErrors), "RecordTags" :: Maybe (RecordTags) }
 ```
 
 <p>Information about a request operation.</p>
@@ -5449,7 +5449,7 @@ Constructs RecordDetail from required parameters
 #### `newRecordDetail'`
 
 ``` purescript
-newRecordDetail' :: ({ "RecordId" :: NullOrUndefined (Id), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName), "Status" :: NullOrUndefined (RecordStatus), "CreatedTime" :: NullOrUndefined (CreatedTime), "UpdatedTime" :: NullOrUndefined (UpdatedTime), "ProvisionedProductType" :: NullOrUndefined (ProvisionedProductType), "RecordType" :: NullOrUndefined (RecordType), "ProvisionedProductId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "PathId" :: NullOrUndefined (Id), "RecordErrors" :: NullOrUndefined (RecordErrors), "RecordTags" :: NullOrUndefined (RecordTags) } -> { "RecordId" :: NullOrUndefined (Id), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductName), "Status" :: NullOrUndefined (RecordStatus), "CreatedTime" :: NullOrUndefined (CreatedTime), "UpdatedTime" :: NullOrUndefined (UpdatedTime), "ProvisionedProductType" :: NullOrUndefined (ProvisionedProductType), "RecordType" :: NullOrUndefined (RecordType), "ProvisionedProductId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "PathId" :: NullOrUndefined (Id), "RecordErrors" :: NullOrUndefined (RecordErrors), "RecordTags" :: NullOrUndefined (RecordTags) }) -> RecordDetail
+newRecordDetail' :: ({ "RecordId" :: Maybe (Id), "ProvisionedProductName" :: Maybe (ProvisionedProductName), "Status" :: Maybe (RecordStatus), "CreatedTime" :: Maybe (CreatedTime), "UpdatedTime" :: Maybe (UpdatedTime), "ProvisionedProductType" :: Maybe (ProvisionedProductType), "RecordType" :: Maybe (RecordType), "ProvisionedProductId" :: Maybe (Id), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "PathId" :: Maybe (Id), "RecordErrors" :: Maybe (RecordErrors), "RecordTags" :: Maybe (RecordTags) } -> { "RecordId" :: Maybe (Id), "ProvisionedProductName" :: Maybe (ProvisionedProductName), "Status" :: Maybe (RecordStatus), "CreatedTime" :: Maybe (CreatedTime), "UpdatedTime" :: Maybe (UpdatedTime), "ProvisionedProductType" :: Maybe (ProvisionedProductType), "RecordType" :: Maybe (RecordType), "ProvisionedProductId" :: Maybe (Id), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "PathId" :: Maybe (Id), "RecordErrors" :: Maybe (RecordErrors), "RecordTags" :: Maybe (RecordTags) }) -> RecordDetail
 ```
 
 Constructs RecordDetail's fields from required parameters
@@ -5474,7 +5474,7 @@ Encode RecordDetails
 
 ``` purescript
 newtype RecordError
-  = RecordError { "Code" :: NullOrUndefined (ErrorCode), "Description" :: NullOrUndefined (ErrorDescription) }
+  = RecordError { "Code" :: Maybe (ErrorCode), "Description" :: Maybe (ErrorDescription) }
 ```
 
 <p>The error code and description resulting from an operation.</p>
@@ -5499,7 +5499,7 @@ Constructs RecordError from required parameters
 #### `newRecordError'`
 
 ``` purescript
-newRecordError' :: ({ "Code" :: NullOrUndefined (ErrorCode), "Description" :: NullOrUndefined (ErrorDescription) } -> { "Code" :: NullOrUndefined (ErrorCode), "Description" :: NullOrUndefined (ErrorDescription) }) -> RecordError
+newRecordError' :: ({ "Code" :: Maybe (ErrorCode), "Description" :: Maybe (ErrorDescription) } -> { "Code" :: Maybe (ErrorCode), "Description" :: Maybe (ErrorDescription) }) -> RecordError
 ```
 
 Constructs RecordError's fields from required parameters
@@ -5524,7 +5524,7 @@ Encode RecordErrors
 
 ``` purescript
 newtype RecordOutput
-  = RecordOutput { "OutputKey" :: NullOrUndefined (OutputKey), "OutputValue" :: NullOrUndefined (OutputValue), "Description" :: NullOrUndefined (Description) }
+  = RecordOutput { "OutputKey" :: Maybe (OutputKey), "OutputValue" :: Maybe (OutputValue), "Description" :: Maybe (Description) }
 ```
 
 <p>The output for the product created as the result of a request. For example, the output for a CloudFormation-backed product that creates an S3 bucket would include the S3 bucket URL.</p>
@@ -5549,7 +5549,7 @@ Constructs RecordOutput from required parameters
 #### `newRecordOutput'`
 
 ``` purescript
-newRecordOutput' :: ({ "OutputKey" :: NullOrUndefined (OutputKey), "OutputValue" :: NullOrUndefined (OutputValue), "Description" :: NullOrUndefined (Description) } -> { "OutputKey" :: NullOrUndefined (OutputKey), "OutputValue" :: NullOrUndefined (OutputValue), "Description" :: NullOrUndefined (Description) }) -> RecordOutput
+newRecordOutput' :: ({ "OutputKey" :: Maybe (OutputKey), "OutputValue" :: Maybe (OutputValue), "Description" :: Maybe (Description) } -> { "OutputKey" :: Maybe (OutputKey), "OutputValue" :: Maybe (OutputValue), "Description" :: Maybe (Description) }) -> RecordOutput
 ```
 
 Constructs RecordOutput's fields from required parameters
@@ -5590,7 +5590,7 @@ Encode RecordStatus
 
 ``` purescript
 newtype RecordTag
-  = RecordTag { "Key" :: NullOrUndefined (RecordTagKey), "Value" :: NullOrUndefined (RecordTagValue) }
+  = RecordTag { "Key" :: Maybe (RecordTagKey), "Value" :: Maybe (RecordTagValue) }
 ```
 
 <p>Information about a tag, which is a key-value pair.</p>
@@ -5615,7 +5615,7 @@ Constructs RecordTag from required parameters
 #### `newRecordTag'`
 
 ``` purescript
-newRecordTag' :: ({ "Key" :: NullOrUndefined (RecordTagKey), "Value" :: NullOrUndefined (RecordTagValue) } -> { "Key" :: NullOrUndefined (RecordTagKey), "Value" :: NullOrUndefined (RecordTagValue) }) -> RecordTag
+newRecordTag' :: ({ "Key" :: Maybe (RecordTagKey), "Value" :: Maybe (RecordTagValue) } -> { "Key" :: Maybe (RecordTagKey), "Value" :: Maybe (RecordTagValue) }) -> RecordTag
 ```
 
 Constructs RecordTag's fields from required parameters
@@ -5688,7 +5688,7 @@ Encode RecordType
 
 ``` purescript
 newtype RejectPortfolioShareInput
-  = RejectPortfolioShareInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id }
+  = RejectPortfolioShareInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id }
 ```
 
 ##### Instances
@@ -5711,7 +5711,7 @@ Constructs RejectPortfolioShareInput from required parameters
 #### `newRejectPortfolioShareInput'`
 
 ``` purescript
-newRejectPortfolioShareInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: Id }) -> RejectPortfolioShareInput
+newRejectPortfolioShareInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Id }) -> RejectPortfolioShareInput
 ```
 
 Constructs RejectPortfolioShareInput's fields from required parameters
@@ -5800,7 +5800,7 @@ Encode ResourceAttribute
 
 ``` purescript
 newtype ResourceChange
-  = ResourceChange { "Action" :: NullOrUndefined (ChangeAction), "LogicalResourceId" :: NullOrUndefined (LogicalResourceId), "PhysicalResourceId" :: NullOrUndefined (PhysicalResourceId), "ResourceType" :: NullOrUndefined (PlanResourceType), "Replacement" :: NullOrUndefined (Replacement), "Scope" :: NullOrUndefined (Scope), "Details" :: NullOrUndefined (ResourceChangeDetails) }
+  = ResourceChange { "Action" :: Maybe (ChangeAction), "LogicalResourceId" :: Maybe (LogicalResourceId), "PhysicalResourceId" :: Maybe (PhysicalResourceId), "ResourceType" :: Maybe (PlanResourceType), "Replacement" :: Maybe (Replacement), "Scope" :: Maybe (Scope), "Details" :: Maybe (ResourceChangeDetails) }
 ```
 
 <p>Information about a resource change that will occur when a plan is executed.</p>
@@ -5825,7 +5825,7 @@ Constructs ResourceChange from required parameters
 #### `newResourceChange'`
 
 ``` purescript
-newResourceChange' :: ({ "Action" :: NullOrUndefined (ChangeAction), "LogicalResourceId" :: NullOrUndefined (LogicalResourceId), "PhysicalResourceId" :: NullOrUndefined (PhysicalResourceId), "ResourceType" :: NullOrUndefined (PlanResourceType), "Replacement" :: NullOrUndefined (Replacement), "Scope" :: NullOrUndefined (Scope), "Details" :: NullOrUndefined (ResourceChangeDetails) } -> { "Action" :: NullOrUndefined (ChangeAction), "LogicalResourceId" :: NullOrUndefined (LogicalResourceId), "PhysicalResourceId" :: NullOrUndefined (PhysicalResourceId), "ResourceType" :: NullOrUndefined (PlanResourceType), "Replacement" :: NullOrUndefined (Replacement), "Scope" :: NullOrUndefined (Scope), "Details" :: NullOrUndefined (ResourceChangeDetails) }) -> ResourceChange
+newResourceChange' :: ({ "Action" :: Maybe (ChangeAction), "LogicalResourceId" :: Maybe (LogicalResourceId), "PhysicalResourceId" :: Maybe (PhysicalResourceId), "ResourceType" :: Maybe (PlanResourceType), "Replacement" :: Maybe (Replacement), "Scope" :: Maybe (Scope), "Details" :: Maybe (ResourceChangeDetails) } -> { "Action" :: Maybe (ChangeAction), "LogicalResourceId" :: Maybe (LogicalResourceId), "PhysicalResourceId" :: Maybe (PhysicalResourceId), "ResourceType" :: Maybe (PlanResourceType), "Replacement" :: Maybe (Replacement), "Scope" :: Maybe (Scope), "Details" :: Maybe (ResourceChangeDetails) }) -> ResourceChange
 ```
 
 Constructs ResourceChange's fields from required parameters
@@ -5834,7 +5834,7 @@ Constructs ResourceChange's fields from required parameters
 
 ``` purescript
 newtype ResourceChangeDetail
-  = ResourceChangeDetail { "Target" :: NullOrUndefined (ResourceTargetDefinition), "Evaluation" :: NullOrUndefined (EvaluationType), "CausingEntity" :: NullOrUndefined (CausingEntity) }
+  = ResourceChangeDetail { "Target" :: Maybe (ResourceTargetDefinition), "Evaluation" :: Maybe (EvaluationType), "CausingEntity" :: Maybe (CausingEntity) }
 ```
 
 <p>Information about a change to a resource attribute.</p>
@@ -5859,7 +5859,7 @@ Constructs ResourceChangeDetail from required parameters
 #### `newResourceChangeDetail'`
 
 ``` purescript
-newResourceChangeDetail' :: ({ "Target" :: NullOrUndefined (ResourceTargetDefinition), "Evaluation" :: NullOrUndefined (EvaluationType), "CausingEntity" :: NullOrUndefined (CausingEntity) } -> { "Target" :: NullOrUndefined (ResourceTargetDefinition), "Evaluation" :: NullOrUndefined (EvaluationType), "CausingEntity" :: NullOrUndefined (CausingEntity) }) -> ResourceChangeDetail
+newResourceChangeDetail' :: ({ "Target" :: Maybe (ResourceTargetDefinition), "Evaluation" :: Maybe (EvaluationType), "CausingEntity" :: Maybe (CausingEntity) } -> { "Target" :: Maybe (ResourceTargetDefinition), "Evaluation" :: Maybe (EvaluationType), "CausingEntity" :: Maybe (CausingEntity) }) -> ResourceChangeDetail
 ```
 
 Constructs ResourceChangeDetail's fields from required parameters
@@ -5900,7 +5900,7 @@ Encode ResourceChanges
 
 ``` purescript
 newtype ResourceDetail
-  = ResourceDetail { "Id" :: NullOrUndefined (ResourceDetailId), "ARN" :: NullOrUndefined (ResourceDetailARN), "Name" :: NullOrUndefined (ResourceDetailName), "Description" :: NullOrUndefined (ResourceDetailDescription), "CreatedTime" :: NullOrUndefined (ResourceDetailCreatedTime) }
+  = ResourceDetail { "Id" :: Maybe (ResourceDetailId), "ARN" :: Maybe (ResourceDetailARN), "Name" :: Maybe (ResourceDetailName), "Description" :: Maybe (ResourceDetailDescription), "CreatedTime" :: Maybe (ResourceDetailCreatedTime) }
 ```
 
 <p>Information about a resource.</p>
@@ -5925,7 +5925,7 @@ Constructs ResourceDetail from required parameters
 #### `newResourceDetail'`
 
 ``` purescript
-newResourceDetail' :: ({ "Id" :: NullOrUndefined (ResourceDetailId), "ARN" :: NullOrUndefined (ResourceDetailARN), "Name" :: NullOrUndefined (ResourceDetailName), "Description" :: NullOrUndefined (ResourceDetailDescription), "CreatedTime" :: NullOrUndefined (ResourceDetailCreatedTime) } -> { "Id" :: NullOrUndefined (ResourceDetailId), "ARN" :: NullOrUndefined (ResourceDetailARN), "Name" :: NullOrUndefined (ResourceDetailName), "Description" :: NullOrUndefined (ResourceDetailDescription), "CreatedTime" :: NullOrUndefined (ResourceDetailCreatedTime) }) -> ResourceDetail
+newResourceDetail' :: ({ "Id" :: Maybe (ResourceDetailId), "ARN" :: Maybe (ResourceDetailARN), "Name" :: Maybe (ResourceDetailName), "Description" :: Maybe (ResourceDetailDescription), "CreatedTime" :: Maybe (ResourceDetailCreatedTime) } -> { "Id" :: Maybe (ResourceDetailId), "ARN" :: Maybe (ResourceDetailARN), "Name" :: Maybe (ResourceDetailName), "Description" :: Maybe (ResourceDetailDescription), "CreatedTime" :: Maybe (ResourceDetailCreatedTime) }) -> ResourceDetail
 ```
 
 Constructs ResourceDetail's fields from required parameters
@@ -6082,7 +6082,7 @@ Encode ResourceNotFoundException
 
 ``` purescript
 newtype ResourceTargetDefinition
-  = ResourceTargetDefinition { "Attribute" :: NullOrUndefined (ResourceAttribute), "Name" :: NullOrUndefined (PropertyName), "RequiresRecreation" :: NullOrUndefined (RequiresRecreation) }
+  = ResourceTargetDefinition { "Attribute" :: Maybe (ResourceAttribute), "Name" :: Maybe (PropertyName), "RequiresRecreation" :: Maybe (RequiresRecreation) }
 ```
 
 <p>Information about a change to a resource attribute.</p>
@@ -6107,7 +6107,7 @@ Constructs ResourceTargetDefinition from required parameters
 #### `newResourceTargetDefinition'`
 
 ``` purescript
-newResourceTargetDefinition' :: ({ "Attribute" :: NullOrUndefined (ResourceAttribute), "Name" :: NullOrUndefined (PropertyName), "RequiresRecreation" :: NullOrUndefined (RequiresRecreation) } -> { "Attribute" :: NullOrUndefined (ResourceAttribute), "Name" :: NullOrUndefined (PropertyName), "RequiresRecreation" :: NullOrUndefined (RequiresRecreation) }) -> ResourceTargetDefinition
+newResourceTargetDefinition' :: ({ "Attribute" :: Maybe (ResourceAttribute), "Name" :: Maybe (PropertyName), "RequiresRecreation" :: Maybe (RequiresRecreation) } -> { "Attribute" :: Maybe (ResourceAttribute), "Name" :: Maybe (PropertyName), "RequiresRecreation" :: Maybe (RequiresRecreation) }) -> ResourceTargetDefinition
 ```
 
 Constructs ResourceTargetDefinition's fields from required parameters
@@ -6132,7 +6132,7 @@ Encode ResourceType
 
 ``` purescript
 newtype ScanProvisionedProductsInput
-  = ScanProvisionedProductsInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = ScanProvisionedProductsInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -6155,7 +6155,7 @@ Constructs ScanProvisionedProductsInput from required parameters
 #### `newScanProvisionedProductsInput'`
 
 ``` purescript
-newScanProvisionedProductsInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "PageSize" :: NullOrUndefined (PageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> ScanProvisionedProductsInput
+newScanProvisionedProductsInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "PageSize" :: Maybe (PageSize), "PageToken" :: Maybe (PageToken) }) -> ScanProvisionedProductsInput
 ```
 
 Constructs ScanProvisionedProductsInput's fields from required parameters
@@ -6164,7 +6164,7 @@ Constructs ScanProvisionedProductsInput's fields from required parameters
 
 ``` purescript
 newtype ScanProvisionedProductsOutput
-  = ScanProvisionedProductsOutput { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = ScanProvisionedProductsOutput { "ProvisionedProducts" :: Maybe (ProvisionedProductDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -6187,7 +6187,7 @@ Constructs ScanProvisionedProductsOutput from required parameters
 #### `newScanProvisionedProductsOutput'`
 
 ``` purescript
-newScanProvisionedProductsOutput' :: ({ "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> ScanProvisionedProductsOutput
+newScanProvisionedProductsOutput' :: ({ "ProvisionedProducts" :: Maybe (ProvisionedProductDetails), "NextPageToken" :: Maybe (PageToken) } -> { "ProvisionedProducts" :: Maybe (ProvisionedProductDetails), "NextPageToken" :: Maybe (PageToken) }) -> ScanProvisionedProductsOutput
 ```
 
 Constructs ScanProvisionedProductsOutput's fields from required parameters
@@ -6244,7 +6244,7 @@ Encode SearchFilterValue
 
 ``` purescript
 newtype SearchProductsAsAdminInput
-  = SearchProductsAsAdminInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: NullOrUndefined (Id), "Filters" :: NullOrUndefined (ProductViewFilters), "SortBy" :: NullOrUndefined (ProductViewSortBy), "SortOrder" :: NullOrUndefined (SortOrder), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize), "ProductSource" :: NullOrUndefined (ProductSource) }
+  = SearchProductsAsAdminInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Maybe (Id), "Filters" :: Maybe (ProductViewFilters), "SortBy" :: Maybe (ProductViewSortBy), "SortOrder" :: Maybe (SortOrder), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize), "ProductSource" :: Maybe (ProductSource) }
 ```
 
 ##### Instances
@@ -6267,7 +6267,7 @@ Constructs SearchProductsAsAdminInput from required parameters
 #### `newSearchProductsAsAdminInput'`
 
 ``` purescript
-newSearchProductsAsAdminInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: NullOrUndefined (Id), "Filters" :: NullOrUndefined (ProductViewFilters), "SortBy" :: NullOrUndefined (ProductViewSortBy), "SortOrder" :: NullOrUndefined (SortOrder), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize), "ProductSource" :: NullOrUndefined (ProductSource) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "PortfolioId" :: NullOrUndefined (Id), "Filters" :: NullOrUndefined (ProductViewFilters), "SortBy" :: NullOrUndefined (ProductViewSortBy), "SortOrder" :: NullOrUndefined (SortOrder), "PageToken" :: NullOrUndefined (PageToken), "PageSize" :: NullOrUndefined (PageSize), "ProductSource" :: NullOrUndefined (ProductSource) }) -> SearchProductsAsAdminInput
+newSearchProductsAsAdminInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Maybe (Id), "Filters" :: Maybe (ProductViewFilters), "SortBy" :: Maybe (ProductViewSortBy), "SortOrder" :: Maybe (SortOrder), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize), "ProductSource" :: Maybe (ProductSource) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "PortfolioId" :: Maybe (Id), "Filters" :: Maybe (ProductViewFilters), "SortBy" :: Maybe (ProductViewSortBy), "SortOrder" :: Maybe (SortOrder), "PageToken" :: Maybe (PageToken), "PageSize" :: Maybe (PageSize), "ProductSource" :: Maybe (ProductSource) }) -> SearchProductsAsAdminInput
 ```
 
 Constructs SearchProductsAsAdminInput's fields from required parameters
@@ -6276,7 +6276,7 @@ Constructs SearchProductsAsAdminInput's fields from required parameters
 
 ``` purescript
 newtype SearchProductsAsAdminOutput
-  = SearchProductsAsAdminOutput { "ProductViewDetails" :: NullOrUndefined (ProductViewDetails), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = SearchProductsAsAdminOutput { "ProductViewDetails" :: Maybe (ProductViewDetails), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -6299,7 +6299,7 @@ Constructs SearchProductsAsAdminOutput from required parameters
 #### `newSearchProductsAsAdminOutput'`
 
 ``` purescript
-newSearchProductsAsAdminOutput' :: ({ "ProductViewDetails" :: NullOrUndefined (ProductViewDetails), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ProductViewDetails" :: NullOrUndefined (ProductViewDetails), "NextPageToken" :: NullOrUndefined (PageToken) }) -> SearchProductsAsAdminOutput
+newSearchProductsAsAdminOutput' :: ({ "ProductViewDetails" :: Maybe (ProductViewDetails), "NextPageToken" :: Maybe (PageToken) } -> { "ProductViewDetails" :: Maybe (ProductViewDetails), "NextPageToken" :: Maybe (PageToken) }) -> SearchProductsAsAdminOutput
 ```
 
 Constructs SearchProductsAsAdminOutput's fields from required parameters
@@ -6308,7 +6308,7 @@ Constructs SearchProductsAsAdminOutput's fields from required parameters
 
 ``` purescript
 newtype SearchProductsInput
-  = SearchProductsInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Filters" :: NullOrUndefined (ProductViewFilters), "PageSize" :: NullOrUndefined (PageSize), "SortBy" :: NullOrUndefined (ProductViewSortBy), "SortOrder" :: NullOrUndefined (SortOrder), "PageToken" :: NullOrUndefined (PageToken) }
+  = SearchProductsInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Filters" :: Maybe (ProductViewFilters), "PageSize" :: Maybe (PageSize), "SortBy" :: Maybe (ProductViewSortBy), "SortOrder" :: Maybe (SortOrder), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -6331,7 +6331,7 @@ Constructs SearchProductsInput from required parameters
 #### `newSearchProductsInput'`
 
 ``` purescript
-newSearchProductsInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Filters" :: NullOrUndefined (ProductViewFilters), "PageSize" :: NullOrUndefined (PageSize), "SortBy" :: NullOrUndefined (ProductViewSortBy), "SortOrder" :: NullOrUndefined (SortOrder), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Filters" :: NullOrUndefined (ProductViewFilters), "PageSize" :: NullOrUndefined (PageSize), "SortBy" :: NullOrUndefined (ProductViewSortBy), "SortOrder" :: NullOrUndefined (SortOrder), "PageToken" :: NullOrUndefined (PageToken) }) -> SearchProductsInput
+newSearchProductsInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Filters" :: Maybe (ProductViewFilters), "PageSize" :: Maybe (PageSize), "SortBy" :: Maybe (ProductViewSortBy), "SortOrder" :: Maybe (SortOrder), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Filters" :: Maybe (ProductViewFilters), "PageSize" :: Maybe (PageSize), "SortBy" :: Maybe (ProductViewSortBy), "SortOrder" :: Maybe (SortOrder), "PageToken" :: Maybe (PageToken) }) -> SearchProductsInput
 ```
 
 Constructs SearchProductsInput's fields from required parameters
@@ -6340,7 +6340,7 @@ Constructs SearchProductsInput's fields from required parameters
 
 ``` purescript
 newtype SearchProductsOutput
-  = SearchProductsOutput { "ProductViewSummaries" :: NullOrUndefined (ProductViewSummaries), "ProductViewAggregations" :: NullOrUndefined (ProductViewAggregations), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = SearchProductsOutput { "ProductViewSummaries" :: Maybe (ProductViewSummaries), "ProductViewAggregations" :: Maybe (ProductViewAggregations), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -6363,7 +6363,7 @@ Constructs SearchProductsOutput from required parameters
 #### `newSearchProductsOutput'`
 
 ``` purescript
-newSearchProductsOutput' :: ({ "ProductViewSummaries" :: NullOrUndefined (ProductViewSummaries), "ProductViewAggregations" :: NullOrUndefined (ProductViewAggregations), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ProductViewSummaries" :: NullOrUndefined (ProductViewSummaries), "ProductViewAggregations" :: NullOrUndefined (ProductViewAggregations), "NextPageToken" :: NullOrUndefined (PageToken) }) -> SearchProductsOutput
+newSearchProductsOutput' :: ({ "ProductViewSummaries" :: Maybe (ProductViewSummaries), "ProductViewAggregations" :: Maybe (ProductViewAggregations), "NextPageToken" :: Maybe (PageToken) } -> { "ProductViewSummaries" :: Maybe (ProductViewSummaries), "ProductViewAggregations" :: Maybe (ProductViewAggregations), "NextPageToken" :: Maybe (PageToken) }) -> SearchProductsOutput
 ```
 
 Constructs SearchProductsOutput's fields from required parameters
@@ -6372,7 +6372,7 @@ Constructs SearchProductsOutput's fields from required parameters
 
 ``` purescript
 newtype SearchProvisionedProductsInput
-  = SearchProvisionedProductsInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "Filters" :: NullOrUndefined (ProvisionedProductFilters), "SortBy" :: NullOrUndefined (SortField), "SortOrder" :: NullOrUndefined (SortOrder), "PageSize" :: NullOrUndefined (SearchProvisionedProductsPageSize), "PageToken" :: NullOrUndefined (PageToken) }
+  = SearchProvisionedProductsInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "Filters" :: Maybe (ProvisionedProductFilters), "SortBy" :: Maybe (SortField), "SortOrder" :: Maybe (SortOrder), "PageSize" :: Maybe (SearchProvisionedProductsPageSize), "PageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -6395,7 +6395,7 @@ Constructs SearchProvisionedProductsInput from required parameters
 #### `newSearchProvisionedProductsInput'`
 
 ``` purescript
-newSearchProvisionedProductsInput' :: ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "Filters" :: NullOrUndefined (ProvisionedProductFilters), "SortBy" :: NullOrUndefined (SortField), "SortOrder" :: NullOrUndefined (SortOrder), "PageSize" :: NullOrUndefined (SearchProvisionedProductsPageSize), "PageToken" :: NullOrUndefined (PageToken) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "AccessLevelFilter" :: NullOrUndefined (AccessLevelFilter), "Filters" :: NullOrUndefined (ProvisionedProductFilters), "SortBy" :: NullOrUndefined (SortField), "SortOrder" :: NullOrUndefined (SortOrder), "PageSize" :: NullOrUndefined (SearchProvisionedProductsPageSize), "PageToken" :: NullOrUndefined (PageToken) }) -> SearchProvisionedProductsInput
+newSearchProvisionedProductsInput' :: ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "Filters" :: Maybe (ProvisionedProductFilters), "SortBy" :: Maybe (SortField), "SortOrder" :: Maybe (SortOrder), "PageSize" :: Maybe (SearchProvisionedProductsPageSize), "PageToken" :: Maybe (PageToken) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "AccessLevelFilter" :: Maybe (AccessLevelFilter), "Filters" :: Maybe (ProvisionedProductFilters), "SortBy" :: Maybe (SortField), "SortOrder" :: Maybe (SortOrder), "PageSize" :: Maybe (SearchProvisionedProductsPageSize), "PageToken" :: Maybe (PageToken) }) -> SearchProvisionedProductsInput
 ```
 
 Constructs SearchProvisionedProductsInput's fields from required parameters
@@ -6404,7 +6404,7 @@ Constructs SearchProvisionedProductsInput's fields from required parameters
 
 ``` purescript
 newtype SearchProvisionedProductsOutput
-  = SearchProvisionedProductsOutput { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductAttributes), "TotalResultsCount" :: NullOrUndefined (TotalResultsCount), "NextPageToken" :: NullOrUndefined (PageToken) }
+  = SearchProvisionedProductsOutput { "ProvisionedProducts" :: Maybe (ProvisionedProductAttributes), "TotalResultsCount" :: Maybe (TotalResultsCount), "NextPageToken" :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -6427,7 +6427,7 @@ Constructs SearchProvisionedProductsOutput from required parameters
 #### `newSearchProvisionedProductsOutput'`
 
 ``` purescript
-newSearchProvisionedProductsOutput' :: ({ "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductAttributes), "TotalResultsCount" :: NullOrUndefined (TotalResultsCount), "NextPageToken" :: NullOrUndefined (PageToken) } -> { "ProvisionedProducts" :: NullOrUndefined (ProvisionedProductAttributes), "TotalResultsCount" :: NullOrUndefined (TotalResultsCount), "NextPageToken" :: NullOrUndefined (PageToken) }) -> SearchProvisionedProductsOutput
+newSearchProvisionedProductsOutput' :: ({ "ProvisionedProducts" :: Maybe (ProvisionedProductAttributes), "TotalResultsCount" :: Maybe (TotalResultsCount), "NextPageToken" :: Maybe (PageToken) } -> { "ProvisionedProducts" :: Maybe (ProvisionedProductAttributes), "TotalResultsCount" :: Maybe (TotalResultsCount), "NextPageToken" :: Maybe (PageToken) }) -> SearchProvisionedProductsOutput
 ```
 
 Constructs SearchProvisionedProductsOutput's fields from required parameters
@@ -6694,7 +6694,7 @@ Encode TagOptionActive
 
 ``` purescript
 newtype TagOptionDetail
-  = TagOptionDetail { "Key" :: NullOrUndefined (TagOptionKey), "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive), "Id" :: NullOrUndefined (TagOptionId) }
+  = TagOptionDetail { "Key" :: Maybe (TagOptionKey), "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive), "Id" :: Maybe (TagOptionId) }
 ```
 
 <p>Information about a TagOption.</p>
@@ -6719,7 +6719,7 @@ Constructs TagOptionDetail from required parameters
 #### `newTagOptionDetail'`
 
 ``` purescript
-newTagOptionDetail' :: ({ "Key" :: NullOrUndefined (TagOptionKey), "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive), "Id" :: NullOrUndefined (TagOptionId) } -> { "Key" :: NullOrUndefined (TagOptionKey), "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive), "Id" :: NullOrUndefined (TagOptionId) }) -> TagOptionDetail
+newTagOptionDetail' :: ({ "Key" :: Maybe (TagOptionKey), "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive), "Id" :: Maybe (TagOptionId) } -> { "Key" :: Maybe (TagOptionKey), "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive), "Id" :: Maybe (TagOptionId) }) -> TagOptionDetail
 ```
 
 Constructs TagOptionDetail's fields from required parameters
@@ -6810,7 +6810,7 @@ Encode TagOptionSummaries
 
 ``` purescript
 newtype TagOptionSummary
-  = TagOptionSummary { "Key" :: NullOrUndefined (TagOptionKey), "Values" :: NullOrUndefined (TagOptionValues) }
+  = TagOptionSummary { "Key" :: Maybe (TagOptionKey), "Values" :: Maybe (TagOptionValues) }
 ```
 
 <p>Summary information about a TagOption.</p>
@@ -6835,7 +6835,7 @@ Constructs TagOptionSummary from required parameters
 #### `newTagOptionSummary'`
 
 ``` purescript
-newTagOptionSummary' :: ({ "Key" :: NullOrUndefined (TagOptionKey), "Values" :: NullOrUndefined (TagOptionValues) } -> { "Key" :: NullOrUndefined (TagOptionKey), "Values" :: NullOrUndefined (TagOptionValues) }) -> TagOptionSummary
+newTagOptionSummary' :: ({ "Key" :: Maybe (TagOptionKey), "Values" :: Maybe (TagOptionValues) } -> { "Key" :: Maybe (TagOptionKey), "Values" :: Maybe (TagOptionValues) }) -> TagOptionSummary
 ```
 
 Constructs TagOptionSummary's fields from required parameters
@@ -6908,7 +6908,7 @@ Encode Tags
 
 ``` purescript
 newtype TerminateProvisionedProductInput
-  = TerminateProvisionedProductInput { "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn), "ProvisionedProductId" :: NullOrUndefined (Id), "TerminateToken" :: IdempotencyToken, "IgnoreErrors" :: NullOrUndefined (IgnoreErrors), "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) }
+  = TerminateProvisionedProductInput { "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn), "ProvisionedProductId" :: Maybe (Id), "TerminateToken" :: IdempotencyToken, "IgnoreErrors" :: Maybe (IgnoreErrors), "AcceptLanguage" :: Maybe (AcceptLanguage) }
 ```
 
 ##### Instances
@@ -6931,7 +6931,7 @@ Constructs TerminateProvisionedProductInput from required parameters
 #### `newTerminateProvisionedProductInput'`
 
 ``` purescript
-newTerminateProvisionedProductInput' :: IdempotencyToken -> ({ "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn), "ProvisionedProductId" :: NullOrUndefined (Id), "TerminateToken" :: IdempotencyToken, "IgnoreErrors" :: NullOrUndefined (IgnoreErrors), "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) } -> { "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn), "ProvisionedProductId" :: NullOrUndefined (Id), "TerminateToken" :: IdempotencyToken, "IgnoreErrors" :: NullOrUndefined (IgnoreErrors), "AcceptLanguage" :: NullOrUndefined (AcceptLanguage) }) -> TerminateProvisionedProductInput
+newTerminateProvisionedProductInput' :: IdempotencyToken -> ({ "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn), "ProvisionedProductId" :: Maybe (Id), "TerminateToken" :: IdempotencyToken, "IgnoreErrors" :: Maybe (IgnoreErrors), "AcceptLanguage" :: Maybe (AcceptLanguage) } -> { "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn), "ProvisionedProductId" :: Maybe (Id), "TerminateToken" :: IdempotencyToken, "IgnoreErrors" :: Maybe (IgnoreErrors), "AcceptLanguage" :: Maybe (AcceptLanguage) }) -> TerminateProvisionedProductInput
 ```
 
 Constructs TerminateProvisionedProductInput's fields from required parameters
@@ -6940,7 +6940,7 @@ Constructs TerminateProvisionedProductInput's fields from required parameters
 
 ``` purescript
 newtype TerminateProvisionedProductOutput
-  = TerminateProvisionedProductOutput { "RecordDetail" :: NullOrUndefined (RecordDetail) }
+  = TerminateProvisionedProductOutput { "RecordDetail" :: Maybe (RecordDetail) }
 ```
 
 ##### Instances
@@ -6963,7 +6963,7 @@ Constructs TerminateProvisionedProductOutput from required parameters
 #### `newTerminateProvisionedProductOutput'`
 
 ``` purescript
-newTerminateProvisionedProductOutput' :: ({ "RecordDetail" :: NullOrUndefined (RecordDetail) } -> { "RecordDetail" :: NullOrUndefined (RecordDetail) }) -> TerminateProvisionedProductOutput
+newTerminateProvisionedProductOutput' :: ({ "RecordDetail" :: Maybe (RecordDetail) } -> { "RecordDetail" :: Maybe (RecordDetail) }) -> TerminateProvisionedProductOutput
 ```
 
 Constructs TerminateProvisionedProductOutput's fields from required parameters
@@ -6988,7 +6988,7 @@ Encode TotalResultsCount
 
 ``` purescript
 newtype UpdateConstraintInput
-  = UpdateConstraintInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "Description" :: NullOrUndefined (ConstraintDescription) }
+  = UpdateConstraintInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "Description" :: Maybe (ConstraintDescription) }
 ```
 
 ##### Instances
@@ -7011,7 +7011,7 @@ Constructs UpdateConstraintInput from required parameters
 #### `newUpdateConstraintInput'`
 
 ``` purescript
-newUpdateConstraintInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "Description" :: NullOrUndefined (ConstraintDescription) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "Description" :: NullOrUndefined (ConstraintDescription) }) -> UpdateConstraintInput
+newUpdateConstraintInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "Description" :: Maybe (ConstraintDescription) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "Description" :: Maybe (ConstraintDescription) }) -> UpdateConstraintInput
 ```
 
 Constructs UpdateConstraintInput's fields from required parameters
@@ -7020,7 +7020,7 @@ Constructs UpdateConstraintInput's fields from required parameters
 
 ``` purescript
 newtype UpdateConstraintOutput
-  = UpdateConstraintOutput { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) }
+  = UpdateConstraintOutput { "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) }
 ```
 
 ##### Instances
@@ -7043,7 +7043,7 @@ Constructs UpdateConstraintOutput from required parameters
 #### `newUpdateConstraintOutput'`
 
 ``` purescript
-newUpdateConstraintOutput' :: ({ "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) } -> { "ConstraintDetail" :: NullOrUndefined (ConstraintDetail), "ConstraintParameters" :: NullOrUndefined (ConstraintParameters), "Status" :: NullOrUndefined (Status) }) -> UpdateConstraintOutput
+newUpdateConstraintOutput' :: ({ "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) } -> { "ConstraintDetail" :: Maybe (ConstraintDetail), "ConstraintParameters" :: Maybe (ConstraintParameters), "Status" :: Maybe (Status) }) -> UpdateConstraintOutput
 ```
 
 Constructs UpdateConstraintOutput's fields from required parameters
@@ -7052,7 +7052,7 @@ Constructs UpdateConstraintOutput's fields from required parameters
 
 ``` purescript
 newtype UpdatePortfolioInput
-  = UpdatePortfolioInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "DisplayName" :: NullOrUndefined (PortfolioDisplayName), "Description" :: NullOrUndefined (PortfolioDescription), "ProviderName" :: NullOrUndefined (ProviderName), "AddTags" :: NullOrUndefined (AddTags), "RemoveTags" :: NullOrUndefined (TagKeys) }
+  = UpdatePortfolioInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "DisplayName" :: Maybe (PortfolioDisplayName), "Description" :: Maybe (PortfolioDescription), "ProviderName" :: Maybe (ProviderName), "AddTags" :: Maybe (AddTags), "RemoveTags" :: Maybe (TagKeys) }
 ```
 
 ##### Instances
@@ -7075,7 +7075,7 @@ Constructs UpdatePortfolioInput from required parameters
 #### `newUpdatePortfolioInput'`
 
 ``` purescript
-newUpdatePortfolioInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "DisplayName" :: NullOrUndefined (PortfolioDisplayName), "Description" :: NullOrUndefined (PortfolioDescription), "ProviderName" :: NullOrUndefined (ProviderName), "AddTags" :: NullOrUndefined (AddTags), "RemoveTags" :: NullOrUndefined (TagKeys) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "DisplayName" :: NullOrUndefined (PortfolioDisplayName), "Description" :: NullOrUndefined (PortfolioDescription), "ProviderName" :: NullOrUndefined (ProviderName), "AddTags" :: NullOrUndefined (AddTags), "RemoveTags" :: NullOrUndefined (TagKeys) }) -> UpdatePortfolioInput
+newUpdatePortfolioInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "DisplayName" :: Maybe (PortfolioDisplayName), "Description" :: Maybe (PortfolioDescription), "ProviderName" :: Maybe (ProviderName), "AddTags" :: Maybe (AddTags), "RemoveTags" :: Maybe (TagKeys) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "DisplayName" :: Maybe (PortfolioDisplayName), "Description" :: Maybe (PortfolioDescription), "ProviderName" :: Maybe (ProviderName), "AddTags" :: Maybe (AddTags), "RemoveTags" :: Maybe (TagKeys) }) -> UpdatePortfolioInput
 ```
 
 Constructs UpdatePortfolioInput's fields from required parameters
@@ -7084,7 +7084,7 @@ Constructs UpdatePortfolioInput's fields from required parameters
 
 ``` purescript
 newtype UpdatePortfolioOutput
-  = UpdatePortfolioOutput { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags) }
+  = UpdatePortfolioOutput { "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags) }
 ```
 
 ##### Instances
@@ -7107,7 +7107,7 @@ Constructs UpdatePortfolioOutput from required parameters
 #### `newUpdatePortfolioOutput'`
 
 ``` purescript
-newUpdatePortfolioOutput' :: ({ "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags) } -> { "PortfolioDetail" :: NullOrUndefined (PortfolioDetail), "Tags" :: NullOrUndefined (Tags) }) -> UpdatePortfolioOutput
+newUpdatePortfolioOutput' :: ({ "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags) } -> { "PortfolioDetail" :: Maybe (PortfolioDetail), "Tags" :: Maybe (Tags) }) -> UpdatePortfolioOutput
 ```
 
 Constructs UpdatePortfolioOutput's fields from required parameters
@@ -7116,7 +7116,7 @@ Constructs UpdatePortfolioOutput's fields from required parameters
 
 ``` purescript
 newtype UpdateProductInput
-  = UpdateProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "Name" :: NullOrUndefined (ProductViewName), "Owner" :: NullOrUndefined (ProductViewOwner), "Description" :: NullOrUndefined (ProductViewShortDescription), "Distributor" :: NullOrUndefined (ProductViewOwner), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportUrl" :: NullOrUndefined (SupportUrl), "AddTags" :: NullOrUndefined (AddTags), "RemoveTags" :: NullOrUndefined (TagKeys) }
+  = UpdateProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "Name" :: Maybe (ProductViewName), "Owner" :: Maybe (ProductViewOwner), "Description" :: Maybe (ProductViewShortDescription), "Distributor" :: Maybe (ProductViewOwner), "SupportDescription" :: Maybe (SupportDescription), "SupportEmail" :: Maybe (SupportEmail), "SupportUrl" :: Maybe (SupportUrl), "AddTags" :: Maybe (AddTags), "RemoveTags" :: Maybe (TagKeys) }
 ```
 
 ##### Instances
@@ -7139,7 +7139,7 @@ Constructs UpdateProductInput from required parameters
 #### `newUpdateProductInput'`
 
 ``` purescript
-newUpdateProductInput' :: Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "Name" :: NullOrUndefined (ProductViewName), "Owner" :: NullOrUndefined (ProductViewOwner), "Description" :: NullOrUndefined (ProductViewShortDescription), "Distributor" :: NullOrUndefined (ProductViewOwner), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportUrl" :: NullOrUndefined (SupportUrl), "AddTags" :: NullOrUndefined (AddTags), "RemoveTags" :: NullOrUndefined (TagKeys) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "Id" :: Id, "Name" :: NullOrUndefined (ProductViewName), "Owner" :: NullOrUndefined (ProductViewOwner), "Description" :: NullOrUndefined (ProductViewShortDescription), "Distributor" :: NullOrUndefined (ProductViewOwner), "SupportDescription" :: NullOrUndefined (SupportDescription), "SupportEmail" :: NullOrUndefined (SupportEmail), "SupportUrl" :: NullOrUndefined (SupportUrl), "AddTags" :: NullOrUndefined (AddTags), "RemoveTags" :: NullOrUndefined (TagKeys) }) -> UpdateProductInput
+newUpdateProductInput' :: Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "Name" :: Maybe (ProductViewName), "Owner" :: Maybe (ProductViewOwner), "Description" :: Maybe (ProductViewShortDescription), "Distributor" :: Maybe (ProductViewOwner), "SupportDescription" :: Maybe (SupportDescription), "SupportEmail" :: Maybe (SupportEmail), "SupportUrl" :: Maybe (SupportUrl), "AddTags" :: Maybe (AddTags), "RemoveTags" :: Maybe (TagKeys) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "Id" :: Id, "Name" :: Maybe (ProductViewName), "Owner" :: Maybe (ProductViewOwner), "Description" :: Maybe (ProductViewShortDescription), "Distributor" :: Maybe (ProductViewOwner), "SupportDescription" :: Maybe (SupportDescription), "SupportEmail" :: Maybe (SupportEmail), "SupportUrl" :: Maybe (SupportUrl), "AddTags" :: Maybe (AddTags), "RemoveTags" :: Maybe (TagKeys) }) -> UpdateProductInput
 ```
 
 Constructs UpdateProductInput's fields from required parameters
@@ -7148,7 +7148,7 @@ Constructs UpdateProductInput's fields from required parameters
 
 ``` purescript
 newtype UpdateProductOutput
-  = UpdateProductOutput { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "Tags" :: NullOrUndefined (Tags) }
+  = UpdateProductOutput { "ProductViewDetail" :: Maybe (ProductViewDetail), "Tags" :: Maybe (Tags) }
 ```
 
 ##### Instances
@@ -7171,7 +7171,7 @@ Constructs UpdateProductOutput from required parameters
 #### `newUpdateProductOutput'`
 
 ``` purescript
-newUpdateProductOutput' :: ({ "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "Tags" :: NullOrUndefined (Tags) } -> { "ProductViewDetail" :: NullOrUndefined (ProductViewDetail), "Tags" :: NullOrUndefined (Tags) }) -> UpdateProductOutput
+newUpdateProductOutput' :: ({ "ProductViewDetail" :: Maybe (ProductViewDetail), "Tags" :: Maybe (Tags) } -> { "ProductViewDetail" :: Maybe (ProductViewDetail), "Tags" :: Maybe (Tags) }) -> UpdateProductOutput
 ```
 
 Constructs UpdateProductOutput's fields from required parameters
@@ -7180,7 +7180,7 @@ Constructs UpdateProductOutput's fields from required parameters
 
 ``` purescript
 newtype UpdateProvisionedProductInput
-  = UpdateProvisionedProductInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn), "ProvisionedProductId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "PathId" :: NullOrUndefined (Id), "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "UpdateToken" :: IdempotencyToken }
+  = UpdateProvisionedProductInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn), "ProvisionedProductId" :: Maybe (Id), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "PathId" :: Maybe (Id), "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "UpdateToken" :: IdempotencyToken }
 ```
 
 ##### Instances
@@ -7203,7 +7203,7 @@ Constructs UpdateProvisionedProductInput from required parameters
 #### `newUpdateProvisionedProductInput'`
 
 ``` purescript
-newUpdateProvisionedProductInput' :: IdempotencyToken -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn), "ProvisionedProductId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "PathId" :: NullOrUndefined (Id), "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "UpdateToken" :: IdempotencyToken } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProvisionedProductName" :: NullOrUndefined (ProvisionedProductNameOrArn), "ProvisionedProductId" :: NullOrUndefined (Id), "ProductId" :: NullOrUndefined (Id), "ProvisioningArtifactId" :: NullOrUndefined (Id), "PathId" :: NullOrUndefined (Id), "ProvisioningParameters" :: NullOrUndefined (UpdateProvisioningParameters), "UpdateToken" :: IdempotencyToken }) -> UpdateProvisionedProductInput
+newUpdateProvisionedProductInput' :: IdempotencyToken -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn), "ProvisionedProductId" :: Maybe (Id), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "PathId" :: Maybe (Id), "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "UpdateToken" :: IdempotencyToken } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProvisionedProductName" :: Maybe (ProvisionedProductNameOrArn), "ProvisionedProductId" :: Maybe (Id), "ProductId" :: Maybe (Id), "ProvisioningArtifactId" :: Maybe (Id), "PathId" :: Maybe (Id), "ProvisioningParameters" :: Maybe (UpdateProvisioningParameters), "UpdateToken" :: IdempotencyToken }) -> UpdateProvisionedProductInput
 ```
 
 Constructs UpdateProvisionedProductInput's fields from required parameters
@@ -7212,7 +7212,7 @@ Constructs UpdateProvisionedProductInput's fields from required parameters
 
 ``` purescript
 newtype UpdateProvisionedProductOutput
-  = UpdateProvisionedProductOutput { "RecordDetail" :: NullOrUndefined (RecordDetail) }
+  = UpdateProvisionedProductOutput { "RecordDetail" :: Maybe (RecordDetail) }
 ```
 
 ##### Instances
@@ -7235,7 +7235,7 @@ Constructs UpdateProvisionedProductOutput from required parameters
 #### `newUpdateProvisionedProductOutput'`
 
 ``` purescript
-newUpdateProvisionedProductOutput' :: ({ "RecordDetail" :: NullOrUndefined (RecordDetail) } -> { "RecordDetail" :: NullOrUndefined (RecordDetail) }) -> UpdateProvisionedProductOutput
+newUpdateProvisionedProductOutput' :: ({ "RecordDetail" :: Maybe (RecordDetail) } -> { "RecordDetail" :: Maybe (RecordDetail) }) -> UpdateProvisionedProductOutput
 ```
 
 Constructs UpdateProvisionedProductOutput's fields from required parameters
@@ -7244,7 +7244,7 @@ Constructs UpdateProvisionedProductOutput's fields from required parameters
 
 ``` purescript
 newtype UpdateProvisioningArtifactInput
-  = UpdateProvisioningArtifactInput { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "Active" :: NullOrUndefined (ProvisioningArtifactActive) }
+  = UpdateProvisioningArtifactInput { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "Active" :: Maybe (ProvisioningArtifactActive) }
 ```
 
 ##### Instances
@@ -7267,7 +7267,7 @@ Constructs UpdateProvisioningArtifactInput from required parameters
 #### `newUpdateProvisioningArtifactInput'`
 
 ``` purescript
-newUpdateProvisioningArtifactInput' :: Id -> Id -> ({ "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "Active" :: NullOrUndefined (ProvisioningArtifactActive) } -> { "AcceptLanguage" :: NullOrUndefined (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "Name" :: NullOrUndefined (ProvisioningArtifactName), "Description" :: NullOrUndefined (ProvisioningArtifactDescription), "Active" :: NullOrUndefined (ProvisioningArtifactActive) }) -> UpdateProvisioningArtifactInput
+newUpdateProvisioningArtifactInput' :: Id -> Id -> ({ "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "Active" :: Maybe (ProvisioningArtifactActive) } -> { "AcceptLanguage" :: Maybe (AcceptLanguage), "ProductId" :: Id, "ProvisioningArtifactId" :: Id, "Name" :: Maybe (ProvisioningArtifactName), "Description" :: Maybe (ProvisioningArtifactDescription), "Active" :: Maybe (ProvisioningArtifactActive) }) -> UpdateProvisioningArtifactInput
 ```
 
 Constructs UpdateProvisioningArtifactInput's fields from required parameters
@@ -7276,7 +7276,7 @@ Constructs UpdateProvisioningArtifactInput's fields from required parameters
 
 ``` purescript
 newtype UpdateProvisioningArtifactOutput
-  = UpdateProvisioningArtifactOutput { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) }
+  = UpdateProvisioningArtifactOutput { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) }
 ```
 
 ##### Instances
@@ -7299,7 +7299,7 @@ Constructs UpdateProvisioningArtifactOutput from required parameters
 #### `newUpdateProvisioningArtifactOutput'`
 
 ``` purescript
-newUpdateProvisioningArtifactOutput' :: ({ "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) } -> { "ProvisioningArtifactDetail" :: NullOrUndefined (ProvisioningArtifactDetail), "Info" :: NullOrUndefined (ProvisioningArtifactInfo), "Status" :: NullOrUndefined (Status) }) -> UpdateProvisioningArtifactOutput
+newUpdateProvisioningArtifactOutput' :: ({ "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) } -> { "ProvisioningArtifactDetail" :: Maybe (ProvisioningArtifactDetail), "Info" :: Maybe (ProvisioningArtifactInfo), "Status" :: Maybe (Status) }) -> UpdateProvisioningArtifactOutput
 ```
 
 Constructs UpdateProvisioningArtifactOutput's fields from required parameters
@@ -7308,7 +7308,7 @@ Constructs UpdateProvisioningArtifactOutput's fields from required parameters
 
 ``` purescript
 newtype UpdateProvisioningParameter
-  = UpdateProvisioningParameter { "Key" :: NullOrUndefined (ParameterKey), "Value" :: NullOrUndefined (ParameterValue), "UsePreviousValue" :: NullOrUndefined (UsePreviousValue) }
+  = UpdateProvisioningParameter { "Key" :: Maybe (ParameterKey), "Value" :: Maybe (ParameterValue), "UsePreviousValue" :: Maybe (UsePreviousValue) }
 ```
 
 <p>The parameter key-value pair used to update a provisioned product.</p>
@@ -7333,7 +7333,7 @@ Constructs UpdateProvisioningParameter from required parameters
 #### `newUpdateProvisioningParameter'`
 
 ``` purescript
-newUpdateProvisioningParameter' :: ({ "Key" :: NullOrUndefined (ParameterKey), "Value" :: NullOrUndefined (ParameterValue), "UsePreviousValue" :: NullOrUndefined (UsePreviousValue) } -> { "Key" :: NullOrUndefined (ParameterKey), "Value" :: NullOrUndefined (ParameterValue), "UsePreviousValue" :: NullOrUndefined (UsePreviousValue) }) -> UpdateProvisioningParameter
+newUpdateProvisioningParameter' :: ({ "Key" :: Maybe (ParameterKey), "Value" :: Maybe (ParameterValue), "UsePreviousValue" :: Maybe (UsePreviousValue) } -> { "Key" :: Maybe (ParameterKey), "Value" :: Maybe (ParameterValue), "UsePreviousValue" :: Maybe (UsePreviousValue) }) -> UpdateProvisioningParameter
 ```
 
 Constructs UpdateProvisioningParameter's fields from required parameters
@@ -7358,7 +7358,7 @@ Encode UpdateProvisioningParameters
 
 ``` purescript
 newtype UpdateTagOptionInput
-  = UpdateTagOptionInput { "Id" :: TagOptionId, "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive) }
+  = UpdateTagOptionInput { "Id" :: TagOptionId, "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive) }
 ```
 
 ##### Instances
@@ -7381,7 +7381,7 @@ Constructs UpdateTagOptionInput from required parameters
 #### `newUpdateTagOptionInput'`
 
 ``` purescript
-newUpdateTagOptionInput' :: TagOptionId -> ({ "Id" :: TagOptionId, "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive) } -> { "Id" :: TagOptionId, "Value" :: NullOrUndefined (TagOptionValue), "Active" :: NullOrUndefined (TagOptionActive) }) -> UpdateTagOptionInput
+newUpdateTagOptionInput' :: TagOptionId -> ({ "Id" :: TagOptionId, "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive) } -> { "Id" :: TagOptionId, "Value" :: Maybe (TagOptionValue), "Active" :: Maybe (TagOptionActive) }) -> UpdateTagOptionInput
 ```
 
 Constructs UpdateTagOptionInput's fields from required parameters
@@ -7390,7 +7390,7 @@ Constructs UpdateTagOptionInput's fields from required parameters
 
 ``` purescript
 newtype UpdateTagOptionOutput
-  = UpdateTagOptionOutput { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) }
+  = UpdateTagOptionOutput { "TagOptionDetail" :: Maybe (TagOptionDetail) }
 ```
 
 ##### Instances
@@ -7413,7 +7413,7 @@ Constructs UpdateTagOptionOutput from required parameters
 #### `newUpdateTagOptionOutput'`
 
 ``` purescript
-newUpdateTagOptionOutput' :: ({ "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) } -> { "TagOptionDetail" :: NullOrUndefined (TagOptionDetail) }) -> UpdateTagOptionOutput
+newUpdateTagOptionOutput' :: ({ "TagOptionDetail" :: Maybe (TagOptionDetail) } -> { "TagOptionDetail" :: Maybe (TagOptionDetail) }) -> UpdateTagOptionOutput
 ```
 
 Constructs UpdateTagOptionOutput's fields from required parameters
@@ -7438,7 +7438,7 @@ Encode UpdatedTime
 
 ``` purescript
 newtype UsageInstruction
-  = UsageInstruction { "Type" :: NullOrUndefined (InstructionType), "Value" :: NullOrUndefined (InstructionValue) }
+  = UsageInstruction { "Type" :: Maybe (InstructionType), "Value" :: Maybe (InstructionValue) }
 ```
 
 <p>Additional information provided by the administrator.</p>
@@ -7463,7 +7463,7 @@ Constructs UsageInstruction from required parameters
 #### `newUsageInstruction'`
 
 ``` purescript
-newUsageInstruction' :: ({ "Type" :: NullOrUndefined (InstructionType), "Value" :: NullOrUndefined (InstructionValue) } -> { "Type" :: NullOrUndefined (InstructionType), "Value" :: NullOrUndefined (InstructionValue) }) -> UsageInstruction
+newUsageInstruction' :: ({ "Type" :: Maybe (InstructionType), "Value" :: Maybe (InstructionValue) } -> { "Type" :: Maybe (InstructionType), "Value" :: Maybe (InstructionValue) }) -> UsageInstruction
 ```
 
 Constructs UsageInstruction's fields from required parameters
